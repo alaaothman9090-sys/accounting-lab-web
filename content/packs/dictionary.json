@@ -1,0 +1,1667 @@
+{
+  "pack": "dictionary",
+  "terms": [
+    {
+      "id": "T-ASSET",
+      "ar": "أصل",
+      "en": "Asset",
+      "formalAr": "مورد تسيطر عليه المنشأة ويُتوقع منه منفعة اقتصادية مستقبلية",
+      "egyptianAr": "أي حاجة الشركة بتتحكم فيها ومنتظر تجيب لها فايدة: فلوس، بضاعة، معدات، أو حق تحصّله من حد.",
+      "exampleAr": "الـ 300,000 في البنك، والمخزون، والمعدات، وحق الشركة عند مكتبة النور.",
+      "relatedTermIds": [
+        "T-LIABILITY",
+        "T-EQUATION"
+      ],
+      "skillIds": [
+        "ACC.EQ"
+      ],
+      "release": "R1"
+    },
+    {
+      "id": "T-LIABILITY",
+      "ar": "التزام",
+      "en": "Liability",
+      "formalAr": "التزام حالي على المنشأة بتحويل موارد اقتصادية",
+      "egyptianAr": "حاجة على الشركة لازم تدفعها أو تنفذها لحد تاني: فلوس لمورد، أو بضاعة لعميل دفع مقدّم.",
+      "exampleAr": "اللي علينا لمصنع الوادي بعد ما استلمنا الورق على الحساب.",
+      "relatedTermIds": [
+        "T-ASSET",
+        "T-AP",
+        "T-EQUATION"
+      ],
+      "skillIds": [
+        "ACC.EQ"
+      ],
+      "release": "R1"
+    },
+    {
+      "id": "T-EQUITY",
+      "ar": "حقوق الملكية",
+      "en": "Owner's equity",
+      "formalAr": "الحصة المتبقية في أصول المنشأة بعد خصم الالتزامات",
+      "egyptianAr": "حق المالك في الشركة = الأصول ناقص الالتزامات. مش هي الفلوس اللي في البنك.",
+      "exampleAr": "رأس المال 300,000 + الأرباح − المسحوبات.",
+      "relatedTermIds": [
+        "T-CAPITAL",
+        "T-EQUATION"
+      ],
+      "skillIds": [
+        "ACC.EQ"
+      ],
+      "release": "R1"
+    },
+    {
+      "id": "T-REVENUE",
+      "ar": "إيراد",
+      "en": "Revenue",
+      "formalAr": "الزيادة في المنافع الاقتصادية الناتجة عن النشاط العادي",
+      "egyptianAr": "اللي الشركة كسبته لما نفّذت شغلها (سلّمت البضاعة) — حتى لو الفلوس لسه ما وصلتش.",
+      "exampleAr": "بيع 200 كرتونة لمكتبة النور بـ 50,000 على الحساب = إيراد يوم التسليم.",
+      "relatedTermIds": [
+        "T-ACCRUAL-BASIS",
+        "T-EXPENSE"
+      ],
+      "skillIds": [
+        "ACC.EQ",
+        "ACC.EVENT"
+      ],
+      "release": "R1"
+    },
+    {
+      "id": "T-EXPENSE",
+      "ar": "مصروف",
+      "en": "Expense",
+      "formalAr": "النقص في المنافع الاقتصادية نتيجة استهلاك موارد لتحقيق الإيراد",
+      "egyptianAr": "اللي الشركة استهلكته علشان تشتغل وتكسب: إيجار الشهر، فاتورة النت، تكلفة البضاعة اللي اتباعت.",
+      "exampleAr": "فاتورة الإنترنت والتليفون 1,200 المدفوعة كاش.",
+      "relatedTermIds": [
+        "T-REVENUE",
+        "T-PREPAID"
+      ],
+      "skillIds": [
+        "ACC.EQ"
+      ],
+      "release": "R1"
+    },
+    {
+      "id": "T-EQUATION",
+      "ar": "المعادلة المحاسبية",
+      "en": "Accounting equation",
+      "formalAr": "الأصول = الالتزامات + حقوق الملكية",
+      "egyptianAr": "كل اللي عند الشركة (أصول) متمول يا من حد ليه حق عليها (التزامات) يا من المالك (حقوق ملكية). لازم الطرفين يتساووا دايمًا.",
+      "exampleAr": "بعد E01: أصول 300,000 = التزامات 0 + حقوق ملكية 300,000.",
+      "relatedTermIds": [
+        "T-ASSET",
+        "T-LIABILITY",
+        "T-EQUITY"
+      ],
+      "skillIds": [
+        "ACC.EQ"
+      ],
+      "release": "R1"
+    },
+    {
+      "id": "T-DEBIT",
+      "ar": "مدين",
+      "en": "Debit (Dr)",
+      "formalAr": "الجانب الأيمن من الحساب في الشكل العربي",
+      "egyptianAr": "جانب في القيد بيزوّد الأصول والمصروفات والمسحوبات، ويقلل الالتزامات وحقوق الملكية والإيرادات. مش معناه حاجة كويسة.",
+      "exampleAr": "من حـ/ البنك 300,000 — البنك زاد فبقى مدين.",
+      "relatedTermIds": [
+        "T-CREDIT",
+        "T-JOURNAL-ENTRY"
+      ],
+      "skillIds": [
+        "ACC.DRCR"
+      ],
+      "release": "R1"
+    },
+    {
+      "id": "T-CREDIT",
+      "ar": "دائن",
+      "en": "Credit (Cr)",
+      "formalAr": "الجانب الأيسر من الحساب في الشكل العربي",
+      "egyptianAr": "جانب في القيد بيزوّد الالتزامات وحقوق الملكية والإيرادات، ويقلل الأصول والمصروفات. مش معناه قرض.",
+      "exampleAr": "إلى حـ/ رأس المال 300,000 — حق المالك زاد فبقى دائن.",
+      "relatedTermIds": [
+        "T-DEBIT",
+        "T-JOURNAL-ENTRY"
+      ],
+      "skillIds": [
+        "ACC.DRCR"
+      ],
+      "release": "R1"
+    },
+    {
+      "id": "T-JOURNAL-ENTRY",
+      "ar": "قيد يومية",
+      "en": "Journal entry",
+      "formalAr": "تسجيل المعاملة في دفتر اليومية بطرفين مدين ودائن متساويين",
+      "egyptianAr": "الجملة المحاسبية اللي بتقول: الحساب ده زاد/قل والحساب ده زاد/قل، بنفس المبلغ في الجانبين.",
+      "exampleAr": "من حـ/ البنك إلى حـ/ رأس المال 300,000.",
+      "relatedTermIds": [
+        "T-DEBIT",
+        "T-CREDIT",
+        "T-COMPOUND-ENTRY",
+        "T-LEDGER"
+      ],
+      "skillIds": [
+        "ACC.JE"
+      ],
+      "release": "R1"
+    },
+    {
+      "id": "T-COMPOUND-ENTRY",
+      "ar": "قيد مركب",
+      "en": "Compound entry",
+      "formalAr": "قيد يتضمن أكثر من حساب مدين أو أكثر من حساب دائن",
+      "egyptianAr": "قيد فيه أكتر من حساب في جانب واحد. بنكتب «من مذكورين» أو «إلى مذكورين».",
+      "exampleAr": "تعويض العهدة: من مذكورين (أدوات 450، نقل 600، ضيافة 150) إلى حـ/ الصندوق 1,200.",
+      "relatedTermIds": [
+        "T-JOURNAL-ENTRY"
+      ],
+      "skillIds": [
+        "ACC.JE"
+      ],
+      "release": "R1"
+    },
+    {
+      "id": "T-LEDGER",
+      "ar": "دفتر الأستاذ",
+      "en": "General ledger",
+      "formalAr": "الدفتر الذي تُجمع فيه حركات كل حساب على حدة",
+      "egyptianAr": "مكان بنجمع فيه كل حركات الحساب الواحد علشان نعرف رصيده. القيد بيتكتب في اليومية ويترحّل للأستاذ.",
+      "exampleAr": "صفحة حساب البنك فيها كل الإيداعات والمدفوعات ورصيدها.",
+      "relatedTermIds": [
+        "T-T-ACCOUNT",
+        "T-TRIAL-BALANCE",
+        "T-JOURNAL-ENTRY"
+      ],
+      "skillIds": [
+        "ACC.POST"
+      ],
+      "release": "R1"
+    },
+    {
+      "id": "T-T-ACCOUNT",
+      "ar": "حساب على شكل حرف T",
+      "en": "T-account",
+      "formalAr": "تمثيل مبسط للحساب: المدين في جانب والدائن في الجانب الآخر",
+      "egyptianAr": "رسمة بسيطة للحساب: في الشكل العربي المدين على اليمين والدائن على الشمال، والرصيد هو الفرق.",
+      "exampleAr": "حساب البنك: 300,000 مدين، و 15,000 + 18,000 + 36,000 دائن.",
+      "relatedTermIds": [
+        "T-LEDGER"
+      ],
+      "skillIds": [
+        "ACC.POST"
+      ],
+      "release": "R1"
+    },
+    {
+      "id": "T-TRIAL-BALANCE",
+      "ar": "ميزان المراجعة",
+      "en": "Trial balance",
+      "formalAr": "كشف بأرصدة الحسابات للتحقق من تساوي المدين والدائن",
+      "egyptianAr": "جدول بكل أرصدة الحسابات: لازم مجموع المدين = مجموع الدائن. التساوي مش بيثبت إن كل حاجة صح.",
+      "exampleAr": "ميزان أول أسبوع: 583,650 = 583,650.",
+      "relatedTermIds": [
+        "T-LEDGER",
+        "T-BALANCE-SHEET"
+      ],
+      "skillIds": [
+        "ACC.TB"
+      ],
+      "release": "R1"
+    },
+    {
+      "id": "T-SOURCE-DOC",
+      "ar": "مستند مؤيد",
+      "en": "Source document",
+      "formalAr": "الدليل الكتابي على وقوع المعاملة",
+      "egyptianAr": "الورقة اللي بتثبت إن الحدث حصل: فاتورة، إيصال، إذن استلام، إشعار بنك. من غير مستند ما نسجلش.",
+      "exampleAr": "إيصال إيداع البنك ومذكرة رأس المال لـ E01.",
+      "relatedTermIds": [
+        "T-INTERNAL-CONTROL",
+        "T-3WAY"
+      ],
+      "skillIds": [
+        "ACC.DOC"
+      ],
+      "release": "R1"
+    },
+    {
+      "id": "T-CAPITAL",
+      "ar": "رأس المال",
+      "en": "Owner's capital",
+      "formalAr": "ما يستثمره المالك في المنشأة",
+      "egyptianAr": "الفلوس أو الأصول اللي المالك حطها في الشركة — حق ليه مش قرض ومش إيراد.",
+      "exampleAr": "300,000 حطها أ. حسام يوم 1 مارس.",
+      "relatedTermIds": [
+        "T-EQUITY"
+      ],
+      "skillIds": [
+        "ACC.EQ",
+        "ACC.JE"
+      ],
+      "release": "R1"
+    },
+    {
+      "id": "T-PREPAID",
+      "ar": "مصروف مدفوع مقدمًا",
+      "en": "Prepaid expense",
+      "formalAr": "مبلغ مدفوع عن منفعة تخص فترات مستقبلية",
+      "egyptianAr": "دفعت النهارده عن حاجة هتستخدمها بعدين — ده أصل (حق استخدام) لحد ما تستهلكه.",
+      "exampleAr": "إيجار المخزن 3 شهور مقدمًا = 18,000 أصل؛ كل شهر 6,000 يتحول مصروف.",
+      "relatedTermIds": [
+        "T-ASSET",
+        "T-EXPENSE",
+        "T-ACCRUAL-BASIS"
+      ],
+      "skillIds": [
+        "ACC.EVENT",
+        "ACC.EQ"
+      ],
+      "release": "R1"
+    },
+    {
+      "id": "T-ACCRUAL-BASIS",
+      "ar": "أساس الاستحقاق",
+      "en": "Accrual basis",
+      "formalAr": "إثبات الإيرادات عند تحققها والمصروفات عند حدوثها بغض النظر عن التدفق النقدي",
+      "egyptianAr": "بنسجل الإيراد لما نكسبه والمصروف لما نستهلكه — مش لما الفلوس تتحرك.",
+      "exampleAr": "بيع آجل لمكتبة النور اتسجل إيراد يوم التسليم مع إن التحصيل بعدين.",
+      "relatedTermIds": [
+        "T-CASH-BASIS",
+        "T-REVENUE"
+      ],
+      "skillIds": [
+        "ACC.EVENT"
+      ],
+      "release": "R1"
+    },
+    {
+      "id": "T-CASH-BASIS",
+      "ar": "الأساس النقدي",
+      "en": "Cash basis",
+      "formalAr": "إثبات الإيرادات والمصروفات عند القبض والدفع فقط",
+      "egyptianAr": "طريقة بسيطة بتسجل لما الفلوس تدخل أو تطلع بس. الشركات المنظمة غالبًا بتستخدم الاستحقاق.",
+      "exampleAr": "لو كنا على الأساس النقدي، بيعة مكتبة النور ما كانتش هتظهر لحد التحصيل.",
+      "relatedTermIds": [
+        "T-ACCRUAL-BASIS"
+      ],
+      "skillIds": [
+        "ACC.EVENT"
+      ],
+      "release": "R1"
+    },
+    {
+      "id": "T-AR",
+      "ar": "العملاء (حسابات مدينة)",
+      "en": "Accounts receivable (AR)",
+      "formalAr": "المبالغ المستحقة للمنشأة على عملائها",
+      "egyptianAr": "فلوس ليك عند عملاء اشتروا على الحساب — أصل.",
+      "exampleAr": "مكتبة النور عليها 17,500 بعد الأسبوع الأول.",
+      "relatedTermIds": [
+        "T-INVOICE",
+        "T-CREDIT-NOTE"
+      ],
+      "skillIds": [
+        "AR.CORE"
+      ],
+      "release": "R1"
+    },
+    {
+      "id": "T-AP",
+      "ar": "الموردون (حسابات دائنة)",
+      "en": "Accounts payable (AP)",
+      "formalAr": "المبالغ المستحقة على المنشأة لمورديها",
+      "egyptianAr": "فلوس عليك لموردين اشتريت منهم على الحساب — التزام.",
+      "exampleAr": "علينا لمصنع الوادي 98,900 بعد 17 مارس.",
+      "relatedTermIds": [
+        "T-3WAY",
+        "T-DEBIT-NOTE"
+      ],
+      "skillIds": [
+        "AP.CORE"
+      ],
+      "release": "R1"
+    },
+    {
+      "id": "T-PO",
+      "ar": "أمر شراء",
+      "en": "Purchase order (PO)",
+      "formalAr": "مستند يصدر من المنشأة للمورد بطلب أصناف وكميات وأسعار محددة",
+      "egyptianAr": "الطلب الرسمي اللي بنبعته للمورد: عايزين كذا بكذا.",
+      "exampleAr": "PO-001: 500 كرتونة ورق × 180.",
+      "relatedTermIds": [
+        "T-GRN",
+        "T-3WAY"
+      ],
+      "skillIds": [
+        "AP.CORE",
+        "ACC.DOC"
+      ],
+      "release": "R1"
+    },
+    {
+      "id": "T-GRN",
+      "ar": "إذن استلام",
+      "en": "Goods received note (GRN)",
+      "formalAr": "مستند يثبت استلام الأصناف فعليًا بالمخزن",
+      "egyptianAr": "ورقة المخزن اللي بتقول استلمنا إيه فعلًا وبكام كمية.",
+      "exampleAr": "GRN-003 مكتوب فيه إن سواقنا استلم البضاعة بنفسه.",
+      "relatedTermIds": [
+        "T-PO",
+        "T-3WAY"
+      ],
+      "skillIds": [
+        "AP.CORE",
+        "ACC.DOC"
+      ],
+      "release": "R1"
+    },
+    {
+      "id": "T-3WAY",
+      "ar": "المطابقة الثلاثية",
+      "en": "Three-way match",
+      "formalAr": "مطابقة أمر الشراء مع إذن الاستلام مع فاتورة المورد قبل الاعتماد والسداد",
+      "egyptianAr": "قبل ما نسجل أو ندفع: اللي طلبناه = اللي استلمناه = اللي في الفاتورة (كمية وسعر).",
+      "exampleAr": "PO-001 (500×180) = GRN-001 (500) = فاتورة S1 (90,000).",
+      "relatedTermIds": [
+        "T-PO",
+        "T-GRN",
+        "T-INVOICE"
+      ],
+      "skillIds": [
+        "AP.CORE",
+        "CTRL.CORE"
+      ],
+      "release": "R1"
+    },
+    {
+      "id": "T-INVOICE",
+      "ar": "فاتورة",
+      "en": "Invoice",
+      "formalAr": "مستند يطالب بقيمة بضاعة أو خدمة مقدمة",
+      "egyptianAr": "ورقة البيع أو الشراء اللي فيها الأصناف والكميات والأسعار والإجمالي.",
+      "exampleAr": "INV-001 لمكتبة النور بـ 50,000.",
+      "relatedTermIds": [
+        "T-CREDIT-NOTE",
+        "T-AR"
+      ],
+      "skillIds": [
+        "AR.CORE",
+        "ACC.DOC"
+      ],
+      "release": "R1"
+    },
+    {
+      "id": "T-CREDIT-NOTE",
+      "ar": "إشعار دائن",
+      "en": "Credit note",
+      "formalAr": "مستند يصدره البائع لتخفيض مديونية العميل",
+      "egyptianAr": "ورقة بنعملها للعميل لما يرجّع بضاعة أو نديله خصم — بتقلل اللي عليه.",
+      "exampleAr": "CN-001 لمكتبة النور بـ 2,500 عن 10 كراتين مرتجعة.",
+      "relatedTermIds": [
+        "T-SALES-RETURNS",
+        "T-DEBIT-NOTE"
+      ],
+      "skillIds": [
+        "AR.CORE"
+      ],
+      "release": "R1"
+    },
+    {
+      "id": "T-DEBIT-NOTE",
+      "ar": "إشعار مدين",
+      "en": "Debit note",
+      "formalAr": "مستند يصدره المشتري لتخفيض مستحقات المورد",
+      "egyptianAr": "ورقة بنبعتها للمورد لما نرجّع بضاعة معيبة — بتقلل اللي علينا ليه.",
+      "exampleAr": "إشعار مدين لـ S2 بـ 2,250 عن 5 خراطيش معيبة.",
+      "relatedTermIds": [
+        "T-CREDIT-NOTE",
+        "T-AP"
+      ],
+      "skillIds": [
+        "AP.CORE"
+      ],
+      "release": "R1"
+    },
+    {
+      "id": "T-COGS",
+      "ar": "تكلفة البضاعة المباعة",
+      "en": "Cost of goods sold (COGS)",
+      "formalAr": "تكلفة الأصناف التي تم بيعها خلال الفترة",
+      "egyptianAr": "اللي البضاعة اللي اتباعت كانت كلفتنا — مش سعر البيع.",
+      "exampleAr": "بيع 200 كرتونة تكلفتها 180 = 36,000 تكلفة.",
+      "relatedTermIds": [
+        "T-PERPETUAL",
+        "T-GROSS-PROFIT"
+      ],
+      "skillIds": [
+        "INV.CORE"
+      ],
+      "release": "R1"
+    },
+    {
+      "id": "T-PERPETUAL",
+      "ar": "الجرد المستمر",
+      "en": "Perpetual inventory",
+      "formalAr": "نظام يحدّث رصيد المخزون وتكلفته مع كل حركة",
+      "egyptianAr": "كل شراء أو بيع بيتسجل في المخزون فورًا، فبنعرف الرصيد في أي لحظة.",
+      "exampleAr": "بعد E17 كارت الورق بيقول 320 كرتونة = 59,200.",
+      "relatedTermIds": [
+        "T-COGS",
+        "T-MOVING-AVG"
+      ],
+      "skillIds": [
+        "INV.CORE"
+      ],
+      "release": "R1"
+    },
+    {
+      "id": "T-MOVING-AVG",
+      "ar": "المتوسط المرجّح المتحرك",
+      "en": "Moving weighted average",
+      "formalAr": "إعادة حساب متوسط تكلفة الوحدة بعد كل شراء",
+      "egyptianAr": "بعد كل شراء نقسم إجمالي التكلفة على إجمالي الكمية، ونصرف بالمتوسط ده.",
+      "exampleAr": "(55,800 + 58,900) ÷ 620 = 185 للكرتونة.",
+      "relatedTermIds": [
+        "T-FIFO",
+        "T-PERPETUAL"
+      ],
+      "skillIds": [
+        "INV.CORE",
+        "INV.COST"
+      ],
+      "release": "R1"
+    },
+    {
+      "id": "T-FIFO",
+      "ar": "الوارد أولًا صادر أولًا",
+      "en": "First-in, first-out (FIFO)",
+      "formalAr": "افتراض صرف أقدم الوحدات أولًا",
+      "egyptianAr": "نفترض إن أقدم بضاعة دخلت هي اللي بتطلع الأول.",
+      "exampleAr": "لو FIFO، تكلفة E17 = 300 × 180 = 54,000.",
+      "relatedTermIds": [
+        "T-MOVING-AVG"
+      ],
+      "skillIds": [
+        "INV.COST"
+      ],
+      "release": "R1"
+    },
+    {
+      "id": "T-GROSS-PROFIT",
+      "ar": "مجمل الربح",
+      "en": "Gross profit",
+      "formalAr": "صافي المبيعات ناقص تكلفة البضاعة المباعة",
+      "egyptianAr": "اللي فاضل من البيع بعد ما نطرح تكلفة البضاعة — قبل باقي المصروفات.",
+      "exampleAr": "بيعة مكتبة النور: 50,000 − 36,000 = 14,000.",
+      "relatedTermIds": [
+        "T-COGS",
+        "T-INCOME-STATEMENT"
+      ],
+      "skillIds": [
+        "STMT.READ"
+      ],
+      "release": "R1"
+    },
+    {
+      "id": "T-PETTY-CASH",
+      "ar": "العهدة النثرية (السلفة المستديمة)",
+      "en": "Petty cash (imprest)",
+      "formalAr": "مبلغ ثابت لدى أمين العهدة للمصروفات الصغيرة يُعوَّض بالمستندات",
+      "egyptianAr": "فلوس صغيرة ثابتة مع موظف للمصاريف البسيطة؛ بيقدّم إيصالات ونعوّضه علشان يرجع للمبلغ الأصلي.",
+      "exampleAr": "عهدة 2,000 مع نادية؛ اتعوّضت بـ 1,200 بإيصالات.",
+      "relatedTermIds": [
+        "T-INTERNAL-CONTROL"
+      ],
+      "skillIds": [
+        "CASH.CORE"
+      ],
+      "release": "R1"
+    },
+    {
+      "id": "T-CHEQUE",
+      "ar": "شيك",
+      "en": "Cheque",
+      "formalAr": "أمر كتابي للبنك بدفع مبلغ للمستفيد",
+      "egyptianAr": "ورقة بتأمر البنك يدفع من حسابك لحد. في دفاترنا بنسجل لما نسلّمه، والبنك بيخصم لما يتقدم.",
+      "exampleAr": "الشيك 1002 اتسلم يوم 12 واتصرف يوم 16.",
+      "relatedTermIds": [
+        "T-OUTSTANDING-CHQ",
+        "T-BANK-STATEMENT"
+      ],
+      "skillIds": [
+        "CASH.CORE",
+        "BANK.REC"
+      ],
+      "release": "R1"
+    },
+    {
+      "id": "T-BANK-STATEMENT",
+      "ar": "كشف حساب البنك",
+      "en": "Bank statement",
+      "formalAr": "كشف يصدره البنك بحركات حساب العميل ورصيده",
+      "egyptianAr": "ورقة البنك بحركات حسابك. مكتوبة من وجهة نظر البنك: الدائن فيها بيزوّد رصيدك.",
+      "exampleAr": "كشف 1–15 مارس رصيده 274,875.",
+      "relatedTermIds": [
+        "T-BANK-REC"
+      ],
+      "skillIds": [
+        "BANK.REC"
+      ],
+      "release": "R1"
+    },
+    {
+      "id": "T-BANK-REC",
+      "ar": "التسوية البنكية",
+      "en": "Bank reconciliation",
+      "formalAr": "مطابقة رصيد البنك في الدفاتر مع رصيد كشف البنك وتفسير الفروق",
+      "egyptianAr": "نشرح ليه رصيد دفاترنا مختلف عن كشف البنك: بنود توقيت (من غير قيد) وبنود في الدفاتر (محتاجة قيد).",
+      "exampleAr": "224,875 دفاتر بعد العمولة = 274,875 كشف − شيك معلّق 50,000.",
+      "relatedTermIds": [
+        "T-DIT",
+        "T-OUTSTANDING-CHQ",
+        "T-BANK-STATEMENT"
+      ],
+      "skillIds": [
+        "BANK.REC"
+      ],
+      "release": "R1"
+    },
+    {
+      "id": "T-DIT",
+      "ar": "إيداع في الطريق",
+      "en": "Deposit in transit",
+      "formalAr": "إيداع مسجل بالدفاتر ولم يظهر بعد في كشف البنك",
+      "egyptianAr": "فلوس أودعناها وسجلناها، بس البنك لسه ما أضافهاش للكشف. بند توقيت — مالوش قيد.",
+      "exampleAr": "شيك مكتبة النور المودع 31 مارس واتضاف 1 أبريل.",
+      "relatedTermIds": [
+        "T-BANK-REC",
+        "T-OUTSTANDING-CHQ"
+      ],
+      "skillIds": [
+        "BANK.REC"
+      ],
+      "release": "R1"
+    },
+    {
+      "id": "T-OUTSTANDING-CHQ",
+      "ar": "شيك معلّق (لم يُصرف بعد)",
+      "en": "Outstanding cheque",
+      "formalAr": "شيك صادر مسجل بالدفاتر ولم يقدَّم للبنك بعد",
+      "egyptianAr": "شيك اديناه للمورد وسجلناه، بس هو لسه ما صرفهوش. بند توقيت — مالوش قيد.",
+      "exampleAr": "الشيك 1003 بـ 60,000 لحد 31 مارس.",
+      "relatedTermIds": [
+        "T-BANK-REC",
+        "T-DIT",
+        "T-CHEQUE"
+      ],
+      "skillIds": [
+        "BANK.REC"
+      ],
+      "release": "R1"
+    },
+    {
+      "id": "T-INCOME-STATEMENT",
+      "ar": "قائمة الدخل",
+      "en": "Income statement",
+      "formalAr": "قائمة توضح الإيرادات والمصروفات وصافي الربح عن فترة",
+      "egyptianAr": "القائمة اللي بتقول الشركة كسبت ولا خسرت في الفترة: الإيرادات ناقص المصروفات.",
+      "exampleAr": "صافي ربح مارس 8,355.",
+      "relatedTermIds": [
+        "T-BALANCE-SHEET",
+        "T-GROSS-PROFIT"
+      ],
+      "skillIds": [
+        "STMT.READ"
+      ],
+      "release": "R1"
+    },
+    {
+      "id": "T-BALANCE-SHEET",
+      "ar": "الميزانية (قائمة المركز المالي)",
+      "en": "Balance sheet",
+      "formalAr": "قائمة توضح الأصول والالتزامات وحقوق الملكية في تاريخ معين",
+      "egyptianAr": "صورة للشركة في يوم معين: عندها إيه، وعليها إيه، وحق المالك كام.",
+      "exampleAr": "إجمالي الأصول 31 مارس = 348,555.",
+      "relatedTermIds": [
+        "T-EQUATION",
+        "T-INCOME-STATEMENT"
+      ],
+      "skillIds": [
+        "STMT.READ"
+      ],
+      "release": "R1"
+    },
+    {
+      "id": "T-VAT",
+      "ar": "ضريبة القيمة المضافة",
+      "en": "Value added tax (VAT)",
+      "formalAr": "ضريبة على الاستهلاك تُحصَّل على المبيعات ويُخصم منها ما سُدِّد على المشتريات وفق القانون",
+      "egyptianAr": "ضريبة بتتضاف على سعر البيع (مخرجات) والشركة بتخصم منها اللي دفعته على مشترياتها (مدخلات) — والفرق بيتورّد. ده مستوى توعية بس.",
+      "exampleAr": "تمرين توعية: مخرجات 2,100 − مدخلات 1,400 = 700 مستحق (مبسط).",
+      "relatedTermIds": [
+        "T-INVOICE"
+      ],
+      "skillIds": [
+        "TAX.AWARE"
+      ],
+      "release": "R1"
+    },
+    {
+      "id": "T-INTERNAL-CONTROL",
+      "ar": "الرقابة الداخلية",
+      "en": "Internal control",
+      "formalAr": "سياسات وإجراءات تحمي الأصول وتضمن دقة السجلات",
+      "egyptianAr": "الإجراءات اللي بتمنع الغلط والتلاعب أو تكشفهم: اعتمادات، مطابقات، جرد، فصل مهام.",
+      "exampleAr": "اعتماد المدير لأي دفعة فوق 10,000 (سياسة وهمية).",
+      "relatedTermIds": [
+        "T-SEGREGATION",
+        "T-3WAY"
+      ],
+      "skillIds": [
+        "CTRL.CORE"
+      ],
+      "release": "R1"
+    },
+    {
+      "id": "T-SEGREGATION",
+      "ar": "الفصل بين المهام",
+      "en": "Segregation of duties",
+      "formalAr": "توزيع مراحل العملية على أشخاص مختلفين لتقليل مخاطر الخطأ والغش",
+      "egyptianAr": "اللي بيعتمد الدفع ما يبقاش هو اللي بيسجله أو بيستلم الفلوس — زي مبدأ توازن السلطات.",
+      "exampleAr": "المحاسب يجهز إذن الصرف والمدير يعتمده.",
+      "relatedTermIds": [
+        "T-INTERNAL-CONTROL"
+      ],
+      "skillIds": [
+        "CTRL.CORE"
+      ],
+      "release": "R1"
+    },
+    {
+      "id": "T-CONTRA-ACCOUNT",
+      "ar": "حساب عكسي",
+      "en": "Contra account",
+      "formalAr": "حساب رصيده عكس طبيعة الحساب المرتبط به ويُطرح منه",
+      "egyptianAr": "حساب بيمشي عكس الحساب اللي مرتبط بيه علشان نحتفظ بالرقم الأصلي ظاهر: مردودات المبيعات، مجمع الإهلاك، المسحوبات.",
+      "exampleAr": "مردودات المبيعات (مدين) بتتطرح من المبيعات (دائن).",
+      "relatedTermIds": [
+        "T-SALES-RETURNS",
+        "T-DEBIT"
+      ],
+      "skillIds": [
+        "ACC.DRCR"
+      ],
+      "release": "R1"
+    },
+    {
+      "id": "T-SALES-RETURNS",
+      "ar": "مردودات المبيعات",
+      "en": "Sales returns",
+      "formalAr": "قيمة البضاعة المباعة التي أعادها العملاء",
+      "egyptianAr": "حساب عكسي للمبيعات: بيزيد مدين وبيقلل صافي المبيعات.",
+      "exampleAr": "مردودات مكتبة النور 2,500.",
+      "relatedTermIds": [
+        "T-CONTRA-ACCOUNT",
+        "T-CREDIT-NOTE"
+      ],
+      "skillIds": [
+        "AR.CORE",
+        "INV.CORE"
+      ],
+      "release": "R1"
+    },
+    {
+      "id": "T-POSTING",
+      "ar": "الترحيل",
+      "en": "Posting",
+      "formalAr": "نقل مبالغ القيود من دفتر اليومية إلى حساباتها في دفتر الأستاذ",
+      "egyptianAr": "كل سطر في القيد بيروح لصفحة حسابه في الأستاذ علشان نعرف رصيد كل حساب لوحده.",
+      "exampleAr": "سطر «من حـ/ المخزون 90,000» في E05 بيترحّل للجانب المدين من حساب المخزون.",
+      "relatedTermIds": [
+        "T-LEDGER",
+        "T-T-ACCOUNT",
+        "T-JOURNAL-ENTRY"
+      ],
+      "skillIds": [
+        "ACC.POST"
+      ],
+      "release": "R1"
+    },
+    {
+      "id": "T-NORMAL-BALANCE",
+      "ar": "الرصيد الطبيعي",
+      "en": "Normal balance",
+      "formalAr": "الجانب الذي يزيد فيه الحساب ويظهر فيه رصيده عادةً",
+      "egyptianAr": "الجانب اللي الحساب بيزيد فيه: الأصول والمصروفات مدين، والالتزامات وحقوق الملكية والإيرادات دائن.",
+      "exampleAr": "المخزون رصيده الطبيعي مدين، والموردون دائن.",
+      "relatedTermIds": [
+        "T-DEBIT",
+        "T-CREDIT",
+        "T-CONTRA-ACCOUNT"
+      ],
+      "skillIds": [
+        "ACC.DRCR"
+      ],
+      "release": "R1"
+    },
+    {
+      "id": "T-SUBLEDGER",
+      "ar": "الحساب الفرعي (دفتر الأستاذ المساعد)",
+      "en": "Subsidiary ledger",
+      "formalAr": "دفتر تفصيلي لكل عميل أو مورد أو صنف، مجموعه يساوي الحساب الإجمالي",
+      "egyptianAr": "حساب لكل عميل أو مورد لوحده تحت الحساب الإجمالي؛ مجموعهم لازم يساوي الإجمالي.",
+      "exampleAr": "الموردون 135,000 = مصنع الوادي 90,000 + الحبر الذهبي 45,000.",
+      "relatedTermIds": [
+        "T-AR",
+        "T-AP",
+        "T-LEDGER"
+      ],
+      "skillIds": [
+        "AR.CORE",
+        "AP.CORE"
+      ],
+      "release": "R1"
+    },
+    {
+      "id": "T-PURCHASE-RETURNS",
+      "ar": "مردودات المشتريات",
+      "en": "Purchase returns",
+      "formalAr": "البضاعة التي تُرد إلى المورد لعيب أو مخالفة، وتُخفض بها المستحقات أو يُسترد ثمنها",
+      "egyptianAr": "بضاعة بنرجّعها للمورد؛ في الجرد المستمر بتخرج من المخزون بتكلفتها والمورد يخصم من اللي علينا.",
+      "exampleAr": "E12: إرجاع 5 خراطيش للحبر الذهبي بـ 2,250 بإشعار مدين.",
+      "relatedTermIds": [
+        "T-DEBIT-NOTE",
+        "T-AP",
+        "T-PERPETUAL"
+      ],
+      "skillIds": [
+        "AP.CORE",
+        "INV.CORE"
+      ],
+      "release": "R1"
+    },
+    {
+      "id": "T-CUSTOMER-STATEMENT",
+      "ar": "كشف حساب العميل",
+      "en": "Customer statement",
+      "formalAr": "بيان بحركات حساب العميل ورصيده يُرسل إليه للمطابقة",
+      "egyptianAr": "صورة من حساب العميل عندنا: فواتير وإشعارات دائنة وتحصيلات ورصيد متحرك — بنبعته له يطابقه مع دفاتره.",
+      "exampleAr": "كشف مكتبة النور لحد 11 مارس: 50,000 − 2,500 − 30,000 = 17,500.",
+      "relatedTermIds": [
+        "T-AR",
+        "T-CREDIT-NOTE",
+        "T-INVOICE"
+      ],
+      "skillIds": [
+        "AR.CORE",
+        "COMM.CORE"
+      ],
+      "release": "R1"
+    },
+    {
+      "id": "T-INPUT-VAT",
+      "ar": "ضريبة المدخلات",
+      "en": "Input VAT",
+      "formalAr": "ضريبة القيمة المضافة المسددة على المشتريات والقابلة للخصم وفق القانون",
+      "egyptianAr": "الضريبة اللي دفعناها على مشترياتنا؛ لو قابلة للخصم بتتخصم من ضريبة المخرجات. مستوى توعية بس.",
+      "exampleAr": "تمرين مبسّط: شراء 10,000 + مدخلات 1,400.",
+      "relatedTermIds": [
+        "T-VAT"
+      ],
+      "skillIds": [
+        "TAX.AWARE"
+      ],
+      "release": "R1"
+    },
+    {
+      "id": "T-OUTPUT-VAT",
+      "ar": "ضريبة المخرجات",
+      "en": "Output VAT",
+      "formalAr": "ضريبة القيمة المضافة المحصلة على المبيعات لحساب الدولة",
+      "egyptianAr": "الضريبة اللي بنضيفها على فاتورة البيع ونحصّلها من العميل لحساب الدولة — مش إيراد لينا.",
+      "exampleAr": "تمرين مبسّط: بيع 15,000 + مخرجات 2,100؛ الصافي المستحق 2,100 − 1,400 = 700.",
+      "relatedTermIds": [
+        "T-VAT"
+      ],
+      "skillIds": [
+        "TAX.AWARE"
+      ],
+      "release": "R1"
+    },
+    {
+      "id": "T-RETURNED-CHEQUE",
+      "ar": "شيك مرتد",
+      "en": "Returned (dishonoured) cheque",
+      "formalAr": "شيك أودع ولم يُصرف لعدم كفاية الرصيد أو لسبب آخر فخصمه البنك من الحساب",
+      "egyptianAr": "شيك عميل أودعناه ورجع من غير ما يتصرف؛ البنك بيخصمه تاني، وإحنا نرجّع المبلغ على حساب العميل بقيد.",
+      "exampleAr": "شيك 1,500 رجع: من حـ/ العملاء إلى حـ/ البنك 1,500.",
+      "relatedTermIds": [
+        "T-BANK-REC",
+        "T-CHEQUE",
+        "T-AR"
+      ],
+      "skillIds": [
+        "BANK.REC",
+        "AR.CORE"
+      ],
+      "release": "R1"
+    },
+    {
+      "id": "T-INVENTORY-CARD",
+      "ar": "كارت الصنف",
+      "en": "Inventory (stock) card",
+      "formalAr": "بطاقة الصنف",
+      "egyptianAr": "ورقة لكل صنف فيها الداخل والخارج والرصيد بالكمية والتكلفة، بتتحدّث مع كل حركة.",
+      "exampleAr": "كارت الورق بعد E16: 620 كرتونة بـ 114,700 — متوسط 185.",
+      "relatedTermIds": [
+        "T-PERPETUAL",
+        "T-MOVING-AVG",
+        "T-COGS"
+      ],
+      "skillIds": [
+        "INV.CORE",
+        "INV.COST"
+      ],
+      "release": "R1"
+    },
+    {
+      "id": "T-TRANSPOSITION",
+      "ar": "خطأ تبديل الأرقام",
+      "en": "Transposition error",
+      "egyptianAr": "رقمين جنب بعض اتبدّلوا وإنت بتكتب، زي 510 بدل 150 — والفرق بيقبل القسمة على 9.",
+      "exampleAr": "الضيافة 150 اتكتبت 510 في مسودة الميزان ← فرق 360 = 9 × 40.",
+      "relatedTermIds": [
+        "T-TRIAL-BALANCE"
+      ],
+      "skillIds": [
+        "ACC.TB"
+      ],
+      "release": "R1"
+    },
+    {
+      "id": "T-CORRECTING-ENTRY",
+      "ar": "قيد التصحيح",
+      "en": "Correcting entry",
+      "egyptianAr": "قيد بيصلّح غلط اتسجّل قبل كده، بدل المسح أو الكشط، علشان الأثر يفضل مقروء.",
+      "exampleAr": "فاتورة اترحّلت مرتين ← قيد عكسي لنسخة واحدة بتاريخ الاكتشاف.",
+      "relatedTermIds": [
+        "T-JOURNAL-ENTRY",
+        "T-TRIAL-BALANCE"
+      ],
+      "skillIds": [
+        "ACC.TB",
+        "ACC.JE"
+      ],
+      "release": "R1"
+    },
+    {
+      "id": "T-NET-SALES",
+      "ar": "صافي المبيعات",
+      "en": "Net sales",
+      "egyptianAr": "المبيعات بعد ما نطرح المرتجعات (والخصومات).",
+      "exampleAr": "ميزان 18 مارس: 142,000 − 2,500 = 139,500.",
+      "relatedTermIds": [
+        "T-SALES-RETURNS",
+        "T-INCOME-STATEMENT",
+        "T-GROSS-PROFIT"
+      ],
+      "skillIds": [
+        "STMT.READ"
+      ],
+      "release": "R1"
+    },
+    {
+      "id": "T-CUTOFF",
+      "ar": "قطع الفترة",
+      "en": "Cut-off",
+      "formalAr": "الفصل بين الفترات المحاسبية",
+      "egyptianAr": "كل حدث يتسجّل في الفترة اللي حصل فيها فعلًا حسب المستند.",
+      "exampleAr": "بيعة اتسلّمت 2 أبريل ← إيراد أبريل حتى لو حد طلب يدخّلها في مارس.",
+      "relatedTermIds": [
+        "T-ACCRUAL-BASIS"
+      ],
+      "skillIds": [
+        "ACC.EVENT",
+        "CTRL.CORE"
+      ],
+      "release": "R1"
+    },
+    {
+      "id": "T-APPROVAL-LIMIT",
+      "ar": "حد الاعتماد",
+      "en": "Approval (authorisation) limit",
+      "egyptianAr": "أكبر مبلغ ينفع يتصرف من غير اعتماد مستوى أعلى.",
+      "exampleAr": "في شركة المعمل (سياسة وهمية): أي دفعة أكبر من 10,000 لازم تعتمدها المديرة — وتقسيم الدفعة للالتفاف ممنوع.",
+      "relatedTermIds": [
+        "T-INTERNAL-CONTROL",
+        "T-SEGREGATION"
+      ],
+      "skillIds": [
+        "CTRL.CORE"
+      ],
+      "release": "R1"
+    },
+    {
+      "id": "T-ESCALATION",
+      "ar": "التصعيد",
+      "en": "Escalation",
+      "egyptianAr": "توصيل المشكلة بالحقايق لصاحب الصلاحية بدل ما تقرر لوحدك.",
+      "exampleAr": "طلب تأريخ بأثر رجعي استمر بعد ما اعتذرت ← تبلّغ مديرك بالطلب والسبب.",
+      "relatedTermIds": [
+        "T-INTERNAL-CONTROL"
+      ],
+      "skillIds": [
+        "CTRL.CORE",
+        "COMM.CORE"
+      ],
+      "release": "R1"
+    },
+    {
+      "id": "T-ADJUSTING-ENTRY",
+      "ar": "قيد التسوية",
+      "en": "Adjusting entry",
+      "egyptianAr": "قيد آخر الفترة لحاجة اتستهلكت أو اتكسبت مع الوقت من غير مستند جديد.",
+      "exampleAr": "جزء مارس من الإيجار المقدم بيتحوّل لمصروف آخر الشهر.",
+      "relatedTermIds": [
+        "T-PREPAID",
+        "T-ACCRUAL-BASIS"
+      ],
+      "skillIds": [
+        "ADJ.CORE"
+      ],
+      "release": "R1"
+    },
+    {
+      "id": "T-ACCRUED-EXPENSE",
+      "ar": "مصروف مستحق",
+      "en": "Accrued expense",
+      "formalAr": "مصروف خاص بالفترة الحالية تم استهلاكه ولم يُسدَّد بعد، ويُثبت كالتزام",
+      "egyptianAr": "حاجة استهلكناها الشهر ده ولسه ما دفعناش تمنها — وممكن الفاتورة نفسها لسه ما وصلتش. بنسجّلها مصروف الشهر ده والتزام علينا.",
+      "exampleAr": "كهربا مارس في شركة المعمل 900 والفاتورة جاية في أبريل (A04): من حـ/ مصروف المرافق والاتصالات إلى حـ/ مصروفات مستحقة 900.",
+      "relatedTermIds": [
+        "T-ADJUSTING-ENTRY",
+        "T-ACCRUAL-BASIS",
+        "T-LIABILITY"
+      ],
+      "skillIds": [
+        "ADJ.CORE"
+      ],
+      "release": "R2"
+    },
+    {
+      "id": "T-CUSTOMER-ADVANCE",
+      "ar": "دفعة مقدمة من عميل (إيراد مقدّم)",
+      "en": "Customer advance (unearned revenue)",
+      "formalAr": "مبالغ مُحصّلة من العميل قبل تسليم السلعة أو أداء الخدمة، وتُعد التزامًا حتى التسليم",
+      "egyptianAr": "العميل دفع قبل ما نسلّمه. الفلوس دي مش إيراد لسه — ده وعد علينا بالتسليم، فهي التزام لحد ما نسلّم.",
+      "exampleAr": "مدرسة المستقبل دفعت 10,000 مقدّم (E19)، وبعد تسليم 10 خراطيش بـ 7,000 (E23) فضل 3,000 التزام في آخر مارس.",
+      "relatedTermIds": [
+        "T-LIABILITY",
+        "T-REVENUE",
+        "T-ADJUSTING-ENTRY"
+      ],
+      "skillIds": [
+        "ADJ.CORE",
+        "AR.CORE"
+      ],
+      "release": "R2"
+    },
+    {
+      "id": "T-DEPRECIATION",
+      "ar": "الإهلاك",
+      "en": "Depreciation",
+      "formalAr": "توزيع تكلفة الأصل الثابت القابلة للإهلاك على عمره الإنتاجي بطريقة منتظمة",
+      "egyptianAr": "الأصل اللي اشتريناه بيخدمنا سنين، فبنحمّل كل شهر جزء من تمنه كمصروف. مفيش فلوس بتطلع وقت قيد الإهلاك — الفلوس طلعت يوم الشراء.",
+      "exampleAr": "معدات شركة المعمل 36,000 على 36 شهر = إهلاك 1,000 في مارس (A03): من حـ/ مصروف الإهلاك إلى حـ/ مجمع الإهلاك.",
+      "relatedTermIds": [
+        "T-ACCUM-DEPRECIATION",
+        "T-ASSET",
+        "T-ADJUSTING-ENTRY"
+      ],
+      "skillIds": [
+        "FA.CORE",
+        "ADJ.CORE"
+      ],
+      "release": "R2"
+    },
+    {
+      "id": "T-ACCUM-DEPRECIATION",
+      "ar": "مجمع الإهلاك",
+      "en": "Accumulated depreciation",
+      "formalAr": "حساب مقابل للأصل الثابت يتجمّع فيه الإهلاك المسجّل منذ الشراء، ويُطرح من التكلفة لإظهار صافي القيمة الدفترية",
+      "egyptianAr": "حساب عكسي بنجمّع فيه الإهلاك شهر ورا شهر بدل ما نقلل تكلفة الأصل نفسها. التكلفة ناقص المجمع = صافي القيمة الدفترية.",
+      "exampleAr": "آخر مارس: المعدات 36,000 − مجمع الإهلاك 1,000 = صافي 35,000 في الميزانية.",
+      "relatedTermIds": [
+        "T-DEPRECIATION",
+        "T-CONTRA-ACCOUNT",
+        "T-BALANCE-SHEET"
+      ],
+      "skillIds": [
+        "FA.CORE"
+      ],
+      "release": "R2"
+    },
+    {
+      "id": "T-AGING",
+      "ar": "تحليل أعمار الديون",
+      "en": "Accounts receivable aging",
+      "formalAr": "تقرير يقسّم أرصدة العملاء حسب مدة التأخير بعد تاريخ الاستحقاق",
+      "egyptianAr": "بنقسّم فلوسنا عند العملاء على شرايح: لسه ما استحقتش، متأخرة 1–30 يوم، 31–60، وأكتر من 60. كل ما الشريحة تكبر الخطر يزيد والمتابعة تبقى أشد.",
+      "exampleAr": "فاتورة استحقاقها 1 مارس ولسه مفتوحة يوم 31 مارس = متأخرة 30 يوم → شريحة 1–30.",
+      "relatedTermIds": [
+        "T-AR",
+        "T-ALLOWANCE-DOUBTFUL",
+        "T-CUSTOMER-STATEMENT"
+      ],
+      "skillIds": [
+        "AR.AGING"
+      ],
+      "release": "R2"
+    },
+    {
+      "id": "T-ALLOWANCE-DOUBTFUL",
+      "ar": "مخصص الديون المشكوك في تحصيلها",
+      "en": "Allowance for doubtful accounts",
+      "formalAr": "حساب مقابل لحساب العملاء يمثل التقدير المتوقع لعدم التحصيل، ويُكوَّن بمصروف في الفترة",
+      "egyptianAr": "تقدير بالخسارة المتوقعة من العملاء — غالبًا من تحليل الأعمار. بنسجّل مصروف تقديري ونطرح المخصص من العملاء في الميزانية، من غير ما نلمس حساب أي عميل بعينه.",
+      "exampleAr": "عملاء رصيدهم 50,000 ومخصص 2,000 → صافي العملاء في الميزانية 48,000.",
+      "relatedTermIds": [
+        "T-AGING",
+        "T-WRITE-OFF",
+        "T-CONTRA-ACCOUNT"
+      ],
+      "skillIds": [
+        "AR.AGING",
+        "ADJ.CORE"
+      ],
+      "release": "R2"
+    },
+    {
+      "id": "T-WRITE-OFF",
+      "ar": "إعدام دين",
+      "en": "Bad-debt write-off",
+      "formalAr": "شطب رصيد عميل ثبت عدم إمكانية تحصيله بعد استنفاد وسائل التحصيل وبموافقة السلطة المختصة",
+      "egyptianAr": "لما نتأكد إن رصيد عميل معيّن مش هيتحصّل — بعد متابعة موثقة واعتماد المسؤول — بنشيله من حساب العميل. في طريقة المخصص الإعدام بيستخدم المخصص ومش بيعمل مصروف جديد.",
+      "exampleAr": "إعدام 3,000 معتمد: من حـ/ مخصص الديون المشكوك في تحصيلها إلى حـ/ العملاء 3,000 — صافي العملاء ما بيتغيرش.",
+      "relatedTermIds": [
+        "T-ALLOWANCE-DOUBTFUL",
+        "T-AR",
+        "T-APPROVAL-LIMIT"
+      ],
+      "skillIds": [
+        "AR.AGING"
+      ],
+      "release": "R2"
+    },
+    {
+      "id": "T-NOTES-RECEIVABLE",
+      "ar": "أوراق القبض",
+      "en": "Notes receivable",
+      "formalAr": "حقوق للمنشأة ثابتة في أوراق تجارية (كالشيكات المؤجلة) تستحق التحصيل في تاريخ لاحق",
+      "egyptianAr": "لما العميل يسدّد بشيك بتاريخ قدّام، حقنا بيتحوّل من «العملاء» لورقة في إيدنا. بيفضل في أوراق القبض لحد ما الشيك يتودع ويتحصّل.",
+      "exampleAr": "الرواد سلّمت شيك مؤجل 20,000 يستحق 15 أبريل (E22): من حـ/ أوراق القبض إلى حـ/ العملاء 20,000.",
+      "relatedTermIds": [
+        "T-POST-DATED-CHEQUE",
+        "T-AR",
+        "T-CHEQUE"
+      ],
+      "skillIds": [
+        "AR.AGING"
+      ],
+      "release": "R2"
+    },
+    {
+      "id": "T-POST-DATED-CHEQUE",
+      "ar": "شيك مؤجل",
+      "en": "Post-dated cheque",
+      "formalAr": "شيك يحمل تاريخ استحقاق لاحق لا يجوز تقديمه للصرف قبله",
+      "egyptianAr": "شيك مكتوب عليه تاريخ لسه ما جاش. ما بيتودعش قبل ميعاده، ومش بند في التسوية البنكية — مكانه أوراق القبض لحد ما يتحصّل.",
+      "exampleAr": "شيك الرواد 20,000 بتاريخ 15 أبريل مش داخل تسوية بنك مارس خالص.",
+      "relatedTermIds": [
+        "T-NOTES-RECEIVABLE",
+        "T-BANK-REC",
+        "T-RETURNED-CHEQUE"
+      ],
+      "skillIds": [
+        "AR.AGING",
+        "BANK.REC"
+      ],
+      "release": "R2"
+    },
+    {
+      "id": "T-SUPPLIER-STMT-REC",
+      "ar": "مطابقة كشف حساب المورد",
+      "en": "Supplier statement reconciliation",
+      "formalAr": "مقارنة رصيد المورد في دفاتر المنشأة برصيده في كشف المورد وتحليل الفروق إلى بنود توقيت وأخطاء ونزاعات",
+      "egyptianAr": "بنحط كشف المورد جنب حسابه عندنا ونفسّر كل فرق: توقيت هيتحل لوحده، ولا غلطة عندنا نقيّدها، ولا غلطة عنده نطلب تصحيحها بالدليل. النزاع ما بيتسجّلش ولا بيتدفع لحد ما يتحل.",
+      "exampleAr": "كشف مصنع الوادي 99,750 ودفاترنا 98,900 → فرق 850 متنازع عليه ومش مترحّل.",
+      "relatedTermIds": [
+        "T-AP",
+        "T-DEBIT-NOTE",
+        "T-3WAY"
+      ],
+      "skillIds": [
+        "AP.RECON"
+      ],
+      "release": "R2"
+    },
+    {
+      "id": "T-PAYROLL",
+      "ar": "كشف الرواتب",
+      "en": "Payroll",
+      "formalAr": "سجل دوري بمستحقات العاملين واستقطاعاتهم وصافي ما يُصرف لهم، وما يترتب عليه من قيود",
+      "egyptianAr": "الكشف الشهري اللي فيه لكل موظف: الأساسي والبدلات (الإجمالي)، والاستقطاعات، والصافي اللي بيتحوّل. مصروف الشركة هو الإجمالي، والاستقطاعات التزام لحد ما تتورّد.",
+      "exampleAr": "رواتب مارس (E24): من حـ/ مصروف الرواتب 24,000 إلى مذكورين: حـ/ البنك 21,600 + حـ/ استقطاعات رواتب مستحقة 2,400 (مبالغ توضيحية).",
+      "relatedTermIds": [
+        "T-GROSS-NET-PAY",
+        "T-COMPOUND-ENTRY",
+        "T-SEGREGATION"
+      ],
+      "skillIds": [
+        "PAY.CORE"
+      ],
+      "release": "R2"
+    },
+    {
+      "id": "T-GROSS-NET-PAY",
+      "ar": "إجمالي الراتب وصافيه",
+      "en": "Gross pay vs net pay",
+      "formalAr": "الإجمالي: مجموع مستحقات العامل قبل الاستقطاعات؛ الصافي: ما يُصرف فعلًا بعد خصم الاستقطاعات",
+      "egyptianAr": "الإجمالي = الأساسي + البدلات، ده اللي بيتسجّل مصروف. الصافي = الإجمالي ناقص الاستقطاعات، ده اللي بيوصل حساب الموظف.",
+      "exampleAr": "إجمالي 24,000 − استقطاعات توضيحية 2,400 = صافي 21,600 اتحوّل من البنك.",
+      "relatedTermIds": [
+        "T-PAYROLL",
+        "T-EXPENSE",
+        "T-LIABILITY"
+      ],
+      "skillIds": [
+        "PAY.CORE"
+      ],
+      "release": "R2"
+    },
+    {
+      "id": "T-CLOSING-ENTRIES",
+      "ar": "قيود الإقفال",
+      "en": "Closing entries",
+      "formalAr": "قيود نهاية الفترة التي تُصفّر الحسابات المؤقتة (الإيرادات والمصروفات والمسحوبات) وتنقل أثرها إلى حقوق الملكية",
+      "egyptianAr": "آخر خطوة في الشهر: بنصفّر الإيرادات والمصروفات والمسحوبات وننقل صافيها لرأس المال، علشان الشهر الجاي يبدأ من صفر. القيود الأصلية فاضلة — مفيش حاجة بتتمسح.",
+      "exampleAr": "شركة المعمل (A06): رأس المال بعد الإقفال 300,000 + 8,355 − 5,000 = 303,355، وميزان ما بعد الإقفال 349,555 = 349,555.",
+      "relatedTermIds": [
+        "T-CAPITAL",
+        "T-TRIAL-BALANCE",
+        "T-INCOME-STATEMENT"
+      ],
+      "skillIds": [
+        "CLOSE.CORE"
+      ],
+      "release": "R2"
+    },
+    {
+      "id": "T-CONTRIBUTION-MARGIN",
+      "ar": "هامش المساهمة",
+      "en": "Contribution margin",
+      "formalAr": "الفرق بين سعر البيع والتكلفة المتغيرة للوحدة، وهو ما تساهم به الوحدة في تغطية التكاليف الثابتة والربح",
+      "egyptianAr": "كل قطعة بنبيعها بتسيب كام بعد تكلفتها المتغيرة؟ الفلوس دي اللي بتغطي الإيجار والمرتبات الثابتة، واللي يفضل بعدهم ربح.",
+      "exampleAr": "منتج بيتباع بـ 200 وتكلفته المتغيرة 120 → هامش المساهمة 80 للقطعة (40%).",
+      "relatedTermIds": [
+        "T-BREAK-EVEN",
+        "T-GROSS-PROFIT",
+        "T-EXPENSE"
+      ],
+      "skillIds": [
+        "COST.CORE"
+      ],
+      "release": "R2"
+    },
+    {
+      "id": "T-BREAK-EVEN",
+      "ar": "نقطة التعادل",
+      "en": "Break-even point",
+      "formalAr": "حجم المبيعات الذي تتساوى عنده الإيرادات مع إجمالي التكاليف فلا يتحقق ربح ولا خسارة",
+      "egyptianAr": "أقل كمية لازم نبيعها علشان ما نخسرش: التكاليف الثابتة ÷ هامش المساهمة للقطعة.",
+      "exampleAr": "تكاليف ثابتة 24,000 ÷ هامش 80 للقطعة = 300 قطعة في الشهر.",
+      "relatedTermIds": [
+        "T-CONTRIBUTION-MARGIN",
+        "T-INCOME-STATEMENT"
+      ],
+      "skillIds": [
+        "COST.CORE"
+      ],
+      "release": "R2"
+    },
+    {
+      "id": "T-BUDGET-VARIANCE",
+      "ar": "انحراف الموازنة",
+      "en": "Budget variance",
+      "formalAr": "الفرق بين المبلغ المخطط في الموازنة والمبلغ الفعلي، ويوصف بأنه ملائم أو غير ملائم",
+      "egyptianAr": "الفرق بين اللي خططنا له واللي حصل فعلًا. إيراد أقل أو مصروف أكتر من الموازنة = في غير صالحنا. والأهم نفهم السبب: سعر؟ كمية؟ حجم نشاط مختلف؟",
+      "exampleAr": "موازنة مصروف النقل 1,000 والفعلي 1,200 → انحراف 200 في غير صالحنا — نسأل: طلبيات أكتر ولا سعر نقل زاد؟",
+      "relatedTermIds": [
+        "T-INCOME-STATEMENT",
+        "T-EXPENSE"
+      ],
+      "skillIds": [
+        "BUD.CORE"
+      ],
+      "release": "R2"
+    },
+    {
+      "id": "T-WORKING-CAPITAL",
+      "ar": "رأس المال العامل",
+      "en": "Working capital",
+      "formalAr": "الفرق بين الأصول المتداولة والالتزامات المتداولة، ومؤشر على السيولة قصيرة الأجل",
+      "egyptianAr": "الحاجات اللي هتتحول فلوس خلال سنة ناقص اللي علينا ندفعه خلال سنة. موجب = نقدر نغطي التزاماتنا القريبة.",
+      "exampleAr": "شركة المعمل آخر مارس: أصول متداولة 313,555 − التزامات متداولة 45,200 = 268,355.",
+      "relatedTermIds": [
+        "T-BALANCE-SHEET",
+        "T-ASSET",
+        "T-LIABILITY"
+      ],
+      "skillIds": [
+        "FIN.RATIO"
+      ],
+      "release": "R2"
+    },
+    {
+      "id": "T-P2P",
+      "ar": "دورة الشراء حتى السداد",
+      "en": "Procure-to-pay (P2P)",
+      "formalAr": "الدورة التشغيلية من طلب الشراء وأمر الشراء والاستلام والفاتورة والمطابقة حتى سداد المورد",
+      "egyptianAr": "رحلة الشراء كلها: طلب ← أمر شراء ← إذن استلام ← فاتورة مورد ← مطابقة ثلاثية ← اعتماد ← سداد ← مطابقة كشف المورد.",
+      "exampleAr": "ورق مصنع الوادي في شركة المعمل: أمر الشراء والاستلام والفاتورة (E05–E06) وبعدين السداد بشيك.",
+      "relatedTermIds": [
+        "T-PO",
+        "T-GRN",
+        "T-3WAY"
+      ],
+      "skillIds": [
+        "BIZ.CORE",
+        "AP.CORE"
+      ],
+      "release": "R2"
+    },
+    {
+      "id": "T-O2C",
+      "ar": "دورة الطلب حتى التحصيل",
+      "en": "Order-to-cash (O2C)",
+      "formalAr": "الدورة التشغيلية من استلام طلب العميل والتسليم والفوترة حتى التحصيل ومتابعة الرصيد",
+      "egyptianAr": "رحلة البيع كلها: طلب العميل ← فحص الائتمان ← تسليم ← فاتورة ← تحصيل وتخصيص ← كشف حساب ومتابعة أعمار.",
+      "exampleAr": "بيع لمكتبة النور: أمر بيع ← إذن تسليم ← فاتورة ← تحصيل بشيك ← كشف حساب العميل.",
+      "relatedTermIds": [
+        "T-INVOICE",
+        "T-AR",
+        "T-CUSTOMER-STATEMENT"
+      ],
+      "skillIds": [
+        "BIZ.CORE",
+        "AR.CORE"
+      ],
+      "release": "R2"
+    },
+    {
+      "id": "T-ERP",
+      "ar": "نظام تخطيط موارد المؤسسة",
+      "en": "Enterprise resource planning (ERP)",
+      "formalAr": "نظام متكامل يربط المشتريات والمبيعات والمخزون والحسابات وغيرها في قاعدة بيانات واحدة",
+      "egyptianAr": "برنامج واحد بيربط أقسام الشركة: المستند بيتسجّل مرة واحدة والنظام بيعمل القيد تلقائي، والمحاسب بيراجع ويطابق ويطلّع التقارير. النظام ما بيلغيش الحاجة لفهم القيد.",
+      "exampleAr": "إذن الاستلام اللي المخزن بيسجّله بيعمل قيد المخزون تلقائي، وفاتورة المورد بتتطابق معاه قبل ما السداد يتفتح.",
+      "relatedTermIds": [
+        "T-JOURNAL-ENTRY",
+        "T-3WAY",
+        "T-SOURCE-DOC"
+      ],
+      "skillIds": [
+        "ERP.AWARE"
+      ],
+      "release": "R2"
+    },
+    {
+      "id": "T-DRAWINGS",
+      "ar": "المسحوبات الشخصية",
+      "en": "Owner's drawings",
+      "formalAr": "ما يسحبه مالك المنشأة الفردية من أصولها لاستخدامه الشخصي، ويُخصم من حقوق الملكية",
+      "egyptianAr": "فلوس أو بضاعة المالك بياخدها لنفسه من الشركة. مش مصروف — بتقلل حقه في الشركة ومش بتعدّي على قائمة الدخل.",
+      "exampleAr": "أ. حسام سحب 5,000 من الصندوق لمصاريف شخصية (E20): من حـ/ المسحوبات الشخصية إلى حـ/ الصندوق.",
+      "relatedTermIds": [
+        "T-EQUITY",
+        "T-CAPITAL",
+        "T-CONTRA-ACCOUNT"
+      ],
+      "skillIds": [
+        "ACC.EQ",
+        "ACC.JE"
+      ],
+      "release": "R2"
+    },
+    {
+      "id": "T-CREDIT-LIMIT",
+      "ar": "حد الائتمان",
+      "en": "Credit limit",
+      "formalAr": "الحد الأقصى للرصيد المدين المسموح به للعميل في البيع الآجل",
+      "egyptianAr": "أقصى مبلغ مسموح العميل يبقى مديون بيه لينا. لو الطلب الجديد هيعدّيه، الآجل يقف لحد موافقة صاحب الصلاحية.",
+      "exampleAr": "«مؤسسة الإعمار (تدريبي)» رصيدها 19,200 والحد 15,000 ← أي توريد آجل جديد محتاج موافقة مكتوبة.",
+      "relatedTermIds": [
+        "T-AGING",
+        "T-AR",
+        "T-APPROVAL-LIMIT"
+      ],
+      "skillIds": [
+        "AR.AGING",
+        "CTRL.CORE"
+      ],
+      "release": "R2"
+    },
+    {
+      "id": "T-SUPPLIER-DISPUTE",
+      "ar": "بند متنازع عليه مع مورد",
+      "en": "Disputed supplier item",
+      "egyptianAr": "سطر في كشف أو فاتورة مورد مش متفقين عليه ومفيش مستند يثبته. ما بيترحّلش؛ بيتبعت فيه خطاب بالدليل ويتسجّل في سجل الاستثناءات.",
+      "exampleAr": "رسوم توصيل 850 في كشف مصنع الوادي، و GRN-003 بيقول إن عربيتنا استلمت من المصنع ← نزاع من غير قيد.",
+      "relatedTermIds": [
+        "T-SUPPLIER-STMT-REC",
+        "T-GRN",
+        "T-CREDIT-NOTE"
+      ],
+      "skillIds": [
+        "AP.RECON",
+        "COMM.CORE"
+      ],
+      "release": "R2"
+    },
+    {
+      "id": "T-EXCEPTION-LOG",
+      "ar": "سجل الاستثناءات",
+      "en": "Exception log",
+      "egyptianAr": "جدول بكل حاجة مفتوحة لسه ما اتحلتش: البند، المبلغ، التاريخ، المسؤول، وميعاد المتابعة — علشان ولا مشكلة تتنسى.",
+      "exampleAr": "بند: رسوم الوادي 850 — متنازع عليها — خطاب اتبعت 26 مارس — متابعة 2 أبريل.",
+      "relatedTermIds": [
+        "T-SUPPLIER-STMT-REC",
+        "T-INTERNAL-CONTROL",
+        "T-ESCALATION"
+      ],
+      "skillIds": [
+        "CTRL.CORE",
+        "AP.RECON"
+      ],
+      "release": "R2"
+    },
+    {
+      "id": "T-PAYROLL-DEDUCTIONS",
+      "ar": "استقطاعات رواتب مستحقة",
+      "en": "Payroll deductions payable",
+      "formalAr": "المبالغ المستقطعة من رواتب العاملين والمستحق توريدها للجهات المختصة",
+      "egyptianAr": "الفلوس اللي الشركة خصمتها من مرتبات الموظفين وهتورّدها لجهات تانية. مش بتاعة الشركة — التزام عليها لحد ما تتورّد.",
+      "exampleAr": "رواتب مارس: استقطاعات توضيحية 2,400 ← التزام في الميزانية. يوم التوريد: من حـ/ استقطاعات رواتب مستحقة إلى حـ/ البنك، من غير مصروف جديد.",
+      "relatedTermIds": [
+        "T-GROSS-NET-PAY",
+        "T-PAYROLL",
+        "T-LIABILITY"
+      ],
+      "skillIds": [
+        "PAY.CORE"
+      ],
+      "release": "R2"
+    },
+    {
+      "id": "T-VOID-CHEQUE",
+      "ar": "شيك ملغي",
+      "en": "Void (cancelled) cheque",
+      "egyptianAr": "شيك اتكتب غلط أو اتلغى قبل ما يتصرف. بيتختم «ملغي» ويتحفظ مع كعبه — ما بيتقطعش — ولو كان اتسجّل، قيده بيتعكس.",
+      "exampleAr": "شيك 2231 في «شركة المنار (تدريبي)» الحروف فيه غير الأرقام ← ملغي، ومن حـ/ البنك إلى حـ/ الموردين 13,600.",
+      "relatedTermIds": [
+        "T-CHEQUE",
+        "T-OUTSTANDING-CHQ",
+        "T-CORRECTING-ENTRY"
+      ],
+      "skillIds": [
+        "CASH.CORE",
+        "CTRL.CORE"
+      ],
+      "release": "R2"
+    },
+    {
+      "id": "T-RED-FLAG",
+      "ar": "علامة خطر",
+      "en": "Red flag",
+      "egyptianAr": "إشارة إن فيه غلط أو احتمال تلاعب: شيكات ناقصة، حساب بنكي جديد بإيميل مستعجل، نفس الشخص بيعمل كل الخطوات. مش دليل إدانة — سبب للتحقق والتصعيد.",
+      "exampleAr": "مورد بيطلب بالإيميل تحويل الدفعة على حساب جديد «النهارده» ← تتحقق من رقم تليفون في ملف المورد قبل أي تحويل.",
+      "relatedTermIds": [
+        "T-INTERNAL-CONTROL",
+        "T-SEGREGATION",
+        "T-ESCALATION"
+      ],
+      "skillIds": [
+        "CTRL.CORE",
+        "AUD.AWARE"
+      ],
+      "release": "R2"
+    },
+    {
+      "id": "T-BACKDATING",
+      "ar": "التأريخ بأثر رجعي",
+      "en": "Backdating",
+      "egyptianAr": "كتابة تاريخ قديم على مستند (فاتورة، إيصال، شيك) غير اليوم اللي الحدث حصل فيه فعلًا. ممنوع حتى لو المبلغ صح — التاريخ جزء من الحقيقة.",
+      "exampleAr": "عميل دفع 5 أبريل وطلب إيصال بتاريخ 31 مارس علشان الغرامة ← الإيصال بتاريخه الحقيقي، وطلب الإعفاء يروح كتابةً للمدير المالي.",
+      "relatedTermIds": [
+        "T-CUTOFF",
+        "T-ESCALATION",
+        "T-SOURCE-DOC"
+      ],
+      "skillIds": [
+        "CTRL.CORE",
+        "ACC.EVENT"
+      ],
+      "release": "R2"
+    },
+    {
+      "id": "T-NET-BOOK-VALUE",
+      "ar": "صافي القيمة الدفترية",
+      "en": "Net book value (carrying amount)",
+      "formalAr": "تكلفة الأصل الثابت مطروحًا منها مجمع الإهلاك",
+      "egyptianAr": "اللي باقي من تكلفة الأصل في الدفاتر بعد الإهلاك. مش سعر بيعه في السوق.",
+      "exampleAr": "الأثاث والمعدات آخر مارس: 36,000 − مجمع إهلاك 1,000 = 35,000.",
+      "relatedTermIds": [
+        "T-DEPRECIATION",
+        "T-ACCUM-DEPRECIATION",
+        "T-ASSET"
+      ],
+      "skillIds": [
+        "FA.CORE",
+        "STMT.READ"
+      ],
+      "release": "R2"
+    },
+    {
+      "id": "T-XLOOKUP",
+      "ar": "دالة البحث XLOOKUP",
+      "en": "XLOOKUP (lookup function)",
+      "egyptianAr": "دالة إكسل بتدوّر على قيمة في عمود وترجّع المقابل ليها من أي عمود تاني، يمين أو شمال. لو مش موجودة في نسختك استخدم INDEX/MATCH.",
+      "exampleAr": "=XLOOKUP(C2,Chart[Code],Chart[Name]) بتجيب اسم الحساب من كوده، حتى لو عمود الاسم قبل عمود الكود.",
+      "relatedTermIds": [
+        "T-SUBLEDGER"
+      ],
+      "skillIds": [
+        "XL.MATCH"
+      ],
+      "release": "R2"
+    },
+    {
+      "id": "T-STOCK-COUNT",
+      "ar": "الجرد الفعلي",
+      "en": "Physical stock count",
+      "formalAr": "حصر الكميات الموجودة فعلًا في المخزن ومقارنتها بالسجلات في تاريخ محدد",
+      "egyptianAr": "عدّ حقيقي للبضاعة في المخزن — الدفاتر بتقول «المفروض» والعدّ بيقول «الموجود».",
+      "exampleAr": "جرد 31 مارس: الورق 318 كرتونة والنظام 320 ← عجز 2 × 185 = 370 (A05).",
+      "relatedTermIds": [
+        "T-PERPETUAL",
+        "T-INVENTORY-CARD",
+        "T-SHRINKAGE"
+      ],
+      "skillIds": [
+        "INV.COST",
+        "CTRL.CORE"
+      ],
+      "release": "R2"
+    },
+    {
+      "id": "T-SHRINKAGE",
+      "ar": "عجز المخزون",
+      "en": "Inventory shrinkage (stock shortage)",
+      "formalAr": "النقص في كمية المخزون الفعلية عن رصيده الدفتري، ويُقيَّم بالتكلفة",
+      "egyptianAr": "البضاعة اللي «اختفت» بين الدفاتر والجرد (غلط، تلف، صرف من غير إذن). بتتسجّل بالتكلفة وسببها يتبحث من غير اتهام.",
+      "exampleAr": "من حـ/ عجز المخزون إلى حـ/ المخزون 370 (2 كرتونة × 185) — مش بسعر البيع.",
+      "relatedTermIds": [
+        "T-STOCK-COUNT",
+        "T-MOVING-AVG",
+        "T-ADJUSTING-ENTRY"
+      ],
+      "skillIds": [
+        "INV.COST",
+        "ADJ.CORE"
+      ],
+      "release": "R2"
+    },
+    {
+      "id": "T-PERIODIC",
+      "ar": "الجرد الدوري",
+      "en": "Periodic inventory system",
+      "formalAr": "نظام لا يُحدَّث فيه المخزون مع كل حركة، وتُحسب تكلفة المبيعات في نهاية الفترة من الجرد",
+      "egyptianAr": "مفيش كارت بيتحدّث مع كل بيعة؛ آخر الفترة: التكلفة = أول المدة + المشتريات − المردودات − آخر المدة بالجرد. أي عجز بيستخبى جوه التكلفة.",
+      "exampleAr": "18,000 + 64,000 − 2,000 − 21,500 = 58,500 تكلفة مبيعات (وجواها 800 عجز ما ظهرش).",
+      "relatedTermIds": [
+        "T-PERPETUAL",
+        "T-COGS",
+        "T-STOCK-COUNT"
+      ],
+      "skillIds": [
+        "INV.COST",
+        "INV.CORE"
+      ],
+      "release": "R2"
+    },
+    {
+      "id": "T-CAPITALISE",
+      "ar": "رسملة التكلفة",
+      "en": "Capitalisation (capitalise a cost)",
+      "formalAr": "إدراج التكلفة ضمن تكلفة أصل في الميزانية بدلًا من تحميلها مصروفًا على الفترة",
+      "egyptianAr": "يعني المبلغ يدخل في تكلفة الأصل (ويتهلك على سنين) بدل ما يبقى مصروف الشهر. بيدخل كل اللي اتصرف لحد ما الأصل يبقى جاهز للاستخدام.",
+      "exampleAr": "كرسي أسنان 85,000 + نقل 1,500 + تركيب 2,000 = 88,500 أصل؛ والتدريب والتصليح العادي مصروف.",
+      "relatedTermIds": [
+        "T-ASSET",
+        "T-EXPENSE",
+        "T-DEPRECIATION"
+      ],
+      "skillIds": [
+        "FA.CORE",
+        "ACC.EQ"
+      ],
+      "release": "R2"
+    },
+    {
+      "id": "T-DISPOSAL",
+      "ar": "استبعاد أصل ثابت",
+      "en": "Disposal of a fixed asset",
+      "formalAr": "إخراج الأصل من الدفاتر عند بيعه أو التخلص منه مع إثبات المكسب أو الخسارة",
+      "egyptianAr": "لما تبيع أصل أو ترميه: يخرج بتكلفته ومجمع إهلاكه، وتسجّل اللي اتحصّل، والفرق مكسب أو خسارة — مش «مبيعات».",
+      "exampleAr": "ماكينة تكلفتها 60,000 ومجمعها 48,000 اتباعت بـ 14,500 ← مكسب 2,500.",
+      "relatedTermIds": [
+        "T-ACCUM-DEPRECIATION",
+        "T-NET-BOOK-VALUE"
+      ],
+      "skillIds": [
+        "FA.CORE"
+      ],
+      "release": "R2"
+    },
+    {
+      "id": "T-TEMPORARY-ACCOUNTS",
+      "ar": "الحسابات المؤقتة",
+      "en": "Temporary (nominal) accounts",
+      "formalAr": "حسابات الإيرادات والمصروفات والمسحوبات التي تُقفل في نهاية كل فترة",
+      "egyptianAr": "حسابات بتجمع نشاط فترة واحدة بس، وبتتصفّر في رأس المال آخر الفترة. حسابات الميزانية (أصول، التزامات، رأس مال) دائمة.",
+      "exampleAr": "بعد A06: المبيعات والمصروفات والمسحوبات صفر، ورأس المال 303,355.",
+      "relatedTermIds": [
+        "T-CLOSING-ENTRIES",
+        "T-CAPITAL",
+        "T-POST-CLOSING-TB"
+      ],
+      "skillIds": [
+        "CLOSE.CORE"
+      ],
+      "release": "R2"
+    },
+    {
+      "id": "T-POST-CLOSING-TB",
+      "ar": "ميزان المراجعة بعد الإقفال",
+      "en": "Post-closing trial balance",
+      "formalAr": "ميزان مراجعة يُعدّ بعد قيود الإقفال ولا يتضمن إلا الحسابات الدائمة",
+      "egyptianAr": "آخر ميزان في الشهر: حسابات الميزانية بس، والمؤقتة كلها صفر. لو لقيت فيه مصروف أو مسحوبات، يبقى في إقفال ناقص.",
+      "exampleAr": "شركة المعمل 31 مارس: 349,555 = 349,555 (فيه مجمع الإهلاك 1,000 دائن).",
+      "relatedTermIds": [
+        "T-TRIAL-BALANCE",
+        "T-CLOSING-ENTRIES",
+        "T-TEMPORARY-ACCOUNTS"
+      ],
+      "skillIds": [
+        "CLOSE.CORE",
+        "ACC.TB"
+      ],
+      "release": "R2"
+    },
+    {
+      "id": "T-CASH-FLOW-STATEMENT",
+      "ar": "قائمة التدفقات النقدية",
+      "en": "Cash flow statement",
+      "formalAr": "قائمة تعرض المتحصلات والمدفوعات النقدية خلال الفترة مبوّبة إلى أنشطة تشغيل واستثمار وتمويل",
+      "egyptianAr": "الفلوس دخلت منين وخرجت فين في الفترة: تشغيل، استثمار، تمويل — وصافيها لازم يساوي تغير النقدية. الطريقة غير المباشرة بتبدأ من الربح وتصلّحه.",
+      "exampleAr": "مارس: تشغيل −83,025، استثمار −36,000، تمويل +295,000 ← النقدية 175,975.",
+      "relatedTermIds": [
+        "T-INCOME-STATEMENT",
+        "T-BALANCE-SHEET",
+        "T-WORKING-CAPITAL"
+      ],
+      "skillIds": [
+        "STMT.FULL"
+      ],
+      "release": "R2"
+    },
+    {
+      "id": "T-COST-BEHAVIOUR",
+      "ar": "سلوك التكلفة (ثابتة ومتغيرة)",
+      "en": "Cost behaviour (fixed vs variable costs)",
+      "formalAr": "تصنيف التكاليف حسب استجابة إجماليها لتغير حجم النشاط في مدى ملائم",
+      "egyptianAr": "المتغيرة إجماليها بيتحرك مع الكمية (تكلفة البضاعة)، والثابتة إجماليها ثابت في حدود الطاقة (الإيجار والمرتبات)، والمختلطة فيها الاتنين.",
+      "exampleAr": "شركة المعمل: تكلفة البضاعة متغيرة؛ الرواتب 24,000 والإيجار 6,000 ثابتة؛ المرافق مختلطة.",
+      "relatedTermIds": [
+        "T-CONTRIBUTION-MARGIN",
+        "T-BREAK-EVEN"
+      ],
+      "skillIds": [
+        "COST.CORE"
+      ],
+      "release": "R2"
+    },
+    {
+      "id": "T-MATERIALITY",
+      "ar": "الأهمية النسبية",
+      "en": "Materiality",
+      "formalAr": "حجم أو طبيعة الخطأ أو الحذف الذي قد يؤثر على قرارات مستخدمي القوائم المالية",
+      "egyptianAr": "الغلط «المهم» هو اللي ممكن يغيّر قرار حد بيقرا القوائم. المراجع بيركز عليه وبياخد عينات — بس الأهمية مش رخصة تسيب غلط صغير وإنت عارفه.",
+      "exampleAr": "عجز 370 صغير من 88,080، لكن نقله لأبريل علشان البنك يبقى تلاعب مقصود — والقصد بيخلّيه مهم.",
+      "relatedTermIds": [
+        "T-SOURCE-DOC",
+        "T-INTERNAL-CONTROL"
+      ],
+      "skillIds": [
+        "AUD.AWARE",
+        "CTRL.CORE"
+      ],
+      "release": "R2"
+    }
+  ]
+}

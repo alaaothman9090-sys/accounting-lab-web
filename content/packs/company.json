@@ -1,0 +1,688 @@
+{
+  "pack": "company",
+  "company": {
+    "id": "maamal",
+    "nameAr": "شركة المعمل للتجارة والتوزيع — شركة وهمية للتدريب",
+    "nameEn": "Al-Maamal Trading & Distribution Co. — fictional training company",
+    "fictionalNoticeAr": "كل الشركات والأشخاص والبنوك والمستندات هنا وهمية للتدريب فقط، ومفيش أي مستند يصلح يُستخدم كفاتورة أو إيصال حقيقي.",
+    "vatNoticeAr": "شهر الشركة الأساسي (مارس 2026) بدون ضريبة القيمة المضافة لتبسيط التعلم؛ الضريبة بتتدرّس في تمارين توعية منفصلة.",
+    "modelAr": [
+      "شركة فردية بمالك واحد (حقوق ملكية مبسطة).",
+      "أساس الاستحقاق: الإيراد بيتسجل لما الشركة تسلّم البضاعة، والمصروف لما يتم استهلاكه — مش لما الفلوس تتحرك.",
+      "جرد مستمر للمخزون بطريقة المتوسط المرجّح المتحرك (والوارد أولًا صادر أولًا في تمارين المقارنة بس).",
+      "الكميات أعداد صحيحة، والفلوس بتتخزن بالقرش علشان مفيش أخطاء كسور.",
+      "النموذج تعليمي ومش بيدّعي إنه مطابق لمعايير المحاسبة المصرية أو لأي التزام ضريبي."
+    ],
+    "period": { "start": "2026-03-01", "end": "2026-03-31" },
+    "holidays": ["2026-03-19", "2026-03-20", "2026-03-21", "2026-03-22"],
+    "policies": [
+      { "id": "POL-WEEK", "textAr": "أيام العمل من الأحد للخميس؛ مفيش ترحيل يوم الجمعة أو السبت، وإجازة الشركة (وهمية) من 19 لـ 22 مارس." },
+      { "id": "POL-DEP", "textAr": "الإهلاك قسط ثابت على 36 شهر، بدون قيمة تخريدية، وبيتحسب شهر كامل في شهر الشراء (سياسة وهمية للتدريب)." },
+      { "id": "POL-PETTY", "textAr": "العهدة النثرية بنظام السلفة المستديمة بمبلغ 2,000 جنيه؛ التعويض بيتم بإيصالات معتمدة." },
+      { "id": "POL-APPROVAL", "textAr": "أي دفعة أكبر من 10,000 جنيه لازم يعتمدها المدير (سياسة شركة وهمية — مش قانون مصري)." },
+      { "id": "POL-PAYROLL", "textAr": "استقطاعات الرواتب في القصة مبالغ توضيحية بس، ومش نسب قانونية حقيقية." }
+    ],
+    "chartNoticeAr": "ده دليل حسابات تعليمي مبسّط؛ الشركات الحقيقية بتستخدم أدلة وترقيم مختلفين حسب نشاطها ونظامها."
+  },
+  "parties": [
+    { "id": "OWNER", "kind": "owner", "nameAr": "أ. حسام الدين رفعت (تدريبي)", "notesAr": "مالك الشركة الوهمية" },
+    { "id": "MGR", "kind": "manager", "nameAr": "أ. ليلى منصور (تدريبي)", "notesAr": "المدير المسؤول عن اعتماد المدفوعات" },
+    { "id": "C1", "kind": "customer", "nameAr": "مكتبة النور (تدريبي)", "notesAr": "عميل آجل" },
+    { "id": "C2", "kind": "customer", "nameAr": "مركز طباعة الأمل (تدريبي)", "notesAr": "بيدفع بتحويل بنكي وقت الشراء" },
+    { "id": "C3", "kind": "customer", "nameAr": "شركة الرواد للخدمات (تدريبي)", "notesAr": "عميل آجل؛ دفع جزء بشيك مؤجل" },
+    { "id": "C4", "kind": "customer", "nameAr": "مدرسة المستقبل (تدريبي)", "notesAr": "بتدفع مقدّم قبل الاستلام" },
+    { "id": "S1", "kind": "supplier", "nameAr": "مصنع الوادي للورق (تدريبي)", "notesAr": "مورد ورق A4" },
+    { "id": "S2", "kind": "supplier", "nameAr": "شركة الحبر الذهبي (تدريبي)", "notesAr": "مورد خراطيش الحبر" },
+    { "id": "BANK", "kind": "bank", "nameAr": "بنك المعمل التجريبي (تدريبي)", "notesAr": "بنك وهمي" },
+    { "id": "EMP1", "kind": "employee", "nameAr": "سارة عبد الحميد (تدريبي)", "notesAr": "مسؤولة مبيعات" },
+    { "id": "EMP2", "kind": "employee", "nameAr": "محمود خليل (تدريبي)", "notesAr": "أمين مخزن وسائق" },
+    { "id": "EMP3", "kind": "employee", "nameAr": "نادية فهمي (تدريبي)", "notesAr": "مسؤولة العهدة النثرية" }
+  ],
+  "skus": [
+    { "id": "PAPER", "nameAr": "كرتونة ورق A4", "nameEn": "A4 paper carton", "unitAr": "كرتونة" },
+    { "id": "TONER", "nameAr": "خرطوشة حبر (تونر)", "nameEn": "Toner cartridge", "unitAr": "خرطوشة" }
+  ],
+  "chart": [
+    { "code": "1101", "nameAr": "الصندوق", "nameEn": "Cash on hand", "category": "asset", "normalSide": "debit", "section": "current-asset", "cashFlow": "cash", "indirect": "cash", "temporary": false, "liquidity": "quick" },
+    { "code": "1102", "nameAr": "العهدة النثرية", "nameEn": "Petty cash", "category": "asset", "normalSide": "debit", "section": "current-asset", "cashFlow": "cash", "indirect": "cash", "temporary": false, "liquidity": "quick" },
+    { "code": "1103", "nameAr": "البنك", "nameEn": "Bank", "category": "asset", "normalSide": "debit", "section": "current-asset", "cashFlow": "cash", "indirect": "cash", "temporary": false, "liquidity": "quick" },
+    { "code": "1201", "nameAr": "العملاء", "nameEn": "Accounts receivable", "category": "asset", "normalSide": "debit", "section": "current-asset", "cashFlow": "receipts-customers", "indirect": "operating-asset", "temporary": false, "subledger": "customer", "liquidity": "quick" },
+    { "code": "1202", "nameAr": "أوراق القبض", "nameEn": "Notes receivable (post-dated cheques)", "category": "asset", "normalSide": "debit", "section": "current-asset", "cashFlow": "receipts-customers", "indirect": "operating-asset", "temporary": false, "subledger": "customer", "liquidity": "quick" },
+    { "code": "1209", "nameAr": "مخصص الديون المشكوك في تحصيلها", "nameEn": "Allowance for doubtful accounts", "category": "asset", "normalSide": "credit", "contraOf": "1201", "section": "current-asset", "cashFlow": "noncash", "indirect": "operating-asset", "temporary": false, "exerciseOnly": true },
+    { "code": "1301", "nameAr": "المخزون", "nameEn": "Inventory", "category": "asset", "normalSide": "debit", "section": "current-asset", "cashFlow": "payments-suppliers", "indirect": "operating-asset", "temporary": false, "subledger": "sku", "liquidity": "inventory" },
+    { "code": "1401", "nameAr": "إيجار مدفوع مقدمًا", "nameEn": "Prepaid rent", "category": "asset", "normalSide": "debit", "section": "current-asset", "cashFlow": "payments-rent", "indirect": "operating-asset", "temporary": false, "liquidity": "prepaid" },
+    { "code": "1501", "nameAr": "الأثاث والمعدات", "nameEn": "Furniture & equipment", "category": "asset", "normalSide": "debit", "section": "noncurrent-asset", "cashFlow": "investing", "indirect": "investing", "temporary": false },
+    { "code": "1509", "nameAr": "مجمع الإهلاك", "nameEn": "Accumulated depreciation", "category": "asset", "normalSide": "credit", "contraOf": "1501", "section": "noncurrent-asset", "cashFlow": "investing", "indirect": "addback", "temporary": false },
+    { "code": "1601", "nameAr": "ضريبة القيمة المضافة على المشتريات (مدخلات)", "nameEn": "VAT input (recoverable)", "category": "asset", "normalSide": "debit", "section": "current-asset", "cashFlow": "payments-other", "indirect": "operating-asset", "temporary": false, "exerciseOnly": true },
+    { "code": "2101", "nameAr": "الموردون", "nameEn": "Accounts payable", "category": "liability", "normalSide": "credit", "section": "current-liability", "cashFlow": "payments-suppliers", "indirect": "operating-liability", "temporary": false, "subledger": "supplier" },
+    { "code": "2201", "nameAr": "دفعات مقدمة من العملاء", "nameEn": "Customer advances (unearned revenue)", "category": "liability", "normalSide": "credit", "section": "current-liability", "cashFlow": "receipts-customers", "indirect": "operating-liability", "temporary": false, "subledger": "customer" },
+    { "code": "2301", "nameAr": "استقطاعات رواتب مستحقة", "nameEn": "Payroll deductions payable", "category": "liability", "normalSide": "credit", "section": "current-liability", "cashFlow": "payments-salaries", "indirect": "operating-liability", "temporary": false },
+    { "code": "2401", "nameAr": "مصروفات مستحقة", "nameEn": "Accrued expenses", "category": "liability", "normalSide": "credit", "section": "current-liability", "cashFlow": "payments-other", "indirect": "operating-liability", "temporary": false },
+    { "code": "2501", "nameAr": "ضريبة القيمة المضافة على المبيعات (مخرجات)", "nameEn": "VAT output (payable)", "category": "liability", "normalSide": "credit", "section": "current-liability", "cashFlow": "payments-other", "indirect": "operating-liability", "temporary": false, "exerciseOnly": true },
+    { "code": "3101", "nameAr": "رأس المال", "nameEn": "Owner's capital", "category": "equity", "normalSide": "credit", "section": "equity", "cashFlow": "financing-capital", "indirect": "financing", "temporary": false },
+    { "code": "3201", "nameAr": "المسحوبات الشخصية", "nameEn": "Owner's drawings", "category": "equity", "normalSide": "debit", "contraOf": "3101", "section": "equity", "cashFlow": "financing-drawings", "indirect": "financing", "temporary": true },
+    { "code": "4101", "nameAr": "المبيعات", "nameEn": "Sales", "category": "revenue", "normalSide": "credit", "section": "revenue", "cashFlow": "receipts-customers", "indirect": "pnl", "temporary": true },
+    { "code": "4102", "nameAr": "مردودات المبيعات", "nameEn": "Sales returns", "category": "revenue", "normalSide": "debit", "contraOf": "4101", "section": "contra-revenue", "cashFlow": "receipts-customers", "indirect": "pnl", "temporary": true },
+    { "code": "4103", "nameAr": "خصم مسموح به", "nameEn": "Sales discounts", "category": "revenue", "normalSide": "debit", "contraOf": "4101", "section": "contra-revenue", "cashFlow": "receipts-customers", "indirect": "pnl", "temporary": true, "exerciseOnly": true },
+    { "code": "4201", "nameAr": "أرباح بيع أصول ثابتة", "nameEn": "Gain on disposal of assets", "category": "revenue", "normalSide": "credit", "section": "other-income", "cashFlow": "investing", "indirect": "pnl", "temporary": true, "exerciseOnly": true },
+    { "code": "5101", "nameAr": "تكلفة البضاعة المباعة", "nameEn": "Cost of goods sold", "category": "expense", "normalSide": "debit", "section": "cogs", "cashFlow": "noncash", "indirect": "pnl", "temporary": true },
+    { "code": "5201", "nameAr": "مصروف الإيجار", "nameEn": "Rent expense", "category": "expense", "normalSide": "debit", "section": "operating-expense", "cashFlow": "payments-rent", "indirect": "pnl", "temporary": true },
+    { "code": "5202", "nameAr": "مصروف الرواتب", "nameEn": "Salaries expense", "category": "expense", "normalSide": "debit", "section": "operating-expense", "cashFlow": "payments-salaries", "indirect": "pnl", "temporary": true },
+    { "code": "5203", "nameAr": "مصروف المرافق والاتصالات", "nameEn": "Utilities & communication expense", "category": "expense", "normalSide": "debit", "section": "operating-expense", "cashFlow": "payments-other", "indirect": "pnl", "temporary": true },
+    { "code": "5204", "nameAr": "مصروف الإهلاك", "nameEn": "Depreciation expense", "category": "expense", "normalSide": "debit", "section": "operating-expense", "cashFlow": "noncash", "indirect": "pnl", "temporary": true },
+    { "code": "5205", "nameAr": "مصروفات بنكية", "nameEn": "Bank charges", "category": "expense", "normalSide": "debit", "section": "operating-expense", "cashFlow": "payments-other", "indirect": "pnl", "temporary": true },
+    { "code": "5206", "nameAr": "أدوات مكتبية", "nameEn": "Office supplies expense", "category": "expense", "normalSide": "debit", "section": "operating-expense", "cashFlow": "payments-other", "indirect": "pnl", "temporary": true },
+    { "code": "5207", "nameAr": "مصروف نقل", "nameEn": "Delivery expense", "category": "expense", "normalSide": "debit", "section": "operating-expense", "cashFlow": "payments-other", "indirect": "pnl", "temporary": true },
+    { "code": "5208", "nameAr": "مصروف ضيافة", "nameEn": "Hospitality expense", "category": "expense", "normalSide": "debit", "section": "operating-expense", "cashFlow": "payments-other", "indirect": "pnl", "temporary": true },
+    { "code": "5209", "nameAr": "عجز المخزون", "nameEn": "Inventory shortage", "category": "expense", "normalSide": "debit", "section": "operating-expense", "cashFlow": "noncash", "indirect": "pnl", "temporary": true },
+    { "code": "5210", "nameAr": "مصروف الديون المشكوك فيها والمعدومة", "nameEn": "Bad debt expense", "category": "expense", "normalSide": "debit", "section": "operating-expense", "cashFlow": "noncash", "indirect": "pnl", "temporary": true, "exerciseOnly": true },
+    { "code": "5211", "nameAr": "خسائر بيع أصول ثابتة", "nameEn": "Loss on disposal of assets", "category": "expense", "normalSide": "debit", "section": "operating-expense", "cashFlow": "investing", "indirect": "pnl", "temporary": true, "exerciseOnly": true },
+    { "code": "5212", "nameAr": "مصروف صيانة وإصلاحات", "nameEn": "Repairs & maintenance expense", "category": "expense", "normalSide": "debit", "section": "operating-expense", "cashFlow": "payments-other", "indirect": "pnl", "temporary": true, "exerciseOnly": true }
+  ],
+  "events": [
+    {
+      "id": "E01", "kind": "event", "date": "2026-03-01", "week": 1, "studyDay": 1, "guidance": "guided",
+      "titleAr": "المالك بيودع رأس المال في البنك",
+      "narrativeAr": "أ. حسام (المالك) فتح حساب للشركة في بنك المعمل التجريبي وحط فيه 300,000 جنيه علشان الشركة تبدأ شغل.",
+      "documentIds": ["DOC-E01-DEPOSIT", "DOC-E01-MEMO"],
+      "entries": [ { "descriptionAr": "إيداع رأس المال في البنك", "lines": [ { "account": "1103", "side": "debit", "amount": 300000 }, { "account": "3101", "side": "credit", "amount": 300000 } ] } ],
+      "protocol": {
+        "happened": "المالك استثمر فلوسه في الشركة. ده حدث حقيقي حصل النهارده (الفلوس دخلت البنك فعلًا)، فيتسجّل دلوقتي.",
+        "evidence": "إيصال الإيداع من البنك + مذكرة رأس المال الموقّعة من المالك.",
+        "changed": "الشركة بقى معاها مورد جديد (فلوس في البنك)، والمالك بقى ليه حق في الشركة بنفس المبلغ. مفيش إيراد ولا مصروف — ده تعامل مع المالك.",
+        "accounts": "البنك (أصل) زاد 300,000 · رأس المال (حقوق ملكية) زاد 300,000.",
+        "drcr": "الأصل بيزيد في الجانب المدين ← من حـ/ البنك. حقوق الملكية بتزيد في الجانب الدائن ← إلى حـ/ رأس المال.",
+        "shows": "دفتر الأستاذ: البنك ورأس المال ← ميزان المراجعة ← الميزانية (أصول = حقوق ملكية). النقدية زادت والربح ما اتغيّرش.",
+        "control": "مطابقة إيصال الإيداع مع كشف حساب البنك آخر الشهر (أول سطر في الكشف لازم يكون +300,000)."
+      },
+      "hintsAr": ["اسأل نفسك: مين بقى معاه فلوس أكتر؟ والمالك ليه حق عند مين؟", "الأصول بتزيد مدين، وحقوق الملكية بتزيد دائن."],
+      "explanationAr": "البنك أصل وزاد ← مدين. رأس المال حق للمالك وزاد ← دائن. الفلوس اللي حطها المالك مش إيراد: الشركة ما باعتش حاجة."
+    },
+    {
+      "id": "E02", "kind": "event", "date": "2026-03-01", "week": 1, "studyDay": 1, "guidance": "guided",
+      "titleAr": "صرف شيك رقم 1001 لتغذية الصندوق",
+      "narrativeAr": "المحاسب كتب شيك رقم 1001 بـ 15,000 جنيه وصرفه من البنك علشان يبقى في خزينة الشركة نقدية للمصاريف اليومية.",
+      "documentIds": ["DOC-E02-COUNTERFOIL", "DOC-E02-CASHRECEIPT"],
+      "entries": [ { "descriptionAr": "سحب نقدية من البنك للصندوق بالشيك 1001", "lines": [ { "account": "1101", "side": "debit", "amount": 15000 }, { "account": "1103", "side": "credit", "amount": 15000 } ] } ],
+      "protocol": {
+        "happened": "فلوس اتنقلت من البنك للصندوق. الشركة ما كسبتش ولا صرفت حاجة؛ بس غيّرت مكان الفلوس. يتسجّل النهارده لأن الشيك اتصرف.",
+        "evidence": "كعب الشيك 1001 + إيصال استلام النقدية للصندوق.",
+        "changed": "أصل (نقدية في الصندوق) زاد وأصل تاني (البنك) قل بنفس المبلغ. إجمالي الأصول ما اتغيّرش.",
+        "accounts": "الصندوق (أصل) زاد 15,000 · البنك (أصل) قل 15,000.",
+        "drcr": "زيادة أصل ← مدين: من حـ/ الصندوق. نقص أصل ← دائن: إلى حـ/ البنك.",
+        "shows": "الأستاذ: الصندوق والبنك. الميزانية: نفس الإجمالي. قائمة التدفقات النقدية: مفيش تدفق — ده تحويل داخلي بين حسابات النقدية.",
+        "control": "عدّ الصندوق ومطابقته مع الدفتر، ومطابقة الشيك 1001 مع كشف البنك (ظهر يوم 1 مارس بـ −15,000)."
+      },
+      "hintsAr": ["الاتنين أصول. واحد زاد وواحد قل."],
+      "explanationAr": "تحويل بين حسابين نقدية: الصندوق زاد (مدين) والبنك قل (دائن). مفيش ربح ولا خسارة."
+    },
+    {
+      "id": "E03", "kind": "event", "date": "2026-03-02", "week": 1, "studyDay": 1, "guidance": "guided",
+      "titleAr": "دفع إيجار المخزن 3 شهور مقدمًا",
+      "narrativeAr": "الشركة حوّلت 18,000 جنيه لصاحب المخزن: إيجار مارس وأبريل ومايو (6,000 في الشهر) مقدمًا.",
+      "documentIds": ["DOC-E03-LEASE", "DOC-E03-TRANSFER", "DOC-E03-PV"],
+      "entries": [ { "descriptionAr": "إيجار المخزن مدفوع مقدمًا عن 3 شهور", "lines": [ { "account": "1401", "side": "debit", "amount": 18000 }, { "account": "1103", "side": "credit", "amount": 18000 } ] } ],
+      "protocol": {
+        "happened": "الشركة دفعت فلوس مقابل حق استخدام المخزن 3 شهور جاية. الدفع حصل النهارده، لكن الاستهلاك (المصروف) هيحصل شهر بشهر.",
+        "evidence": "ملخص عقد الإيجار + إشعار التحويل البنكي + إذن صرف معتمد من المدير (المبلغ أكبر من 10,000).",
+        "changed": "الشركة اكتسبت حق استخدام (أصل) وقلّت فلوسها في البنك. لسه ما استهلكتش حاجة، فمفيش مصروف النهارده.",
+        "accounts": "إيجار مدفوع مقدمًا (أصل) زاد 18,000 · البنك (أصل) قل 18,000.",
+        "drcr": "من حـ/ إيجار مدفوع مقدمًا (زيادة أصل) إلى حـ/ البنك (نقص أصل).",
+        "shows": "الميزانية: أصل متداول. آخر الشهر هيتحوّل 6,000 بس لمصروف (تسوية A02). التدفق النقدي: −18,000 تشغيلي.",
+        "control": "اعتماد المدير على إذن الصرف + جدول استهلاك الإيجار شهريًا."
+      },
+      "hintsAr": ["هل الشركة استهلكت 3 شهور إيجار النهارده؟", "حق الاستخدام في المستقبل = أصل."],
+      "explanationAr": "الإيجار المقدم أصل (حق استخدام المخزن لشهور جاية)، مش مصروف لسه. المصروف بيتسجّل وإحنا بنستهلك كل شهر."
+    },
+    {
+      "id": "E04", "kind": "event", "date": "2026-03-03", "week": 1, "studyDay": 1, "guidance": "guided",
+      "titleAr": "شراء أثاث وكمبيوتر بتحويل بنكي",
+      "narrativeAr": "الشركة اشترت مكاتب وكراسي وجهاز كمبيوتر بـ 36,000 جنيه وحوّلت الفلوس للمورد. المعدات هتخدم الشركة سنين.",
+      "documentIds": ["DOC-E04-INVOICE", "DOC-E04-TRANSFER", "DOC-E04-ASSETCARD"],
+      "entries": [ { "descriptionAr": "شراء أثاث ومعدات بتحويل بنكي", "lines": [ { "account": "1501", "side": "debit", "amount": 36000 }, { "account": "1103", "side": "credit", "amount": 36000 } ] } ],
+      "protocol": {
+        "happened": "الشركة اشترت أصل هيستخدم لأكتر من سنة. يتسجّل النهارده لأن الاستلام والدفع حصلوا.",
+        "evidence": "فاتورة المورد + إشعار التحويل + بطاقة الأصل (رقم الأصل ومكانه وتاريخ الشراء) + اعتماد المدير.",
+        "changed": "الشركة بقى عندها مورد طويل الأجل (معدات) وقلّت فلوسها. مفيش مصروف كامل النهارده — المصروف هو الإهلاك على 36 شهر.",
+        "accounts": "الأثاث والمعدات (أصل غير متداول) زاد 36,000 · البنك (أصل) قل 36,000.",
+        "drcr": "من حـ/ الأثاث والمعدات إلى حـ/ البنك.",
+        "shows": "الميزانية: أصول غير متداولة. قائمة الدخل: الإهلاك الشهري بس (1,000 في التسوية A03). التدفق النقدي: −36,000 استثماري.",
+        "control": "بطاقة الأصل وسجل الأصول الثابتة + اعتماد المدير + مطابقة التحويل مع كشف البنك."
+      },
+      "hintsAr": ["المعدات هتستخدم كام سنة؟", "الأصل = حاجة الشركة بتتحكم فيها ومتوقع منها منفعة مستقبلية."],
+      "explanationAr": "المعدات أصل لأنها هتفيد الشركة سنين. لو سجلناها مصروف هنقلل ربح الشهر بغلط ونخفي أصل موجود فعلًا."
+    },
+    {
+      "id": "E05", "kind": "event", "date": "2026-03-04", "week": 1, "studyDay": 2, "guidance": "guided",
+      "titleAr": "شراء 500 كرتونة ورق آجل من مصنع الوادي",
+      "narrativeAr": "استلمنا 500 كرتونة ورق A4 بسعر 180 جنيه للكرتونة على الحساب من مصنع الوادي (S1). عندنا أمر شراء وإذن استلام وفاتورة المورد.",
+      "documentIds": ["DOC-E05-PO", "DOC-E05-GRN", "DOC-E05-INV"],
+      "entries": [ { "descriptionAr": "شراء بضاعة آجل من S1", "lines": [ { "account": "1301", "side": "debit", "amount": 90000, "sku": "PAPER", "qty": 500 }, { "account": "2101", "side": "credit", "amount": 90000, "party": "S1" } ] } ],
+      "inventory": [ { "sku": "PAPER", "type": "purchase", "qty": 500, "unitCost": 180 } ],
+      "protocol": {
+        "happened": "البضاعة اتسلمت النهارده، فالشركة بقت مسؤولة عنها وبقى عليها التزام للمورد حتى لو ما دفعتش.",
+        "evidence": "مطابقة ثلاثية: أمر الشراء PO-001 (500 × 180) = إذن الاستلام GRN-001 (500 كرتونة) = فاتورة المورد (90,000).",
+        "changed": "زاد مخزون الشركة (مورد هتبيعه) وزاد التزامها للمورد. مفيش مصروف: في الجرد المستمر الشراء بيدخل المخزون مش المصروفات.",
+        "accounts": "المخزون (أصل) زاد 90,000 · الموردون — S1 (التزام) زاد 90,000.",
+        "drcr": "من حـ/ المخزون إلى حـ/ الموردين (مصنع الوادي).",
+        "shows": "كارت صنف الورق: 500 × 180. الميزانية: مخزون والتزام متداول. لا قائمة دخل ولا نقدية لحد دلوقتي.",
+        "control": "المطابقة الثلاثية قبل التسجيل، وكشف حساب المورد آخر الشهر."
+      },
+      "hintsAr": ["هل دفعنا فلوس؟ لأ — يبقى بقى علينا التزام.", "في الجرد المستمر المشتريات بتزوّد حساب المخزون."],
+      "explanationAr": "استلمنا بضاعة على الحساب: المخزون زاد (مدين) والموردين زادوا (دائن). المشتريات هنا مش مصروف لأن البضاعة لسه عندنا."
+    },
+    {
+      "id": "E06", "kind": "event", "date": "2026-03-05", "week": 1, "studyDay": 2, "guidance": "guided",
+      "titleAr": "شراء 100 خرطوشة حبر آجل من الحبر الذهبي",
+      "narrativeAr": "استلمنا 100 خرطوشة تونر بسعر 450 جنيه على الحساب من شركة الحبر الذهبي (S2).",
+      "documentIds": ["DOC-E06-PO", "DOC-E06-GRN", "DOC-E06-INV"],
+      "entries": [ { "descriptionAr": "شراء بضاعة آجل من S2", "lines": [ { "account": "1301", "side": "debit", "amount": 45000, "sku": "TONER", "qty": 100 }, { "account": "2101", "side": "credit", "amount": 45000, "party": "S2" } ] } ],
+      "inventory": [ { "sku": "TONER", "type": "purchase", "qty": 100, "unitCost": 450 } ],
+      "protocol": {
+        "happened": "استلام بضاعة على الحساب — يتسجّل يوم الاستلام.",
+        "evidence": "PO-002 = GRN-002 = فاتورة S2 (100 × 450 = 45,000).",
+        "changed": "مخزون التونر زاد والالتزام لـ S2 زاد.",
+        "accounts": "المخزون زاد 45,000 · الموردون — S2 زاد 45,000.",
+        "drcr": "من حـ/ المخزون إلى حـ/ الموردين (الحبر الذهبي).",
+        "shows": "كارت صنف التونر 100 × 450؛ الحساب الفرعي لـ S2.",
+        "control": "المطابقة الثلاثية + مراجعة السعر مع أمر الشراء."
+      },
+      "hintsAr": ["نفس منطق E05 لكن مورد وصنف مختلف."],
+      "explanationAr": "نفس المنطق: مخزون مدين، والمورد S2 دائن."
+    },
+    {
+      "id": "E07", "kind": "event", "date": "2026-03-08", "week": 1, "studyDay": 3, "guidance": "guided",
+      "titleAr": "بيع 200 كرتونة لمكتبة النور على الحساب",
+      "narrativeAr": "سلّمنا مكتبة النور (C1) 200 كرتونة ورق بسعر 250 جنيه على الحساب. تكلفة الكرتونة عندنا 180.",
+      "documentIds": ["DOC-E07-SO", "DOC-E07-DN", "DOC-E07-INV"],
+      "entries": [
+        { "descriptionAr": "إثبات المبيعات الآجلة لـ C1", "lines": [ { "account": "1201", "side": "debit", "amount": 50000, "party": "C1" }, { "account": "4101", "side": "credit", "amount": 50000 } ] },
+        { "descriptionAr": "إثبات تكلفة البضاعة المباعة", "lines": [ { "account": "5101", "side": "debit", "amount": 36000 }, { "account": "1301", "side": "credit", "amount": 36000, "sku": "PAPER", "qty": 200 } ] }
+      ],
+      "inventory": [ { "sku": "PAPER", "type": "sale", "qty": 200, "unitPrice": 250 } ],
+      "protocol": {
+        "happened": "الشركة سلّمت البضاعة = نفّذت التزامها للعميل، فالإيراد اتكسب النهارده حتى لو الفلوس لسه ما جاتش.",
+        "evidence": "أمر البيع + إذن التسليم DN-001 موقّع من العميل + فاتورة البيع INV-001.",
+        "changed": "الشركة بقى ليها حق عند العميل (50,000) وكسبت إيراد. وفي نفس الوقت خرج من المخزون بضاعة تكلفتها 36,000 (استهلاك لكسب الإيراد).",
+        "accounts": "العملاء — C1 (أصل) زاد 50,000 · المبيعات (إيراد) زادت 50,000 · تكلفة البضاعة المباعة (مصروف) زادت 36,000 · المخزون (أصل) قل 36,000.",
+        "drcr": "قيدين: من حـ/ العملاء إلى حـ/ المبيعات، ومن حـ/ تكلفة البضاعة المباعة إلى حـ/ المخزون.",
+        "shows": "قائمة الدخل: مبيعات 50,000 وتكلفة 36,000 = مجمل ربح 14,000. الميزانية: عملاء زادوا ومخزون قل. النقدية ما اتغيّرتش.",
+        "control": "توقيع العميل على إذن التسليم + كشف حساب العميل + مطابقة كارت الصنف مع حساب المخزون."
+      },
+      "hintsAr": ["في الجرد المستمر كل بيعة ليها قيدين: الإيراد والتكلفة.", "الإيراد بيتسجل بسعر البيع، والتكلفة بتكلفة الشراء."],
+      "explanationAr": "البيع الآجل: العملاء مدين والمبيعات دائن بسعر البيع. ونقلل المخزون بالتكلفة: تكلفة البضاعة المباعة مدين والمخزون دائن. لو نسيت قيد التكلفة، المخزون والربح هيبقوا أكبر من الحقيقة."
+    },
+    {
+      "id": "E08", "kind": "event", "date": "2026-03-09", "week": 1, "studyDay": 3, "guidance": "guided",
+      "titleAr": "بيع 20 خرطوشة لمركز طباعة الأمل بتحويل بنكي",
+      "narrativeAr": "مركز طباعة الأمل (C2) اشترى 20 خرطوشة بسعر 700 وحوّل الفلوس على البنك في نفس اليوم. تكلفة الخرطوشة 450.",
+      "documentIds": ["DOC-E08-INV", "DOC-E08-ADVICE"],
+      "entries": [
+        { "descriptionAr": "مبيعات محصلة بتحويل بنكي", "lines": [ { "account": "1103", "side": "debit", "amount": 14000 }, { "account": "4101", "side": "credit", "amount": 14000 } ] },
+        { "descriptionAr": "تكلفة البضاعة المباعة", "lines": [ { "account": "5101", "side": "debit", "amount": 9000 }, { "account": "1301", "side": "credit", "amount": 9000, "sku": "TONER", "qty": 20 } ] }
+      ],
+      "inventory": [ { "sku": "TONER", "type": "sale", "qty": 20, "unitPrice": 700 } ],
+      "protocol": {
+        "happened": "بيع وتسليم وتحصيل في نفس اليوم — الإيراد اتكسب والفلوس وصلت.",
+        "evidence": "فاتورة INV-002 + إشعار إضافة من البنك بـ 14,000.",
+        "changed": "البنك زاد والإيراد زاد؛ والمخزون قل بالتكلفة.",
+        "accounts": "البنك زاد 14,000 · المبيعات زادت 14,000 · تكلفة البضاعة المباعة زادت 9,000 · المخزون قل 9,000.",
+        "drcr": "من حـ/ البنك إلى حـ/ المبيعات، ومن حـ/ تكلفة البضاعة المباعة إلى حـ/ المخزون.",
+        "shows": "قائمة الدخل: مبيعات 14,000 وتكلفة 9,000. التدفق النقدي: +14,000 مقبوضات من العملاء.",
+        "control": "مطابقة إشعار الإضافة مع كشف البنك (ظهر يوم 9 مارس)."
+      },
+      "hintsAr": ["البيع النقدي بيقلب حساب العملاء بحساب البنك بس."],
+      "explanationAr": "الفرق الوحيد عن البيع الآجل إن الحساب المدين بقى البنك بدل العملاء. قيد التكلفة زي ما هو."
+    },
+    {
+      "id": "E09", "kind": "event", "date": "2026-03-10", "week": 1, "studyDay": 3, "guidance": "guided",
+      "titleAr": "مكتبة النور بترجّع 10 كراتين سليمة",
+      "narrativeAr": "مكتبة النور رجّعت 10 كراتين ورق بحالة سليمة. أصدرنا إشعار دائن CN-001 بقيمة 2,500 (10 × 250) ورجّعنا الكراتين للمخزن بتكلفتها 180.",
+      "documentIds": ["DOC-E09-REQUEST", "DOC-E09-GRNOTE", "DOC-E09-CN"],
+      "entries": [
+        { "descriptionAr": "مردودات مبيعات من C1", "lines": [ { "account": "4102", "side": "debit", "amount": 2500 }, { "account": "1201", "side": "credit", "amount": 2500, "party": "C1" } ] },
+        { "descriptionAr": "إرجاع البضاعة للمخزن بالتكلفة", "lines": [ { "account": "1301", "side": "debit", "amount": 1800, "sku": "PAPER", "qty": 10 }, { "account": "5101", "side": "credit", "amount": 1800 } ] }
+      ],
+      "inventory": [ { "sku": "PAPER", "type": "sales-return", "qty": 10, "unitCost": 180 } ],
+      "protocol": {
+        "happened": "جزء من البيع اتلغى برجوع البضاعة. يتسجّل يوم استلام المرتجع وإصدار إشعار الدائن.",
+        "evidence": "طلب الإرجاع + إذن استلام المرتجع (البضاعة سليمة) + إشعار دائن CN-001 معتمد.",
+        "changed": "حق الشركة عند العميل قل 2,500، والإيراد الصافي قل؛ والبضاعة رجعت للمخزن بتكلفتها فقلّت تكلفة المبيعات.",
+        "accounts": "مردودات المبيعات (عكس إيراد) زادت 2,500 · العملاء — C1 قلوا 2,500 · المخزون زاد 1,800 · تكلفة البضاعة المباعة قلّت 1,800.",
+        "drcr": "من حـ/ مردودات المبيعات إلى حـ/ العملاء، ومن حـ/ المخزون إلى حـ/ تكلفة البضاعة المباعة.",
+        "shows": "قائمة الدخل: صافي المبيعات = المبيعات − المردودات. كشف حساب C1 بيقل 2,500.",
+        "control": "فحص حالة البضاعة المرتجعة + اعتماد إشعار الدائن + كشف حساب العميل."
+      },
+      "hintsAr": ["المردودات حساب عكسي للمبيعات: بيزيد مدين.", "متنساش ترجّع التكلفة للمخزون."],
+      "explanationAr": "بنستخدم حساب مردودات المبيعات بدل ما نخصم من المبيعات مباشرة، علشان الإدارة تشوف حجم المرتجعات. والمرتجع ما بيزوّدش المبيعات."
+    },
+    {
+      "id": "E10", "kind": "event", "date": "2026-03-11", "week": 1, "studyDay": 3, "guidance": "guided",
+      "titleAr": "مكتبة النور بتدفع 30,000 بتحويل",
+      "narrativeAr": "وصل إشعار من البنك بتحويل 30,000 من مكتبة النور، وعملنا إيصال استلام وخصصناه على الفاتورة INV-001.",
+      "documentIds": ["DOC-E10-ADVICE", "DOC-E10-RV"],
+      "entries": [ { "descriptionAr": "تحصيل من C1 مخصص على INV-001", "lines": [ { "account": "1103", "side": "debit", "amount": 30000 }, { "account": "1201", "side": "credit", "amount": 30000, "party": "C1" } ] } ],
+      "protocol": {
+        "happened": "العميل سدّد جزء من دينه. ده تحصيل مش إيراد جديد — الإيراد اتسجّل يوم التسليم (E07).",
+        "evidence": "إشعار الإضافة من البنك + إيصال الاستلام مخصص على INV-001.",
+        "changed": "أصل (البنك) زاد وأصل تاني (حقنا عند العميل) قل. الربح ما اتغيّرش.",
+        "accounts": "البنك زاد 30,000 · العملاء — C1 قلوا 30,000.",
+        "drcr": "من حـ/ البنك إلى حـ/ العملاء (مكتبة النور).",
+        "shows": "رصيد C1 بقى 17,500 (50,000 − 2,500 − 30,000). التدفق النقدي: +30,000 مقبوضات.",
+        "control": "تخصيص التحصيل على الفاتورة الصحيحة + كشف حساب العميل + كشف البنك."
+      },
+      "hintsAr": ["هل الشركة باعت حاجة جديدة النهارده؟"],
+      "explanationAr": "التحصيل بيحوّل أصل لأصل: البنك مدين والعملاء دائن. لو سجلته مبيعات هتسجّل نفس الإيراد مرتين."
+    },
+    {
+      "id": "E11", "kind": "event", "date": "2026-03-12", "week": 1, "studyDay": 4, "guidance": "guided",
+      "titleAr": "شيك رقم 1002 لمصنع الوادي بـ 50,000",
+      "narrativeAr": "سلّمنا مصنع الوادي شيك رقم 1002 بـ 50,000 من حسابه. البنك هيصرف الشيك يوم 16 مارس لما المورد يقدّمه.",
+      "documentIds": ["DOC-E11-PV", "DOC-E11-COUNTERFOIL"],
+      "entries": [ { "descriptionAr": "سداد جزء من مستحقات S1 بالشيك 1002", "lines": [ { "account": "2101", "side": "debit", "amount": 50000, "party": "S1" }, { "account": "1103", "side": "credit", "amount": 50000 } ] } ],
+      "protocol": {
+        "happened": "الشركة سلّمت الشيك للمورد فخفّضت دينها من النهارده في دفاترها، حتى لو البنك لسه ما صرفهوش.",
+        "evidence": "إذن صرف معتمد من المدير (أكبر من 10,000) + كعب الشيك 1002.",
+        "changed": "التزام الشركة للمورد قل، ورصيدها في البنك (في دفاترها) قل.",
+        "accounts": "الموردون — S1 قلوا 50,000 · البنك قل 50,000.",
+        "drcr": "من حـ/ الموردين (مصنع الوادي) إلى حـ/ البنك.",
+        "shows": "رصيد S1 بقى 40,000. في التسوية البنكية نص الشهر الشيك هيظهر كشيك معلّق (لسه ما اتصرفش).",
+        "control": "اعتماد المدير + سجل الشيكات الصادرة + التسوية البنكية."
+      },
+      "hintsAr": ["الدفاتر بتسجّل لما الشيك يتسلّم للمورد، مش لما البنك يصرفه."],
+      "explanationAr": "بندفع للمورد: الالتزام قل (مدين) والبنك قل (دائن). الفرق في التوقيت مع كشف البنك هيتحل في التسوية من غير قيد."
+    },
+    {
+      "id": "E12", "kind": "event", "date": "2026-03-12", "week": 1, "studyDay": 4, "guidance": "guided",
+      "titleAr": "إرجاع 5 خراطيش معيبة للحبر الذهبي",
+      "narrativeAr": "اكتشفنا 5 خراطيش معيبة فرجعناها لـ S2 بإشعار مدين، بتكلفتها 450 للواحدة.",
+      "documentIds": ["DOC-E12-DN", "DOC-E12-GRNOTE"],
+      "entries": [ { "descriptionAr": "مردودات مشتريات لـ S2", "lines": [ { "account": "2101", "side": "debit", "amount": 2250, "party": "S2" }, { "account": "1301", "side": "credit", "amount": 2250, "sku": "TONER", "qty": 5 } ] } ],
+      "inventory": [ { "sku": "TONER", "type": "purchase-return", "qty": 5, "unitCost": 450 } ],
+      "protocol": {
+        "happened": "رجّعنا جزء من بضاعة اشتريناها، فالمورد هيخصم من حسابنا. يتسجّل يوم خروج المرتجع.",
+        "evidence": "إشعار مدين صادر للمورد + إذن خروج المرتجع موقّع من المخزن.",
+        "changed": "المخزون قل والتزامنا للمورد قل بنفس التكلفة.",
+        "accounts": "الموردون — S2 قلوا 2,250 · المخزون قل 2,250.",
+        "drcr": "من حـ/ الموردين (الحبر الذهبي) إلى حـ/ المخزون.",
+        "shows": "رصيد S2 بقى 42,750؛ كارت التونر 75 خرطوشة.",
+        "control": "تأكيد المورد على إشعار المدين في كشف حسابه."
+      },
+      "hintsAr": ["إحنا بنقلل دين علينا وبنقلل بضاعة عندنا."],
+      "explanationAr": "مردودات المشتريات في الجرد المستمر بتقلل المخزون مباشرة، والموردين بيقلّوا (مدين)."
+    },
+    {
+      "id": "E13", "kind": "event", "date": "2026-03-15", "week": 1, "studyDay": 4, "guidance": "guided",
+      "titleAr": "إنشاء عهدة نثرية مستديمة 2,000",
+      "narrativeAr": "المدير اعتمد عهدة نثرية بـ 2,000 جنيه من الصندوق لنادية (مسؤولة العهدة) للمصاريف الصغيرة.",
+      "documentIds": ["DOC-E13-AUTH", "DOC-E13-CUSTODIAN"],
+      "entries": [ { "descriptionAr": "إنشاء العهدة النثرية", "lines": [ { "account": "1102", "side": "debit", "amount": 2000 }, { "account": "1101", "side": "credit", "amount": 2000 } ] } ],
+      "protocol": {
+        "happened": "نقل نقدية من الصندوق الرئيسي لعهدة موظفة. لسه مفيش مصروف.",
+        "evidence": "اعتماد إنشاء العهدة + إيصال استلام موقّع من مسؤولة العهدة.",
+        "changed": "أصل نقدي (العهدة) زاد وأصل نقدي تاني (الصندوق) قل.",
+        "accounts": "العهدة النثرية زادت 2,000 · الصندوق قل 2,000.",
+        "drcr": "من حـ/ العهدة النثرية إلى حـ/ الصندوق.",
+        "shows": "النقدية الإجمالية ما اتغيّرتش. المصروفات هتظهر وقت التعويض بالإيصالات (E18).",
+        "control": "جرد مفاجئ للعهدة: النقدية + الإيصالات = 2,000 دايمًا."
+      },
+      "hintsAr": ["الاتنين حسابات نقدية."],
+      "explanationAr": "العهدة المستديمة رصيدها ثابت 2,000؛ اللي بيتصرف منها بيتعوّض بإيصالات ويتسجل مصروف وقت التعويض."
+    },
+    {
+      "id": "E14", "kind": "event", "date": "2026-03-16", "week": 1, "studyDay": 4, "guidance": "guided",
+      "titleAr": "تسجيل مصروفات بنكية ظهرت في الكشف",
+      "narrativeAr": "كشف البنك من 1 لـ 15 مارس فيه عمولة بنكية 125 جنيه ما كانتش في دفاترنا. البنك خصمها فعلًا.",
+      "documentIds": ["DOC-BANK-MID"],
+      "entries": [ { "descriptionAr": "عمولات بنكية من كشف الحساب", "lines": [ { "account": "5205", "side": "debit", "amount": 125 }, { "account": "1103", "side": "credit", "amount": 125 } ] } ],
+      "protocol": {
+        "happened": "البنك خصم عمولة. الشركة عرفت بيها من الكشف، فلازم تسجلها في دفاترها (بند من جهة الدفاتر).",
+        "evidence": "سطر العمولة في كشف البنك بتاريخ 15 مارس (أو إشعار خصم).",
+        "changed": "الشركة استهلكت خدمة بنكية (مصروف) وقلّت فلوسها في البنك.",
+        "accounts": "مصروفات بنكية زادت 125 · البنك قل 125.",
+        "drcr": "من حـ/ مصروفات بنكية إلى حـ/ البنك.",
+        "shows": "بعد القيد رصيد البنك في الدفاتر 224,875 = رصيد الكشف 274,875 − الشيك المعلّق 50,000.",
+        "control": "التسوية البنكية: البنود اللي من جهة الدفاتر بس هي اللي بتتقيد."
+      },
+      "hintsAr": ["هل ده فرق توقيت ولا حاجة لسه ما اتسجلتش عندنا؟"],
+      "explanationAr": "العمولة حصلت فعلًا في البنك ومش هتتعكس، فلازم قيد في الدفاتر. على عكس الشيك المعلّق اللي بيتحل لوحده لما البنك يصرفه."
+    },
+    {
+      "id": "E15", "kind": "event", "date": "2026-03-16", "week": 1, "studyDay": 4, "guidance": "guided",
+      "titleAr": "دفع فاتورة الإنترنت والتليفون نقدًا",
+      "narrativeAr": "دفعنا فاتورة الإنترنت والتليفون لشهر مارس 1,200 جنيه كاش من الصندوق.",
+      "documentIds": ["DOC-E15-BILL", "DOC-E15-CPV"],
+      "entries": [ { "descriptionAr": "سداد فاتورة الإنترنت والتليفون نقدًا", "lines": [ { "account": "5203", "side": "debit", "amount": 1200 }, { "account": "1101", "side": "credit", "amount": 1200 } ] } ],
+      "protocol": {
+        "happened": "الشركة استهلكت خدمة الإنترنت والتليفون عن الشهر ودفعت.",
+        "evidence": "الفاتورة + إذن صرف نقدية معتمد.",
+        "changed": "استهلاك خدمة (مصروف) وقلّت النقدية في الصندوق.",
+        "accounts": "مصروف المرافق والاتصالات زاد 1,200 · الصندوق قل 1,200.",
+        "drcr": "من حـ/ مصروف المرافق والاتصالات إلى حـ/ الصندوق.",
+        "shows": "قائمة الدخل: مصروف تشغيلي. التدفق النقدي: −1,200 مصروفات أخرى.",
+        "control": "إذن صرف بإيصال + جرد الصندوق."
+      },
+      "hintsAr": ["الخدمة اتستهلكت خلاص."],
+      "explanationAr": "مصروف اتستهلك واتدفع: المصروف مدين والصندوق دائن."
+    },
+    {
+      "id": "E16", "kind": "event", "date": "2026-03-17", "week": 1, "studyDay": 5, "guidance": "guided",
+      "titleAr": "شراء 310 كرتونة بسعر 190 — استلمها سواقنا",
+      "narrativeAr": "اشترينا 310 كرتونة ورق بسعر جديد 190 على الحساب من مصنع الوادي. سواق الشركة (محمود) راح المصنع واستلمها بنفسه، ومكتوب ده في إذن الاستلام GRN-003.",
+      "documentIds": ["DOC-E16-PO", "DOC-E16-GRN", "DOC-E16-INV"],
+      "entries": [ { "descriptionAr": "شراء بضاعة آجل من S1 بسعر جديد", "lines": [ { "account": "1301", "side": "debit", "amount": 58900, "sku": "PAPER", "qty": 310 }, { "account": "2101", "side": "credit", "amount": 58900, "party": "S1" } ] } ],
+      "inventory": [ { "sku": "PAPER", "type": "purchase", "qty": 310, "unitCost": 190 } ],
+      "protocol": {
+        "happened": "استلام بضاعة على الحساب بسعر مختلف عن الشراء الأول. يتسجّل يوم الاستلام.",
+        "evidence": "PO-003 + GRN-003 (مكتوب فيه: الاستلام بسيارة الشركة) + فاتورة S1 (310 × 190 = 58,900) — مفيش أي رسوم نقل في الفاتورة.",
+        "changed": "زاد المخزون وزاد الالتزام لـ S1. متوسط تكلفة الكرتونة اتغيّر.",
+        "accounts": "المخزون زاد 58,900 · الموردون — S1 زادوا 58,900.",
+        "drcr": "من حـ/ المخزون إلى حـ/ الموردين (مصنع الوادي).",
+        "shows": "كارت الورق: 620 كرتونة بتكلفة 114,700 = متوسط 185 للكرتونة.",
+        "control": "المطابقة الثلاثية + الاحتفاظ بـ GRN-003 (هيبقى دليل مهم في نزاع آخر الشهر)."
+      },
+      "hintsAr": ["المتوسط المرجّح = إجمالي التكلفة ÷ إجمالي الكمية بعد الشراء."],
+      "explanationAr": "القيد زي أي شراء آجل. الجديد إن متوسط التكلفة بقى (55,800 + 58,900) ÷ (310 + 310) = 185."
+    },
+    {
+      "id": "E17", "kind": "event", "date": "2026-03-18", "week": 1, "studyDay": 5, "guidance": "guided",
+      "titleAr": "بيع 300 كرتونة لشركة الرواد على الحساب",
+      "narrativeAr": "سلّمنا شركة الرواد (C3) 300 كرتونة بسعر 260 على الحساب. التكلفة بالمتوسط المتحرك 185 للكرتونة.",
+      "documentIds": ["DOC-E17-SO", "DOC-E17-DN", "DOC-E17-INV"],
+      "entries": [
+        { "descriptionAr": "مبيعات آجلة لـ C3", "lines": [ { "account": "1201", "side": "debit", "amount": 78000, "party": "C3" }, { "account": "4101", "side": "credit", "amount": 78000 } ] },
+        { "descriptionAr": "تكلفة البضاعة المباعة بالمتوسط المتحرك", "lines": [ { "account": "5101", "side": "debit", "amount": 55500 }, { "account": "1301", "side": "credit", "amount": 55500, "sku": "PAPER", "qty": 300 } ] }
+      ],
+      "inventory": [ { "sku": "PAPER", "type": "sale", "qty": 300, "unitPrice": 260 } ],
+      "protocol": {
+        "happened": "تسليم بضاعة = إيراد مكتسب النهارده.",
+        "evidence": "أمر البيع + DN-002 موقّع + INV-003.",
+        "changed": "حق عند C3 بـ 78,000 وإيراد؛ وخروج بضاعة بتكلفة 55,500.",
+        "accounts": "العملاء — C3 زادوا 78,000 · المبيعات زادت 78,000 · تكلفة البضاعة المباعة زادت 55,500 · المخزون قل 55,500.",
+        "drcr": "من حـ/ العملاء إلى حـ/ المبيعات، ومن حـ/ تكلفة البضاعة المباعة إلى حـ/ المخزون.",
+        "shows": "مجمل ربح البيعة 22,500. لو كنا بنستخدم الوارد أولًا كانت التكلفة 54,000 (300 × 180).",
+        "control": "كارت الصنف يطابق حساب المخزون: 320 كرتونة = 59,200."
+      },
+      "hintsAr": ["التكلفة = 300 × 185."],
+      "explanationAr": "نفس قيدين البيع الآجل. التكلفة بالمتوسط 185 مش بآخر سعر شراء ولا بأول سعر."
+    },
+    {
+      "id": "E18", "kind": "event", "date": "2026-03-18", "week": 1, "studyDay": 5, "guidance": "guided",
+      "titleAr": "تعويض العهدة النثرية بإيصالات",
+      "narrativeAr": "نادية قدّمت 3 إيصالات معتمدة صرفتها من العهدة: أدوات مكتبية 450، نقل 600، ضيافة 150. عوّضناها 1,200 من الصندوق علشان ترجع العهدة 2,000.",
+      "documentIds": ["DOC-E18-PCV1", "DOC-E18-PCV2", "DOC-E18-PCV3", "DOC-E18-REQUEST"],
+      "entries": [ { "descriptionAr": "تعويض العهدة النثرية بالمصروفات المؤيدة بإيصالات", "lines": [ { "account": "5206", "side": "debit", "amount": 450 }, { "account": "5207", "side": "debit", "amount": 600 }, { "account": "5208", "side": "debit", "amount": 150 }, { "account": "1101", "side": "credit", "amount": 1200 } ] } ],
+      "protocol": {
+        "happened": "مصروفات صغيرة اتصرفت فعلًا من العهدة، والتعويض بيرجّع رصيد العهدة لأصله.",
+        "evidence": "3 أذون صرف نثرية بإيصالات + طلب تعويض بمجموع 1,200.",
+        "changed": "الشركة استهلكت أدوات ونقل وضيافة (مصروفات)، وخرجت نقدية من الصندوق للعهدة. رصيد العهدة نفسه رجع 2,000.",
+        "accounts": "أدوات مكتبية +450 · نقل +600 · ضيافة +150 · الصندوق −1,200.",
+        "drcr": "من مذكورين: حـ/ أدوات مكتبية 450، حـ/ مصروف نقل 600، حـ/ مصروف ضيافة 150 — إلى حـ/ الصندوق 1,200.",
+        "shows": "قائمة الدخل: 3 مصروفات تشغيلية. حساب العهدة ما اتحركش (2,000).",
+        "control": "فحص كل إيصال: تاريخ، مبلغ، اعتماد، مش مكرر. أي إيصال ناقص يترفض (زي مطالبة التاكسي D-X2)."
+      },
+      "hintsAr": ["قيد مركب: كذا حساب مدين وحساب دائن واحد.", "في العهدة المستديمة المصروف بيتسجّل وقت التعويض."],
+      "explanationAr": "قيد مركب: من مذكورين (المصروفات الثلاثة) إلى حـ/ الصندوق. العهدة بتفضل 2,000 لأن التعويض بيرجعها."
+    },
+    {
+      "id": "E19", "kind": "event", "date": "2026-03-23", "week": 2, "studyDay": 8, "guidance": "faded",
+      "titleAr": "مدرسة المستقبل بتدفع مقدّم 10,000",
+      "narrativeAr": "مدرسة المستقبل (C4) حوّلت 10,000 مقدّم لطلبية حبر هنسلّمها بعدين.",
+      "documentIds": ["DOC-E19-ORDER", "DOC-E19-ADVICE", "DOC-E19-RV"],
+      "entries": [ { "descriptionAr": "دفعة مقدمة من C4", "lines": [ { "account": "1103", "side": "debit", "amount": 10000 }, { "account": "2201", "side": "credit", "amount": 10000, "party": "C4" } ] } ],
+      "protocol": {
+        "happened": "الفلوس وصلت، لكن الشركة لسه ما سلّمتش. يعني لسه ما كسبتش إيراد؛ عليها التزام إنها تسلّم.",
+        "evidence": "تأكيد الطلبية + إشعار الإضافة + إيصال الاستلام.",
+        "changed": "البنك زاد، وبقى على الشركة التزام للعميل (تسليم بضاعة أو رد الفلوس).",
+        "accounts": "البنك زاد 10,000 · دفعات مقدمة من العملاء (التزام) زادت 10,000.",
+        "drcr": "من حـ/ البنك إلى حـ/ دفعات مقدمة من العملاء.",
+        "shows": "الميزانية: التزام متداول. قائمة الدخل: لا شيء لحد التسليم (E23).",
+        "control": "متابعة الطلبيات المفتوحة مقابل الدفعات المقدمة."
+      },
+      "hintsAr": ["هل الشركة نفّذت اللي عليها؟"],
+      "explanationAr": "الدفعة المقدمة التزام مش إيراد. الإيراد بيتكسب لما نسلّم."
+    },
+    {
+      "id": "E20", "kind": "event", "date": "2026-03-24", "week": 2, "studyDay": 8, "guidance": "faded",
+      "titleAr": "المالك بيسحب 5,000 لاستخدامه الشخصي",
+      "narrativeAr": "أ. حسام أخد 5,000 جنيه من الصندوق لمصاريف شخصية.",
+      "documentIds": ["DOC-E20-MEMO", "DOC-E20-CPV"],
+      "entries": [ { "descriptionAr": "مسحوبات شخصية للمالك", "lines": [ { "account": "3201", "side": "debit", "amount": 5000 }, { "account": "1101", "side": "credit", "amount": 5000 } ] } ],
+      "protocol": {
+        "happened": "المالك خد فلوس من الشركة لنفسه. ده مش مصروف شغل؛ ده تقليل لحقه في الشركة.",
+        "evidence": "مذكرة سحب موقّعة من المالك + إذن صرف نقدية.",
+        "changed": "النقدية قلّت وحق المالك في الشركة قل.",
+        "accounts": "المسحوبات الشخصية (عكس حقوق ملكية) زادت 5,000 · الصندوق قل 5,000.",
+        "drcr": "من حـ/ المسحوبات الشخصية إلى حـ/ الصندوق.",
+        "shows": "قائمة التغير في حقوق الملكية (مش قائمة الدخل). التدفق النقدي: −5,000 تمويلي.",
+        "control": "فصل مصاريف المالك الشخصية عن مصروفات الشركة."
+      },
+      "hintsAr": ["هل الفلوس دي اتصرفت علشان الشركة تكسب إيراد؟"],
+      "explanationAr": "المسحوبات بتقلل حقوق الملكية مباشرة ومش بتدخل قائمة الدخل."
+    },
+    {
+      "id": "E21", "kind": "event", "date": "2026-03-25", "week": 2, "studyDay": 9, "guidance": "faded",
+      "titleAr": "سداد رصيد الحبر الذهبي بالكامل",
+      "narrativeAr": "كشف حساب S2 بيقول إن رصيدنا 42,750، وده مطابق لدفاترنا. المدير اعتمد السداد وحوّلنا المبلغ.",
+      "documentIds": ["DOC-E21-STATEMENT", "DOC-E21-PV", "DOC-E21-TRANSFER"],
+      "entries": [ { "descriptionAr": "سداد رصيد S2 بتحويل", "lines": [ { "account": "2101", "side": "debit", "amount": 42750, "party": "S2" }, { "account": "1103", "side": "credit", "amount": 42750 } ] } ],
+      "protocol": {
+        "happened": "سداد التزام قائم بعد مطابقة كشف المورد.",
+        "evidence": "كشف حساب المورد (42,750 = دفاترنا) + إذن صرف معتمد + إشعار التحويل.",
+        "changed": "الالتزام للمورد اتقفل والبنك قل.",
+        "accounts": "الموردون — S2 قلوا 42,750 · البنك قل 42,750.",
+        "drcr": "من حـ/ الموردين (الحبر الذهبي) إلى حـ/ البنك.",
+        "shows": "رصيد S2 = صفر.",
+        "control": "مطابقة كشف المورد قبل الدفع + اعتماد المدير."
+      },
+      "hintsAr": ["طابقت الرصيد قبل ما تدفع؟"],
+      "explanationAr": "سداد مورد: الموردين مدين والبنك دائن."
+    },
+    {
+      "id": "E22", "kind": "event", "date": "2026-03-26", "week": 2, "studyDay": 9, "guidance": "faded",
+      "titleAr": "الرواد بتدفع 40,000 تحويل + شيك مؤجل 20,000 — وكشف مصنع الوادي فيه فرق",
+      "narrativeAr": "شركة الرواد حوّلت 40,000 وسلّمتنا شيك بتاريخ 15 أبريل بـ 20,000. وفي نفس اليوم وصل كشف حساب مصنع الوادي برصيد 99,750 بينما دفاترنا 98,900.",
+      "documentIds": ["DOC-E22-ADVICE", "DOC-E22-PDC", "DOC-E22-RV", "DOC-E22-S1STATEMENT"],
+      "entries": [ { "descriptionAr": "تحصيل من C3: تحويل + شيك آجل (أوراق قبض)", "lines": [ { "account": "1103", "side": "debit", "amount": 40000 }, { "account": "1202", "side": "debit", "amount": 20000, "party": "C3" }, { "account": "1201", "side": "credit", "amount": 60000, "party": "C3" } ] } ],
+      "protocol": {
+        "happened": "العميل سدّد 60,000 من دينه: 40,000 وصلت البنك فعلًا، و20,000 شيك مؤجل ما ينفعش يتصرف قبل 15 أبريل. وكشف المورد فيه 850 مش في دفاترنا.",
+        "evidence": "إشعار الإضافة + صورة الشيك المؤجل + إيصال الاستلام. لفرق المورد: GRN-003 بيقول إن سواقنا استلم البضاعة بنفسه، فرسوم التوصيل 850 مش مستحقة.",
+        "changed": "البنك زاد 40,000، وبقى معانا ورقة قبض (حق مستندي) بـ 20,000، وحقنا العادي عند العميل قل 60,000. فرق المورد: مفيش أي تغيير لحد ما النزاع يتحل.",
+        "accounts": "البنك +40,000 · أوراق القبض +20,000 · العملاء — C3 −60,000. (المورد: لا قيد).",
+        "drcr": "من مذكورين: حـ/ البنك 40,000، حـ/ أوراق القبض 20,000 — إلى حـ/ العملاء (الرواد) 60,000.",
+        "shows": "الشيك المؤجل أصل متداول (أوراق قبض) ومش بند تسوية بنكية. رصيد S1 يفضل 98,900 والفرق يتسجل في سجل الاستثناءات.",
+        "control": "حافظة الشيكات المؤجلة ومتابعة تواريخ الاستحقاق. للمورد: خطاب نزاع مدعوم بـ GRN-003 — بدون ترحيل."
+      },
+      "hintsAr": ["الشيك المؤجل لسه ما بقاش فلوس في البنك.", "قبل ما تقبل رسوم في كشف مورد: فين المستند اللي يثبتها؟"],
+      "explanationAr": "الشيك المؤجل بيتسجّل أوراق قبض لحد تاريخه. والفرق في كشف المورد ما يتسجلش لمجرد إنه ظهر في كشفه: المستند (GRN-003) بيناقضه، فنفتح نزاع بالدليل."
+    },
+    {
+      "id": "E23", "kind": "event", "date": "2026-03-29", "week": 2, "studyDay": 10, "guidance": "faded",
+      "titleAr": "تسليم 10 خراطيش لمدرسة المستقبل مقابل الدفعة المقدمة",
+      "narrativeAr": "سلّمنا مدرسة المستقبل 10 خراطيش بسعر 700 وخصمنا قيمتها من الدفعة المقدمة. التكلفة 450 للخرطوشة.",
+      "documentIds": ["DOC-E23-DN", "DOC-E23-INV"],
+      "entries": [
+        { "descriptionAr": "إثبات الإيراد مقابل الدفعة المقدمة", "lines": [ { "account": "2201", "side": "debit", "amount": 7000, "party": "C4" }, { "account": "4101", "side": "credit", "amount": 7000 } ] },
+        { "descriptionAr": "تكلفة البضاعة المباعة", "lines": [ { "account": "5101", "side": "debit", "amount": 4500 }, { "account": "1301", "side": "credit", "amount": 4500, "sku": "TONER", "qty": 10 } ] }
+      ],
+      "inventory": [ { "sku": "TONER", "type": "sale", "qty": 10, "unitPrice": 700 } ],
+      "protocol": {
+        "happened": "التسليم حصل النهارده، فالإيراد اتكسب دلوقتي (الفلوس كانت وصلت قبل كده).",
+        "evidence": "إذن التسليم DN-003 + فاتورة INV-004 مخصومة من الدفعة المقدمة.",
+        "changed": "الالتزام للعميل قل بقيمة اللي اتسلّم، والإيراد زاد؛ والمخزون قل بالتكلفة.",
+        "accounts": "دفعات مقدمة — C4 −7,000 · المبيعات +7,000 · تكلفة البضاعة المباعة +4,500 · المخزون −4,500.",
+        "drcr": "من حـ/ دفعات مقدمة من العملاء إلى حـ/ المبيعات، ومن حـ/ تكلفة البضاعة المباعة إلى حـ/ المخزون.",
+        "shows": "باقي الدفعة المقدمة 3,000 التزام. ولا جنيه دخل البنك النهارده.",
+        "control": "متابعة رصيد الدفعة المقدمة لكل عميل."
+      },
+      "hintsAr": ["الفلوس جت قبل كده. النهارده إيه اللي اتغيّر؟"],
+      "explanationAr": "الإيراد بيتسجّل وقت التسليم: بنقلل الالتزام (مدين) ونسجل المبيعات (دائن)، ومعاه قيد التكلفة."
+    },
+    {
+      "id": "E24", "kind": "event", "date": "2026-03-30", "week": 2, "studyDay": 10, "guidance": "faded",
+      "titleAr": "رواتب مارس: إجمالي 24,000 واستقطاعات توضيحية 2,400",
+      "narrativeAr": "كشف رواتب مارس: سارة 9,000 + محمود 8,000 + نادية 7,000 = 24,000 إجمالي. الاستقطاعات (مبالغ توضيحية مش نسب قانونية) 2,400، والصافي 21,600 اتحوّل للموظفين.",
+      "documentIds": ["DOC-E24-PAYROLL", "DOC-E24-TRANSFER"],
+      "entries": [ { "descriptionAr": "رواتب مارس", "lines": [ { "account": "5202", "side": "debit", "amount": 24000 }, { "account": "1103", "side": "credit", "amount": 21600 }, { "account": "2301", "side": "credit", "amount": 2400 } ] } ],
+      "protocol": {
+        "happened": "الموظفين اشتغلوا الشهر، فتكلفة الرواتب (الإجمالي) مصروف مارس. الشركة دفعت الصافي واحتجزت الاستقطاعات لتوريدها لجهاتها لاحقًا.",
+        "evidence": "كشف رواتب معتمد (مكتوب عليه توضيحي) + إشعار التحويل بالصافي.",
+        "changed": "مصروف رواتب بالإجمالي؛ البنك قل بالصافي؛ والتزام بالاستقطاعات لسه ما اتوردش.",
+        "accounts": "مصروف الرواتب +24,000 · البنك −21,600 · استقطاعات رواتب مستحقة +2,400.",
+        "drcr": "من حـ/ مصروف الرواتب 24,000 — إلى مذكورين: حـ/ البنك 21,600، حـ/ استقطاعات رواتب مستحقة 2,400.",
+        "shows": "قائمة الدخل: 24,000 (الإجمالي مش الصافي). التدفق النقدي: −21,600.",
+        "control": "مراجعة كشف الرواتب: موظفين حاليين، مفيش تكرار، الإجمالي − الاستقطاعات = الصافي."
+      },
+      "hintsAr": ["المصروف = الإجمالي. البنك = الصافي. والفرق؟"],
+      "explanationAr": "المصروف بالإجمالي، والاستقطاعات المحتجزة التزام لحد ما تتورّد. الأرقام توضيحية بس."
+    },
+    {
+      "id": "E25", "kind": "event", "date": "2026-03-30", "week": 2, "studyDay": 10, "guidance": "faded",
+      "titleAr": "شيك رقم 1003 لمصنع الوادي بـ 60,000",
+      "narrativeAr": "سلّمنا مصنع الوادي شيك رقم 1003 بـ 60,000 بعد اعتماد المدير. المورد لسه ما قدّمش الشيك للبنك لحد 31 مارس.",
+      "documentIds": ["DOC-E25-PV", "DOC-E25-COUNTERFOIL"],
+      "entries": [ { "descriptionAr": "سداد لـ S1 بالشيك 1003", "lines": [ { "account": "2101", "side": "debit", "amount": 60000, "party": "S1" }, { "account": "1103", "side": "credit", "amount": 60000 } ] } ],
+      "protocol": {
+        "happened": "سلّمنا الشيك فخفّضنا الالتزام في دفاترنا.",
+        "evidence": "إذن صرف معتمد + كعب الشيك 1003.",
+        "changed": "الالتزام لـ S1 قل والبنك (في دفاترنا) قل.",
+        "accounts": "الموردون — S1 −60,000 · البنك −60,000.",
+        "drcr": "من حـ/ الموردين (مصنع الوادي) إلى حـ/ البنك.",
+        "shows": "في تسوية آخر الشهر: شيك معلّق 60,000 (بند توقيت — لا قيد).",
+        "control": "سجل الشيكات الصادرة والتسوية البنكية."
+      },
+      "hintsAr": ["زي E11 بالظبط."],
+      "explanationAr": "سداد مورد بشيك: الموردين مدين والبنك دائن، وفرق التوقيت مع البنك بيتحل في التسوية."
+    },
+    {
+      "id": "E26", "kind": "event", "date": "2026-03-31", "week": 2, "studyDay": 10, "guidance": "faded",
+      "titleAr": "إيداع شيك مكتبة النور بـ 10,000",
+      "narrativeAr": "مكتبة النور سلّمتنا شيك بـ 10,000 وأودعناه في البنك يوم 31 مارس. البنك هيضيفه للحساب يوم 1 أبريل.",
+      "documentIds": ["DOC-E26-CHEQUE", "DOC-E26-DEPOSIT"],
+      "entries": [ { "descriptionAr": "إيداع شيك C1", "lines": [ { "account": "1103", "side": "debit", "amount": 10000 }, { "account": "1201", "side": "credit", "amount": 10000, "party": "C1" } ] } ],
+      "protocol": {
+        "happened": "استلمنا الشيك وأودعناه، فبنسجّل التحصيل في دفاترنا النهارده.",
+        "evidence": "صورة شيك العميل + إيصال الإيداع.",
+        "changed": "البنك (في دفاترنا) زاد وحقنا عند C1 قل.",
+        "accounts": "البنك +10,000 · العملاء — C1 −10,000.",
+        "drcr": "من حـ/ البنك إلى حـ/ العملاء (مكتبة النور).",
+        "shows": "رصيد C1 = 7,500. في التسوية: إيداع في الطريق 10,000 (بند توقيت).",
+        "control": "التأكد إن البنك أضاف الشيك فعلًا أول أبريل؛ لو رجع، يتعكس القيد."
+      },
+      "hintsAr": ["الإيداع حصل في دفاترنا؛ البنك متأخر يوم."],
+      "explanationAr": "تحصيل بشيك مودَع: البنك مدين والعملاء دائن. فرق اليوم مع كشف البنك = إيداع في الطريق."
+    },
+    {
+      "id": "A01", "kind": "adjustment", "date": "2026-03-31", "week": 2, "studyDay": 12, "guidance": "unguided",
+      "titleAr": "تسويات التسوية البنكية آخر الشهر",
+      "narrativeAr": "كشف البنك لآخر مارس فيه تحويل 8,000 من شركة الرواد يوم 31 (كانوا بعتوا إيميل بيقولوا حوّلنا) ما اتسجلش في دفاترنا، وعمولة بنكية 150.",
+      "documentIds": ["DOC-BANK-END", "DOC-A01-C3EMAIL"],
+      "entries": [
+        { "descriptionAr": "تحصيل غير مسجل من C3 ظهر في كشف البنك", "lines": [ { "account": "1103", "side": "debit", "amount": 8000 }, { "account": "1201", "side": "credit", "amount": 8000, "party": "C3" } ] },
+        { "descriptionAr": "عمولات بنكية آخر الشهر", "lines": [ { "account": "5205", "side": "debit", "amount": 150 }, { "account": "1103", "side": "credit", "amount": 150 } ] }
+      ],
+      "protocol": {
+        "happened": "بندين حصلوا فعلًا في البنك ومش في دفاترنا: تحصيل من C3 وعمولة. الاتنين بنود من جهة الدفاتر فيتقيدوا.",
+        "evidence": "كشف البنك 1–31 مارس (السطرين ظاهرين) + إيميل C3. الإيميل لوحده مش دليل كفاية؛ الدليل هو ظهور المبلغ في كشف البنك.",
+        "changed": "البنك زاد 8,000 وحقنا عند C3 قل؛ ومصروف عمولة 150.",
+        "accounts": "البنك +8,000 · العملاء — C3 −8,000 · مصروفات بنكية +150 · البنك −150.",
+        "drcr": "من حـ/ البنك إلى حـ/ العملاء (الرواد)، ومن حـ/ مصروفات بنكية إلى حـ/ البنك.",
+        "shows": "رصيد البنك المعدّل 168,375 = رصيد الكشف 218,375 + إيداع في الطريق 10,000 − شيك معلّق 60,000.",
+        "control": "التسوية البنكية الشهرية: بنود التوقيت ما بتتقيدش؛ بنود الدفاتر بس."
+      },
+      "hintsAr": ["فرّق بين بنود التوقيت (إيداع في الطريق، شيك معلّق) وبنود الدفاتر."],
+      "explanationAr": "بنقيد بس البنود اللي حصلت في البنك ولسه مش في دفاترنا. الإيداع في الطريق والشيك المعلّق هيظهروا في كشف أبريل لوحدهم."
+    },
+    {
+      "id": "A02", "kind": "adjustment", "date": "2026-03-31", "week": 2, "studyDay": 12, "guidance": "unguided",
+      "titleAr": "استهلاك إيجار مارس",
+      "narrativeAr": "خلص شهر مارس، فاستهلكنا شهر من الإيجار المدفوع مقدمًا (6,000).",
+      "documentIds": ["DOC-A02-SCHEDULE"],
+      "entries": [ { "descriptionAr": "إيجار مارس المستهلك", "lines": [ { "account": "5201", "side": "debit", "amount": 6000 }, { "account": "1401", "side": "credit", "amount": 6000 } ] } ],
+      "protocol": {
+        "happened": "شهر من حق الاستخدام اتستهلك.",
+        "evidence": "جدول استهلاك الإيجار (عقد 3 شهور × 6,000).",
+        "changed": "الأصل (إيجار مقدم) قل والمصروف زاد.",
+        "accounts": "مصروف الإيجار +6,000 · إيجار مدفوع مقدمًا −6,000.",
+        "drcr": "من حـ/ مصروف الإيجار إلى حـ/ إيجار مدفوع مقدمًا.",
+        "shows": "قائمة الدخل: 6,000؛ الميزانية: إيجار مقدم 12,000 (أبريل ومايو). مفيش نقدية.",
+        "control": "جدول المدفوعات المقدمة يتراجع كل شهر."
+      },
+      "hintsAr": ["كام شهر اتستهلك؟"],
+      "explanationAr": "تسوية مصروف مقدم: جزء الأصل اللي اتستهلك يتحول لمصروف."
+    },
+    {
+      "id": "A03", "kind": "adjustment", "date": "2026-03-31", "week": 2, "studyDay": 11, "guidance": "unguided",
+      "titleAr": "إهلاك مارس",
+      "narrativeAr": "حسب سياسة الشركة: 36,000 ÷ 36 شهر = 1,000 إهلاك شهري، وشهر الشراء محسوب كامل.",
+      "documentIds": ["DOC-A03-SCHEDULE"],
+      "entries": [ { "descriptionAr": "إهلاك الأثاث والمعدات عن مارس", "lines": [ { "account": "5204", "side": "debit", "amount": 1000 }, { "account": "1509", "side": "credit", "amount": 1000 } ] } ],
+      "protocol": {
+        "happened": "جزء من منفعة المعدات اتستهلك في مارس. مفيش فلوس اتدفعت.",
+        "evidence": "جدول الإهلاك في سجل الأصول.",
+        "changed": "مصروف إهلاك، وقيمة المعدات الدفترية الصافية قلّت.",
+        "accounts": "مصروف الإهلاك +1,000 · مجمع الإهلاك (حساب عكسي للأصل) +1,000.",
+        "drcr": "من حـ/ مصروف الإهلاك إلى حـ/ مجمع الإهلاك.",
+        "shows": "الميزانية: معدات 36,000 − مجمع 1,000 = 35,000. الإهلاك مش تدفق نقدي.",
+        "control": "سجل الأصول الثابتة وجدول الإهلاك."
+      },
+      "hintsAr": ["الإهلاك عمره ما بيكون مدفوعات نقدية."],
+      "explanationAr": "بنستخدم مجمع الإهلاك (حساب عكسي) علشان التكلفة الأصلية تفضل ظاهرة في الدفاتر."
+    },
+    {
+      "id": "A04", "kind": "adjustment", "date": "2026-03-31", "week": 2, "studyDay": 12, "guidance": "unguided",
+      "titleAr": "كهرباء مارس — الفاتورة جاية أبريل",
+      "narrativeAr": "استهلكنا كهرباء في مارس، والفاتورة هتوصل أبريل. المدير اعتمد تقدير 900 جنيه من قراءة العداد.",
+      "documentIds": ["DOC-A04-ESTIMATE"],
+      "entries": [ { "descriptionAr": "مصروف كهرباء مستحق عن مارس", "lines": [ { "account": "5203", "side": "debit", "amount": 900 }, { "account": "2401", "side": "credit", "amount": 900 } ] } ],
+      "protocol": {
+        "happened": "الاستهلاك حصل في مارس حتى لو الفاتورة لسه ما وصلتش — يبقى مصروف مارس.",
+        "evidence": "مذكرة تقدير قراءة العداد معتمدة من المدير.",
+        "changed": "مصروف حصل، وبقى على الشركة التزام لسه ما اتدفعش.",
+        "accounts": "مصروف المرافق والاتصالات +900 · مصروفات مستحقة +900.",
+        "drcr": "من حـ/ مصروف المرافق والاتصالات إلى حـ/ مصروفات مستحقة.",
+        "shows": "قائمة دخل مارس فيها الكهرباء؛ الميزانية فيها التزام 900.",
+        "control": "أول ما الفاتورة تيجي في أبريل نقارنها بالتقدير."
+      },
+      "hintsAr": ["غياب الفاتورة مش معناه غياب الالتزام."],
+      "explanationAr": "مصروف مستحق: الاستهلاك في مارس، والدفع بعدين. لو ما سجلناهوش، ربح مارس هيبان أعلى من الحقيقة."
+    },
+    {
+      "id": "A05", "kind": "adjustment", "date": "2026-03-31", "week": 2, "studyDay": 11, "guidance": "unguided",
+      "titleAr": "الجرد الفعلي: عجز كرتونتين ورق",
+      "narrativeAr": "الجرد آخر الشهر: الورق 318 كرتونة والنظام بيقول 320؛ التونر 65 مطابق. العجز 2 × 185 = 370.",
+      "documentIds": ["DOC-A05-COUNT"],
+      "entries": [ { "descriptionAr": "عجز جرد المخزون", "lines": [ { "account": "5209", "side": "debit", "amount": 370 }, { "account": "1301", "side": "credit", "amount": 370, "sku": "PAPER", "qty": 2 } ] } ],
+      "inventory": [ { "sku": "PAPER", "type": "count-adjustment", "qty": 2 } ],
+      "protocol": {
+        "happened": "الموجود فعلًا أقل من الدفاتر بكرتونتين — خسارة لازم تتسجل وسببها يتبحث.",
+        "evidence": "كشف الجرد موقّع من لجنة الجرد.",
+        "changed": "المخزون قل ومصروف (عجز) زاد.",
+        "accounts": "عجز المخزون +370 · المخزون −370.",
+        "drcr": "من حـ/ عجز المخزون إلى حـ/ المخزون.",
+        "shows": "الورق 318 كرتونة = 58,830. العجز مصروف تشغيلي في القصة دي.",
+        "control": "جرد دوري + التحقيق في سبب العجز (من غير اتهام قبل الدليل)."
+      },
+      "hintsAr": ["العجز بيتسعّر بمتوسط التكلفة الحالي."],
+      "explanationAr": "الجرد بيظبط الدفاتر على الحقيقة. العجز بالتكلفة (185) مش بسعر البيع."
+    },
+    {
+      "id": "A06", "kind": "closing", "date": "2026-03-31", "week": 2, "studyDay": 12, "guidance": "unguided",
+      "titleAr": "قيود الإقفال في رأس المال",
+      "narrativeAr": "خلصنا التسويات. نقفل الإيرادات والمصروفات والمسحوبات في رأس المال علشان نبدأ أبريل بحسابات مؤقتة صفر.",
+      "documentIds": ["DOC-A06-CHECKLIST"],
+      "entries": [],
+      "protocol": {
+        "happened": "نهاية الفترة: الحسابات المؤقتة (إيرادات، مصروفات، مسحوبات) بتتقفل.",
+        "evidence": "قائمة مراجعة الإقفال + ميزان المراجعة بعد التسويات (495,200).",
+        "changed": "صافي الربح (8,355) بيضاف لرأس المال، والمسحوبات (5,000) بتتخصم منه.",
+        "accounts": "كل الإيرادات والمصروفات والمسحوبات ← صفر · رأس المال ← 303,355.",
+        "drcr": "الحسابات الدائنة (المبيعات) بتتقفل مدين، والمدينة (المصروفات والمردودات والمسحوبات) بتتقفل دائن، والفرق في رأس المال.",
+        "shows": "ميزان المراجعة بعد الإقفال 349,555 = 349,555 وفيه حسابات دائمة بس. قائمة دخل مارس لسه بتعرض مارس كامل.",
+        "control": "الإقفال ما بيمسحش التاريخ: القيود الأصلية فاضلة، والتقارير بتستبعد قيود الإقفال من نشاط الفترة."
+      },
+      "hintsAr": ["الإقفال مش حذف — هو نقل الأرصدة لرأس المال."],
+      "explanationAr": "قيود الإقفال بتصفّر الحسابات المؤقتة وتنقل صافي الربح والمسحوبات لرأس المال."
+    }
+  ]
+}

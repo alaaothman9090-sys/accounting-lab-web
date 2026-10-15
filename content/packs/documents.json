@@ -1,0 +1,1481 @@
+{
+  "pack": "documents",
+  "documents": [
+    {
+      "id": "DOC-E01-DEPOSIT", "type": "deposit-slip", "number": "DS-0301-01", "date": "2026-03-01", "companyId": "maamal", "eventIds": ["E01"],
+      "titleAr": "إيصال إيداع نقدي — بنك المعمل التجريبي (تدريبي)", "fromParty": "OWNER", "toParty": "BANK",
+      "fields": [
+        { "labelAr": "اسم الحساب", "value": "شركة المعمل للتجارة والتوزيع (تدريبي)" },
+        { "labelAr": "رقم الحساب", "value": "TRN-ACC-0001 (تدريبي)", "kind": "code" },
+        { "labelAr": "المودِع", "value": "أ. حسام الدين رفعت (تدريبي)" },
+        { "labelAr": "المبلغ", "value": 300000, "kind": "money" },
+        { "labelAr": "المبلغ بالحروف", "value": "ثلاثمائة ألف جنيه فقط لا غير" },
+        { "labelAr": "الغرض", "value": "إيداع رأس مال الشركة" }
+      ],
+      "total": 300000,
+      "approvals": [ { "roleAr": "ختم البنك التجريبي", "name": "موظف الشباك (تدريبي)", "date": "2026-03-01", "status": "approved" } ],
+      "expectedDecision": "accept-post",
+      "checks": [
+        { "id": "amount", "labelAr": "المبلغ في الإيصال = المبلغ في مذكرة رأس المال", "expected": true, "explainAr": "الاتنين 300,000 — المستندين بيأكدوا بعض." },
+        { "id": "account", "labelAr": "الإيداع في حساب الشركة نفسها (مش حساب المالك الشخصي)", "expected": true, "explainAr": "اسم الحساب هو اسم الشركة — ده مبدأ الشخصية المعنوية المستقلة." },
+        { "id": "stamp", "labelAr": "عليه ختم البنك", "expected": true, "explainAr": "ختم البنك بيثبت إن الفلوس دخلت فعلًا." }
+      ],
+      "decisionExplainAr": "المستند كامل ومطابق ومختوم: نقبله ونسجّل القيد."
+    },
+    {
+      "id": "DOC-E01-MEMO", "type": "memo", "number": "MEMO-CAP-01", "date": "2026-03-01", "companyId": "maamal", "eventIds": ["E01"],
+      "titleAr": "مذكرة إثبات رأس المال", "fromParty": "OWNER",
+      "fields": [
+        { "labelAr": "من", "value": "أ. حسام الدين رفعت — المالك (تدريبي)" },
+        { "labelAr": "إلى", "value": "الحسابات" },
+        { "labelAr": "الموضوع", "value": "إيداع رأس المال الافتتاحي" },
+        { "labelAr": "المبلغ", "value": 300000, "kind": "money" }
+      ],
+      "notesAr": ["أقر أنا المالك بأني أودعت 300,000 جنيه في حساب الشركة كرأس مال لبدء النشاط، وليس قرضًا للشركة."],
+      "approvals": [ { "roleAr": "توقيع المالك", "name": "حسام الدين رفعت (تدريبي)", "date": "2026-03-01", "status": "approved" } ],
+      "expectedDecision": "accept-post",
+      "decisionExplainAr": "المذكرة بتوضح طبيعة المبلغ (رأس مال مش قرض) فبتحدد الحساب الدائن: رأس المال."
+    },
+    {
+      "id": "DOC-E02-COUNTERFOIL", "type": "cheque-counterfoil", "number": "1001", "date": "2026-03-01", "companyId": "maamal", "eventIds": ["E02"],
+      "titleAr": "كعب شيك رقم 1001", "toParty": "BANK",
+      "fields": [
+        { "labelAr": "رقم الشيك", "value": "1001", "kind": "code" },
+        { "labelAr": "المستفيد", "value": "نقدًا — لتغذية صندوق الشركة" },
+        { "labelAr": "المبلغ", "value": 15000, "kind": "money" },
+        { "labelAr": "البيان", "value": "عهدة الصندوق للمصاريف اليومية" }
+      ],
+      "approvals": [ { "roleAr": "اعتماد المدير (المبلغ أكبر من 10,000)", "name": "ليلى منصور (تدريبي)", "date": "2026-03-01", "status": "approved" } ],
+      "expectedDecision": "accept-post",
+      "checks": [
+        { "id": "approval", "labelAr": "عليه اعتماد المدير لأن المبلغ أكبر من 10,000", "expected": true, "explainAr": "سياسة الشركة (الوهمية) بتشترط اعتماد المدير لأي دفعة أكبر من 10,000." }
+      ],
+      "decisionExplainAr": "مستند معتمد ومطابق لإيصال الصندوق: نقبله."
+    },
+    {
+      "id": "DOC-E02-CASHRECEIPT", "type": "receipt-voucher", "number": "CR-001", "date": "2026-03-01", "companyId": "maamal", "eventIds": ["E02"],
+      "titleAr": "إيصال استلام نقدية للصندوق",
+      "fields": [
+        { "labelAr": "استلمت من", "value": "البنك — صرف الشيك 1001" },
+        { "labelAr": "المبلغ", "value": 15000, "kind": "money" },
+        { "labelAr": "المستلم", "value": "أمين الصندوق — المحاسب (تدريبي)" }
+      ],
+      "approvals": [ { "roleAr": "توقيع المستلم", "name": "المحاسب (أنت)", "date": "2026-03-01", "status": "approved" } ],
+      "expectedDecision": "accept-post",
+      "decisionExplainAr": "الإيصال بيثبت إن النقدية دخلت الصندوق فعلًا."
+    },
+    {
+      "id": "DOC-E03-LEASE", "type": "lease-summary", "number": "LEASE-WH-01", "date": "2026-03-02", "companyId": "maamal", "eventIds": ["E03", "A02"],
+      "titleAr": "ملخص عقد إيجار المخزن",
+      "fields": [
+        { "labelAr": "المؤجر", "value": "مالك المخزن — أ. سامي نبيل (تدريبي)" },
+        { "labelAr": "العين المؤجرة", "value": "مخزن بمساحة 120 م² (عنوان وهمي)" },
+        { "labelAr": "مدة الإيجار المدفوعة", "value": "مارس + أبريل + مايو 2026" },
+        { "labelAr": "الإيجار الشهري", "value": 6000, "kind": "money" },
+        { "labelAr": "المدفوع مقدمًا", "value": 18000, "kind": "money" }
+      ],
+      "lines": [
+        { "descAr": "إيجار مارس 2026", "qty": 1, "unitPrice": 6000, "amount": 6000 },
+        { "descAr": "إيجار أبريل 2026", "qty": 1, "unitPrice": 6000, "amount": 6000 },
+        { "descAr": "إيجار مايو 2026", "qty": 1, "unitPrice": 6000, "amount": 6000 }
+      ],
+      "total": 18000,
+      "notesAr": ["الدفع مقدمًا عن 3 شهور؛ كل شهر بيتحمّل 6,000 مصروف إيجار في آخره."],
+      "expectedDecision": "accept-post",
+      "decisionExplainAr": "العقد بيثبت إن المدفوع يخص 3 شهور جاية — يعني أصل (إيجار مقدم) مش مصروف مارس كله."
+    },
+    {
+      "id": "DOC-E03-TRANSFER", "type": "bank-advice", "number": "TRF-0302-01", "date": "2026-03-02", "companyId": "maamal", "eventIds": ["E03"],
+      "titleAr": "إشعار خصم — تحويل صادر (بنك المعمل التجريبي)", "fromParty": "BANK",
+      "fields": [
+        { "labelAr": "نوع العملية", "value": "تحويل صادر" },
+        { "labelAr": "المستفيد", "value": "أ. سامي نبيل (تدريبي)" },
+        { "labelAr": "المبلغ المخصوم من حسابكم", "value": 18000, "kind": "money" },
+        { "labelAr": "البيان", "value": "إيجار مخزن مارس–مايو" }
+      ],
+      "expectedDecision": "accept-post",
+      "decisionExplainAr": "إشعار البنك بيأكد خروج الفلوس من حساب الشركة."
+    },
+    {
+      "id": "DOC-E03-PV", "type": "payment-voucher", "number": "PV-001", "date": "2026-03-02", "companyId": "maamal", "eventIds": ["E03"],
+      "titleAr": "إذن صرف رقم PV-001",
+      "fields": [
+        { "labelAr": "اصرفوا إلى", "value": "أ. سامي نبيل — مالك المخزن (تدريبي)" },
+        { "labelAr": "المبلغ", "value": 18000, "kind": "money" },
+        { "labelAr": "طريقة الدفع", "value": "تحويل بنكي" },
+        { "labelAr": "البيان", "value": "إيجار مقدم 3 شهور حسب العقد LEASE-WH-01" }
+      ],
+      "approvals": [
+        { "roleAr": "إعداد", "name": "المحاسب (أنت)", "date": "2026-03-02", "status": "approved" },
+        { "roleAr": "اعتماد المدير", "name": "ليلى منصور (تدريبي)", "date": "2026-03-02", "status": "approved" }
+      ],
+      "expectedDecision": "accept-post",
+      "decisionExplainAr": "إذن الصرف معتمد من المدير ومربوط بالعقد — الدفعة مسموحة."
+    },
+    {
+      "id": "DOC-E04-INVOICE", "type": "supplier-invoice", "number": "FUR-2026-118", "date": "2026-03-03", "companyId": "maamal", "eventIds": ["E04"],
+      "titleAr": "فاتورة — شركة الأثاث الحديث (تدريبي)",
+      "fields": [
+        { "labelAr": "المورد", "value": "شركة الأثاث الحديث (تدريبي)" },
+        { "labelAr": "العميل", "value": "شركة المعمل للتجارة والتوزيع (تدريبي)" },
+        { "labelAr": "شروط الدفع", "value": "تحويل بنكي فوري" }
+      ],
+      "lines": [
+        { "descAr": "مكتب خشب", "qty": 3, "unitAr": "قطعة", "unitPrice": 4000, "amount": 12000 },
+        { "descAr": "كرسي مكتب", "qty": 4, "unitAr": "قطعة", "unitPrice": 1500, "amount": 6000 },
+        { "descAr": "جهاز كمبيوتر بشاشة", "qty": 1, "unitAr": "جهاز", "unitPrice": 18000, "amount": 18000 }
+      ],
+      "total": 36000,
+      "expectedDecision": "accept-post",
+      "checks": [
+        { "id": "math", "labelAr": "مجموع السطور = إجمالي الفاتورة", "expected": true, "explainAr": "12,000 + 6,000 + 18,000 = 36,000." },
+        { "id": "longlife", "labelAr": "الأصناف هتستخدم أكتر من سنة", "expected": true, "explainAr": "علشان كده بتتسجل أصل (أثاث ومعدات) مش مصروف." }
+      ],
+      "decisionExplainAr": "فاتورة سليمة لأصول طويلة الأجل: نقبلها ونسجلها أصل."
+    },
+    {
+      "id": "DOC-E04-TRANSFER", "type": "bank-advice", "number": "TRF-0303-01", "date": "2026-03-03", "companyId": "maamal", "eventIds": ["E04"],
+      "titleAr": "إشعار خصم — تحويل صادر (بنك المعمل التجريبي)", "fromParty": "BANK",
+      "fields": [
+        { "labelAr": "نوع العملية", "value": "تحويل صادر" },
+        { "labelAr": "المستفيد", "value": "شركة الأثاث الحديث (تدريبي)" },
+        { "labelAr": "المبلغ المخصوم من حسابكم", "value": 36000, "kind": "money" },
+        { "labelAr": "مرجع", "value": "فاتورة FUR-2026-118", "kind": "code" }
+      ],
+      "approvals": [ { "roleAr": "اعتماد المدير (أكبر من 10,000)", "name": "ليلى منصور (تدريبي)", "date": "2026-03-03", "status": "approved" } ],
+      "expectedDecision": "accept-post",
+      "decisionExplainAr": "التحويل مطابق للفاتورة ومعتمد."
+    },
+    {
+      "id": "DOC-E04-ASSETCARD", "type": "asset-card", "number": "FA-001", "date": "2026-03-03", "companyId": "maamal", "eventIds": ["E04", "A03"],
+      "titleAr": "بطاقة أصل ثابت FA-001",
+      "fields": [
+        { "labelAr": "الوصف", "value": "أثاث مكتبي (3 مكاتب + 4 كراسي) وجهاز كمبيوتر" },
+        { "labelAr": "تاريخ الشراء", "value": "2026-03-03", "kind": "date" },
+        { "labelAr": "التكلفة", "value": 36000, "kind": "money" },
+        { "labelAr": "العمر الإنتاجي", "value": "36 شهر (سياسة الشركة)" },
+        { "labelAr": "القيمة التخريدية", "value": 0, "kind": "money" },
+        { "labelAr": "طريقة الإهلاك", "value": "قسط ثابت — 1,000 جنيه شهريًا" },
+        { "labelAr": "المكان", "value": "مكتب الإدارة" }
+      ],
+      "expectedDecision": "file-only",
+      "decisionExplainAr": "بطاقة الأصل ما بتنشئش قيد لوحدها؛ بتتحفظ في سجل الأصول وتدعم قيد الشراء والإهلاك."
+    },
+    {
+      "id": "DOC-E05-PO", "type": "purchase-order", "number": "PO-001", "date": "2026-03-03", "companyId": "maamal", "eventIds": ["E05"],
+      "titleAr": "أمر شراء رقم PO-001 — ورق A4", "toParty": "S1",
+      "fields": [
+        { "labelAr": "المورد", "value": "مصنع الوادي للورق (تدريبي)" },
+        { "labelAr": "تاريخ التوريد المطلوب", "value": "2026-03-04", "kind": "date" },
+        { "labelAr": "مكان التسليم", "value": "مخزن الشركة (عنوان وهمي) — توريد بمعرفة المورد" },
+        { "labelAr": "شروط الدفع", "value": "آجل 30 يوم من تاريخ الفاتورة" }
+      ],
+      "lines": [ { "descAr": "كرتونة ورق A4", "sku": "PAPER", "qty": 500, "unitAr": "كرتونة", "unitPrice": 180, "amount": 90000 } ],
+      "total": 90000,
+      "approvals": [
+        { "roleAr": "إعداد", "name": "المحاسب (أنت)", "date": "2026-03-03", "status": "approved" },
+        { "roleAr": "اعتماد المدير", "name": "ليلى منصور (تدريبي)", "date": "2026-03-03", "status": "approved" }
+      ],
+      "expectedDecision": "file-only",
+      "checks": [
+        { "id": "notevent", "labelAr": "أمر الشراء PO-001 لوحده بيعمل قيد؟", "expected": false, "explainAr": "أمر الشراء طلب بس — لسه مفيش بضاعة اتسلمت ولا التزام اتولد. بيتحفظ علشان المطابقة الثلاثية." }
+      ],
+      "decisionExplainAr": "أمر الشراء مش حدث محاسبي: بنحفظه ونستخدمه في المطابقة مع إذن الاستلام والفاتورة. القيد بيتعمل يوم الاستلام (4 مارس)."
+    },
+    {
+      "id": "DOC-E05-GRN", "type": "goods-receipt", "number": "GRN-001", "date": "2026-03-04", "companyId": "maamal", "eventIds": ["E05"],
+      "titleAr": "إذن استلام بضاعة رقم GRN-001", "fromParty": "S1",
+      "fields": [
+        { "labelAr": "المورد", "value": "مصنع الوادي للورق (تدريبي)" },
+        { "labelAr": "مرجع أمر الشراء", "value": "PO-001", "kind": "code" },
+        { "labelAr": "طريقة الاستلام", "value": "توريد المورد لمخزن الشركة" },
+        { "labelAr": "حالة البضاعة", "value": "سليمة — اتعدّت كرتونة كرتونة" }
+      ],
+      "lines": [ { "descAr": "كرتونة ورق A4 — مستلمة", "sku": "PAPER", "qty": 500, "unitAr": "كرتونة" } ],
+      "approvals": [
+        { "roleAr": "استلام أمين المخزن", "name": "محمود خليل (تدريبي)", "date": "2026-03-04", "status": "approved" },
+        { "roleAr": "توقيع مندوب المورد", "name": "مندوب مصنع الوادي (تدريبي)", "date": "2026-03-04", "status": "approved" }
+      ],
+      "expectedDecision": "accept-post",
+      "checks": [
+        { "id": "qty", "labelAr": "الكمية المستلمة في GRN-001 = الكمية في PO-001", "expected": true, "explainAr": "500 = 500 — أول ضلع في المطابقة الثلاثية." }
+      ],
+      "decisionExplainAr": "إذن الاستلام بيثبت إن البضاعة دخلت المخزن يوم 4 مارس — ده توقيت التسجيل، والفاتورة بتحدد المبلغ."
+    },
+    {
+      "id": "DOC-E05-INV", "type": "supplier-invoice", "number": "WAD-2026-0412", "date": "2026-03-04", "companyId": "maamal", "eventIds": ["E05"],
+      "titleAr": "فاتورة مورد — مصنع الوادي للورق (تدريبي)", "fromParty": "S1",
+      "fields": [
+        { "labelAr": "المورد", "value": "مصنع الوادي للورق (تدريبي)" },
+        { "labelAr": "العميل", "value": "شركة المعمل للتجارة والتوزيع (تدريبي)" },
+        { "labelAr": "مرجع أمر الشراء", "value": "PO-001", "kind": "code" },
+        { "labelAr": "شروط الدفع", "value": "آجل 30 يوم" }
+      ],
+      "lines": [ { "descAr": "كرتونة ورق A4", "sku": "PAPER", "qty": 500, "unitAr": "كرتونة", "unitPrice": 180, "amount": 90000 } ],
+      "total": 90000,
+      "expectedDecision": "accept-post",
+      "checks": [
+        { "id": "price", "labelAr": "سعر الوحدة في الفاتورة = سعر أمر الشراء (180)", "expected": true, "explainAr": "مفيش فرق سعر — لو كان فيه فرق كنا وقفنا واستفسرنا قبل التسجيل." },
+        { "id": "qty", "labelAr": "الكمية المفوترة = الكمية المستلمة في GRN-001", "expected": true, "explainAr": "500 = 500 — المطابقة الثلاثية كاملة." },
+        { "id": "math", "labelAr": "500 × 180 = 90,000", "expected": true, "explainAr": "الحساب سليم، والإجمالي = مجموع السطور." }
+      ],
+      "decisionExplainAr": "المطابقة الثلاثية سليمة (PO-001 = GRN-001 = الفاتورة): نقبل ونسجّل مخزون 90,000 على حساب مصنع الوادي."
+    },
+    {
+      "id": "DOC-E06-PO", "type": "purchase-order", "number": "PO-002", "date": "2026-03-04", "companyId": "maamal", "eventIds": ["E06"],
+      "titleAr": "أمر شراء رقم PO-002 — خراطيش حبر", "toParty": "S2",
+      "fields": [
+        { "labelAr": "المورد", "value": "شركة الحبر الذهبي (تدريبي)" },
+        { "labelAr": "تاريخ التوريد المطلوب", "value": "2026-03-05", "kind": "date" },
+        { "labelAr": "مكان التسليم", "value": "مخزن الشركة (عنوان وهمي)" },
+        { "labelAr": "شروط الدفع", "value": "آجل 30 يوم من تاريخ الفاتورة" }
+      ],
+      "lines": [ { "descAr": "خرطوشة حبر (تونر)", "sku": "TONER", "qty": 100, "unitAr": "خرطوشة", "unitPrice": 450, "amount": 45000 } ],
+      "total": 45000,
+      "approvals": [
+        { "roleAr": "إعداد", "name": "المحاسب (أنت)", "date": "2026-03-04", "status": "approved" },
+        { "roleAr": "اعتماد المدير", "name": "ليلى منصور (تدريبي)", "date": "2026-03-04", "status": "approved" }
+      ],
+      "expectedDecision": "file-only",
+      "checks": [
+        { "id": "approval", "labelAr": "أمر الشراء PO-002 معتمد من المدير", "expected": true, "explainAr": "الاعتماد قبل الشراء بيمنع إن حد يطلب بضاعة من غير صلاحية." }
+      ],
+      "decisionExplainAr": "أمر الشراء بيتحفظ للمطابقة بس؛ القيد بيتعمل لما البضاعة توصل (5 مارس) وتيجي الفاتورة."
+    },
+    {
+      "id": "DOC-E06-GRN", "type": "goods-receipt", "number": "GRN-002", "date": "2026-03-05", "companyId": "maamal", "eventIds": ["E06"],
+      "titleAr": "إذن استلام بضاعة رقم GRN-002", "fromParty": "S2",
+      "fields": [
+        { "labelAr": "المورد", "value": "شركة الحبر الذهبي (تدريبي)" },
+        { "labelAr": "مرجع أمر الشراء", "value": "PO-002", "kind": "code" },
+        { "labelAr": "طريقة الاستلام", "value": "توريد المورد لمخزن الشركة" },
+        { "labelAr": "حالة البضاعة", "value": "الكراتين سليمة من بره — الفحص الفني عند الاستخدام" }
+      ],
+      "lines": [ { "descAr": "خرطوشة حبر (تونر) — مستلمة", "sku": "TONER", "qty": 100, "unitAr": "خرطوشة" } ],
+      "approvals": [
+        { "roleAr": "استلام أمين المخزن", "name": "محمود خليل (تدريبي)", "date": "2026-03-05", "status": "approved" },
+        { "roleAr": "توقيع مندوب المورد", "name": "مندوب الحبر الذهبي (تدريبي)", "date": "2026-03-05", "status": "approved" }
+      ],
+      "expectedDecision": "accept-post",
+      "checks": [
+        { "id": "qty", "labelAr": "الكمية المستلمة في GRN-002 = الكمية في PO-002", "expected": true, "explainAr": "100 = 100." }
+      ],
+      "decisionExplainAr": "الاستلام حصل يوم 5 مارس بالكمية المطلوبة: مع الفاتورة يتسجل المخزون والالتزام للمورد."
+    },
+    {
+      "id": "DOC-E06-INV", "type": "supplier-invoice", "number": "GLD-2026-0087", "date": "2026-03-05", "companyId": "maamal", "eventIds": ["E06"],
+      "titleAr": "فاتورة مورد — شركة الحبر الذهبي (تدريبي)", "fromParty": "S2",
+      "fields": [
+        { "labelAr": "المورد", "value": "شركة الحبر الذهبي (تدريبي)" },
+        { "labelAr": "العميل", "value": "شركة المعمل للتجارة والتوزيع (تدريبي)" },
+        { "labelAr": "مرجع أمر الشراء", "value": "PO-002", "kind": "code" },
+        { "labelAr": "شروط الدفع", "value": "آجل 30 يوم" }
+      ],
+      "lines": [ { "descAr": "خرطوشة حبر (تونر)", "sku": "TONER", "qty": 100, "unitAr": "خرطوشة", "unitPrice": 450, "amount": 45000 } ],
+      "total": 45000,
+      "expectedDecision": "accept-post",
+      "checks": [
+        { "id": "price", "labelAr": "سعر الخرطوشة في الفاتورة = سعر PO-002 (450)", "expected": true, "explainAr": "السعر مطابق لأمر الشراء." },
+        { "id": "qty", "labelAr": "الكمية المفوترة = الكمية في GRN-002", "expected": true, "explainAr": "100 = 100 — والإجمالي 100 × 450 = 45,000." }
+      ],
+      "decisionExplainAr": "PO-002 = GRN-002 = الفاتورة: نقبل ونسجّل مخزون 45,000 على حساب الحبر الذهبي."
+    },
+    {
+      "id": "DOC-E07-SO", "type": "sales-order", "number": "SO-001", "date": "2026-03-05", "companyId": "maamal", "eventIds": ["E07"],
+      "titleAr": "أمر بيع رقم SO-001 — مكتبة النور (تدريبي)", "fromParty": "C1",
+      "fields": [
+        { "labelAr": "العميل", "value": "مكتبة النور (تدريبي)" },
+        { "labelAr": "طريقة الطلب", "value": "تليفون + تأكيد مكتوب من العميل" },
+        { "labelAr": "موعد التسليم", "value": "2026-03-08", "kind": "date" },
+        { "labelAr": "شروط الدفع", "value": "آجل 30 يوم من التسليم" }
+      ],
+      "lines": [ { "descAr": "كرتونة ورق A4", "sku": "PAPER", "qty": 200, "unitAr": "كرتونة", "unitPrice": 250, "amount": 50000 } ],
+      "total": 50000,
+      "approvals": [ { "roleAr": "موافقة المبيعات", "name": "سارة عبد الحميد (تدريبي)", "date": "2026-03-05", "status": "approved" } ],
+      "expectedDecision": "file-only",
+      "checks": [
+        { "id": "revenue", "labelAr": "أمر البيع يوم 5 مارس بيثبت إيراد؟", "expected": false, "explainAr": "الإيراد بيتكسب بالتسليم (8 مارس) مش بالطلب." }
+      ],
+      "decisionExplainAr": "أمر البيع وعد بالتسليم بس — مفيش إيراد ولا قيد لحد ما البضاعة تتسلّم. بنحفظه ونطابقه مع إذن التسليم والفاتورة."
+    },
+    {
+      "id": "DOC-E07-DN", "type": "delivery-note", "number": "DN-001", "date": "2026-03-08", "companyId": "maamal", "eventIds": ["E07"],
+      "titleAr": "إذن تسليم رقم DN-001", "toParty": "C1",
+      "fields": [
+        { "labelAr": "العميل", "value": "مكتبة النور (تدريبي)" },
+        { "labelAr": "مرجع أمر البيع", "value": "SO-001", "kind": "code" },
+        { "labelAr": "التسليم بواسطة", "value": "محمود خليل (تدريبي) — سيارة الشركة" },
+        { "labelAr": "مكان التسليم", "value": "مخزن مكتبة النور (تدريبي) — عنوان وهمي" }
+      ],
+      "lines": [ { "descAr": "كرتونة ورق A4 — مسلّمة", "sku": "PAPER", "qty": 200, "unitAr": "كرتونة" } ],
+      "approvals": [
+        { "roleAr": "خروج من المخزن", "name": "محمود خليل (تدريبي)", "date": "2026-03-08", "status": "approved" },
+        { "roleAr": "توقيع استلام العميل", "name": "مسؤول المخزن — مكتبة النور (تدريبي)", "date": "2026-03-08", "status": "approved" }
+      ],
+      "expectedDecision": "accept-post",
+      "checks": [
+        { "id": "signed", "labelAr": "إذن التسليم DN-001 موقّع من العميل بالاستلام", "expected": true, "explainAr": "توقيع العميل هو الدليل إن الشركة نفّذت التزامها — ودي لحظة الاعتراف بالإيراد." }
+      ],
+      "decisionExplainAr": "إذن التسليم الموقّع بيثبت إن البيع اتنفّذ يوم 8 مارس: يتسجّل الإيراد والتكلفة النهارده."
+    },
+    {
+      "id": "DOC-E07-INV", "type": "sales-invoice", "number": "INV-001", "date": "2026-03-08", "companyId": "maamal", "eventIds": ["E07"],
+      "titleAr": "فاتورة بيع رقم INV-001", "toParty": "C1",
+      "fields": [
+        { "labelAr": "العميل", "value": "مكتبة النور (تدريبي)" },
+        { "labelAr": "مرجع إذن التسليم", "value": "DN-001", "kind": "code" },
+        { "labelAr": "شروط الدفع", "value": "آجل 30 يوم" },
+        { "labelAr": "تاريخ الاستحقاق", "value": "2026-04-07", "kind": "date" }
+      ],
+      "lines": [ { "descAr": "كرتونة ورق A4", "sku": "PAPER", "qty": 200, "unitAr": "كرتونة", "unitPrice": 250, "amount": 50000 } ],
+      "total": 50000,
+      "expectedDecision": "accept-post",
+      "checks": [
+        { "id": "qty", "labelAr": "الكمية في INV-001 = الكمية المسلّمة في DN-001", "expected": true, "explainAr": "200 = 200 — بنفوتر اللي اتسلّم فعلًا بس." },
+        { "id": "cost", "labelAr": "الفاتورة بتوضّح تكلفة البضاعة على الشركة", "expected": false, "explainAr": "الفاتورة فيها سعر البيع بس؛ التكلفة (200 × 180 = 36,000) بتيجي من كارت الصنف لقيد التكلفة." }
+      ],
+      "decisionExplainAr": "الفاتورة مطابقة لإذن التسليم: نسجّل عملاء 50,000 / مبيعات 50,000، ومعاها قيد التكلفة 36,000 من كارت الصنف."
+    },
+    {
+      "id": "DOC-E08-INV", "type": "sales-invoice", "number": "INV-002", "date": "2026-03-09", "companyId": "maamal", "eventIds": ["E08"],
+      "titleAr": "فاتورة بيع رقم INV-002", "toParty": "C2",
+      "fields": [
+        { "labelAr": "العميل", "value": "مركز طباعة الأمل (تدريبي)" },
+        { "labelAr": "التسليم", "value": "العميل استلم من مخزن الشركة يوم 9 مارس" },
+        { "labelAr": "طريقة الدفع", "value": "تحويل بنكي في نفس اليوم" }
+      ],
+      "lines": [ { "descAr": "خرطوشة حبر (تونر)", "sku": "TONER", "qty": 20, "unitAr": "خرطوشة", "unitPrice": 700, "amount": 14000 } ],
+      "total": 14000,
+      "approvals": [ { "roleAr": "توقيع العميل بالاستلام", "name": "مندوب مركز طباعة الأمل (تدريبي)", "date": "2026-03-09", "status": "approved" } ],
+      "expectedDecision": "accept-post",
+      "checks": [
+        { "id": "math", "labelAr": "20 × 700 = 14,000", "expected": true, "explainAr": "الحساب سليم." },
+        { "id": "paid", "labelAr": "في إشعار إضافة من البنك بنفس مبلغ INV-002", "expected": true, "explainAr": "CRD-0309-01 بـ 14,000 — يبقى البيع نقدي (بنك) مش آجل." }
+      ],
+      "decisionExplainAr": "بيع مسلّم ومحصّل في نفس اليوم: نسجّل بنك 14,000 / مبيعات 14,000، وتكلفة 20 × 450 = 9,000."
+    },
+    {
+      "id": "DOC-E08-ADVICE", "type": "bank-advice", "number": "CRD-0309-01", "date": "2026-03-09", "companyId": "maamal", "eventIds": ["E08"],
+      "titleAr": "إشعار إضافة — تحويل وارد (بنك المعمل التجريبي)", "fromParty": "BANK",
+      "fields": [
+        { "labelAr": "نوع العملية", "value": "تحويل وارد" },
+        { "labelAr": "المحوِّل", "value": "مركز طباعة الأمل (تدريبي)" },
+        { "labelAr": "المبلغ المضاف لحسابكم", "value": 14000, "kind": "money" },
+        { "labelAr": "البيان", "value": "سداد فاتورة INV-002" }
+      ],
+      "expectedDecision": "accept-post",
+      "decisionExplainAr": "إشعار البنك بيأكد إن 14,000 دخلت الحساب يوم 9 مارس — مطابق للفاتورة."
+    },
+    {
+      "id": "DOC-E09-REQUEST", "type": "return-request", "number": "RR-001", "date": "2026-03-10", "companyId": "maamal", "eventIds": ["E09"],
+      "titleAr": "طلب إرجاع بضاعة — مكتبة النور (تدريبي)", "fromParty": "C1",
+      "fields": [
+        { "labelAr": "العميل", "value": "مكتبة النور (تدريبي)" },
+        { "labelAr": "مرجع الفاتورة", "value": "INV-001", "kind": "code" },
+        { "labelAr": "سبب الإرجاع", "value": "الكمية زادت عن احتياج المكتبة" },
+        { "labelAr": "حالة البضاعة حسب العميل", "value": "سليمة في كراتينها" }
+      ],
+      "lines": [ { "descAr": "كرتونة ورق A4 مطلوب إرجاعها", "sku": "PAPER", "qty": 10, "unitAr": "كرتونة", "unitPrice": 250, "amount": 2500 } ],
+      "total": 2500,
+      "approvals": [ { "roleAr": "موافقة المبيعات على الإرجاع", "name": "سارة عبد الحميد (تدريبي)", "date": "2026-03-10", "status": "approved" } ],
+      "expectedDecision": "file-only",
+      "checks": [
+        { "id": "ref", "labelAr": "طلب الإرجاع مربوط بفاتورة بيع أصلية (INV-001)", "expected": true, "explainAr": "ما نقبلش مرتجع من غير فاتورة بيع أصلية بنفس الصنف والسعر." }
+      ],
+      "decisionExplainAr": "الطلب بيبدأ الإجراء بس. القيد بيتعمل على أساس إذن استلام المرتجع (البضاعة رجعت فعلًا وسليمة) وإشعار الدائن المعتمد."
+    },
+    {
+      "id": "DOC-E09-GRNOTE", "type": "goods-return-note", "number": "SRN-001", "date": "2026-03-10", "companyId": "maamal", "eventIds": ["E09"],
+      "titleAr": "إذن استلام مرتجع مبيعات رقم SRN-001", "fromParty": "C1",
+      "fields": [
+        { "labelAr": "من العميل", "value": "مكتبة النور (تدريبي)" },
+        { "labelAr": "مرجع طلب الإرجاع", "value": "RR-001", "kind": "code" },
+        { "labelAr": "نتيجة الفحص", "value": "10 كراتين سليمة — صالحة لإعادة البيع" },
+        { "labelAr": "قيمة الإرجاع للمخزن", "value": "بالتكلفة: 180 للكرتونة" }
+      ],
+      "lines": [ { "descAr": "كرتونة ورق A4 مرتجعة — بالتكلفة", "sku": "PAPER", "qty": 10, "unitAr": "كرتونة", "unitPrice": 180, "amount": 1800 } ],
+      "total": 1800,
+      "approvals": [ { "roleAr": "استلام وفحص أمين المخزن", "name": "محمود خليل (تدريبي)", "date": "2026-03-10", "status": "approved" } ],
+      "expectedDecision": "accept-post",
+      "checks": [
+        { "id": "condition", "labelAr": "البضاعة المرتجعة سليمة ورجعت المخزن", "expected": true, "explainAr": "علشان كده بنرجّع تكلفتها للمخزون (1,800) ونقلل تكلفة المبيعات." },
+        { "id": "atcost", "labelAr": "قيمة رجوع الكراتين للمخزن بسعر البيع (250)", "expected": false, "explainAr": "المخزون دايمًا بالتكلفة: 10 × 180 = 1,800. سعر البيع بيظهر في إشعار الدائن بس." }
+      ],
+      "decisionExplainAr": "الإذن بيثبت إن البضاعة رجعت فعلًا وسليمة: نرجّع 1,800 للمخزون من تكلفة البضاعة المباعة."
+    },
+    {
+      "id": "DOC-E09-CN", "type": "credit-note", "number": "CN-001", "date": "2026-03-10", "companyId": "maamal", "eventIds": ["E09"],
+      "titleAr": "إشعار دائن رقم CN-001 — مكتبة النور (تدريبي)", "toParty": "C1",
+      "fields": [
+        { "labelAr": "العميل", "value": "مكتبة النور (تدريبي)" },
+        { "labelAr": "مرجع الفاتورة", "value": "INV-001", "kind": "code" },
+        { "labelAr": "مرجع المرتجع", "value": "SRN-001", "kind": "code" },
+        { "labelAr": "الأثر", "value": "تخفيض رصيد العميل" }
+      ],
+      "lines": [ { "descAr": "مرتجع كرتونة ورق A4 بسعر البيع", "sku": "PAPER", "qty": 10, "unitAr": "كرتونة", "unitPrice": 250, "amount": 2500 } ],
+      "total": 2500,
+      "approvals": [ { "roleAr": "اعتماد المدير", "name": "ليلى منصور (تدريبي)", "date": "2026-03-10", "status": "approved" } ],
+      "expectedDecision": "accept-post",
+      "checks": [
+        { "id": "price", "labelAr": "سعر الوحدة في CN-001 = سعر البيع في INV-001 (250)", "expected": true, "explainAr": "العميل بيتخصم له بنفس السعر اللي اتفوتر بيه." }
+      ],
+      "decisionExplainAr": "إشعار دائن معتمد ومربوط بالفاتورة والمرتجع: نسجّل مردودات مبيعات 2,500 / العملاء — مكتبة النور."
+    },
+    {
+      "id": "DOC-E10-ADVICE", "type": "bank-advice", "number": "CRD-0311-01", "date": "2026-03-11", "companyId": "maamal", "eventIds": ["E10"],
+      "titleAr": "إشعار إضافة — تحويل وارد (بنك المعمل التجريبي)", "fromParty": "BANK",
+      "fields": [
+        { "labelAr": "نوع العملية", "value": "تحويل وارد" },
+        { "labelAr": "المحوِّل", "value": "مكتبة النور (تدريبي)" },
+        { "labelAr": "المبلغ المضاف لحسابكم", "value": 30000, "kind": "money" },
+        { "labelAr": "البيان", "value": "دفعة من حساب فاتورة INV-001" }
+      ],
+      "expectedDecision": "accept-post",
+      "decisionExplainAr": "إشعار البنك بيثبت إن 30,000 من مكتبة النور دخلت الحساب يوم 11 مارس."
+    },
+    {
+      "id": "DOC-E10-RV", "type": "receipt-voucher", "number": "RV-001", "date": "2026-03-11", "companyId": "maamal", "eventIds": ["E10"],
+      "titleAr": "إيصال استلام رقم RV-001", "fromParty": "C1",
+      "fields": [
+        { "labelAr": "استلمنا من", "value": "مكتبة النور (تدريبي)" },
+        { "labelAr": "المبلغ", "value": 30000, "kind": "money" },
+        { "labelAr": "طريقة السداد", "value": "تحويل بنكي — إشعار CRD-0311-01" },
+        { "labelAr": "التخصيص", "value": "فاتورة INV-001", "kind": "code" },
+        { "labelAr": "رصيد العميل بعد التحصيل", "value": 17500, "kind": "money" }
+      ],
+      "approvals": [ { "roleAr": "إعداد", "name": "المحاسب (أنت)", "date": "2026-03-11", "status": "approved" } ],
+      "expectedDecision": "accept-post",
+      "checks": [
+        { "id": "alloc", "labelAr": "التحصيل متخصص على فاتورة محددة", "expected": true, "explainAr": "التخصيص على INV-001 بيخلّي كشف العميل واضح: 50,000 − 2,500 − 30,000 = 17,500." },
+        { "id": "revenue", "labelAr": "التحصيل ده إيراد جديد", "expected": false, "explainAr": "الإيراد اتسجل يوم التسليم (E07)؛ ده تحصيل بيقلل رصيد العميل بس." }
+      ],
+      "decisionExplainAr": "إيصال مطابق لإشعار البنك ومخصص على INV-001: نسجّل بنك 30,000 / العملاء — مكتبة النور."
+    },
+    {
+      "id": "DOC-E11-PV", "type": "payment-voucher", "number": "PV-002", "date": "2026-03-12", "companyId": "maamal", "eventIds": ["E11"],
+      "titleAr": "إذن صرف رقم PV-002", "toParty": "S1",
+      "fields": [
+        { "labelAr": "اصرفوا إلى", "value": "مصنع الوادي للورق (تدريبي)" },
+        { "labelAr": "المبلغ", "value": 50000, "kind": "money" },
+        { "labelAr": "طريقة الدفع", "value": "شيك رقم 1002" },
+        { "labelAr": "البيان", "value": "دفعة من حساب فاتورة WAD-2026-0412" },
+        { "labelAr": "رصيد المورد بعد الدفعة", "value": 40000, "kind": "money" }
+      ],
+      "approvals": [
+        { "roleAr": "إعداد", "name": "المحاسب (أنت)", "date": "2026-03-12", "status": "approved" },
+        { "roleAr": "اعتماد المدير (المبلغ أكبر من 10,000)", "name": "ليلى منصور (تدريبي)", "date": "2026-03-12", "status": "approved" }
+      ],
+      "expectedDecision": "accept-post",
+      "checks": [
+        { "id": "approval", "labelAr": "إذن الصرف PV-002 معتمد من المدير", "expected": true, "explainAr": "المبلغ 50,000 أكبر من حد الـ 10,000 في سياسة الشركة الوهمية — والاعتماد موجود." }
+      ],
+      "decisionExplainAr": "إذن صرف معتمد ومربوط بفاتورة قائمة: الدفعة مسموحة وتتسجل يوم تسليم الشيك."
+    },
+    {
+      "id": "DOC-E11-COUNTERFOIL", "type": "cheque-counterfoil", "number": "1002", "date": "2026-03-12", "companyId": "maamal", "eventIds": ["E11"],
+      "titleAr": "كعب شيك رقم 1002", "toParty": "S1",
+      "fields": [
+        { "labelAr": "رقم الشيك", "value": "1002", "kind": "code" },
+        { "labelAr": "المستفيد", "value": "مصنع الوادي للورق (تدريبي)" },
+        { "labelAr": "المبلغ", "value": 50000, "kind": "money" },
+        { "labelAr": "البيان", "value": "حسب إذن الصرف PV-002" }
+      ],
+      "approvals": [ { "roleAr": "اعتماد المدير (المبلغ أكبر من 10,000)", "name": "ليلى منصور (تدريبي)", "date": "2026-03-12", "status": "approved" } ],
+      "notesAr": ["الشيك اتسلّم للمورد يوم 12 مارس؛ صرفه هيظهر في كشف البنك لما المورد يقدّمه."],
+      "expectedDecision": "accept-post",
+      "checks": [
+        { "id": "match", "labelAr": "مبلغ الكعب 1002 = مبلغ إذن الصرف PV-002", "expected": true, "explainAr": "50,000 = 50,000." }
+      ],
+      "decisionExplainAr": "الشيك اتسلّم للمورد فالدين قل من النهارده في دفاترنا، حتى لو البنك لسه ما صرفهوش."
+    },
+    {
+      "id": "DOC-E12-DN", "type": "debit-note", "number": "DBN-001", "date": "2026-03-12", "companyId": "maamal", "eventIds": ["E12"],
+      "titleAr": "إشعار مدين رقم DBN-001 — شركة الحبر الذهبي (تدريبي)", "toParty": "S2",
+      "fields": [
+        { "labelAr": "المورد", "value": "شركة الحبر الذهبي (تدريبي)" },
+        { "labelAr": "مرجع الفاتورة", "value": "GLD-2026-0087", "kind": "code" },
+        { "labelAr": "سبب الإرجاع", "value": "5 خراطيش معيبة (بتسرّب حبر)" },
+        { "labelAr": "الأثر", "value": "تخفيض رصيدنا عند المورد" }
+      ],
+      "lines": [ { "descAr": "خرطوشة حبر معيبة مرتجعة", "sku": "TONER", "qty": 5, "unitAr": "خرطوشة", "unitPrice": 450, "amount": 2250 } ],
+      "total": 2250,
+      "approvals": [
+        { "roleAr": "اعتماد المدير", "name": "ليلى منصور (تدريبي)", "date": "2026-03-12", "status": "approved" },
+        { "roleAr": "إقرار استلام المورد", "name": "مندوب الحبر الذهبي (تدريبي)", "date": "2026-03-12", "status": "approved" }
+      ],
+      "expectedDecision": "accept-post",
+      "checks": [
+        { "id": "price", "labelAr": "سعر الخرطوشة في DBN-001 = سعر فاتورة الشراء (450)", "expected": true, "explainAr": "المرتجع بيتخصم بنفس سعر الشراء: 5 × 450 = 2,250." }
+      ],
+      "decisionExplainAr": "إشعار مدين معتمد ومستلم من المورد: نسجّل الموردين — الحبر الذهبي 2,250 / المخزون."
+    },
+    {
+      "id": "DOC-E12-GRNOTE", "type": "goods-return-note", "number": "PRN-001", "date": "2026-03-12", "companyId": "maamal", "eventIds": ["E12"],
+      "titleAr": "إذن خروج مرتجع مشتريات رقم PRN-001", "toParty": "S2",
+      "fields": [
+        { "labelAr": "إلى المورد", "value": "شركة الحبر الذهبي (تدريبي)" },
+        { "labelAr": "مرجع إشعار المدين", "value": "DBN-001", "kind": "code" },
+        { "labelAr": "سبب الإرجاع", "value": "عيب في التصنيع" },
+        { "labelAr": "استلمها", "value": "مندوب الحبر الذهبي (تدريبي)" }
+      ],
+      "lines": [ { "descAr": "خرطوشة حبر معيبة — خارجة من المخزن بالتكلفة", "sku": "TONER", "qty": 5, "unitAr": "خرطوشة", "unitPrice": 450, "amount": 2250 } ],
+      "total": 2250,
+      "approvals": [ { "roleAr": "خروج من المخزن", "name": "محمود خليل (تدريبي)", "date": "2026-03-12", "status": "approved" } ],
+      "expectedDecision": "accept-post",
+      "checks": [
+        { "id": "qty", "labelAr": "الكمية الخارجة في PRN-001 = الكمية في DBN-001", "expected": true, "explainAr": "5 = 5 — البضاعة خرجت فعلًا بنفس كمية الإشعار." }
+      ],
+      "decisionExplainAr": "الإذن بيثبت إن الخراطيش خرجت من المخزن فعلًا — ومع إشعار المدين يتسجل المرتجع."
+    },
+    {
+      "id": "DOC-E13-AUTH", "type": "fund-authorisation", "number": "PCA-001", "date": "2026-03-15", "companyId": "maamal", "eventIds": ["E13"],
+      "titleAr": "اعتماد إنشاء عهدة نثرية مستديمة", "fromParty": "MGR", "toParty": "EMP3",
+      "fields": [
+        { "labelAr": "مسؤولة العهدة", "value": "نادية فهمي (تدريبي)" },
+        { "labelAr": "مبلغ العهدة", "value": 2000, "kind": "money" },
+        { "labelAr": "النظام", "value": "سلفة مستديمة — التعويض بإيصالات معتمدة" },
+        { "labelAr": "مصدر التمويل", "value": "الصندوق الرئيسي" },
+        { "labelAr": "شروط الصرف", "value": "إيصال أصلي لكل مصروف + اعتماد المدير على إذن الصرف النثري" }
+      ],
+      "approvals": [ { "roleAr": "اعتماد المدير", "name": "ليلى منصور (تدريبي)", "date": "2026-03-15", "status": "approved" } ],
+      "expectedDecision": "accept-post",
+      "checks": [
+        { "id": "approval", "labelAr": "اعتماد العهدة موقّع من المدير", "expected": true, "explainAr": "العهدة بتتنشئ بقرار من صاحب الصلاحية، وبيحدد المبلغ والمسؤولة وشروط الصرف." }
+      ],
+      "decisionExplainAr": "اعتماد مكتمل: مع إيصال استلام المسؤولة يتسجل نقل 2,000 من الصندوق للعهدة النثرية."
+    },
+    {
+      "id": "DOC-E13-CUSTODIAN", "type": "receipt-voucher", "number": "CUS-001", "date": "2026-03-15", "companyId": "maamal", "eventIds": ["E13"],
+      "titleAr": "إيصال استلام عهدة نثرية", "fromParty": "EMP3",
+      "fields": [
+        { "labelAr": "استلمت أنا", "value": "نادية فهمي — مسؤولة العهدة (تدريبي)" },
+        { "labelAr": "المبلغ", "value": 2000, "kind": "money" },
+        { "labelAr": "من", "value": "الصندوق الرئيسي" },
+        { "labelAr": "الغرض", "value": "عهدة نثرية مستديمة حسب PCA-001" }
+      ],
+      "approvals": [
+        { "roleAr": "توقيع مسؤولة العهدة", "name": "نادية فهمي (تدريبي)", "date": "2026-03-15", "status": "approved" },
+        { "roleAr": "تسليم أمين الصندوق", "name": "المحاسب (أنت)", "date": "2026-03-15", "status": "approved" }
+      ],
+      "expectedDecision": "accept-post",
+      "decisionExplainAr": "توقيع المسؤولة بيحدد مين مسؤول عن الـ 2,000 — ده أساس الجرد المفاجئ للعهدة."
+    },
+    {
+      "id": "DOC-BANK-MID", "type": "bank-statement", "number": "STM-2026-03-A", "date": "2026-03-15", "companyId": "maamal", "eventIds": ["E14"],
+      "titleAr": "كشف حساب بنكي 1–15 مارس — بنك المعمل التجريبي (تدريبي)", "fromParty": "BANK",
+      "fields": [
+        { "labelAr": "اسم الحساب", "value": "شركة المعمل للتجارة والتوزيع (تدريبي)" },
+        { "labelAr": "رقم الحساب", "value": "TRN-ACC-0001 (تدريبي)", "kind": "code" },
+        { "labelAr": "الفترة", "value": "1–15 مارس 2026" },
+        { "labelAr": "الرصيد الختامي حسب البنك", "value": 274875, "kind": "money" }
+      ],
+      "statement": {
+        "accountAr": "حساب جاري TRN-ACC-0001 (تدريبي)",
+        "periodAr": "1–15 مارس 2026",
+        "opening": 0,
+        "lines": [
+          { "date": "2026-03-01", "descAr": "إيداع نقدي", "ref": "DS-0301-01", "credit": 300000, "balance": 300000 },
+          { "date": "2026-03-01", "descAr": "صرف شيك", "ref": "1001", "debit": 15000, "balance": 285000 },
+          { "date": "2026-03-02", "descAr": "تحويل صادر — أ. سامي نبيل (تدريبي)", "ref": "TRF-0302-01", "debit": 18000, "balance": 267000 },
+          { "date": "2026-03-03", "descAr": "تحويل صادر — شركة الأثاث الحديث (تدريبي)", "ref": "TRF-0303-01", "debit": 36000, "balance": 231000 },
+          { "date": "2026-03-09", "descAr": "تحويل وارد — مركز طباعة الأمل (تدريبي)", "ref": "CRD-0309-01", "credit": 14000, "balance": 245000 },
+          { "date": "2026-03-11", "descAr": "تحويل وارد — مكتبة النور (تدريبي)", "ref": "CRD-0311-01", "credit": 30000, "balance": 275000 },
+          { "date": "2026-03-15", "descAr": "عمولات ومصاريف حساب", "debit": 125, "balance": 274875 }
+        ],
+        "closing": 274875
+      },
+      "notesAr": ["الكشف من وجهة نظر البنك: «دائن» = إضافة لحسابكم، و«مدين» = خصم منه."],
+      "expectedDecision": "accept-post",
+      "checks": [
+        { "id": "charges", "labelAr": "في سطر في كشف نص الشهر مش متسجل في دفاترنا", "expected": true, "explainAr": "عمولة 125 يوم 15 مارس — بند من جهة الدفاتر يتقيد (E14)." },
+        { "id": "chq1002", "labelAr": "الشيك 1002 (50,000) ظاهر في كشف نص الشهر", "expected": false, "explainAr": "المورد ما قدّمهوش لحد 15 مارس — شيك معلّق (بند توقيت) ما يتقيدش تاني." },
+        { "id": "rec", "labelAr": "رصيد البنك المعدّل (274,875 − 50,000) = رصيد الدفاتر المعدّل (225,000 − 125)", "expected": true, "explainAr": "الاتنين = 224,875 — التسوية مقفولة." }
+      ],
+      "decisionExplainAr": "نقبل الكشف ونقيد منه العمولة 125 بس (E14). الشيك 1002 فرق توقيت هيظهر في الكشف الجاي من غير قيد."
+    },
+    {
+      "id": "DOC-E15-BILL", "type": "bill", "number": "TEL-2026-03-5521", "date": "2026-03-12", "companyId": "maamal", "eventIds": ["E15"],
+      "titleAr": "فاتورة إنترنت وتليفون — شركة الاتصالات التجريبية (تدريبي)",
+      "fields": [
+        { "labelAr": "مقدّم الخدمة", "value": "شركة الاتصالات التجريبية (تدريبي)" },
+        { "labelAr": "رقم الاشتراك", "value": "TRN-TEL-0001 (تدريبي)", "kind": "code" },
+        { "labelAr": "فترة الخدمة", "value": "1–31 مارس 2026" },
+        { "labelAr": "آخر موعد للسداد", "value": "2026-03-20", "kind": "date" }
+      ],
+      "lines": [
+        { "descAr": "باقة إنترنت — مارس 2026", "qty": 1, "unitAr": "شهر", "unitPrice": 900, "amount": 900 },
+        { "descAr": "خط تليفون أرضي — مارس 2026", "qty": 1, "unitAr": "شهر", "unitPrice": 300, "amount": 300 }
+      ],
+      "total": 1200,
+      "expectedDecision": "accept-post",
+      "checks": [
+        { "id": "period", "labelAr": "خدمة الفاتورة TEL-2026-03-5521 تخص شهر مارس", "expected": true, "explainAr": "فترة الخدمة 1–31 مارس، فالمصروف كله يخص مارس." },
+        { "id": "math", "labelAr": "900 + 300 = 1,200", "expected": true, "explainAr": "مجموع السطور = الإجمالي." }
+      ],
+      "decisionExplainAr": "فاتورة خدمة اتستهلكت في مارس: مع إذن الصرف تتسجل مصروف مرافق واتصالات 1,200."
+    },
+    {
+      "id": "DOC-E15-CPV", "type": "payment-voucher", "number": "CPV-001", "date": "2026-03-16", "companyId": "maamal", "eventIds": ["E15"],
+      "titleAr": "إذن صرف نقدية رقم CPV-001",
+      "fields": [
+        { "labelAr": "اصرفوا إلى", "value": "شركة الاتصالات التجريبية (تدريبي)" },
+        { "labelAr": "المبلغ", "value": 1200, "kind": "money" },
+        { "labelAr": "طريقة الدفع", "value": "نقدًا من الصندوق" },
+        { "labelAr": "البيان", "value": "سداد فاتورة TEL-2026-03-5521" }
+      ],
+      "approvals": [
+        { "roleAr": "إعداد", "name": "المحاسب (أنت)", "date": "2026-03-16", "status": "approved" },
+        { "roleAr": "توقيع المستلم", "name": "موظف تحصيل شركة الاتصالات التجريبية (تدريبي)", "date": "2026-03-16", "status": "approved" }
+      ],
+      "expectedDecision": "accept-post",
+      "checks": [
+        { "id": "noapproval", "labelAr": "دفعة CPV-001 محتاجة اعتماد المدير", "expected": false, "explainAr": "المبلغ 1,200 أقل من حد الـ 10,000 في سياسة الشركة الوهمية؛ يكفي إذن صرف بتوقيع المعد والمستلم وإيصال السداد." }
+      ],
+      "decisionExplainAr": "إذن صرف مكتمل ومربوط بالفاتورة: نسجّل مصروف المرافق والاتصالات 1,200 / الصندوق."
+    },
+    {
+      "id": "DOC-E16-PO", "type": "purchase-order", "number": "PO-003", "date": "2026-03-16", "companyId": "maamal", "eventIds": ["E16"],
+      "titleAr": "أمر شراء رقم PO-003 — ورق A4 (سعر جديد)", "toParty": "S1",
+      "fields": [
+        { "labelAr": "المورد", "value": "مصنع الوادي للورق (تدريبي)" },
+        { "labelAr": "شرط التسليم", "value": "استلام من مصنع المورد بسيارة الشركة — بدون رسوم توصيل" },
+        { "labelAr": "تاريخ الاستلام المتفق عليه", "value": "2026-03-17", "kind": "date" },
+        { "labelAr": "شروط الدفع", "value": "آجل 30 يوم من تاريخ الفاتورة" },
+        { "labelAr": "ملاحظة السعر", "value": "سعر جديد 190 للكرتونة حسب عرض أسعار المورد" }
+      ],
+      "lines": [ { "descAr": "كرتونة ورق A4", "sku": "PAPER", "qty": 310, "unitAr": "كرتونة", "unitPrice": 190, "amount": 58900 } ],
+      "total": 58900,
+      "approvals": [
+        { "roleAr": "إعداد", "name": "المحاسب (أنت)", "date": "2026-03-16", "status": "approved" },
+        { "roleAr": "اعتماد المدير", "name": "ليلى منصور (تدريبي)", "date": "2026-03-16", "status": "approved" }
+      ],
+      "expectedDecision": "file-only",
+      "checks": [
+        { "id": "terms", "labelAr": "أمر الشراء PO-003 بيحدد إن الاستلام بسيارة الشركة", "expected": true, "explainAr": "ده شرط متفق عليه قبل الشراء — مفيش رسوم توصيل على المورد." }
+      ],
+      "decisionExplainAr": "أمر الشراء بيتحفظ للمطابقة؛ القيد يوم الاستلام. وشرط التسليم المكتوب فيه هيبقى دليل مهم لو المورد طالب بأي رسوم نقل."
+    },
+    {
+      "id": "DOC-E16-GRN", "type": "goods-receipt", "number": "GRN-003", "date": "2026-03-17", "companyId": "maamal", "eventIds": ["E16"],
+      "titleAr": "إذن استلام بضاعة رقم GRN-003", "fromParty": "S1",
+      "fields": [
+        { "labelAr": "المورد", "value": "مصنع الوادي للورق (تدريبي)" },
+        { "labelAr": "مرجع أمر الشراء", "value": "PO-003", "kind": "code" },
+        { "labelAr": "طريقة الاستلام", "value": "تم الاستلام من مصنع المورد بسيارة الشركة — السائق محمود خليل (تدريبي)" },
+        { "labelAr": "رسوم نقل", "value": "لا يوجد — النقل تم بمعرفة الشركة وبسيارتها" },
+        { "labelAr": "حالة البضاعة", "value": "310 كرتونة سليمة — اتعدّت عند التحميل وعند التفريغ" }
+      ],
+      "lines": [ { "descAr": "كرتونة ورق A4 — مستلمة من المصنع", "sku": "PAPER", "qty": 310, "unitAr": "كرتونة" } ],
+      "approvals": [
+        { "roleAr": "استلام السائق / أمين المخزن", "name": "محمود خليل (تدريبي)", "date": "2026-03-17", "status": "approved" },
+        { "roleAr": "تسليم أمين مخزن المورد", "name": "أمين مخزن مصنع الوادي (تدريبي)", "date": "2026-03-17", "status": "approved" }
+      ],
+      "notesAr": ["البضاعة اتنقلت بسيارة الشركة من مصنع المورد — المورد ما قامش بأي توصيل. احتفظ بالإذن ده كدليل."],
+      "expectedDecision": "accept-post",
+      "checks": [
+        { "id": "qty", "labelAr": "الكمية المستلمة في GRN-003 = الكمية في PO-003 (310)", "expected": true, "explainAr": "310 = 310." },
+        { "id": "self", "labelAr": "بضاعة GRN-003 وصلت بعربية المورد", "expected": false, "explainAr": "الإذن مكتوب فيه إن سواق الشركة محمود خليل (تدريبي) استلمها من المصنع بسيارة الشركة." }
+      ],
+      "decisionExplainAr": "استلام سليم يوم 17 مارس بالكمية المطلوبة: مع الفاتورة يتسجل المخزون والالتزام. والإذن نفسه بيثبت إن الاستلام كان بسيارتنا."
+    },
+    {
+      "id": "DOC-E16-INV", "type": "supplier-invoice", "number": "WAD-2026-0457", "date": "2026-03-17", "companyId": "maamal", "eventIds": ["E16"],
+      "titleAr": "فاتورة مورد — مصنع الوادي للورق (تدريبي)", "fromParty": "S1",
+      "fields": [
+        { "labelAr": "المورد", "value": "مصنع الوادي للورق (تدريبي)" },
+        { "labelAr": "العميل", "value": "شركة المعمل للتجارة والتوزيع (تدريبي)" },
+        { "labelAr": "مرجع أمر الشراء", "value": "PO-003", "kind": "code" },
+        { "labelAr": "شروط الدفع", "value": "آجل 30 يوم" }
+      ],
+      "lines": [ { "descAr": "كرتونة ورق A4", "sku": "PAPER", "qty": 310, "unitAr": "كرتونة", "unitPrice": 190, "amount": 58900 } ],
+      "total": 58900,
+      "expectedDecision": "accept-post",
+      "checks": [
+        { "id": "price", "labelAr": "سعر الكرتونة في الفاتورة = سعر PO-003 (190)", "expected": true, "explainAr": "السعر الجديد متفق عليه في أمر الشراء." },
+        { "id": "qty", "labelAr": "الكمية المفوترة = الكمية في GRN-003", "expected": true, "explainAr": "310 = 310 — والإجمالي 310 × 190 = 58,900." },
+        { "id": "delivery", "labelAr": "فاتورة WAD-2026-0457 فيها رسوم توصيل", "expected": false, "explainAr": "مفيش أي بند نقل — وده متسق مع GRN-003 (الاستلام بسيارتنا)." }
+      ],
+      "decisionExplainAr": "PO-003 = GRN-003 = الفاتورة: نقبل ونسجّل مخزون 58,900 على حساب مصنع الوادي."
+    },
+    {
+      "id": "DOC-E17-SO", "type": "sales-order", "number": "SO-002", "date": "2026-03-16", "companyId": "maamal", "eventIds": ["E17"],
+      "titleAr": "أمر بيع رقم SO-002 — شركة الرواد للخدمات (تدريبي)", "fromParty": "C3",
+      "fields": [
+        { "labelAr": "العميل", "value": "شركة الرواد للخدمات (تدريبي)" },
+        { "labelAr": "طريقة الطلب", "value": "طلب مكتوب من إدارة المشتريات عند العميل" },
+        { "labelAr": "موعد التسليم", "value": "2026-03-18", "kind": "date" },
+        { "labelAr": "شروط الدفع", "value": "آجل 30 يوم من التسليم" }
+      ],
+      "lines": [ { "descAr": "كرتونة ورق A4", "sku": "PAPER", "qty": 300, "unitAr": "كرتونة", "unitPrice": 260, "amount": 78000 } ],
+      "total": 78000,
+      "approvals": [ { "roleAr": "موافقة المبيعات", "name": "سارة عبد الحميد (تدريبي)", "date": "2026-03-16", "status": "approved" } ],
+      "expectedDecision": "file-only",
+      "checks": [
+        { "id": "price", "labelAr": "سعر البيع المتفق عليه في SO-002 = 260 للكرتونة", "expected": true, "explainAr": "ده السعر اللي لازم يظهر في الفاتورة INV-003." }
+      ],
+      "decisionExplainAr": "أمر البيع بيتحفظ للمطابقة؛ الإيراد بيتسجل يوم التسليم (18 مارس) مش يوم الطلب."
+    },
+    {
+      "id": "DOC-E17-DN", "type": "delivery-note", "number": "DN-002", "date": "2026-03-18", "companyId": "maamal", "eventIds": ["E17"],
+      "titleAr": "إذن تسليم رقم DN-002", "toParty": "C3",
+      "fields": [
+        { "labelAr": "العميل", "value": "شركة الرواد للخدمات (تدريبي)" },
+        { "labelAr": "مرجع أمر البيع", "value": "SO-002", "kind": "code" },
+        { "labelAr": "التوصيل", "value": "عربية نقل مؤجرة بمرافقة محمود خليل (تدريبي) — الأجرة اتدفعت من العهدة النثرية (PCV-002)" },
+        { "labelAr": "مكان التسليم", "value": "مقر شركة الرواد للخدمات (تدريبي) — عنوان وهمي" }
+      ],
+      "lines": [ { "descAr": "كرتونة ورق A4 — مسلّمة", "sku": "PAPER", "qty": 300, "unitAr": "كرتونة" } ],
+      "approvals": [
+        { "roleAr": "خروج من المخزن", "name": "محمود خليل (تدريبي)", "date": "2026-03-18", "status": "approved" },
+        { "roleAr": "توقيع استلام العميل", "name": "مسؤول المشتريات — شركة الرواد (تدريبي)", "date": "2026-03-18", "status": "approved" }
+      ],
+      "expectedDecision": "accept-post",
+      "checks": [
+        { "id": "signed", "labelAr": "إذن التسليم DN-002 موقّع من العميل بالاستلام", "expected": true, "explainAr": "التسليم تم وموقّع — الإيراد اتكسب يوم 18 مارس." }
+      ],
+      "decisionExplainAr": "تسليم موقّع: نسجّل الإيراد والتكلفة يوم 18 مارس."
+    },
+    {
+      "id": "DOC-E17-INV", "type": "sales-invoice", "number": "INV-003", "date": "2026-03-18", "companyId": "maamal", "eventIds": ["E17"],
+      "titleAr": "فاتورة بيع رقم INV-003", "toParty": "C3",
+      "fields": [
+        { "labelAr": "العميل", "value": "شركة الرواد للخدمات (تدريبي)" },
+        { "labelAr": "مرجع إذن التسليم", "value": "DN-002", "kind": "code" },
+        { "labelAr": "شروط الدفع", "value": "آجل 30 يوم" },
+        { "labelAr": "تاريخ الاستحقاق", "value": "2026-04-17", "kind": "date" }
+      ],
+      "lines": [ { "descAr": "كرتونة ورق A4", "sku": "PAPER", "qty": 300, "unitAr": "كرتونة", "unitPrice": 260, "amount": 78000 } ],
+      "total": 78000,
+      "expectedDecision": "accept-post",
+      "checks": [
+        { "id": "qty", "labelAr": "الكمية في INV-003 = الكمية المسلّمة في DN-002", "expected": true, "explainAr": "300 = 300." },
+        { "id": "math", "labelAr": "300 × 260 = 78,000", "expected": true, "explainAr": "الحساب سليم. والتكلفة منفصلة: 300 × 185 = 55,500 بالمتوسط المتحرك." }
+      ],
+      "decisionExplainAr": "الفاتورة مطابقة للتسليم وأمر البيع: نسجّل عملاء — الرواد 78,000 / مبيعات، وتكلفة 55,500 من كارت الصنف."
+    },
+    {
+      "id": "DOC-E18-PCV1", "type": "petty-cash-voucher", "number": "PCV-001", "date": "2026-03-16", "companyId": "maamal", "eventIds": ["E18"],
+      "titleAr": "إذن صرف نثري PCV-001 — أدوات مكتبية", "fromParty": "EMP3",
+      "fields": [
+        { "labelAr": "المصروف", "value": "أدوات مكتبية للمكتب" },
+        { "labelAr": "مكان الشراء", "value": "محل أدوات مكتبية (تدريبي)" },
+        { "labelAr": "الإيصال", "value": "مرفق — إيصال رقم 3381 (تدريبي)" }
+      ],
+      "lines": [
+        { "descAr": "ملفات بلاستيك", "qty": 10, "unitAr": "ملف", "unitPrice": 15, "amount": 150 },
+        { "descAr": "أقلام جاف", "qty": 20, "unitAr": "قلم", "unitPrice": 5, "amount": 100 },
+        { "descAr": "دباسة مكتب", "qty": 1, "unitAr": "قطعة", "unitPrice": 200, "amount": 200 }
+      ],
+      "total": 450,
+      "approvals": [
+        { "roleAr": "صرف مسؤولة العهدة", "name": "نادية فهمي (تدريبي)", "date": "2026-03-16", "status": "approved" },
+        { "roleAr": "اعتماد المدير", "name": "ليلى منصور (تدريبي)", "date": "2026-03-16", "status": "approved" }
+      ],
+      "expectedDecision": "accept-post",
+      "checks": [
+        { "id": "math", "labelAr": "سطور PCV-001: 150 + 100 + 200 = 450", "expected": true, "explainAr": "الإجمالي مطابق للإيصال." },
+        { "id": "receipt", "labelAr": "PCV-001 مرفق بيه إيصال ومعتمد", "expected": true, "explainAr": "الإيصال والاعتماد موجودين — مستوفي شروط العهدة." }
+      ],
+      "decisionExplainAr": "إذن نثري مستوفي: يدخل في طلب التعويض ويتسجل أدوات مكتبية 450 وقت التعويض."
+    },
+    {
+      "id": "DOC-E18-PCV2", "type": "petty-cash-voucher", "number": "PCV-002", "date": "2026-03-18", "companyId": "maamal", "eventIds": ["E18"],
+      "titleAr": "إذن صرف نثري PCV-002 — نقل", "fromParty": "EMP3",
+      "fields": [
+        { "labelAr": "المصروف", "value": "أجرة نقل لتوصيل طلبية عميل" },
+        { "labelAr": "مرجع التوصيل", "value": "DN-002", "kind": "code" },
+        { "labelAr": "الإيصال", "value": "مرفق — إيصال صاحب العربية (تدريبي)" }
+      ],
+      "lines": [ { "descAr": "أجرة عربية نقل لتوصيل 300 كرتونة لشركة الرواد للخدمات (تدريبي)", "qty": 1, "unitAr": "مشوار", "unitPrice": 600, "amount": 600 } ],
+      "total": 600,
+      "approvals": [
+        { "roleAr": "صرف مسؤولة العهدة", "name": "نادية فهمي (تدريبي)", "date": "2026-03-18", "status": "approved" },
+        { "roleAr": "اعتماد المدير", "name": "ليلى منصور (تدريبي)", "date": "2026-03-18", "status": "approved" }
+      ],
+      "expectedDecision": "accept-post",
+      "checks": [
+        { "id": "link", "labelAr": "مصروف PCV-002 مربوط بشغل الشركة (توصيل DN-002)", "expected": true, "explainAr": "نقل بضاعة لعميل = مصروف نقل (مصروف بيع) مش تكلفة مخزون." }
+      ],
+      "decisionExplainAr": "إذن نثري مستوفي ومربوط بتسليم حقيقي: يتسجل مصروف نقل 600 وقت التعويض."
+    },
+    {
+      "id": "DOC-E18-PCV3", "type": "petty-cash-voucher", "number": "PCV-003", "date": "2026-03-17", "companyId": "maamal", "eventIds": ["E18"],
+      "titleAr": "إذن صرف نثري PCV-003 — ضيافة", "fromParty": "EMP3",
+      "fields": [
+        { "labelAr": "المصروف", "value": "ضيافة اجتماع مع عميل في مقر الشركة" },
+        { "labelAr": "الإيصال", "value": "مرفق — إيصال سوبر ماركت (تدريبي)" }
+      ],
+      "lines": [ { "descAr": "شاي وقهوة ومياه لاجتماع عميل", "qty": 1, "unitAr": "فاتورة", "unitPrice": 150, "amount": 150 } ],
+      "total": 150,
+      "approvals": [
+        { "roleAr": "صرف مسؤولة العهدة", "name": "نادية فهمي (تدريبي)", "date": "2026-03-17", "status": "approved" },
+        { "roleAr": "اعتماد المدير", "name": "ليلى منصور (تدريبي)", "date": "2026-03-17", "status": "approved" }
+      ],
+      "expectedDecision": "accept-post",
+      "decisionExplainAr": "إذن نثري بإيصال واعتماد: يتسجل مصروف ضيافة 150 وقت التعويض."
+    },
+    {
+      "id": "DOC-E18-REQUEST", "type": "replenishment-request", "number": "REQ-PC-01", "date": "2026-03-18", "companyId": "maamal", "eventIds": ["E18"],
+      "titleAr": "طلب تعويض العهدة النثرية", "fromParty": "EMP3", "toParty": "MGR",
+      "fields": [
+        { "labelAr": "مسؤولة العهدة", "value": "نادية فهمي (تدريبي)" },
+        { "labelAr": "رصيد العهدة المعتمد", "value": 2000, "kind": "money" },
+        { "labelAr": "النقدية الموجودة عند الجرد", "value": 800, "kind": "money" },
+        { "labelAr": "مجموع الإيصالات المعتمدة", "value": 1200, "kind": "money" },
+        { "labelAr": "مبلغ التعويض المطلوب", "value": 1200, "kind": "money" }
+      ],
+      "lines": [
+        { "descAr": "PCV-001 — أدوات مكتبية", "amount": 450 },
+        { "descAr": "PCV-002 — نقل (توصيل DN-002)", "amount": 600 },
+        { "descAr": "PCV-003 — ضيافة", "amount": 150 }
+      ],
+      "total": 1200,
+      "approvals": [
+        { "roleAr": "مقدّمة الطلب", "name": "نادية فهمي (تدريبي)", "date": "2026-03-18", "status": "approved" },
+        { "roleAr": "اعتماد المدير", "name": "ليلى منصور (تدريبي)", "date": "2026-03-18", "status": "approved" }
+      ],
+      "notesAr": ["مطالبة تاكسي بـ 300 (PCV-004) مش داخلة في الطلب لأنها من غير إيصال ولا اعتماد — اترجعت للاستيضاح."],
+      "expectedDecision": "accept-post",
+      "checks": [
+        { "id": "imprest", "labelAr": "النقدية الموجودة في العهدة + الإيصالات = 2,000", "expected": true, "explainAr": "800 + 1,200 = 2,000 — العهدة متطابقة." },
+        { "id": "taxi", "labelAr": "مطالبة التاكسي 300 داخلة في مبلغ التعويض", "expected": false, "explainAr": "اتستبعدت لحد ما يتقدّم إيصال واعتماد — ما نعوّضش مصروف من غير دليل." }
+      ],
+      "decisionExplainAr": "الطلب مؤيد بـ 3 إيصالات معتمدة مجموعها 1,200: نعوّض من الصندوق ونسجّل المصروفات الثلاثة، والعهدة ترجع 2,000."
+    },
+    {
+      "id": "DOC-E19-ORDER", "type": "sales-order", "number": "SO-003", "date": "2026-03-23", "companyId": "maamal", "eventIds": ["E19"],
+      "titleAr": "تأكيد طلبية رقم SO-003 — مدرسة المستقبل (تدريبي)", "fromParty": "C4",
+      "fields": [
+        { "labelAr": "العميل", "value": "مدرسة المستقبل (تدريبي)" },
+        { "labelAr": "الدفعة المقدمة المطلوبة", "value": 10000, "kind": "money" },
+        { "labelAr": "التسليم", "value": "على دفعتين: 10 خراطيش قبل آخر مارس، و10 في أبريل" },
+        { "labelAr": "الباقي بعد الدفعة المقدمة", "value": "4,000 تتدفع عند التسليم الأخير" }
+      ],
+      "lines": [ { "descAr": "خرطوشة حبر (تونر)", "sku": "TONER", "qty": 20, "unitAr": "خرطوشة", "unitPrice": 700, "amount": 14000 } ],
+      "total": 14000,
+      "approvals": [
+        { "roleAr": "موافقة المبيعات", "name": "سارة عبد الحميد (تدريبي)", "date": "2026-03-23", "status": "approved" },
+        { "roleAr": "توقيع العميل", "name": "مدير مدرسة المستقبل (تدريبي)", "date": "2026-03-23", "status": "approved" }
+      ],
+      "expectedDecision": "file-only",
+      "checks": [
+        { "id": "revenue", "labelAr": "قيمة الطلبية SO-003 (14,000) تتسجل مبيعات النهارده", "expected": false, "explainAr": "مفيش تسليم لسه؛ والفلوس اللي وصلت (10,000) دفعة مقدمة = التزام." }
+      ],
+      "decisionExplainAr": "تأكيد الطلبية بيتحفظ ويتابَع مع الدفعة المقدمة؛ مفيش قيد على قيمة الطلبية نفسها."
+    },
+    {
+      "id": "DOC-E19-ADVICE", "type": "bank-advice", "number": "CRD-0323-01", "date": "2026-03-23", "companyId": "maamal", "eventIds": ["E19"],
+      "titleAr": "إشعار إضافة — تحويل وارد (بنك المعمل التجريبي)", "fromParty": "BANK",
+      "fields": [
+        { "labelAr": "نوع العملية", "value": "تحويل وارد" },
+        { "labelAr": "المحوِّل", "value": "مدرسة المستقبل (تدريبي)" },
+        { "labelAr": "المبلغ المضاف لحسابكم", "value": 10000, "kind": "money" },
+        { "labelAr": "البيان", "value": "دفعة مقدمة — طلبية SO-003" }
+      ],
+      "expectedDecision": "accept-post",
+      "decisionExplainAr": "الفلوس دخلت البنك فعلًا يوم 23 مارس — تتسجل بنك مقابل التزام (دفعات مقدمة)."
+    },
+    {
+      "id": "DOC-E19-RV", "type": "receipt-voucher", "number": "RV-002", "date": "2026-03-23", "companyId": "maamal", "eventIds": ["E19"],
+      "titleAr": "إيصال استلام رقم RV-002", "fromParty": "C4",
+      "fields": [
+        { "labelAr": "استلمنا من", "value": "مدرسة المستقبل (تدريبي)" },
+        { "labelAr": "المبلغ", "value": 10000, "kind": "money" },
+        { "labelAr": "طريقة السداد", "value": "تحويل بنكي — إشعار CRD-0323-01" },
+        { "labelAr": "التخصيص", "value": "دفعة مقدمة على الطلبية SO-003 — مش سداد فاتورة" }
+      ],
+      "approvals": [ { "roleAr": "إعداد", "name": "المحاسب (أنت)", "date": "2026-03-23", "status": "approved" } ],
+      "expectedDecision": "accept-post",
+      "checks": [
+        { "id": "advance", "labelAr": "إيصال RV-002 مخصص على فاتورة مبيعات قائمة", "expected": false, "explainAr": "مفيش فاتورة لسه — المبلغ دفعة مقدمة يتسجل في حـ/ دفعات مقدمة من العملاء." }
+      ],
+      "decisionExplainAr": "إيصال مطابق للبنك: نسجّل بنك 10,000 / دفعات مقدمة من العملاء — مدرسة المستقبل."
+    },
+    {
+      "id": "DOC-E20-MEMO", "type": "memo", "number": "MEMO-DRW-01", "date": "2026-03-24", "companyId": "maamal", "eventIds": ["E20"],
+      "titleAr": "مذكرة مسحوبات شخصية", "fromParty": "OWNER",
+      "fields": [
+        { "labelAr": "من", "value": "أ. حسام الدين رفعت — المالك (تدريبي)" },
+        { "labelAr": "إلى", "value": "الحسابات" },
+        { "labelAr": "الموضوع", "value": "سحب نقدية لاستخدام شخصي" },
+        { "labelAr": "المبلغ", "value": 5000, "kind": "money" }
+      ],
+      "notesAr": ["أقر بإني سحبت 5,000 جنيه من صندوق الشركة لمصاريف شخصية ما تخصش نشاط الشركة."],
+      "approvals": [ { "roleAr": "توقيع المالك", "name": "حسام الدين رفعت (تدريبي)", "date": "2026-03-24", "status": "approved" } ],
+      "expectedDecision": "accept-post",
+      "checks": [
+        { "id": "personal", "labelAr": "مبلغ MEMO-DRW-01 اتصرف على شغل الشركة", "expected": false, "explainAr": "المذكرة بتقول إنه لاستخدام المالك الشخصي — يبقى مسحوبات مش مصروف." }
+      ],
+      "decisionExplainAr": "المذكرة الموقّعة بتحدد طبيعة المبلغ: مسحوبات شخصية بتقلل حقوق الملكية ومش بتدخل قائمة الدخل."
+    },
+    {
+      "id": "DOC-E20-CPV", "type": "payment-voucher", "number": "CPV-002", "date": "2026-03-24", "companyId": "maamal", "eventIds": ["E20"],
+      "titleAr": "إذن صرف نقدية رقم CPV-002", "toParty": "OWNER",
+      "fields": [
+        { "labelAr": "اصرفوا إلى", "value": "أ. حسام الدين رفعت — المالك (تدريبي)" },
+        { "labelAr": "المبلغ", "value": 5000, "kind": "money" },
+        { "labelAr": "طريقة الدفع", "value": "نقدًا من الصندوق" },
+        { "labelAr": "البيان", "value": "مسحوبات شخصية حسب MEMO-DRW-01" }
+      ],
+      "approvals": [
+        { "roleAr": "إعداد", "name": "المحاسب (أنت)", "date": "2026-03-24", "status": "approved" },
+        { "roleAr": "توقيع المستلم", "name": "حسام الدين رفعت (تدريبي)", "date": "2026-03-24", "status": "approved" }
+      ],
+      "expectedDecision": "accept-post",
+      "decisionExplainAr": "إذن صرف موقّع من المالك ومربوط بالمذكرة: نسجّل المسحوبات الشخصية 5,000 / الصندوق."
+    },
+    {
+      "id": "DOC-E21-STATEMENT", "type": "supplier-statement", "number": "GLD-ST-0325", "date": "2026-03-25", "companyId": "maamal", "eventIds": ["E21"],
+      "titleAr": "كشف حساب مورد — شركة الحبر الذهبي (تدريبي)", "fromParty": "S2",
+      "fields": [
+        { "labelAr": "صادر من", "value": "شركة الحبر الذهبي (تدريبي)" },
+        { "labelAr": "حساب العميل", "value": "شركة المعمل للتجارة والتوزيع (تدريبي)" },
+        { "labelAr": "الرصيد المستحق للمورد", "value": 42750, "kind": "money" }
+      ],
+      "statement": {
+        "accountAr": "حساب شركة المعمل للتجارة والتوزيع (تدريبي) لدى شركة الحبر الذهبي (تدريبي)",
+        "periodAr": "1–25 مارس 2026",
+        "opening": 0,
+        "lines": [
+          { "date": "2026-03-05", "descAr": "فاتورة توريد 100 خرطوشة", "ref": "GLD-2026-0087", "debit": 45000, "balance": 45000 },
+          { "date": "2026-03-12", "descAr": "إشعار مدين — مرتجع 5 خراطيش معيبة", "ref": "DBN-001", "credit": 2250, "balance": 42750 }
+        ],
+        "closing": 42750
+      },
+      "expectedDecision": "accept-post",
+      "checks": [
+        { "id": "match", "labelAr": "رصيد كشف الحبر الذهبي (42,750) = رصيد S2 في دفاترنا", "expected": true, "explainAr": "45,000 − 2,250 = 42,750 في الكشف وفي دفاترنا." },
+        { "id": "dn", "labelAr": "المورد سجّل إشعار المدين DBN-001 في كشفه", "expected": true, "explainAr": "المرتجع ظاهر دائن 2,250 — يعني المورد موافق عليه." }
+      ],
+      "decisionExplainAr": "الكشف مطابق لدفاترنا سطر بسطر: نعتمده أساس لسداد الرصيد 42,750 (E21)."
+    },
+    {
+      "id": "DOC-E21-PV", "type": "payment-voucher", "number": "PV-003", "date": "2026-03-25", "companyId": "maamal", "eventIds": ["E21"],
+      "titleAr": "إذن صرف رقم PV-003", "toParty": "S2",
+      "fields": [
+        { "labelAr": "اصرفوا إلى", "value": "شركة الحبر الذهبي (تدريبي)" },
+        { "labelAr": "المبلغ", "value": 42750, "kind": "money" },
+        { "labelAr": "طريقة الدفع", "value": "تحويل بنكي" },
+        { "labelAr": "البيان", "value": "سداد الرصيد بالكامل حسب كشف المورد GLD-ST-0325" }
+      ],
+      "approvals": [
+        { "roleAr": "إعداد", "name": "المحاسب (أنت)", "date": "2026-03-25", "status": "approved" },
+        { "roleAr": "اعتماد المدير (المبلغ أكبر من 10,000)", "name": "ليلى منصور (تدريبي)", "date": "2026-03-25", "status": "approved" }
+      ],
+      "expectedDecision": "accept-post",
+      "checks": [
+        { "id": "approval", "labelAr": "إذن الصرف PV-003 معتمد من المدير", "expected": true, "explainAr": "42,750 أكبر من 10,000 — والاعتماد موجود بعد مطابقة كشف المورد." }
+      ],
+      "decisionExplainAr": "دفعة معتمدة ومبنية على كشف مطابق: تتسجل الموردين — الحبر الذهبي 42,750 / البنك."
+    },
+    {
+      "id": "DOC-E21-TRANSFER", "type": "bank-advice", "number": "TRF-0325-01", "date": "2026-03-25", "companyId": "maamal", "eventIds": ["E21"],
+      "titleAr": "إشعار خصم — تحويل صادر (بنك المعمل التجريبي)", "fromParty": "BANK",
+      "fields": [
+        { "labelAr": "نوع العملية", "value": "تحويل صادر" },
+        { "labelAr": "المستفيد", "value": "شركة الحبر الذهبي (تدريبي)" },
+        { "labelAr": "المبلغ المخصوم من حسابكم", "value": 42750, "kind": "money" },
+        { "labelAr": "مرجع", "value": "PV-003", "kind": "code" }
+      ],
+      "expectedDecision": "accept-post",
+      "decisionExplainAr": "إشعار البنك بيأكد خروج 42,750 للمورد يوم 25 مارس — مطابق لإذن الصرف."
+    },
+    {
+      "id": "DOC-E22-ADVICE", "type": "bank-advice", "number": "CRD-0326-01", "date": "2026-03-26", "companyId": "maamal", "eventIds": ["E22"],
+      "titleAr": "إشعار إضافة — تحويل وارد (بنك المعمل التجريبي)", "fromParty": "BANK",
+      "fields": [
+        { "labelAr": "نوع العملية", "value": "تحويل وارد" },
+        { "labelAr": "المحوِّل", "value": "شركة الرواد للخدمات (تدريبي)" },
+        { "labelAr": "المبلغ المضاف لحسابكم", "value": 40000, "kind": "money" },
+        { "labelAr": "البيان", "value": "دفعة من حساب فاتورة INV-003" }
+      ],
+      "expectedDecision": "accept-post",
+      "decisionExplainAr": "الـ 40,000 دخلت البنك فعلًا يوم 26 مارس — الجزء ده بس هو اللي يتسجل بنك."
+    },
+    {
+      "id": "DOC-E22-PDC", "type": "customer-cheque", "number": "784512", "date": "2026-03-26", "companyId": "maamal", "eventIds": ["E22"],
+      "titleAr": "صورة شيك مؤجل — شركة الرواد للخدمات (تدريبي)", "fromParty": "C3",
+      "fields": [
+        { "labelAr": "رقم الشيك", "value": "784512", "kind": "code" },
+        { "labelAr": "البنك المسحوب عليه", "value": "البنك التجريبي الثاني (تدريبي)" },
+        { "labelAr": "الساحب", "value": "شركة الرواد للخدمات (تدريبي)" },
+        { "labelAr": "المستفيد", "value": "شركة المعمل للتجارة والتوزيع (تدريبي)" },
+        { "labelAr": "المبلغ", "value": 20000, "kind": "money" },
+        { "labelAr": "تاريخ الاستحقاق", "value": "2026-04-15", "kind": "date" }
+      ],
+      "notesAr": ["الشيك الأصلي محفوظ في حافظة الشيكات المؤجلة — دي صورة للدفاتر."],
+      "expectedDecision": "accept-post",
+      "checks": [
+        { "id": "due", "labelAr": "الشيك 784512 ينفع يتصرف قبل 15 أبريل", "expected": false, "explainAr": "شيك مؤجل: يتسجل أوراق قبض لحد تاريخ استحقاقه — مش بنك ومش بند تسوية بنكية." },
+        { "id": "payee", "labelAr": "المستفيد في الشيك 784512 = اسم الشركة", "expected": true, "explainAr": "الشيك باسم الشركة نفسها، فهو حق للشركة." }
+      ],
+      "decisionExplainAr": "شيك سليم بتاريخ مستقبلي: نسجّله أوراق قبض 20,000 ونتابع تاريخ استحقاقه في حافظة الشيكات."
+    },
+    {
+      "id": "DOC-E22-RV", "type": "receipt-voucher", "number": "RV-003", "date": "2026-03-26", "companyId": "maamal", "eventIds": ["E22"],
+      "titleAr": "إيصال استلام رقم RV-003", "fromParty": "C3",
+      "fields": [
+        { "labelAr": "استلمنا من", "value": "شركة الرواد للخدمات (تدريبي)" },
+        { "labelAr": "التخصيص", "value": "فاتورة INV-003", "kind": "code" },
+        { "labelAr": "رصيد العميل بعد التحصيل", "value": 18000, "kind": "money" }
+      ],
+      "lines": [
+        { "descAr": "تحويل بنكي — إشعار CRD-0326-01", "amount": 40000 },
+        { "descAr": "شيك مؤجل رقم 784512 يستحق 15 أبريل 2026", "amount": 20000 }
+      ],
+      "total": 60000,
+      "approvals": [ { "roleAr": "إعداد", "name": "المحاسب (أنت)", "date": "2026-03-26", "status": "approved" } ],
+      "expectedDecision": "accept-post",
+      "checks": [
+        { "id": "split", "labelAr": "إيصال RV-003 بيفصل بين التحويل والشيك المؤجل", "expected": true, "explainAr": "40,000 للبنك و20,000 لأوراق القبض — كل جزء له حساب، والاتنين بيقللوا رصيد العميل." }
+      ],
+      "decisionExplainAr": "نسجّل من مذكورين: البنك 40,000 وأوراق القبض 20,000 — إلى العملاء (الرواد) 60,000. رصيد العميل يبقى 18,000."
+    },
+    {
+      "id": "DOC-E22-S1STATEMENT", "type": "supplier-statement", "number": "WAD-ST-0326", "date": "2026-03-26", "companyId": "maamal", "eventIds": ["E22"],
+      "titleAr": "كشف حساب مورد — مصنع الوادي للورق (تدريبي)", "fromParty": "S1",
+      "fields": [
+        { "labelAr": "صادر من", "value": "مصنع الوادي للورق (تدريبي)" },
+        { "labelAr": "حساب العميل", "value": "شركة المعمل للتجارة والتوزيع (تدريبي)" },
+        { "labelAr": "الرصيد المستحق حسب المورد", "value": 99750, "kind": "money" },
+        { "labelAr": "طلب المورد", "value": "برجاء سداد الرصيد المستحق" }
+      ],
+      "statement": {
+        "accountAr": "حساب شركة المعمل للتجارة والتوزيع (تدريبي) لدى مصنع الوادي للورق (تدريبي)",
+        "periodAr": "1–26 مارس 2026",
+        "opening": 0,
+        "lines": [
+          { "date": "2026-03-04", "descAr": "فاتورة توريد 500 كرتونة", "ref": "WAD-2026-0412", "debit": 90000, "balance": 90000 },
+          { "date": "2026-03-16", "descAr": "تحصيل شيك", "ref": "1002", "credit": 50000, "balance": 40000 },
+          { "date": "2026-03-17", "descAr": "فاتورة توريد 310 كرتونة", "ref": "WAD-2026-0457", "debit": 58900, "balance": 98900 },
+          { "date": "2026-03-17", "descAr": "رسوم توصيل 17 مارس", "ref": "WAD-DLV-17", "debit": 850, "balance": 99750 }
+        ],
+        "closing": 99750
+      },
+      "decoy": true,
+      "expectedDecision": "dispute",
+      "checks": [
+        { "id": "match", "labelAr": "رصيد كشف مصنع الوادي (99,750) = رصيد S1 في دفاترنا (98,900)", "expected": false, "explainAr": "فيه فرق 850 = سطر «رسوم توصيل 17 مارس»." },
+        { "id": "support", "labelAr": "عندنا مستند يثبت إن المورد وصّل بضاعة 17 مارس", "expected": false, "explainAr": "بالعكس: GRN-003 بيقول إن سواقنا محمود خليل (تدريبي) استلمها من المصنع بسيارة الشركة، وPO-003 شرطه الاستلام من المصنع، والفاتورة WAD-2026-0457 ما فيهاش رسوم نقل." },
+        { "id": "post", "labelAr": "نرحّل الـ 850 علشان رصيدنا يطابق كشف المورد", "expected": false, "explainAr": "ما بنرحّلش حاجة لمجرد إنها ظهرت في كشف المورد؛ المستند بيناقضها — نفتح نزاع." }
+      ],
+      "decisionExplainAr": "نزاع بالدليل: نبعت لمصنع الوادي خطاب نعترض فيه على رسوم التوصيل 850، ونرفق صورة GRN-003 (الاستلام من المصنع بسيارة الشركة — السائق محمود خليل (تدريبي)) وPO-003، ونطلب إشعار دائن بـ 850 أو كشف مصحح. ما نرحّلش أي قيد: رصيد S1 يفضل 98,900 والفرق يتسجل في سجل الاستثناءات لحد ما يتحل."
+    },
+    {
+      "id": "DOC-E23-DN", "type": "delivery-note", "number": "DN-003", "date": "2026-03-29", "companyId": "maamal", "eventIds": ["E23"],
+      "titleAr": "إذن تسليم رقم DN-003", "toParty": "C4",
+      "fields": [
+        { "labelAr": "العميل", "value": "مدرسة المستقبل (تدريبي)" },
+        { "labelAr": "مرجع الطلبية", "value": "SO-003", "kind": "code" },
+        { "labelAr": "الدفعة", "value": "التسليم الأول — 10 من 20 خرطوشة" },
+        { "labelAr": "التسليم بواسطة", "value": "محمود خليل (تدريبي) — سيارة الشركة" }
+      ],
+      "lines": [ { "descAr": "خرطوشة حبر (تونر) — مسلّمة", "sku": "TONER", "qty": 10, "unitAr": "خرطوشة" } ],
+      "approvals": [
+        { "roleAr": "خروج من المخزن", "name": "محمود خليل (تدريبي)", "date": "2026-03-29", "status": "approved" },
+        { "roleAr": "توقيع استلام العميل", "name": "أمين مخزن مدرسة المستقبل (تدريبي)", "date": "2026-03-29", "status": "approved" }
+      ],
+      "expectedDecision": "accept-post",
+      "checks": [
+        { "id": "signed", "labelAr": "إذن التسليم DN-003 موقّع من العميل بالاستلام", "expected": true, "explainAr": "التسليم حصل يوم 29 مارس — ده وقت الاعتراف بإيراد الـ 10 خراطيش." }
+      ],
+      "decisionExplainAr": "تسليم موقّع: الإيراد عن الـ 10 خراطيش اتكسب النهارده والتكلفة تخرج من المخزون."
+    },
+    {
+      "id": "DOC-E23-INV", "type": "sales-invoice", "number": "INV-004", "date": "2026-03-29", "companyId": "maamal", "eventIds": ["E23"],
+      "titleAr": "فاتورة بيع رقم INV-004 — مخصومة من الدفعة المقدمة", "toParty": "C4",
+      "fields": [
+        { "labelAr": "العميل", "value": "مدرسة المستقبل (تدريبي)" },
+        { "labelAr": "مرجع إذن التسليم", "value": "DN-003", "kind": "code" },
+        { "labelAr": "الدفعة المقدمة المستلمة (RV-002)", "value": 10000, "kind": "money" },
+        { "labelAr": "المخصوم من الدفعة المقدمة", "value": 7000, "kind": "money" },
+        { "labelAr": "المطلوب سداده الآن", "value": 0, "kind": "money" },
+        { "labelAr": "رصيد الدفعة المقدمة المتبقي", "value": 3000, "kind": "money" }
+      ],
+      "lines": [ { "descAr": "خرطوشة حبر (تونر)", "sku": "TONER", "qty": 10, "unitAr": "خرطوشة", "unitPrice": 700, "amount": 7000 } ],
+      "total": 7000,
+      "expectedDecision": "accept-post",
+      "checks": [
+        { "id": "applied", "labelAr": "قيمة INV-004 اتخصمت من الدفعة المقدمة", "expected": true, "explainAr": "مفيش فلوس جديدة: بنقلل الالتزام 7,000 ونسجّل المبيعات 7,000." },
+        { "id": "remaining", "labelAr": "الباقي من الدفعة المقدمة بعد INV-004 = 3,000", "expected": true, "explainAr": "10,000 − 7,000 = 3,000 يفضلوا التزام لحد التسليم الجاي." }
+      ],
+      "decisionExplainAr": "نسجّل دفعات مقدمة — مدرسة المستقبل 7,000 / مبيعات 7,000، وتكلفة 10 × 450 = 4,500. ولا جنيه دخل البنك النهارده."
+    },
+    {
+      "id": "DOC-E24-PAYROLL", "type": "payroll-sheet", "number": "PAY-2026-03", "date": "2026-03-30", "companyId": "maamal", "eventIds": ["E24"],
+      "titleAr": "كشف رواتب مارس 2026 (توضيحي)",
+      "fields": [
+        { "labelAr": "الشهر", "value": "مارس 2026" },
+        { "labelAr": "عدد الموظفين", "value": 3, "kind": "number" },
+        { "labelAr": "إجمالي الرواتب", "value": 24000, "kind": "money" },
+        { "labelAr": "إجمالي الاستقطاعات (توضيحية)", "value": 2400, "kind": "money" },
+        { "labelAr": "صافي المستحق للتحويل", "value": 21600, "kind": "money" },
+        { "labelAr": "تنبيه", "value": "مبالغ الاستقطاع توضيحية وليست نسبًا قانونية" }
+      ],
+      "lines": [
+        { "descAr": "سارة عبد الحميد (تدريبي) — مسؤولة مبيعات — رقم تعريفي مقنّع ••••01 (وهمي) — استقطاع توضيحي 1,000 · صافي 8,000", "qty": 1, "unitAr": "شهر", "unitPrice": 9000, "amount": 9000 },
+        { "descAr": "محمود خليل (تدريبي) — أمين مخزن وسائق — رقم تعريفي مقنّع ••••02 (وهمي) — استقطاع توضيحي 800 · صافي 7,200", "qty": 1, "unitAr": "شهر", "unitPrice": 8000, "amount": 8000 },
+        { "descAr": "نادية فهمي (تدريبي) — مسؤولة العهدة النثرية — رقم تعريفي مقنّع ••••03 (وهمي) — استقطاع توضيحي 600 · صافي 6,400", "qty": 1, "unitAr": "شهر", "unitPrice": 7000, "amount": 7000 }
+      ],
+      "total": 24000,
+      "approvals": [
+        { "roleAr": "إعداد", "name": "المحاسب (أنت)", "date": "2026-03-30", "status": "approved" },
+        { "roleAr": "اعتماد المدير (صافي التحويل أكبر من 10,000)", "name": "ليلى منصور (تدريبي)", "date": "2026-03-30", "status": "approved" }
+      ],
+      "notesAr": [
+        "مبالغ الاستقطاع توضيحية وليست نسبًا قانونية — متختارة للتدريب بس.",
+        "عمود القيمة = الراتب الإجمالي. الصافي المحوَّل = 24,000 − 2,400 = 21,600."
+      ],
+      "expectedDecision": "accept-post",
+      "checks": [
+        { "id": "net", "labelAr": "في كشف الرواتب: الإجمالي − الاستقطاعات = الصافي", "expected": true, "explainAr": "24,000 − 2,400 = 21,600 (8,000 + 7,200 + 6,400)." },
+        { "id": "employees", "labelAr": "كل الأسماء في كشف الرواتب موظفين حاليين ومفيش اسم متكرر", "expected": true, "explainAr": "3 موظفين معروفين في الشركة — مفيش موظف وهمي أو مكرر." },
+        { "id": "expense", "labelAr": "مصروف الرواتب = الصافي المحوَّل (21,600)", "expected": false, "explainAr": "المصروف بالإجمالي 24,000؛ الاستقطاعات 2,400 التزام لحد ما تتورّد." }
+      ],
+      "decisionExplainAr": "كشف معتمد وحسابه سليم: نسجّل مصروف الرواتب 24,000 — إلى البنك 21,600 واستقطاعات رواتب مستحقة 2,400."
+    },
+    {
+      "id": "DOC-E24-TRANSFER", "type": "bank-advice", "number": "TRF-0330-01", "date": "2026-03-30", "companyId": "maamal", "eventIds": ["E24"],
+      "titleAr": "إشعار خصم — تحويلات رواتب مارس (بنك المعمل التجريبي)", "fromParty": "BANK",
+      "fields": [
+        { "labelAr": "نوع العملية", "value": "تحويلات رواتب مجمّعة" },
+        { "labelAr": "إجمالي المخصوم من حسابكم", "value": 21600, "kind": "money" },
+        { "labelAr": "مرجع", "value": "PAY-2026-03", "kind": "code" }
+      ],
+      "lines": [
+        { "descAr": "سارة عبد الحميد (تدريبي) — صافي راتب مارس", "amount": 8000 },
+        { "descAr": "محمود خليل (تدريبي) — صافي راتب مارس", "amount": 7200 },
+        { "descAr": "نادية فهمي (تدريبي) — صافي راتب مارس", "amount": 6400 }
+      ],
+      "total": 21600,
+      "approvals": [ { "roleAr": "اعتماد المدير (أكبر من 10,000)", "name": "ليلى منصور (تدريبي)", "date": "2026-03-30", "status": "approved" } ],
+      "expectedDecision": "accept-post",
+      "checks": [
+        { "id": "net", "labelAr": "إجمالي تحويلات الرواتب = صافي كشف الرواتب", "expected": true, "explainAr": "21,600 = الصافي في PAY-2026-03 — مش الإجمالي 24,000." }
+      ],
+      "decisionExplainAr": "الإشعار بيأكد خروج الصافي 21,600 من البنك — ده الجزء الدائن في البنك من قيد الرواتب."
+    },
+    {
+      "id": "DOC-E25-PV", "type": "payment-voucher", "number": "PV-004", "date": "2026-03-30", "companyId": "maamal", "eventIds": ["E25"],
+      "titleAr": "إذن صرف رقم PV-004", "toParty": "S1",
+      "fields": [
+        { "labelAr": "اصرفوا إلى", "value": "مصنع الوادي للورق (تدريبي)" },
+        { "labelAr": "المبلغ", "value": 60000, "kind": "money" },
+        { "labelAr": "طريقة الدفع", "value": "شيك رقم 1003" },
+        { "labelAr": "البيان", "value": "دفعة من رصيد فواتير WAD-2026-0412 وWAD-2026-0457" },
+        { "labelAr": "رصيد المورد في دفاترنا بعد الدفعة", "value": 38900, "kind": "money" }
+      ],
+      "approvals": [
+        { "roleAr": "إعداد", "name": "المحاسب (أنت)", "date": "2026-03-30", "status": "approved" },
+        { "roleAr": "اعتماد المدير (المبلغ أكبر من 10,000)", "name": "ليلى منصور (تدريبي)", "date": "2026-03-30", "status": "approved" }
+      ],
+      "notesAr": ["رسوم التوصيل 850 المتنازع عليها مش داخلة في الرصيد ولا في الدفعة."],
+      "expectedDecision": "accept-post",
+      "checks": [
+        { "id": "approval", "labelAr": "إذن الصرف PV-004 معتمد من المدير", "expected": true, "explainAr": "60,000 أكبر من 10,000 — والاعتماد موجود." }
+      ],
+      "decisionExplainAr": "دفعة معتمدة على فواتير مسجلة: تتسجل الموردين — مصنع الوادي 60,000 / البنك يوم تسليم الشيك."
+    },
+    {
+      "id": "DOC-E25-COUNTERFOIL", "type": "cheque-counterfoil", "number": "1003", "date": "2026-03-30", "companyId": "maamal", "eventIds": ["E25"],
+      "titleAr": "كعب شيك رقم 1003", "toParty": "S1",
+      "fields": [
+        { "labelAr": "رقم الشيك", "value": "1003", "kind": "code" },
+        { "labelAr": "المستفيد", "value": "مصنع الوادي للورق (تدريبي)" },
+        { "labelAr": "المبلغ", "value": 60000, "kind": "money" },
+        { "labelAr": "البيان", "value": "حسب إذن الصرف PV-004" }
+      ],
+      "approvals": [ { "roleAr": "اعتماد المدير (المبلغ أكبر من 10,000)", "name": "ليلى منصور (تدريبي)", "date": "2026-03-30", "status": "approved" } ],
+      "notesAr": ["لحد 31 مارس المورد ما قدّمش الشيك للبنك."],
+      "expectedDecision": "accept-post",
+      "checks": [
+        { "id": "match", "labelAr": "مبلغ الكعب 1003 = مبلغ إذن الصرف PV-004", "expected": true, "explainAr": "60,000 = 60,000." }
+      ],
+      "decisionExplainAr": "الشيك اتسلّم للمورد فالقيد النهارده. عدم ظهوره في كشف آخر الشهر بند توقيت (شيك معلّق) من غير قيد."
+    },
+    {
+      "id": "DOC-E26-CHEQUE", "type": "customer-cheque", "number": "550213", "date": "2026-03-31", "companyId": "maamal", "eventIds": ["E26"],
+      "titleAr": "صورة شيك — مكتبة النور (تدريبي)", "fromParty": "C1",
+      "fields": [
+        { "labelAr": "رقم الشيك", "value": "550213", "kind": "code" },
+        { "labelAr": "البنك المسحوب عليه", "value": "البنك التجريبي الثالث (تدريبي)" },
+        { "labelAr": "الساحب", "value": "مكتبة النور (تدريبي)" },
+        { "labelAr": "المستفيد", "value": "شركة المعمل للتجارة والتوزيع (تدريبي)" },
+        { "labelAr": "المبلغ", "value": 10000, "kind": "money" },
+        { "labelAr": "تاريخ الشيك", "value": "2026-03-31", "kind": "date" }
+      ],
+      "expectedDecision": "accept-post",
+      "checks": [
+        { "id": "current", "labelAr": "تاريخ الشيك 550213 النهارده (مش مؤجل)", "expected": true, "explainAr": "شيك حالّ فينفع يتودع فورًا — يتسجل بنك مش أوراق قبض." }
+      ],
+      "decisionExplainAr": "شيك حالّ باسم الشركة: مع إيصال الإيداع نسجّل بنك 10,000 / العملاء — مكتبة النور."
+    },
+    {
+      "id": "DOC-E26-DEPOSIT", "type": "deposit-slip", "number": "DS-0331-01", "date": "2026-03-31", "companyId": "maamal", "eventIds": ["E26"],
+      "titleAr": "إيصال إيداع شيكات — بنك المعمل التجريبي (تدريبي)", "toParty": "BANK",
+      "fields": [
+        { "labelAr": "اسم الحساب", "value": "شركة المعمل للتجارة والتوزيع (تدريبي)" },
+        { "labelAr": "رقم الحساب", "value": "TRN-ACC-0001 (تدريبي)", "kind": "code" },
+        { "labelAr": "نوع الإيداع", "value": "شيك للتحصيل" },
+        { "labelAr": "رقم الشيك", "value": "550213", "kind": "code" },
+        { "labelAr": "المبلغ", "value": 10000, "kind": "money" },
+        { "labelAr": "ملاحظة البنك", "value": "قيمة الشيكات بتتضاف للحساب بعد التحصيل (يوم عمل)" }
+      ],
+      "total": 10000,
+      "approvals": [ { "roleAr": "ختم البنك التجريبي", "name": "موظف الشباك (تدريبي)", "date": "2026-03-31", "status": "approved" } ],
+      "expectedDecision": "accept-post",
+      "checks": [
+        { "id": "timing", "labelAr": "مبلغ الإيداع DS-0331-01 هيظهر في كشف البنك بتاريخ 31 مارس", "expected": false, "explainAr": "البنك هيضيفه 1 أبريل — في تسوية آخر مارس يبقى إيداع في الطريق (بند توقيت، لا قيد)." }
+      ],
+      "decisionExplainAr": "الإيداع حصل من جهتنا يوم 31 مارس، فالتحصيل يتسجل في دفاترنا النهارده حتى لو البنك هيضيفه بكرة."
+    },
+    {
+      "id": "DOC-BANK-END", "type": "bank-statement", "number": "STM-2026-03-B", "date": "2026-03-31", "companyId": "maamal", "eventIds": ["A01"],
+      "titleAr": "كشف حساب بنكي 1–31 مارس — بنك المعمل التجريبي (تدريبي)", "fromParty": "BANK",
+      "fields": [
+        { "labelAr": "اسم الحساب", "value": "شركة المعمل للتجارة والتوزيع (تدريبي)" },
+        { "labelAr": "رقم الحساب", "value": "TRN-ACC-0001 (تدريبي)", "kind": "code" },
+        { "labelAr": "الفترة", "value": "1–31 مارس 2026" },
+        { "labelAr": "الرصيد الختامي حسب البنك", "value": 218375, "kind": "money" }
+      ],
+      "statement": {
+        "accountAr": "حساب جاري TRN-ACC-0001 (تدريبي)",
+        "periodAr": "1–31 مارس 2026",
+        "opening": 0,
+        "lines": [
+          { "date": "2026-03-01", "descAr": "إيداع نقدي", "ref": "DS-0301-01", "credit": 300000, "balance": 300000 },
+          { "date": "2026-03-01", "descAr": "صرف شيك", "ref": "1001", "debit": 15000, "balance": 285000 },
+          { "date": "2026-03-02", "descAr": "تحويل صادر — أ. سامي نبيل (تدريبي)", "ref": "TRF-0302-01", "debit": 18000, "balance": 267000 },
+          { "date": "2026-03-03", "descAr": "تحويل صادر — شركة الأثاث الحديث (تدريبي)", "ref": "TRF-0303-01", "debit": 36000, "balance": 231000 },
+          { "date": "2026-03-09", "descAr": "تحويل وارد — مركز طباعة الأمل (تدريبي)", "ref": "CRD-0309-01", "credit": 14000, "balance": 245000 },
+          { "date": "2026-03-11", "descAr": "تحويل وارد — مكتبة النور (تدريبي)", "ref": "CRD-0311-01", "credit": 30000, "balance": 275000 },
+          { "date": "2026-03-15", "descAr": "عمولات ومصاريف حساب", "debit": 125, "balance": 274875 },
+          { "date": "2026-03-16", "descAr": "صرف شيك — مصنع الوادي للورق (تدريبي)", "ref": "1002", "debit": 50000, "balance": 224875 },
+          { "date": "2026-03-23", "descAr": "تحويل وارد — مدرسة المستقبل (تدريبي)", "ref": "CRD-0323-01", "credit": 10000, "balance": 234875 },
+          { "date": "2026-03-25", "descAr": "تحويل صادر — شركة الحبر الذهبي (تدريبي)", "ref": "TRF-0325-01", "debit": 42750, "balance": 192125 },
+          { "date": "2026-03-26", "descAr": "تحويل وارد — شركة الرواد للخدمات (تدريبي)", "ref": "CRD-0326-01", "credit": 40000, "balance": 232125 },
+          { "date": "2026-03-30", "descAr": "تحويلات رواتب مجمّعة", "ref": "TRF-0330-01", "debit": 21600, "balance": 210525 },
+          { "date": "2026-03-31", "descAr": "تحويل وارد — شركة الرواد للخدمات (تدريبي)", "ref": "CRD-0331-01", "credit": 8000, "balance": 218525 },
+          { "date": "2026-03-31", "descAr": "عمولات ومصاريف حساب", "debit": 150, "balance": 218375 }
+        ],
+        "closing": 218375
+      },
+      "notesAr": ["الكشف من وجهة نظر البنك: «دائن» = إضافة لحسابكم، و«مدين» = خصم منه."],
+      "expectedDecision": "accept-post",
+      "checks": [
+        { "id": "book", "labelAr": "في سطور في كشف آخر الشهر مش متسجلة في دفاترنا", "expected": true, "explainAr": "تحويل الرواد 8,000 وعمولة 150 يوم 31 مارس — بنود دفاتر تتقيد (A01)." },
+        { "id": "chq1003", "labelAr": "الشيك 1003 (60,000) ظاهر في كشف آخر الشهر", "expected": false, "explainAr": "لسه ما اتقدّمش — شيك معلّق يتطرح من رصيد البنك في التسوية من غير قيد." },
+        { "id": "dit", "labelAr": "شيك مكتبة النور المودَع 31 مارس (10,000) ظاهر في كشف آخر الشهر", "expected": false, "explainAr": "البنك هيضيفه 1 أبريل — إيداع في الطريق يتضاف لرصيد البنك في التسوية. والشيك المؤجل 20,000 مش بند تسوية أصلًا." }
+      ],
+      "decisionExplainAr": "نقبل الكشف ونقيد بنود الدفاتر بس: تحصيل الرواد 8,000 والعمولة 150 (A01). الرصيد المعدّل: 218,375 + 10,000 − 60,000 = 168,375 = 160,525 + 8,000 − 150."
+    },
+    {
+      "id": "DOC-A01-C3EMAIL", "type": "email", "date": "2026-03-31", "companyId": "maamal", "eventIds": ["A01"],
+      "titleAr": "إيميل من شركة الرواد للخدمات (تدريبي): «حوّلنا 8,000»", "fromParty": "C3",
+      "fields": [
+        { "labelAr": "المرسل", "value": "قسم الحسابات — شركة الرواد للخدمات (تدريبي)" },
+        { "labelAr": "المبلغ المذكور", "value": 8000, "kind": "money" },
+        { "labelAr": "المرفقات", "value": "لا يوجد إشعار تحويل مرفق" }
+      ],
+      "email": {
+        "fromAr": "قسم الحسابات — شركة الرواد للخدمات (تدريبي)",
+        "toAr": "الحسابات — شركة المعمل للتجارة والتوزيع (تدريبي)",
+        "subjectAr": "تحويل دفعة 8,000 جنيه",
+        "bodyAr": "السلام عليكم، بنبلغكم إننا حوّلنا النهارده 8,000 جنيه لحسابكم من رصيد الفاتورة INV-003. برجاء التأكيد وتحديث كشف حسابنا. شكرًا — قسم الحسابات (تدريبي).",
+        "receivedAt": "2026-03-31"
+      },
+      "expectedDecision": "file-only",
+      "checks": [
+        { "id": "evidence", "labelAr": "إيميل الرواد لوحده دليل كفاية لتسجيل التحصيل", "expected": false, "explainAr": "الإيميل كلام العميل؛ الدليل إن الفلوس دخلت فعلًا هو سطر 31 مارس في كشف البنك (8,000 من شركة الرواد)." },
+        { "id": "bank", "labelAr": "مبلغ الـ 8,000 ظاهر في كشف البنك 1–31 مارس", "expected": true, "explainAr": "سطر «تحويل وارد — شركة الرواد» 8,000 يوم 31 مارس — ده سند القيد (A01)." }
+      ],
+      "decisionExplainAr": "نأرشف الإيميل مع الكشف كمعلومة مساعدة بس. قيد التحصيل (من حـ/ البنك إلى حـ/ العملاء — الرواد 8,000) سنده سطر كشف البنك مش الإيميل. لو المبلغ ما كانش ظهر في الكشف كنا هنستنى ونطلب من العميل إشعار التحويل."
+    },
+    {
+      "id": "DOC-A02-SCHEDULE", "type": "lease-summary", "number": "SCH-PRE-03", "date": "2026-03-31", "companyId": "maamal", "eventIds": ["A02"],
+      "titleAr": "جدول استهلاك الإيجار المدفوع مقدمًا — مارس 2026",
+      "fields": [
+        { "labelAr": "مرجع العقد", "value": "LEASE-WH-01", "kind": "code" },
+        { "labelAr": "المدفوع مقدمًا (2 مارس)", "value": 18000, "kind": "money" },
+        { "labelAr": "المستهلك عن مارس", "value": 6000, "kind": "money" },
+        { "labelAr": "الرصيد المتبقي آخر مارس (أبريل + مايو)", "value": 12000, "kind": "money" }
+      ],
+      "lines": [
+        { "descAr": "مارس 2026 — اتستهلك ← مصروف إيجار", "qty": 1, "unitAr": "شهر", "unitPrice": 6000, "amount": 6000 },
+        { "descAr": "أبريل 2026 — لسه أصل (إيجار مقدم)", "qty": 1, "unitAr": "شهر", "unitPrice": 6000, "amount": 6000 },
+        { "descAr": "مايو 2026 — لسه أصل (إيجار مقدم)", "qty": 1, "unitAr": "شهر", "unitPrice": 6000, "amount": 6000 }
+      ],
+      "total": 18000,
+      "approvals": [ { "roleAr": "إعداد", "name": "المحاسب (أنت)", "date": "2026-03-31", "status": "approved" } ],
+      "expectedDecision": "accept-post",
+      "checks": [
+        { "id": "month", "labelAr": "المبلغ اللي يتحمّل على مارس من الإيجار المقدم = 6,000 بس", "expected": true, "explainAr": "شهر واحد اتستهلك من 3 شهور مدفوعة." },
+        { "id": "rest", "labelAr": "الباقي 12,000 يتحوّل مصروف دلوقتي برضه", "expected": false, "explainAr": "أبريل ومايو لسه ما اتستهلكوش — يفضلوا أصل (إيجار مقدم) لحد شهرهم." }
+      ],
+      "decisionExplainAr": "الجدول بيثبت استهلاك شهر واحد: نقيد من حـ/ مصروف الإيجار إلى حـ/ إيجار مدفوع مقدمًا 6,000."
+    },
+    {
+      "id": "DOC-A03-SCHEDULE", "type": "depreciation-schedule", "number": "SCH-DEP-03", "date": "2026-03-31", "companyId": "maamal", "eventIds": ["A03"],
+      "titleAr": "جدول إهلاك الأصل FA-001 — مارس 2026",
+      "fields": [
+        { "labelAr": "رقم الأصل", "value": "FA-001", "kind": "code" },
+        { "labelAr": "التكلفة", "value": 36000, "kind": "money" },
+        { "labelAr": "العمر الإنتاجي", "value": "36 شهر" },
+        { "labelAr": "القيمة التخريدية", "value": 0, "kind": "money" },
+        { "labelAr": "الإهلاك الشهري (36,000 ÷ 36)", "value": 1000, "kind": "money" },
+        { "labelAr": "مجمع الإهلاك آخر مارس", "value": 1000, "kind": "money" },
+        { "labelAr": "صافي القيمة الدفترية آخر مارس", "value": 35000, "kind": "money" }
+      ],
+      "lines": [ { "descAr": "إهلاك مارس 2026 — شهر كامل حسب سياسة الشركة (الشراء 3 مارس)", "qty": 1, "unitAr": "شهر", "unitPrice": 1000, "amount": 1000 } ],
+      "total": 1000,
+      "approvals": [ { "roleAr": "إعداد", "name": "المحاسب (أنت)", "date": "2026-03-31", "status": "approved" } ],
+      "expectedDecision": "accept-post",
+      "checks": [
+        { "id": "calc", "labelAr": "الإهلاك الشهري = 36,000 ÷ 36", "expected": true, "explainAr": "1,000 جنيه في الشهر — قسط ثابت بدون قيمة تخريدية." },
+        { "id": "full", "labelAr": "مارس محسوب شهر إهلاك كامل رغم إن الشراء يوم 3", "expected": true, "explainAr": "ده حسب سياسة الشركة الوهمية (شهر كامل في شهر الشراء)." },
+        { "id": "cash", "labelAr": "قيد الإهلاك بيخرّج فلوس من البنك", "expected": false, "explainAr": "الإهلاك توزيع لتكلفة اتدفعت قبل كده — مفيش نقدية." }
+      ],
+      "decisionExplainAr": "الجدول متسق مع بطاقة الأصل والسياسة: نقيد من حـ/ مصروف الإهلاك إلى حـ/ مجمع الإهلاك 1,000."
+    },
+    {
+      "id": "DOC-A04-ESTIMATE", "type": "estimate-memo", "number": "EST-ELEC-03", "date": "2026-03-31", "companyId": "maamal", "eventIds": ["A04"],
+      "titleAr": "مذكرة تقدير كهرباء مارس 2026",
+      "fields": [
+        { "labelAr": "الموضوع", "value": "تقدير استهلاك الكهرباء لحين وصول الفاتورة" },
+        { "labelAr": "قراءة العداد 1 مارس", "value": 12400, "kind": "number" },
+        { "labelAr": "قراءة العداد 31 مارس", "value": 12850, "kind": "number" },
+        { "labelAr": "الاستهلاك (كيلووات ساعة)", "value": 450, "kind": "number" },
+        { "labelAr": "المبلغ التقديري", "value": 900, "kind": "money" },
+        { "labelAr": "موعد الفاتورة المتوقع", "value": "أبريل 2026" }
+      ],
+      "lines": [ { "descAr": "استهلاك كهرباء مارس من قراءة العداد — سعر تقديري تدريبي", "qty": 450, "unitAr": "ك.و.س", "unitPrice": 2, "amount": 900 } ],
+      "total": 900,
+      "approvals": [
+        { "roleAr": "إعداد", "name": "المحاسب (أنت)", "date": "2026-03-31", "status": "approved" },
+        { "roleAr": "اعتماد المدير للتقدير", "name": "ليلى منصور (تدريبي)", "date": "2026-03-31", "status": "approved" }
+      ],
+      "notesAr": [
+        "سعر الكيلووات هنا رقم تدريبي للتبسيط — مش تعريفة حقيقية.",
+        "أول ما الفاتورة الفعلية توصل في أبريل نقارنها بالتقدير ونسوّي الفرق."
+      ],
+      "expectedDecision": "accept-post",
+      "checks": [
+        { "id": "approval", "labelAr": "تقدير الكهرباء معتمد من المدير", "expected": true, "explainAr": "التقدير مبني على قراءة عداد فعلية ومعتمد — ده الدليل البديل لحد ما الفاتورة توصل." },
+        { "id": "wait", "labelAr": "لازم نستنى فاتورة الكهرباء علشان نسجل مصروف مارس", "expected": false, "explainAr": "الاستهلاك حصل في مارس — نسجله مصروف مستحق بتقدير معقول ومعتمد." }
+      ],
+      "decisionExplainAr": "تقدير معقول ومعتمد: نقيد من حـ/ مصروف المرافق والاتصالات إلى حـ/ مصروفات مستحقة 900."
+    },
+    {
+      "id": "DOC-A05-COUNT", "type": "count-sheet", "number": "CNT-2026-03", "date": "2026-03-31", "companyId": "maamal", "eventIds": ["A05"],
+      "titleAr": "كشف جرد المخزون الفعلي — 31 مارس 2026",
+      "fields": [
+        { "labelAr": "توقيت الجرد", "value": "31 مارس 2026 — بعد آخر حركة مخزن" },
+        { "labelAr": "ورق A4 — رصيد النظام (كرتونة)", "value": 320, "kind": "number" },
+        { "labelAr": "ورق A4 — المعدود فعلًا (كرتونة)", "value": 318, "kind": "number" },
+        { "labelAr": "الفرق في الورق", "value": "عجز 2 كرتونة × 185 = 370" },
+        { "labelAr": "تونر — رصيد النظام (خرطوشة)", "value": 65, "kind": "number" },
+        { "labelAr": "تونر — المعدود فعلًا (خرطوشة)", "value": 65, "kind": "number" },
+        { "labelAr": "الفرق في التونر", "value": "لا يوجد — مطابق" }
+      ],
+      "lines": [
+        { "descAr": "كرتونة ورق A4 — المعدود فعلًا (بمتوسط التكلفة 185)", "sku": "PAPER", "qty": 318, "unitAr": "كرتونة", "unitPrice": 185, "amount": 58830 },
+        { "descAr": "خرطوشة حبر (تونر) — المعدود فعلًا (بالتكلفة 450)", "sku": "TONER", "qty": 65, "unitAr": "خرطوشة", "unitPrice": 450, "amount": 29250 }
+      ],
+      "total": 88080,
+      "approvals": [
+        { "roleAr": "رئيس لجنة الجرد", "name": "ليلى منصور (تدريبي)", "date": "2026-03-31", "status": "approved" },
+        { "roleAr": "عضو لجنة الجرد", "name": "نادية فهمي (تدريبي)", "date": "2026-03-31", "status": "approved" },
+        { "roleAr": "عضو لجنة الجرد", "name": "المحاسب (أنت)", "date": "2026-03-31", "status": "approved" },
+        { "roleAr": "حضور أمين المخزن", "name": "محمود خليل (تدريبي)", "date": "2026-03-31", "status": "approved" }
+      ],
+      "notesAr": ["العجز يتسجّل ويتبحث سببه (غلط عدّ، تلف، صرف من غير إذن…) من غير اتهام حد قبل الدليل."],
+      "expectedDecision": "accept-post",
+      "checks": [
+        { "id": "diff", "labelAr": "في كشف الجرد: فيه عجز في الورق = 2 كرتونة", "expected": true, "explainAr": "320 − 318 = 2 × 185 = 370 عجز مخزون." },
+        { "id": "price", "labelAr": "عجز الجرد يتسعّر بسعر البيع (260)", "expected": false, "explainAr": "بالتكلفة: متوسط 185 — المخزون مسجل بالتكلفة مش بسعر البيع." },
+        { "id": "signed", "labelAr": "كشف الجرد موقّع من لجنة الجرد", "expected": true, "explainAr": "توقيع اللجنة (مش أمين المخزن لوحده) بيدّي الكشف مصداقية." }
+      ],
+      "decisionExplainAr": "كشف جرد موقّع من اللجنة: نقيد من حـ/ عجز المخزون إلى حـ/ المخزون 370 (2 كرتونة × 185)، ونفتح بحث في السبب."
+    },
+    {
+      "id": "DOC-A06-CHECKLIST", "type": "close-checklist", "number": "CLOSE-2026-03", "date": "2026-03-31", "companyId": "maamal", "eventIds": ["A06"],
+      "titleAr": "قائمة مراجعة إقفال مارس 2026",
+      "fields": [
+        { "labelAr": "الفترة", "value": "1–31 مارس 2026" },
+        { "labelAr": "ميزان المراجعة بعد التسويات", "value": "495,200 = 495,200" },
+        { "labelAr": "صافي ربح مارس", "value": 8355, "kind": "money" },
+        { "labelAr": "المسحوبات الشخصية", "value": 5000, "kind": "money" },
+        { "labelAr": "رأس المال بعد الإقفال", "value": 303355, "kind": "money" },
+        { "labelAr": "ميزان المراجعة بعد الإقفال", "value": "349,555 = 349,555" }
+      ],
+      "lines": [
+        { "descAr": "1) كل أحداث الشهر E01–E26 مترحّلة ومربوطة بمستنداتها ✔" },
+        { "descAr": "2) التسوية البنكية آخر الشهر: الرصيد المعدّل 168,375 في الدفاتر = 168,375 في البنك ✔" },
+        { "descAr": "3) الحسابات الفرعية مطابقة للحسابات الإجمالية: العملاء 17,500 · أوراق القبض 20,000 · الموردين 38,900 · المخزون 88,080 ✔" },
+        { "descAr": "4) تسويات آخر الشهر مترحّلة: البنك (A01) · الإيجار (A02) · الإهلاك (A03) · الكهرباء المستحقة (A04) · عجز الجرد (A05) ✔" },
+        { "descAr": "5) سجل الاستثناءات متراجع: نزاع 850 مع مصنع الوادي للورق (تدريبي) مفتوح ومش مترحّل · الفاتورة المكررة مرفوضة · مطالبة التاكسي تحت الاستفسار ✔" },
+        { "descAr": "6) ميزان المراجعة بعد التسويات متوازن 495,200 ✔" },
+        { "descAr": "7) قيود الإقفال: الإيرادات والمصروفات والمسحوبات في رأس المال (صافي الربح 8,355 − المسحوبات 5,000)" },
+        { "descAr": "8) ميزان المراجعة بعد الإقفال: حسابات دائمة بس — 349,555" },
+        { "descAr": "9) قفل الفترة وأرشفة المستندات — أي تعديل بعد كده بقيد عكسي أو تصحيحي مسجّل" }
+      ],
+      "approvals": [
+        { "roleAr": "إعداد", "name": "المحاسب (أنت)", "date": "2026-03-31", "status": "approved" },
+        { "roleAr": "اعتماد المدير", "name": "ليلى منصور (تدريبي)", "date": "2026-03-31", "status": "approved" }
+      ],
+      "expectedDecision": "accept-post",
+      "checks": [
+        { "id": "tb", "labelAr": "ميزان المراجعة بعد التسويات متوازن قبل قيود الإقفال", "expected": true, "explainAr": "495,200 = 495,200 — شرط قبل الإقفال (وإن كان التوازن لوحده مش دليل صحة)." },
+        { "id": "dispute", "labelAr": "نرحّل الـ 850 المتنازع عليها قبل الإقفال علشان نقفل نظيف", "expected": false, "explainAr": "النزاع مدعوم بـ GRN-003؛ يفضل في سجل الاستثناءات ومش بيتقيد." },
+        { "id": "history", "labelAr": "قيود الإقفال بتمسح قيود الشهر", "expected": false, "explainAr": "الإقفال بينقل الأرصدة لرأس المال بس — القيود الأصلية فاضلة وقائمة دخل مارس لسه بتعرض مارس." }
+      ],
+      "decisionExplainAr": "القائمة مكتملة ومعتمدة: نرحّل قيود الإقفال في رأس المال (303,355) ونقفل الفترة."
+    },
+    {
+      "id": "DOC-DX1", "type": "supplier-invoice", "number": "WAD-2026-0457", "date": "2026-03-17", "companyId": "maamal", "eventIds": ["E16"],
+      "titleAr": "فاتورة مورد — مصنع الوادي للورق (تدريبي) — نسخة وصلت بالإيميل", "fromParty": "S1",
+      "fields": [
+        { "labelAr": "المورد", "value": "مصنع الوادي للورق (تدريبي)" },
+        { "labelAr": "العميل", "value": "شركة المعمل للتجارة والتوزيع (تدريبي)" },
+        { "labelAr": "مرجع أمر الشراء", "value": "PO-003", "kind": "code" },
+        { "labelAr": "طريقة الوصول", "value": "نسخة PDF بالبريد الإلكتروني" },
+        { "labelAr": "تاريخ الاستلام", "value": "2026-03-24", "kind": "date" },
+        { "labelAr": "نص الإيميل", "value": "مرفق الفاتورة للمراجعة والسداد" }
+      ],
+      "lines": [ { "descAr": "كرتونة ورق A4", "sku": "PAPER", "qty": 310, "unitAr": "كرتونة", "unitPrice": 190, "amount": 58900 } ],
+      "total": 58900,
+      "decoy": true,
+      "expectedDecision": "reject-duplicate",
+      "checks": [
+        { "id": "dup", "labelAr": "رقم الفاتورة مسجل قبل كده؟", "expected": true, "explainAr": "WAD-2026-0457 اترحّلت يوم 17 مارس مع GRN-003 (E16)." },
+        { "id": "same", "labelAr": "نفس المورد والمبلغ والتاريخ والكمية زي فاتورة 17 مارس", "expected": true, "explainAr": "310 × 190 = 58,900 بتاريخ 17 مارس — نفس الفاتورة بالظبط." },
+        { "id": "grn", "labelAr": "في إذن استلام جديد يقابل النسخة دي", "expected": false, "explainAr": "مفيش بضاعة جديدة وصلت؛ GRN-003 اتطابق خلاص مع الفاتورة الأصلية." }
+      ],
+      "decisionExplainAr": "نسخة مكررة من فاتورة مترحّلة: نرفضها ونختمها «نسخة — لا تُرحّل» ونحفظها مع الأصل. لو اترحّلت هنسجّل مخزون وموردين 58,900 زيادة ونخاطر ندفع نفس الفاتورة مرتين."
+    },
+    {
+      "id": "DOC-DX2", "type": "petty-cash-voucher", "number": "PCV-004", "date": "2026-03-17", "companyId": "maamal", "eventIds": ["E18"],
+      "titleAr": "مطالبة صرف نثري PCV-004 — تاكسي", "fromParty": "EMP1",
+      "fields": [
+        { "labelAr": "مقدّمة المطالبة", "value": "سارة عبد الحميد (تدريبي)" },
+        { "labelAr": "المصروف", "value": "تاكسي — مشوار عميل" },
+        { "labelAr": "المبلغ المطلوب", "value": 300, "kind": "money" },
+        { "labelAr": "الإيصال", "value": "غير مرفق" },
+        { "labelAr": "بيان المشوار (التاريخ، من/إلى، السبب)", "value": "غير مكتوب" }
+      ],
+      "lines": [ { "descAr": "أجرة تاكسي", "qty": 1, "unitAr": "مشوار", "unitPrice": 300, "amount": 300 } ],
+      "total": 300,
+      "approvals": [
+        { "roleAr": "توقيع مقدّمة المطالبة", "name": "سارة عبد الحميد (تدريبي)", "date": "2026-03-17", "status": "approved" },
+        { "roleAr": "اعتماد المدير", "name": "ليلى منصور (تدريبي)", "status": "missing" }
+      ],
+      "decoy": true,
+      "expectedDecision": "query",
+      "checks": [
+        { "id": "receipt", "labelAr": "مطالبة التاكسي مرفق بيها إيصال أو مستند يثبت المصروف", "expected": false, "explainAr": "مفيش إيصال ولا بيان بالمشوار — وده شرط أساسي في اعتماد العهدة PCA-001." },
+        { "id": "approval", "labelAr": "مطالبة التاكسي معتمدة من المدير", "expected": false, "explainAr": "خانة اعتماد المدير فاضية." }
+      ],
+      "decisionExplainAr": "نستفسر من مقدّمة المطالبة برسالة: نطلب الإيصال أو بيان المشوار (التاريخ، من/إلى، العميل) وبعدين اعتماد المدير. لحد ما تكتمل ما تتصرفش ولا تدخل في طلب التعويض ولا تتسجل. ده نقص مستندات — مش اتهام لحد."
+    }
+  ]
+}

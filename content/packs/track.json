@@ -1,0 +1,2642 @@
+{
+  "pack": "track",
+  "days": [
+    {
+      "day": 1,
+      "titleAr": "الشركة والمستندات والمعادلة — دورة كاملة مصغّرة",
+      "outcomesAr": [
+        "تصنّف 8 من 10 بنود صح (أصل/التزام/حقوق ملكية/إيراد/مصروف)",
+        "تشرح المعادلة وحركة الفلوس بكلامك (شرح ذاتي)",
+        "تتابع مستند خلال دورة مصغّرة لحد القوائم",
+        "تسجّل أول 4 أحداث في دفاتر الشركة"
+      ],
+      "lessonIds": [
+        "L01",
+        "L02"
+      ],
+      "eventIds": [
+        "E01",
+        "E02",
+        "E03",
+        "E04"
+      ],
+      "tasks": [
+        {
+          "id": "D01-T01",
+          "type": "lesson",
+          "refId": "L01",
+          "titleAr": "الدرس 1: الشركة والمستندات والمعادلة",
+          "block": "guided",
+          "estimates": {
+            "r2": 30,
+            "r4": 35,
+            "r6": 35
+          },
+          "required": true
+        },
+        {
+          "id": "D01-T02",
+          "type": "company",
+          "refId": "E01",
+          "titleAr": "مكتب المستندات: سجّل E01 — إيداع رأس المال",
+          "block": "practical",
+          "estimates": {
+            "r2": 10,
+            "r4": 10,
+            "r6": 10
+          },
+          "required": true,
+          "companyCheckpoint": true,
+          "prerequisites": [
+            "D01-T01"
+          ]
+        },
+        {
+          "id": "D01-T03",
+          "type": "lesson",
+          "refId": "L02",
+          "titleAr": "الدرس 2: دورة كاملة مصغّرة",
+          "block": "guided",
+          "estimates": {
+            "r2": 30,
+            "r4": 35,
+            "r6": 35
+          },
+          "required": true
+        },
+        {
+          "id": "D01-T04",
+          "type": "company",
+          "refId": "E02",
+          "titleAr": "سجّل E02 — من البنك للصندوق",
+          "block": "practical",
+          "estimates": {
+            "r2": 5,
+            "r4": 5,
+            "r6": 5
+          },
+          "required": true,
+          "prerequisites": [
+            "D01-T02"
+          ]
+        },
+        {
+          "id": "D01-T05",
+          "type": "company",
+          "refId": "E03",
+          "titleAr": "سجّل E03 — إيجار مقدم 3 شهور",
+          "block": "practical",
+          "estimates": {
+            "r2": 5,
+            "r4": 5,
+            "r6": 5
+          },
+          "required": true,
+          "prerequisites": [
+            "D01-T04"
+          ]
+        },
+        {
+          "id": "D01-T06",
+          "type": "company",
+          "refId": "E04",
+          "titleAr": "سجّل E04 — أثاث ومعدات",
+          "block": "practical",
+          "estimates": {
+            "r2": 5,
+            "r4": 5,
+            "r6": 5
+          },
+          "required": true,
+          "companyCheckpoint": true,
+          "prerequisites": [
+            "D01-T05"
+          ]
+        },
+        {
+          "id": "D01-T07",
+          "type": "whatif",
+          "refId": "W-ASSET-EXP",
+          "titleAr": "ماذا لو؟ أصل مقابل مصروف",
+          "block": "transfer",
+          "estimates": {
+            "r2": null,
+            "r4": 10,
+            "r6": 10
+          },
+          "required": false
+        },
+        {
+          "id": "D01-T09",
+          "type": "career",
+          "refId": "career:jobs",
+          "titleAr": "جولة في خريطة الوظائف + راجع لوحة الأهلية للوظيفة اللي تستهدفها",
+          "block": "interview",
+          "estimates": {
+            "r2": null,
+            "r4": 10,
+            "r6": 10
+          },
+          "required": false
+        },
+        {
+          "id": "D01-T10",
+          "type": "career",
+          "refId": "career:story",
+          "titleAr": "قصتك المهنية — النسخة الأولى (حقوق ← خدمة عملاء ← محاسبة)",
+          "block": "interview",
+          "estimates": {
+            "r2": null,
+            "r4": 10,
+            "r6": 10
+          },
+          "required": false
+        },
+        {
+          "id": "D01-T11",
+          "type": "interview",
+          "refId": "IV-HR-01",
+          "titleAr": "سؤال مقابلة: «عرّفني بنفسك» (عربي، وجرّب الإنجليزي)",
+          "block": "interview",
+          "estimates": {
+            "r2": 8,
+            "r4": 10,
+            "r6": 10
+          },
+          "required": true
+        },
+        {
+          "id": "D01-T08",
+          "type": "reflection",
+          "refId": "reflection:day",
+          "titleAr": "تأمّل اليوم وخطة بكرة",
+          "block": "reflection",
+          "estimates": {
+            "r2": 10,
+            "r4": 10,
+            "r6": 10
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 2,
+      "titleAr": "المدين والدائن والترحيل — والمشتريات الآجلة",
+      "outcomesAr": [
+        "تحدد مدين ولا دائن صح في 8 من 10 تغييرات، وتشرح القاعدة من المعادلة",
+        "ترحّل قيود لحساب T وتطلّع رصيده وجانبه",
+        "تطابق أمر الشراء وإذن الاستلام والفاتورة، وتعرف إمتى توقف وتطلب المستند الناقص",
+        "تسجّل E05 و E06 في دفاتر الشركة (مخزون مش مصروف)",
+        "تشرح المدين والدائن بإنجليزي بسيط (تقييم ذاتي)"
+      ],
+      "lessonIds": [
+        "L03",
+        "L04"
+      ],
+      "eventIds": [
+        "E05",
+        "E06"
+      ],
+      "tasks": [
+        {
+          "id": "D02-T01",
+          "type": "lesson",
+          "refId": "L03",
+          "titleAr": "الدرس 3: المدين والدائن من المعادلة",
+          "block": "guided",
+          "estimates": {
+            "r2": 30,
+            "r4": 40,
+            "r6": 40
+          },
+          "required": true
+        },
+        {
+          "id": "D02-T02",
+          "type": "lesson",
+          "refId": "L04",
+          "titleAr": "الدرس 4: المشتريات الآجلة والمطابقة الثلاثية",
+          "block": "guided",
+          "estimates": {
+            "r2": 30,
+            "r4": 40,
+            "r6": 40
+          },
+          "required": true
+        },
+        {
+          "id": "D02-T03",
+          "type": "company",
+          "refId": "E05",
+          "titleAr": "مكتب المستندات: طابق وسجّل E05 — ورق من مصنع الوادي",
+          "block": "practical",
+          "estimates": {
+            "r2": 8,
+            "r4": 10,
+            "r6": 10
+          },
+          "required": true,
+          "prerequisites": [
+            "D02-T02"
+          ]
+        },
+        {
+          "id": "D02-T04",
+          "type": "company",
+          "refId": "E06",
+          "titleAr": "سجّل E06 — تونر من الحبر الذهبي",
+          "block": "practical",
+          "estimates": {
+            "r2": 5,
+            "r4": 5,
+            "r6": 5
+          },
+          "required": true,
+          "companyCheckpoint": true,
+          "prerequisites": [
+            "D02-T03"
+          ]
+        },
+        {
+          "id": "D02-T05",
+          "type": "practice",
+          "refId": "Q-D02-11|Q-D02-12",
+          "titleAr": "تدريب إضافي: اشرح المدين والدائن بالإنجليزي + مصروف على الحساب",
+          "block": "transfer",
+          "estimates": {
+            "r2": null,
+            "r4": 15,
+            "r6": 15
+          },
+          "required": false
+        },
+        {
+          "id": "D02-T07",
+          "type": "excel",
+          "refId": "XL-PURCH",
+          "titleAr": "ورشة إكسل: المطابقة الثلاثية بـ IF والمراجع المطلقة",
+          "block": "excel",
+          "estimates": {
+            "r2": 15,
+            "r4": 45,
+            "r6": 45
+          },
+          "required": true
+        },
+        {
+          "id": "D02-T08",
+          "type": "interview",
+          "refId": "IV-ACC-02",
+          "titleAr": "سؤال مقابلة: اشرح المدين والدائن — عربي وإنجليزي بسيط",
+          "block": "interview",
+          "estimates": {
+            "r2": 7,
+            "r4": 10,
+            "r6": 10
+          },
+          "required": true
+        },
+        {
+          "id": "D02-T09",
+          "type": "scenario",
+          "refId": "SC-02|SC-05|SC-08|SC-11",
+          "titleAr": "مختبر المواقف: العميل بيقول دفع… والبنك ساكت / جرد الصندوق ناقص 300 (+2)",
+          "block": "transfer",
+          "estimates": {
+            "r2": null,
+            "r4": null,
+            "r6": 32
+          },
+          "required": false
+        },
+        {
+          "id": "D02-T06",
+          "type": "reflection",
+          "refId": "reflection:day",
+          "titleAr": "تأمّل اليوم وخطة بكرة",
+          "block": "reflection",
+          "estimates": {
+            "r2": 10,
+            "r4": 10,
+            "r6": 10
+          },
+          "required": true
+        }
+      ],
+      "narrowerOn2hAr": "على مسار الساعتين: التدريب الإضافي (الشرح بالإنجليزي والمصروف الآجل) بيتأجّل للمراجعة."
+    },
+    {
+      "day": 3,
+      "titleAr": "المبيعات والعملاء وتكلفة البضاعة — المرتجعات والتحصيل",
+      "outcomesAr": [
+        "تصنّف 8 من 10 تغييرات في الحسابات صح في مواقف جديدة",
+        "تكتب 8 من 10 قيود بسيطة صح (بيع وتكلفة، مرتجع، تحصيل)",
+        "تفرّق بين الربح والنقدية في 4 من 5 مواقف",
+        "تتابع فاتورة من المستند لحد الحساب الفرعي للعميل",
+        "تطابق كشف حساب عميل بسيط وتفسّر الفرق من غير اتهام",
+        "تشرح الفرق بين ضريبة المدخلات وضريبة المخرجات في جملة واحدة (توعية)"
+      ],
+      "lessonIds": [
+        "L05",
+        "L06"
+      ],
+      "eventIds": [
+        "E07",
+        "E08",
+        "E09",
+        "E10"
+      ],
+      "tasks": [
+        {
+          "id": "D03-T01",
+          "type": "lesson",
+          "refId": "L05",
+          "titleAr": "الدرس 5: المبيعات والعملاء وتكلفة البضاعة",
+          "block": "guided",
+          "estimates": {
+            "r2": 30,
+            "r4": 40,
+            "r6": 40
+          },
+          "required": true
+        },
+        {
+          "id": "D03-T02",
+          "type": "company",
+          "refId": "E07",
+          "titleAr": "سجّل E07 — بيع آجل لمكتبة النور (قيدين)",
+          "block": "practical",
+          "estimates": {
+            "r2": 8,
+            "r4": 10,
+            "r6": 10
+          },
+          "required": true,
+          "prerequisites": [
+            "D03-T01"
+          ]
+        },
+        {
+          "id": "D03-T03",
+          "type": "company",
+          "refId": "E08",
+          "titleAr": "سجّل E08 — بيع بتحويل لمركز طباعة الأمل",
+          "block": "practical",
+          "estimates": {
+            "r2": 5,
+            "r4": 5,
+            "r6": 5
+          },
+          "required": true,
+          "prerequisites": [
+            "D03-T02"
+          ]
+        },
+        {
+          "id": "D03-T04",
+          "type": "lesson",
+          "refId": "L06",
+          "titleAr": "الدرس 6: المرتجعات والتحصيل وكشف حساب العميل (+ توعية القيمة المضافة)",
+          "block": "guided",
+          "estimates": {
+            "r2": 30,
+            "r4": 40,
+            "r6": 40
+          },
+          "required": true
+        },
+        {
+          "id": "D03-T05",
+          "type": "company",
+          "refId": "E09",
+          "titleAr": "سجّل E09 — مرتجع مكتبة النور بإشعار دائن",
+          "block": "practical",
+          "estimates": {
+            "r2": 5,
+            "r4": 5,
+            "r6": 5
+          },
+          "required": true,
+          "prerequisites": [
+            "D03-T03",
+            "D03-T04"
+          ]
+        },
+        {
+          "id": "D03-T06",
+          "type": "company",
+          "refId": "E10",
+          "titleAr": "سجّل E10 — تحصيل مكتبة النور وخصّصه على INV-001",
+          "block": "practical",
+          "estimates": {
+            "r2": 5,
+            "r4": 5,
+            "r6": 5
+          },
+          "required": true,
+          "companyCheckpoint": true,
+          "prerequisites": [
+            "D03-T05"
+          ]
+        },
+        {
+          "id": "D03-T07",
+          "type": "practice",
+          "refId": "Q-D03-05|Q-D03-12",
+          "titleAr": "تدريب إضافي: مجمل الربح بعد المرتجع + تحصيل يغطي فاتورتين",
+          "block": "transfer",
+          "estimates": {
+            "r2": null,
+            "r4": 15,
+            "r6": 15
+          },
+          "required": false
+        },
+        {
+          "id": "D03-T09",
+          "type": "excel",
+          "refId": "XL-SALES",
+          "titleAr": "ورشة إكسل: أرصدة العملاء بـ SUMIFS و COUNTIFS",
+          "block": "excel",
+          "estimates": {
+            "r2": 12,
+            "r4": 45,
+            "r6": 45
+          },
+          "required": true
+        },
+        {
+          "id": "D03-T10",
+          "type": "interview",
+          "refId": "IV-ACC-07",
+          "titleAr": "سؤال مقابلة: الفرق بين العملاء والموردين (AR / AP)",
+          "block": "interview",
+          "estimates": {
+            "r2": null,
+            "r4": 10,
+            "r6": 10
+          },
+          "required": false
+        },
+        {
+          "id": "D03-T11",
+          "type": "scenario",
+          "refId": "SC-09",
+          "titleAr": "مختبر المواقف: مرتجع بضاعة تالفة",
+          "block": "transfer",
+          "estimates": {
+            "r2": null,
+            "r4": null,
+            "r6": 8
+          },
+          "required": false
+        },
+        {
+          "id": "D03-T12",
+          "type": "mistake",
+          "refId": "MC-03|MC-07",
+          "titleAr": "مختبر الأخطاء: تحويل مكتبة النور اتخصص على الرواد / بيع من غير قيد تكلفة",
+          "block": "transfer",
+          "estimates": {
+            "r2": null,
+            "r4": null,
+            "r6": 16
+          },
+          "required": false
+        },
+        {
+          "id": "D03-T08",
+          "type": "reflection",
+          "refId": "reflection:day",
+          "titleAr": "تأمّل اليوم وخطة بكرة",
+          "block": "reflection",
+          "estimates": {
+            "r2": 10,
+            "r4": 10,
+            "r6": 10
+          },
+          "required": true
+        }
+      ],
+      "narrowerOn2hAr": "على مسار الساعتين: تمارين مجمل الربح بعد المرتجع وتخصيص التحصيل على فاتورتين بتتأجّل للمراجعة."
+    },
+    {
+      "day": 4,
+      "titleAr": "النقدية والعهدة والشيكات — والتسوية البنكية",
+      "outcomesAr": [
+        "تفرّق بين الصندوق والعهدة النثرية المستديمة والبنك، وتسجّل الشيك الصادر يوم تسليمه",
+        "تسجّل مردودات المشتريات بإشعار مدين في الجرد المستمر",
+        "تقرأ كشف البنك من وجهة نظر البنك (الدائن في الكشف = زيادة في رصيدك)",
+        "تفرّق بين بنود التوقيت (بلا قيد) والبنود اللي من جهة الدفاتر (بقيد)",
+        "تعمل تسوية بنكية بسيطة لحد رصيد معدّل واحد في الجانبين",
+        "تسجّل E11–E15 وتطابق بنك الشركة نص الشهر على 224,875"
+      ],
+      "lessonIds": [
+        "L07",
+        "L08"
+      ],
+      "eventIds": [
+        "E11",
+        "E12",
+        "E13",
+        "E14",
+        "E15"
+      ],
+      "tasks": [
+        {
+          "id": "D04-T01",
+          "type": "lesson",
+          "refId": "L07",
+          "titleAr": "الدرس 7: النقدية والعهدة والشيكات",
+          "block": "guided",
+          "estimates": {
+            "r2": 30,
+            "r4": 40,
+            "r6": 40
+          },
+          "required": true
+        },
+        {
+          "id": "D04-T02",
+          "type": "company",
+          "refId": "E11",
+          "titleAr": "سجّل E11 — الشيك 1002 لمصنع الوادي",
+          "block": "practical",
+          "estimates": {
+            "r2": 5,
+            "r4": 5,
+            "r6": 5
+          },
+          "required": true,
+          "prerequisites": [
+            "D04-T01"
+          ]
+        },
+        {
+          "id": "D04-T03",
+          "type": "company",
+          "refId": "E12",
+          "titleAr": "سجّل E12 — مرتجع 5 خراطيش للحبر الذهبي",
+          "block": "practical",
+          "estimates": {
+            "r2": 5,
+            "r4": 5,
+            "r6": 5
+          },
+          "required": true,
+          "prerequisites": [
+            "D04-T02"
+          ]
+        },
+        {
+          "id": "D04-T04",
+          "type": "company",
+          "refId": "E13",
+          "titleAr": "سجّل E13 — إنشاء العهدة النثرية 2,000",
+          "block": "practical",
+          "estimates": {
+            "r2": 5,
+            "r4": 5,
+            "r6": 5
+          },
+          "required": true,
+          "prerequisites": [
+            "D04-T03"
+          ]
+        },
+        {
+          "id": "D04-T05",
+          "type": "lesson",
+          "refId": "L08",
+          "titleAr": "الدرس 8: التسوية البنكية",
+          "block": "guided",
+          "estimates": {
+            "r2": 35,
+            "r4": 45,
+            "r6": 45
+          },
+          "required": true
+        },
+        {
+          "id": "D04-T06",
+          "type": "company",
+          "refId": "E14",
+          "titleAr": "تسوية نص الشهر وسجّل E14 — العمولة البنكية بس",
+          "block": "practical",
+          "estimates": {
+            "r2": 8,
+            "r4": 10,
+            "r6": 10
+          },
+          "required": true,
+          "prerequisites": [
+            "D04-T04",
+            "D04-T05"
+          ]
+        },
+        {
+          "id": "D04-T07",
+          "type": "company",
+          "refId": "E15",
+          "titleAr": "سجّل E15 — فاتورة الإنترنت والتليفون من الصندوق",
+          "block": "practical",
+          "estimates": {
+            "r2": 5,
+            "r4": 5,
+            "r6": 5
+          },
+          "required": true,
+          "companyCheckpoint": true,
+          "prerequisites": [
+            "D04-T06"
+          ]
+        },
+        {
+          "id": "D04-T08",
+          "type": "practice",
+          "refId": "Q-D04-11|Q-D04-12",
+          "titleAr": "تدريب إضافي: تسوية فيها شيك مرتد وأخطاء + تشخيص مصدر الدفع",
+          "block": "transfer",
+          "estimates": {
+            "r2": null,
+            "r4": 20,
+            "r6": 20
+          },
+          "required": false
+        },
+        {
+          "id": "D04-T10",
+          "type": "excel",
+          "refId": "XL-BANK",
+          "titleAr": "ورشة إكسل: تنظيف كشف البنك ومطابقته مع الدفاتر (IFERROR والبحث)",
+          "block": "excel",
+          "estimates": {
+            "r2": null,
+            "r4": 45,
+            "r6": 45
+          },
+          "required": false
+        },
+        {
+          "id": "D04-T11",
+          "type": "interview",
+          "refId": "IV-ACC-06",
+          "titleAr": "سؤال مقابلة: إزاي بتعمل تسوية بنكية؟",
+          "block": "interview",
+          "estimates": {
+            "r2": null,
+            "r4": 10,
+            "r6": 10
+          },
+          "required": false
+        },
+        {
+          "id": "D04-T12",
+          "type": "scenario",
+          "refId": "SC-06|SC-07",
+          "titleAr": "مختبر المواقف: رسوم بنك في الكشف — «مدين» يعني إيه؟ / شيك ما ظهرش في الكشف — نعكسه؟",
+          "block": "transfer",
+          "estimates": {
+            "r2": null,
+            "r4": null,
+            "r6": 16
+          },
+          "required": false
+        },
+        {
+          "id": "D04-T13",
+          "type": "mistake",
+          "refId": "MC-06",
+          "titleAr": "مختبر الأخطاء: زميل «طابق» البنك بعكس شيك 1002",
+          "block": "transfer",
+          "estimates": {
+            "r2": null,
+            "r4": null,
+            "r6": 8
+          },
+          "required": false
+        },
+        {
+          "id": "D04-T14",
+          "type": "bankrec",
+          "refId": "BR-01",
+          "titleAr": "مختبر التسوية: تسوية نص الشهر — كشف 1 لـ 15 مارس",
+          "block": "transfer",
+          "estimates": {
+            "r2": null,
+            "r4": null,
+            "r6": 15
+          },
+          "required": false
+        },
+        {
+          "id": "D04-T15",
+          "type": "bankrec",
+          "refId": "BR-02",
+          "titleAr": "مختبر التسوية: تسوية كلها فروق توقيت",
+          "block": "transfer",
+          "estimates": {
+            "r2": null,
+            "r4": null,
+            "r6": 15
+          },
+          "required": false
+        },
+        {
+          "id": "D04-T16",
+          "type": "bankrec",
+          "refId": "BR-03",
+          "titleAr": "مختبر التسوية: شيك مرتد وتبديل أرقام",
+          "block": "transfer",
+          "estimates": {
+            "r2": null,
+            "r4": null,
+            "r6": 15
+          },
+          "required": false
+        },
+        {
+          "id": "D04-T17",
+          "type": "bankrec",
+          "refId": "BR-04",
+          "titleAr": "مختبر التسوية: دفعة متسجلة مرتين وخطأ من البنك",
+          "block": "transfer",
+          "estimates": {
+            "r2": null,
+            "r4": null,
+            "r6": 15
+          },
+          "required": false
+        },
+        {
+          "id": "D04-T09",
+          "type": "reflection",
+          "refId": "reflection:day",
+          "titleAr": "تأمّل اليوم وخطة بكرة",
+          "block": "reflection",
+          "estimates": {
+            "r2": 10,
+            "r4": 10,
+            "r6": 10
+          },
+          "required": true
+        }
+      ],
+      "narrowerOn2hAr": "على مسار الساعتين: التسوية الأصعب (شيك مرتد وأخطاء) وتشخيص E15 بيتأجّلوا للمراجعة."
+    },
+    {
+      "day": 5,
+      "titleAr": "المخزون بالمتوسط المتحرك، والوارد أولًا، وتعويض العهدة",
+      "outcomesAr": [
+        "تحسب المتوسط المرجّح المتحرك بعد كل شراء، وتكلفة البيع منه",
+        "تقارن الوارد أولًا بالمتوسط وتشرح أثرهم على الربح والمخزون (وإن الإجمالي واحد)",
+        "تسجّل E16 و E17 و E18 في دفاتر الشركة صح",
+        "توقف مطالبة من غير إيصال واعتماد وتستفسر عنها بأدب — من غير ترحيل ولا اتهام",
+        "تفرّق بين الربح والنقدية في أحداث الأسبوع"
+      ],
+      "lessonIds": [
+        "L09",
+        "L10"
+      ],
+      "eventIds": [
+        "E16",
+        "E17",
+        "E18"
+      ],
+      "tasks": [
+        {
+          "id": "D05-T01",
+          "type": "lesson",
+          "refId": "L09",
+          "titleAr": "الدرس 9: المخزون المستمر والمتوسط المتحرك",
+          "block": "guided",
+          "estimates": {
+            "r2": 30,
+            "r4": 40,
+            "r6": 45
+          },
+          "required": true
+        },
+        {
+          "id": "D05-T02",
+          "type": "company",
+          "refId": "E16",
+          "titleAr": "مكتب المستندات: طابق وسجّل E16 — ورق بسعر جديد (اقرا GRN-003)",
+          "block": "practical",
+          "estimates": {
+            "r2": 10,
+            "r4": 10,
+            "r6": 10
+          },
+          "required": true,
+          "prerequisites": [
+            "D05-T01"
+          ]
+        },
+        {
+          "id": "D05-T03",
+          "type": "company",
+          "refId": "E17",
+          "titleAr": "سجّل E17 — بيع للرواد وتكلفته بالمتوسط",
+          "block": "practical",
+          "estimates": {
+            "r2": 10,
+            "r4": 10,
+            "r6": 10
+          },
+          "required": true,
+          "prerequisites": [
+            "D05-T02"
+          ]
+        },
+        {
+          "id": "D05-T04",
+          "type": "lesson",
+          "refId": "L10",
+          "titleAr": "الدرس 10: الوارد أولًا، وتعويض العهدة، والربح مقابل النقدية",
+          "block": "guided",
+          "estimates": {
+            "r2": 30,
+            "r4": 40,
+            "r6": 45
+          },
+          "required": true
+        },
+        {
+          "id": "D05-T05",
+          "type": "company",
+          "refId": "E18",
+          "titleAr": "سجّل E18 — تعويض العهدة بالإيصالات المؤيدة بس (PCV-004 استفسار)",
+          "block": "practical",
+          "estimates": {
+            "r2": 10,
+            "r4": 10,
+            "r6": 10
+          },
+          "required": true,
+          "companyCheckpoint": true,
+          "prerequisites": [
+            "D05-T03",
+            "D05-T04"
+          ]
+        },
+        {
+          "id": "D05-T06",
+          "type": "practice",
+          "refId": "Q-D05-09|Q-D05-10|Q-D05-11|Q-D05-12",
+          "titleAr": "تمرين: نقل الشراء، تعويض جزئي، مطابقة الكروت، زيادة العهدة",
+          "block": "transfer",
+          "estimates": {
+            "r2": null,
+            "r4": 20,
+            "r6": 20
+          },
+          "required": false
+        },
+        {
+          "id": "D05-T07",
+          "type": "excel",
+          "refId": "XL-INV",
+          "titleAr": "إكسل: جرد مقابل النظام — تنسيق شرطي وتقييم الفروق",
+          "block": "excel",
+          "estimates": {
+            "r2": null,
+            "r4": 30,
+            "r6": 40
+          },
+          "required": false
+        },
+        {
+          "id": "D05-T09",
+          "type": "interview",
+          "refId": "IV-ACC-11",
+          "titleAr": "سؤال مقابلة (تمهيد): الوارد أولًا مقابل المتوسط وأثرهم على الربح",
+          "block": "interview",
+          "estimates": {
+            "r2": null,
+            "r4": 10,
+            "r6": 10
+          },
+          "required": false
+        },
+        {
+          "id": "D05-T08",
+          "type": "reflection",
+          "refId": "reflection:day",
+          "titleAr": "تأمّل اليوم وخطة بكرة",
+          "block": "reflection",
+          "estimates": {
+            "r2": 10,
+            "r4": 10,
+            "r6": 10
+          },
+          "required": true
+        }
+      ],
+      "narrowerOn2hAr": "مسار الساعتين بيغطي الدرسين وأحداث الشركة التلاتة بس؛ تمرين النقل والتعويض الجزئي وتحدي الإكسل بيتأجلوا للمراجعة بعد اليوم 14."
+    },
+    {
+      "day": 6,
+      "titleAr": "ميزان الأسبوع الأول، واكتشاف الأخطاء، وقراءة القوائم",
+      "outcomesAr": [
+        "تطلّع ميزان مراجعة الشركة بعد E18: 583,650 = 583,650",
+        "تلاقي سبب فرق الميزان بخطوات (= مبلغ، ÷ 2، ÷ 9) وتأكّده من الأستاذ والمستند",
+        "تشرح ليه الميزان المتوازن مش دليل إن القيود صح، وتصحّح الغلط بقيد",
+        "تقرا قائمة دخل وميزانية مختصرة (ربح 38,275 قبل التسويات) وتفرّق بين الربح والنقدية",
+        "تعرف إن التسويات لسه جاية، وتشوف أثرها في «ماذا لو؟» بس"
+      ],
+      "lessonIds": [
+        "L11",
+        "L12"
+      ],
+      "eventIds": [],
+      "tasks": [
+        {
+          "id": "D06-T01",
+          "type": "review",
+          "refId": "review",
+          "titleAr": "مراجعة متباعدة: أخطاء الأيام اللي فاتت",
+          "block": "recall",
+          "estimates": {
+            "r2": 10,
+            "r4": 15,
+            "r6": 15
+          },
+          "required": true
+        },
+        {
+          "id": "D06-T02",
+          "type": "lesson",
+          "refId": "L11",
+          "titleAr": "الدرس 11: ميزان المراجعة واكتشاف الأخطاء",
+          "block": "guided",
+          "estimates": {
+            "r2": 35,
+            "r4": 45,
+            "r6": 50
+          },
+          "required": true
+        },
+        {
+          "id": "D06-T03",
+          "type": "lesson",
+          "refId": "L12",
+          "titleAr": "الدرس 12: قراءة القوائم وتمهيد التسويات",
+          "block": "guided",
+          "estimates": {
+            "r2": 30,
+            "r4": 40,
+            "r6": 45
+          },
+          "required": true,
+          "prerequisites": [
+            "D06-T02"
+          ]
+        },
+        {
+          "id": "D06-T04",
+          "type": "practice",
+          "refId": "Q-D06-10|Q-D06-11",
+          "titleAr": "تمرين: قيود تصحيح (أرقام مقلوبة، حساب غلط)",
+          "block": "transfer",
+          "estimates": {
+            "r2": null,
+            "r4": 15,
+            "r6": 20
+          },
+          "required": false
+        },
+        {
+          "id": "D06-T05",
+          "type": "excel",
+          "refId": "XL-EXP",
+          "titleAr": "إكسل: ملخص المصروفات بمعادلات فحص الاعتمادات",
+          "block": "excel",
+          "estimates": {
+            "r2": null,
+            "r4": 30,
+            "r6": 40
+          },
+          "required": false
+        },
+        {
+          "id": "D06-T06",
+          "type": "interview",
+          "refId": "IV-ACC-09",
+          "titleAr": "سؤال مقابلة: الميزان مش متوازن — تدوّر فين؟",
+          "block": "interview",
+          "estimates": {
+            "r2": null,
+            "r4": null,
+            "r6": 10
+          },
+          "required": false
+        },
+        {
+          "id": "D06-T07",
+          "type": "mock-interview",
+          "refId": "mock:1",
+          "titleAr": "مقابلة تجريبية 1",
+          "block": "interview",
+          "estimates": {
+            "r2": 20,
+            "r4": 15,
+            "r6": 20
+          },
+          "required": true
+        },
+        {
+          "id": "D06-T09",
+          "type": "mistake",
+          "refId": "MC-01|MC-04|MC-05|MC-08",
+          "titleAr": "مختبر الأخطاء: الأثاث والكمبيوتر اتسجلوا أدوات مكتبية / الميزان مش متوازن بـ 90 (+2)",
+          "block": "transfer",
+          "estimates": {
+            "r2": null,
+            "r4": null,
+            "r6": 32
+          },
+          "required": false
+        },
+        {
+          "id": "D06-T08",
+          "type": "reflection",
+          "refId": "reflection:day",
+          "titleAr": "تأمّل اليوم وخطة بكرة",
+          "block": "reflection",
+          "estimates": {
+            "r2": 10,
+            "r4": 10,
+            "r6": 10
+          },
+          "required": true
+        }
+      ],
+      "narrowerOn2hAr": "مسار الساعتين بيغطي الدرسين والمراجعة؛ قيود التصحيح الإضافية والإكسل والمقابلة التجريبية بيتأجلوا."
+    },
+    {
+      "day": 7,
+      "titleAr": "الضوابط والقرارات الآمنة — والاستعداد للتقديم",
+      "outcomesAr": [
+        "درجة 75 أو أكتر في نموذج جاهزية ما شفتهوش قبل كده (أول محاولة على النموذج)",
+        "تنفّذ دورات العملاء والموردين والنقدية صح",
+        "تسوية بنكية سليمة: البنود متصنّفة صح، والرصيدين المعدّلين متساويين، وبنود التوقيت من غير قيود",
+        "تنظّف ملف إكسل وتطلّع ملخص منه",
+        "تقرا قائمة دخل وميزانية بسيطة وتشرحها",
+        "تتصرف بأمان مع مستند ناقص ومع دفعة مكررة",
+        "تشرح 6 إجابات مقابلة بالعربي، و3 على الأقل بإنجليزي بسيط",
+        "تعرض شغلين تدريبيين مكتوب عليهم إنهم تدريب على شركة وهمية"
+      ],
+      "lessonIds": [
+        "L13",
+        "L14"
+      ],
+      "eventIds": [],
+      "tasks": [
+        {
+          "id": "D07-T01",
+          "type": "lesson",
+          "refId": "L13",
+          "titleAr": "الدرس 13: الضوابط والقرارات الآمنة",
+          "block": "guided",
+          "estimates": {
+            "r2": 25,
+            "r4": 35,
+            "r6": 45
+          },
+          "required": true
+        },
+        {
+          "id": "D07-T02",
+          "type": "practice",
+          "refId": "Q-D07-05|Q-D07-12",
+          "titleAr": "تمرين: «سجّل دلوقتي» واسترداد دفعة مكررة",
+          "block": "transfer",
+          "estimates": {
+            "r2": null,
+            "r4": null,
+            "r6": 15
+          },
+          "required": false
+        },
+        {
+          "id": "D07-T03",
+          "type": "lesson",
+          "refId": "L14",
+          "titleAr": "الدرس 14: الاستعداد للتقديم والمقابلة",
+          "block": "guided",
+          "estimates": {
+            "r2": 20,
+            "r4": 30,
+            "r6": 40
+          },
+          "required": true
+        },
+        {
+          "id": "D07-T04",
+          "type": "excel",
+          "refId": "XL-BANK:T3",
+          "titleAr": "إكسل (دليل): التسوية البنكية بالمعادلات",
+          "block": "excel",
+          "estimates": {
+            "r2": 20,
+            "r4": 20,
+            "r6": 25
+          },
+          "required": true
+        },
+        {
+          "id": "D07-T05",
+          "type": "assessment",
+          "refId": "formA",
+          "titleAr": "نموذج الجاهزية (أ)",
+          "block": "practical",
+          "estimates": {
+            "r2": 50,
+            "r4": 60,
+            "r6": 60
+          },
+          "required": true,
+          "prerequisites": [
+            "D07-T01",
+            "D07-T03"
+          ]
+        },
+        {
+          "id": "D07-T06",
+          "type": "mock-interview",
+          "refId": "mock:2",
+          "titleAr": "مقابلة تجريبية 2 (منها 3 أسئلة بالإنجليزي)",
+          "block": "interview",
+          "estimates": {
+            "r2": null,
+            "r4": 15,
+            "r6": 25
+          },
+          "required": false
+        },
+        {
+          "id": "D07-T07",
+          "type": "career",
+          "refId": "career:checklist",
+          "titleAr": "قائمة التقديم + سجل المهارات + ملف التدريب",
+          "block": "interview",
+          "estimates": {
+            "r2": null,
+            "r4": 10,
+            "r6": 15
+          },
+          "required": false
+        },
+        {
+          "id": "D07-T09",
+          "type": "scenario",
+          "refId": "SC-01|SC-03|SC-04|SC-10|SC-12",
+          "titleAr": "مختبر المواقف: فاتورة مورد من غير إذن استلام / فاتورة جاية بالإيميل… «للمراجعة والسداد» (+3)",
+          "block": "transfer",
+          "estimates": {
+            "r2": null,
+            "r4": null,
+            "r6": 40
+          },
+          "required": false
+        },
+        {
+          "id": "D07-T10",
+          "type": "mistake",
+          "refId": "MC-02",
+          "titleAr": "مختبر الأخطاء: فاتورة مصنع الوادي اترحّلت مرتين",
+          "block": "transfer",
+          "estimates": {
+            "r2": null,
+            "r4": null,
+            "r6": 8
+          },
+          "required": false
+        },
+        {
+          "id": "D07-T08",
+          "type": "reflection",
+          "refId": "reflection:day",
+          "titleAr": "تأمّل الأسبوع وخطة المعالجة",
+          "block": "reflection",
+          "estimates": {
+            "r2": 10,
+            "r4": 10,
+            "r6": 10
+          },
+          "required": true
+        }
+      ],
+      "narrowerOn2hAr": "على مسار الساعتين اليوم 7 بياخد جلستين: الدرسين ومهمة إكسل الدليل في جلسة، ونموذج الجاهزية والتأمّل في الجلسة اللي بعدها. المقابلة التجريبية التانية وقائمة التقديم بيتأجّلوا للمراجعة."
+    },
+    {
+      "day": 8,
+      "titleAr": "شبكة التوقيت، والدفعات المقدمة، والمسحوبات",
+      "outcomesAr": [
+        "تحط أي حدث في شبكة التوقيت وتحدد الحساب الوسيط (مدفوع مقدمًا، دفعة مقدمة، مستحق، عملاء)",
+        "تسجّل E19 دفعة مقدمة من مدرسة المستقبل: التزام 10,000 مش مبيعات",
+        "تحسب أقساط التسوية الشهرية (إيجار 6,000، إهلاك 1,000) وتشرح إن الإهلاك مش فلوس خارجة",
+        "تسجّل E20 مسحوبات 5,000: الربح ما بيتأثرش وحقوق الملكية بتقل",
+        "تجيب بيانات بدالة بحث (XLOOKUP أو INDEX/MATCH) وتستخدم EOMONTH لتاريخ آخر الشهر"
+      ],
+      "lessonIds": [
+        "L15",
+        "L16"
+      ],
+      "eventIds": [
+        "E19",
+        "E20"
+      ],
+      "tasks": [
+        {
+          "id": "D08-T01",
+          "type": "review",
+          "refId": "review",
+          "titleAr": "مراجعة متباعدة: أخطاء الأسبوع الأول",
+          "block": "recall",
+          "estimates": {
+            "r2": 10,
+            "r4": 15,
+            "r6": 15
+          },
+          "required": true
+        },
+        {
+          "id": "D08-T02",
+          "type": "lesson",
+          "refId": "L15",
+          "titleAr": "الدرس 15: شبكة التوقيت وقيود التسوية",
+          "block": "guided",
+          "estimates": {
+            "r2": 30,
+            "r4": 40,
+            "r6": 45
+          },
+          "required": true
+        },
+        {
+          "id": "D08-T03",
+          "type": "company",
+          "refId": "E19",
+          "titleAr": "سجّل E19 — دفعة مدرسة المستقبل المقدمة (التزام مش مبيعات)",
+          "block": "practical",
+          "estimates": {
+            "r2": 8,
+            "r4": 8,
+            "r6": 8
+          },
+          "required": true,
+          "prerequisites": [
+            "D08-T02"
+          ]
+        },
+        {
+          "id": "D08-T04",
+          "type": "lesson",
+          "refId": "L16",
+          "titleAr": "الدرس 16: المسحوبات مقابل المصروف",
+          "block": "guided",
+          "estimates": {
+            "r2": 25,
+            "r4": 30,
+            "r6": 35
+          },
+          "required": true
+        },
+        {
+          "id": "D08-T05",
+          "type": "company",
+          "refId": "E20",
+          "titleAr": "سجّل E20 — مسحوبات أ. حسام من الصندوق",
+          "block": "practical",
+          "estimates": {
+            "r2": 5,
+            "r4": 5,
+            "r6": 5
+          },
+          "required": true,
+          "companyCheckpoint": true,
+          "prerequisites": [
+            "D08-T03",
+            "D08-T04"
+          ]
+        },
+        {
+          "id": "D08-T06",
+          "type": "practice",
+          "refId": "Q-D08-06|Q-D08-09|Q-D08-11",
+          "titleAr": "تمرين: مسودة فيها غلطتين، فاتورة مختلطة، وعزومة على حساب الشغل",
+          "block": "transfer",
+          "estimates": {
+            "r2": null,
+            "r4": 20,
+            "r6": 25
+          },
+          "required": false
+        },
+        {
+          "id": "D08-T07",
+          "type": "excel",
+          "refId": "XL-SALES:T3",
+          "titleAr": "إكسل: حد الائتمان لكل عميل بدالة بحث (XLOOKUP أو INDEX/MATCH)",
+          "block": "excel",
+          "estimates": {
+            "r2": null,
+            "r4": 30,
+            "r6": 40
+          },
+          "required": false
+        },
+        {
+          "id": "D08-T08",
+          "type": "interview",
+          "refId": "IV-ACC-04",
+          "titleAr": "سؤال مقابلة: المصروف المدفوع مقدمًا مقابل المصروف المستحق",
+          "block": "interview",
+          "estimates": {
+            "r2": 10,
+            "r4": 10,
+            "r6": 10
+          },
+          "required": false
+        },
+        {
+          "id": "D08-T09",
+          "type": "scenario",
+          "refId": "SC-21|SC-23",
+          "titleAr": "مختبر المواقف: كهربا مارس من غير فاتورة / إيجار مدفوع لشهرين بيعدّوا على 3 شهور",
+          "block": "transfer",
+          "estimates": {
+            "r2": null,
+            "r4": null,
+            "r6": 16
+          },
+          "required": false
+        },
+        {
+          "id": "D08-T10",
+          "type": "mistake",
+          "refId": "MC-10|MC-11|MC-12|MC-13",
+          "titleAr": "مختبر الأخطاء: كهربا مارس اختفت / إيجار 6 شهور اتسجّل مصروف مارس (+2)",
+          "block": "transfer",
+          "estimates": {
+            "r2": null,
+            "r4": null,
+            "r6": 32
+          },
+          "required": false
+        },
+        {
+          "id": "D08-T12",
+          "type": "scenario",
+          "refId": "SC-19",
+          "titleAr": "مختبر المواقف: فاتورة اتدفعت مرتين",
+          "block": "transfer",
+          "estimates": {
+            "r2": null,
+            "r4": null,
+            "r6": 8
+          },
+          "required": false
+        },
+        {
+          "id": "D08-T13",
+          "type": "mistake",
+          "refId": "MC-09",
+          "titleAr": "مختبر الأخطاء: صيانة مارس اتسجلت في أبريل",
+          "block": "transfer",
+          "estimates": {
+            "r2": null,
+            "r4": null,
+            "r6": 8
+          },
+          "required": false
+        },
+        {
+          "id": "D08-T11",
+          "type": "reflection",
+          "refId": "reflection:day",
+          "titleAr": "تأمّل اليوم وخطة بكرة",
+          "block": "reflection",
+          "estimates": {
+            "r2": 10,
+            "r4": 10,
+            "r6": 10
+          },
+          "required": true
+        }
+      ],
+      "narrowerOn2hAr": "مسار الساعتين بيغطي الدرسين و E19 و E20 وسؤال المقابلة؛ تمرين التشخيص والفاتورة المختلطة، ومهمة الإكسل (XL-SALES المهمة 3)، ومختبرات المواقف والأخطاء بيتأجلوا للمراجعة."
+    },
+    {
+      "day": 9,
+      "titleAr": "أعمار الديون وأوراق القبض، ومطابقة كشوف الموردين",
+      "outcomesAr": [
+        "تسجّل تحصيل بشيك مؤجل (E22): البنك بالتحويل بس والشيك أوراق قبض — ومش بند تسوية بنكية",
+        "تعمل جدول أعمار ديون وتطبّق حد الائتمان من غير ما تتجاوز صلاحيتك",
+        "تفرّق على مستوى المفهوم بين مخصص الديون المشكوك فيها وإعدام دين محدد",
+        "تطابق كشف مورد وتصنّف الفروق: توقيت، غلط عندنا، أو نزاع",
+        "تسدد الحبر الذهبي بعد المطابقة (E21)، وتفتح نزاع مكتوب بالدليل على 850 مصنع الوادي من غير ترحيل",
+        "تحسب أعمار الديون في إكسل بـ SUMIFS بعد تنظيف النصوص"
+      ],
+      "lessonIds": [
+        "L17",
+        "L18"
+      ],
+      "eventIds": [
+        "E21",
+        "E22"
+      ],
+      "tasks": [
+        {
+          "id": "D09-T01",
+          "type": "review",
+          "refId": "review",
+          "titleAr": "مراجعة متباعدة: التوقيت والمسحوبات",
+          "block": "recall",
+          "estimates": {
+            "r2": 10,
+            "r4": 15,
+            "r6": 15
+          },
+          "required": true
+        },
+        {
+          "id": "D09-T02",
+          "type": "lesson",
+          "refId": "L17",
+          "titleAr": "الدرس 17: أعمار الديون وأوراق القبض",
+          "block": "guided",
+          "estimates": {
+            "r2": 30,
+            "r4": 40,
+            "r6": 45
+          },
+          "required": true
+        },
+        {
+          "id": "D09-T03",
+          "type": "lesson",
+          "refId": "L18",
+          "titleAr": "الدرس 18: مطابقة كشف المورد والنزاعات",
+          "block": "guided",
+          "estimates": {
+            "r2": 30,
+            "r4": 40,
+            "r6": 45
+          },
+          "required": true,
+          "prerequisites": [
+            "D09-T02"
+          ]
+        },
+        {
+          "id": "D09-T04",
+          "type": "company",
+          "refId": "E21",
+          "titleAr": "سجّل E21 — سداد الحبر الذهبي بعد مطابقة الكشف",
+          "block": "practical",
+          "estimates": {
+            "r2": 5,
+            "r4": 5,
+            "r6": 5
+          },
+          "required": true,
+          "prerequisites": [
+            "D09-T03"
+          ]
+        },
+        {
+          "id": "D09-T05",
+          "type": "company",
+          "refId": "E22",
+          "titleAr": "سجّل E22 — تحويل الرواد وشيكها المؤجل (أوراق قبض)؛ وكشف الوادي: نزاع من غير قيد",
+          "block": "practical",
+          "estimates": {
+            "r2": 10,
+            "r4": 10,
+            "r6": 10
+          },
+          "required": true,
+          "companyCheckpoint": true,
+          "prerequisites": [
+            "D09-T04"
+          ]
+        },
+        {
+          "id": "D09-T06",
+          "type": "practice",
+          "refId": "Q-D09-10|Q-D09-11",
+          "titleAr": "تمرين: إشعار دائن لرسوم ما اتسجّلتش، وشيك مؤجل رجع من البنك",
+          "block": "transfer",
+          "estimates": {
+            "r2": null,
+            "r4": 15,
+            "r6": 20
+          },
+          "required": false
+        },
+        {
+          "id": "D09-T07",
+          "type": "excel",
+          "refId": "XL-SALES:T7",
+          "titleAr": "إكسل: أعمار ديون العملاء بشرايح SUMIFS بعد تنظيف النصوص",
+          "block": "excel",
+          "estimates": {
+            "r2": null,
+            "r4": 35,
+            "r6": 40
+          },
+          "required": false
+        },
+        {
+          "id": "D09-T08",
+          "type": "interview",
+          "refId": "IV-SIT-03",
+          "titleAr": "سؤال مقابلة: كشف المورد أعلى من رصيده في دفاترنا",
+          "block": "interview",
+          "estimates": {
+            "r2": 10,
+            "r4": 10,
+            "r6": 10
+          },
+          "required": false
+        },
+        {
+          "id": "D09-T09",
+          "type": "scenario",
+          "refId": "SC-13|SC-14|SC-15",
+          "titleAr": "مختبر المواقف: كشف مصنع الوادي أعلى بـ 850 / عميل متأخر وفوق الحد (+1)",
+          "block": "transfer",
+          "estimates": {
+            "r2": null,
+            "r4": null,
+            "r6": 24
+          },
+          "required": false
+        },
+        {
+          "id": "D09-T10",
+          "type": "mistake",
+          "refId": "MC-14",
+          "titleAr": "مختبر الأخطاء: كشف المورد أقل من دفاترنا بـ 1,800",
+          "block": "transfer",
+          "estimates": {
+            "r2": null,
+            "r4": null,
+            "r6": 8
+          },
+          "required": false
+        },
+        {
+          "id": "D09-T11",
+          "type": "reflection",
+          "refId": "reflection:day",
+          "titleAr": "تأمّل اليوم وخطة بكرة",
+          "block": "reflection",
+          "estimates": {
+            "r2": 10,
+            "r4": 10,
+            "r6": 10
+          },
+          "required": true
+        }
+      ],
+      "narrowerOn2hAr": "مسار الساعتين بيغطي الدرسين و E21 و E22 وسؤال المقابلة، وإيميل النزاع جوّه الدرس 18 (تقييم ذاتي). مهمة الإكسل (أعمار الديون بـ SUMIFS)، وتمرين الشيك المرتد والإشعار الدائن، ومختبرات المواقف بيتأجلوا للمراجعة."
+    },
+    {
+      "day": 10,
+      "titleAr": "الخزينة والشيكات والأخلاقيات، ومبادئ الرواتب — ونقطة مراجعة اليوم 10",
+      "outcomesAr": [
+        "تسجّل E23: تسليم مقابل الدفعة المقدمة (مبيعات 7,000، والتزام باقي 3,000)",
+        "تسجّل الشيك الصادر يوم تسليمه (E25) والوارد يوم إيداعه (E26)، وتعرف إنهم بنود توقيت من غير قيد",
+        "تعالج شيك ملغي وشيك مرتد صح، وتتعرّف على علامات الخطر في الخزينة وتصعّد من غير اتهام",
+        "ترفض بأدب تأريخ مستند بتاريخ غير حقيقي وتوجّه الطلب الأصلي لصاحب الصلاحية",
+        "تسجّل رواتب مارس (E24): مصروف 24,000، بنك 21,600، واستقطاعات توضيحية 2,400 التزام",
+        "تراجع كشف رواتب قبل التحويل: موظف ساب، صافي غلط، وحساب متكرر",
+        "تخلّص نقطة مراجعة اليوم 10"
+      ],
+      "lessonIds": [
+        "L19",
+        "L20"
+      ],
+      "eventIds": [
+        "E23",
+        "E24",
+        "E25",
+        "E26"
+      ],
+      "tasks": [
+        {
+          "id": "D10-T01",
+          "type": "review",
+          "refId": "review",
+          "titleAr": "مراجعة متباعدة: أوراق القبض ومطابقة الموردين",
+          "block": "recall",
+          "estimates": {
+            "r2": null,
+            "r4": 10,
+            "r6": 10
+          },
+          "required": false
+        },
+        {
+          "id": "D10-T02",
+          "type": "practice",
+          "refId": "Q-D10-01",
+          "titleAr": "تسخين: أثر E23 — التسليم مقابل الدفعة المقدمة",
+          "block": "recall",
+          "estimates": {
+            "r2": 5,
+            "r4": 5,
+            "r6": 5
+          },
+          "required": true
+        },
+        {
+          "id": "D10-T03",
+          "type": "company",
+          "refId": "E23",
+          "titleAr": "سجّل E23 — تسليم 10 خراطيش لمدرسة المستقبل من الدفعة المقدمة",
+          "block": "practical",
+          "estimates": {
+            "r2": 5,
+            "r4": 5,
+            "r6": 5
+          },
+          "required": true,
+          "prerequisites": [
+            "D10-T02"
+          ]
+        },
+        {
+          "id": "D10-T04",
+          "type": "lesson",
+          "refId": "L19",
+          "titleAr": "الدرس 19: الخزينة والرقابة والأخلاقيات",
+          "block": "guided",
+          "estimates": {
+            "r2": 20,
+            "r4": 35,
+            "r6": 40
+          },
+          "required": true
+        },
+        {
+          "id": "D10-T05",
+          "type": "lesson",
+          "refId": "L20",
+          "titleAr": "الدرس 20: مبادئ الرواتب",
+          "block": "guided",
+          "estimates": {
+            "r2": 20,
+            "r4": 35,
+            "r6": 40
+          },
+          "required": true
+        },
+        {
+          "id": "D10-T06",
+          "type": "company",
+          "refId": "E24",
+          "titleAr": "سجّل E24 — رواتب مارس (إجمالي 24,000، صافي 21,600)",
+          "block": "practical",
+          "estimates": {
+            "r2": 5,
+            "r4": 5,
+            "r6": 5
+          },
+          "required": true,
+          "prerequisites": [
+            "D10-T03",
+            "D10-T05"
+          ]
+        },
+        {
+          "id": "D10-T07",
+          "type": "company",
+          "refId": "E25",
+          "titleAr": "سجّل E25 — الشيك 1003 لمصنع الوادي بـ 60,000",
+          "block": "practical",
+          "estimates": {
+            "r2": 4,
+            "r4": 4,
+            "r6": 5
+          },
+          "required": true,
+          "prerequisites": [
+            "D10-T04",
+            "D10-T06"
+          ]
+        },
+        {
+          "id": "D10-T08",
+          "type": "company",
+          "refId": "E26",
+          "titleAr": "سجّل E26 — إيداع شيك مكتبة النور بـ 10,000",
+          "block": "practical",
+          "estimates": {
+            "r2": 4,
+            "r4": 4,
+            "r6": 5
+          },
+          "required": true,
+          "companyCheckpoint": true,
+          "prerequisites": [
+            "D10-T07"
+          ]
+        },
+        {
+          "id": "D10-T09",
+          "type": "excel",
+          "refId": "XL-PAY",
+          "titleAr": "إكسل: مراجعة كشف الرواتب قبل الصرف (تكرار، صافي غلط، تارك للعمل)",
+          "block": "excel",
+          "estimates": {
+            "r2": null,
+            "r4": 25,
+            "r6": 35
+          },
+          "required": false
+        },
+        {
+          "id": "D10-T10",
+          "type": "interview",
+          "refId": "IV-BUS-03",
+          "titleAr": "سؤال مقابلة: ليه الضوابط الرقابية مهمة؟",
+          "block": "interview",
+          "estimates": {
+            "r2": null,
+            "r4": 10,
+            "r6": 10
+          },
+          "required": false
+        },
+        {
+          "id": "D10-T11",
+          "type": "assessment",
+          "refId": "checkpoint10",
+          "titleAr": "نقطة مراجعة اليوم 10",
+          "block": "practical",
+          "estimates": {
+            "r2": 30,
+            "r4": 40,
+            "r6": 40
+          },
+          "required": true,
+          "prerequisites": [
+            "D10-T04",
+            "D10-T05"
+          ]
+        },
+        {
+          "id": "D10-T12",
+          "type": "practice",
+          "refId": "Q-D10-10|Q-D10-12",
+          "titleAr": "تمرين: صافي راتب موقوف، وتسليم طلبية مدفوع جزء منها مقدّم",
+          "block": "transfer",
+          "estimates": {
+            "r2": null,
+            "r4": null,
+            "r6": 20
+          },
+          "required": false
+        },
+        {
+          "id": "D10-T13",
+          "type": "scenario",
+          "refId": "SC-16|SC-18|SC-22",
+          "titleAr": "مختبر المواقف: شيك عميل رجع من البنك / موظف مستقيل لسه في الكشف (+1)",
+          "block": "transfer",
+          "estimates": {
+            "r2": null,
+            "r4": null,
+            "r6": 24
+          },
+          "required": false
+        },
+        {
+          "id": "D10-T14",
+          "type": "mistake",
+          "refId": "MC-15",
+          "titleAr": "مختبر الأخطاء: غلطة البنك اتسجّلت مصروف عندنا",
+          "block": "transfer",
+          "estimates": {
+            "r2": null,
+            "r4": null,
+            "r6": 8
+          },
+          "required": false
+        },
+        {
+          "id": "D10-T15",
+          "type": "reflection",
+          "refId": "reflection:day",
+          "titleAr": "تأمّل اليوم وخطة بكرة",
+          "block": "reflection",
+          "estimates": {
+            "r2": 10,
+            "r4": 10,
+            "r6": 10
+          },
+          "required": true
+        }
+      ],
+      "narrowerOn2hAr": "مسار الساعتين بيغطي التسخين والدرسين وأحداث الشركة الأربعة ونقطة المراجعة؛ المراجعة المتباعدة بتتلغي النهارده لأن نقطة المراجعة بتقوم بدورها. مهمة الإكسل (XL-PAY) وسؤال المقابلة وتمرين الرواتب الإضافي ومختبرات المواقف بيتأجلوا للمراجعة."
+    },
+    {
+      "day": 11,
+      "titleAr": "الجرد وطرق التكلفة، والأصول الثابتة والإهلاك",
+      "outcomesAr": [
+        "تقيّم عجز الجرد بمتوسط التكلفة وتسجّل A05 في دفاتر الشركة (2 × 185 = 370 ← مخزون 88,080)",
+        "تفرّق بين الجرد المستمر والدوري، وتقارن المتوسط بالوارد أولًا (الإجمالي 114,700 ثابت والتوزيع بيختلف 1,500)",
+        "تحدّد تكلفة الأصل الثابت (رسملة) وتطلّع جدول إهلاك بالقسط الثابت",
+        "تسجّل إهلاك مارس A03 (1,000) بمجمع الإهلاك وتشرح ليه مش نقدية؛ وتسجّل بيع أصل بمكسب أو خسارة في شركة تانية",
+        "تتعامل مع عجز الجرد من غير اتهام وبالمستندات"
+      ],
+      "lessonIds": [
+        "L21",
+        "L22"
+      ],
+      "eventIds": [
+        "A05",
+        "A03"
+      ],
+      "tasks": [
+        {
+          "id": "D11-T01",
+          "type": "review",
+          "refId": "review",
+          "titleAr": "مراجعة متباعدة: أخطاء الأيام اللي فاتت",
+          "block": "recall",
+          "estimates": {
+            "r2": 10,
+            "r4": 10,
+            "r6": 15
+          },
+          "required": true
+        },
+        {
+          "id": "D11-T02",
+          "type": "lesson",
+          "refId": "L21",
+          "titleAr": "الدرس 21: الجرد وطرق التكلفة",
+          "block": "guided",
+          "estimates": {
+            "r2": 30,
+            "r4": 40,
+            "r6": 45
+          },
+          "required": true
+        },
+        {
+          "id": "D11-T03",
+          "type": "company",
+          "refId": "A05",
+          "titleAr": "سجّل A05 — عجز جرد الورق من كشف الجرد CNT-2026-03",
+          "block": "practical",
+          "estimates": {
+            "r2": 10,
+            "r4": 10,
+            "r6": 10
+          },
+          "required": true,
+          "prerequisites": [
+            "D11-T02"
+          ]
+        },
+        {
+          "id": "D11-T04",
+          "type": "lesson",
+          "refId": "L22",
+          "titleAr": "الدرس 22: الأصول الثابتة والإهلاك",
+          "block": "guided",
+          "estimates": {
+            "r2": 30,
+            "r4": 40,
+            "r6": 45
+          },
+          "required": true,
+          "prerequisites": [
+            "D11-T02"
+          ]
+        },
+        {
+          "id": "D11-T05",
+          "type": "company",
+          "refId": "A03",
+          "titleAr": "سجّل A03 — إهلاك مارس من جدول الإهلاك SCH-DEP-03",
+          "block": "practical",
+          "estimates": {
+            "r2": 10,
+            "r4": 10,
+            "r6": 10
+          },
+          "required": true,
+          "prerequisites": [
+            "D11-T04"
+          ],
+          "companyCheckpoint": true
+        },
+        {
+          "id": "D11-T06",
+          "type": "practice",
+          "refId": "Q-D11-07|Q-D11-09|Q-D11-11",
+          "titleAr": "تمرين: إهلاك سنوي لأصلين، مسودة ناقصها تسوية الجرد، صيانة اتسجّلت أصل",
+          "block": "transfer",
+          "estimates": {
+            "r2": null,
+            "r4": 20,
+            "r6": 25
+          },
+          "required": false
+        },
+        {
+          "id": "D11-T07",
+          "type": "excel",
+          "refId": "XL-INV:T3|XL-INV:T4",
+          "titleAr": "إكسل: قيمة العجز وتقييم المخزون بالجرد",
+          "block": "excel",
+          "estimates": {
+            "r2": null,
+            "r4": 30,
+            "r6": 35
+          },
+          "required": false
+        },
+        {
+          "id": "D11-T08",
+          "type": "interview",
+          "refId": "IV-ACC-05",
+          "titleAr": "سؤال مقابلة: يعني إيه إهلاك؟ وبيتحسب ويتسجّل إزاي؟",
+          "block": "interview",
+          "estimates": {
+            "r2": null,
+            "r4": 10,
+            "r6": 10
+          },
+          "required": false
+        },
+        {
+          "id": "D11-T09",
+          "type": "scenario",
+          "refId": "SC-17",
+          "titleAr": "مختبر المواقف: الجرد ناقص كرتونتين",
+          "block": "transfer",
+          "estimates": {
+            "r2": null,
+            "r4": null,
+            "r6": 15
+          },
+          "required": false
+        },
+        {
+          "id": "D11-T11",
+          "type": "reflection",
+          "refId": "reflection:day",
+          "titleAr": "تأمّل اليوم وخطة بكرة",
+          "block": "reflection",
+          "estimates": {
+            "r2": 10,
+            "r4": 10,
+            "r6": 10
+          },
+          "required": true
+        }
+      ],
+      "narrowerOn2hAr": "مسار الساعتين بيغطي الدرسين وقيدي A05 و A03. تمارين النقل، والإكسل، وسؤال المقابلة، ومعامل المواقف والأخطاء بتتأجل للمراجعة."
+    },
+    {
+      "day": 12,
+      "titleAr": "إقفال الشهر والقوائم الأربع",
+      "outcomesAr": [
+        "تسوية البنك آخر الشهر: 168,375 = 168,375، وقيود A01 لبنود الدفاتر بس (الشيك المؤجل مش بند تسوية)",
+        "تسجّل A02 (إيجار 6,000) و A04 (كهرباء مستحقة 900) وتطلّع الميزان المعدّل 495,200 = 495,200",
+        "تقرا القوائم الأربع وتربطها: صافي ربح 8,355 ← رأس مال 303,355 ← أصول 348,555؛ والتدفقات ← نقدية 175,975 (تشغيل −83,025 بالطريقتين)",
+        "تراجع قيود الإقفال (A06) وتتأكد إن ميزان ما بعد الإقفال 349,555 = 349,555 وفيه حسابات دائمة بس",
+        "تكتب سجل استثناءات بالحقايق: نزاع S1 850، شيك الرواد المؤجل 20,000، مطالبة PCV-004"
+      ],
+      "lessonIds": [
+        "L23",
+        "L24"
+      ],
+      "eventIds": [
+        "A01",
+        "A02",
+        "A04",
+        "A06"
+      ],
+      "tasks": [
+        {
+          "id": "D12-T01",
+          "type": "review",
+          "refId": "review",
+          "titleAr": "مراجعة متباعدة قبل الإقفال",
+          "block": "recall",
+          "estimates": {
+            "r2": null,
+            "r4": 10,
+            "r6": 15
+          },
+          "required": true
+        },
+        {
+          "id": "D12-T02",
+          "type": "lesson",
+          "refId": "L23",
+          "titleAr": "الدرس 23: إقفال الشهر",
+          "block": "guided",
+          "estimates": {
+            "r2": 25,
+            "r4": 30,
+            "r6": 40
+          },
+          "required": true
+        },
+        {
+          "id": "D12-T03",
+          "type": "bankrec",
+          "refId": "BR-05",
+          "titleAr": "تسوية آخر الشهر — كشف مارس كامل (قبل A01)",
+          "block": "practical",
+          "estimates": {
+            "r2": null,
+            "r4": 15,
+            "r6": 20
+          },
+          "required": true,
+          "prerequisites": [
+            "D12-T02"
+          ]
+        },
+        {
+          "id": "D12-T04",
+          "type": "company",
+          "refId": "A01",
+          "titleAr": "سجّل A01 — قيود بنود الدفاتر من تسوية آخر الشهر",
+          "block": "practical",
+          "estimates": {
+            "r2": 5,
+            "r4": 5,
+            "r6": 10
+          },
+          "required": true,
+          "prerequisites": [
+            "D12-T02"
+          ]
+        },
+        {
+          "id": "D12-T05",
+          "type": "company",
+          "refId": "A02",
+          "titleAr": "سجّل A02 — إيجار مارس من جدول الإيجار المقدم",
+          "block": "practical",
+          "estimates": {
+            "r2": 5,
+            "r4": 5,
+            "r6": 5
+          },
+          "required": true,
+          "prerequisites": [
+            "D12-T02"
+          ]
+        },
+        {
+          "id": "D12-T06",
+          "type": "company",
+          "refId": "A04",
+          "titleAr": "سجّل A04 — كهرباء مارس المستحقة من مذكرة التقدير",
+          "block": "practical",
+          "estimates": {
+            "r2": 5,
+            "r4": 5,
+            "r6": 5
+          },
+          "required": true,
+          "prerequisites": [
+            "D12-T02"
+          ]
+        },
+        {
+          "id": "D12-T07",
+          "type": "lesson",
+          "refId": "L24",
+          "titleAr": "الدرس 24: القوائم الأربع والإقفال",
+          "block": "guided",
+          "estimates": {
+            "r2": 25,
+            "r4": 35,
+            "r6": 40
+          },
+          "required": true,
+          "prerequisites": [
+            "D12-T02"
+          ]
+        },
+        {
+          "id": "D12-T08",
+          "type": "close",
+          "refId": "close:march",
+          "titleAr": "مساحة إقفال الشهر: ميزان معدّل → قوائم → إقفال → سجل الاستثناءات",
+          "block": "company",
+          "estimates": {
+            "r2": 30,
+            "r4": 40,
+            "r6": 45
+          },
+          "required": true,
+          "prerequisites": [
+            "D12-T04",
+            "D12-T05",
+            "D12-T06",
+            "D12-T07"
+          ],
+          "companyCheckpoint": true
+        },
+        {
+          "id": "D12-T09",
+          "type": "practice",
+          "refId": "Q-D12-03|Q-D12-09|Q-D12-12",
+          "titleAr": "تمرين: فرق تسوية من غير «سد خانة»، مسحوبات ما اتقفلتش، إيراد مقدم اتحقق",
+          "block": "transfer",
+          "estimates": {
+            "r2": null,
+            "r4": 15,
+            "r6": 20
+          },
+          "required": false
+        },
+        {
+          "id": "D12-T10",
+          "type": "excel",
+          "refId": "XL-BANK:T4",
+          "titleAr": "إكسل: تصحيحات الدفاتر قبل الإقفال (أرقام مقلوبة ودفعة مكررة)",
+          "block": "excel",
+          "estimates": {
+            "r2": null,
+            "r4": 20,
+            "r6": 30
+          },
+          "required": false
+        },
+        {
+          "id": "D12-T11",
+          "type": "interview",
+          "refId": "IV-ACC-10",
+          "titleAr": "سؤال مقابلة: الميزان متوازن… يبقى الدفاتر صح؟",
+          "block": "interview",
+          "estimates": {
+            "r2": null,
+            "r4": 10,
+            "r6": 10
+          },
+          "required": false
+        },
+        {
+          "id": "D12-T12",
+          "type": "scenario",
+          "refId": "SC-20",
+          "titleAr": "مختبر المواقف: دفعة مقدمة على العميل الغلط / كهرباء مارس من غير فاتورة",
+          "block": "transfer",
+          "estimates": {
+            "r2": null,
+            "r4": null,
+            "r6": 8
+          },
+          "required": false
+        },
+        {
+          "id": "D12-T13",
+          "type": "mistake",
+          "refId": "MC-16",
+          "titleAr": "مختبر الأخطاء: مستحق اتنسى / قيد الإقفال اترحّل مرتين",
+          "block": "transfer",
+          "estimates": {
+            "r2": null,
+            "r4": null,
+            "r6": 8
+          },
+          "required": false
+        },
+        {
+          "id": "D12-T14",
+          "type": "reflection",
+          "refId": "reflection:day",
+          "titleAr": "تأمّل اليوم: إيه البنود المفتوحة اللي هتتابعها في أبريل؟",
+          "block": "reflection",
+          "estimates": {
+            "r2": 10,
+            "r4": 10,
+            "r6": 10
+          },
+          "required": true
+        }
+      ],
+      "narrowerOn2hAr": "على مسار الساعتين: الدرسين، وقيود A01 و A02 و A04، ومساحة الإقفال للآخر. التسوية الكاملة في مختبر BR-05 والمراجعة والتمارين والإكسل والمقابلة بتتأجل — ومساحة الإقفال بتوضّحلك أرقام التسوية لو احتجتها."
+    },
+    {
+      "day": 13,
+      "titleAr": "سلوك التكاليف والتعادل، والموازنة والسيولة ودورات الأعمال",
+      "outcomesAr": [
+        "تفرّق بين التكلفة الثابتة والمتغيرة والمختلطة، وتحسب هامش المساهمة لكل صنف (الورق 28.53%، التونر 35.71%)",
+        "تحسب نقطة التعادل والكمية لربح مستهدف وهامش الأمان، وتعرف حدود الافتراضات",
+        "تقارن موازنة مارس التدريبية بالفعلي (صافي الربح −3,645) وتكتب سبب الانحراف للمالك",
+        "تحسب رأس المال العامل 268,355 ونسبة التداول 6.94 والسريعة 4.72 وتفسّرهم",
+        "ترسم دورتي P2P و O2C على مستندات الشركة، وتعرف شغل الـ ERP التلقائي وقواعد استخدام الذكاء الاصطناعي بأمان"
+      ],
+      "lessonIds": [
+        "L25",
+        "L26"
+      ],
+      "eventIds": [],
+      "tasks": [
+        {
+          "id": "D13-T01",
+          "type": "review",
+          "refId": "review",
+          "titleAr": "مراجعة متباعدة: الإقفال والقوائم",
+          "block": "recall",
+          "estimates": {
+            "r2": 10,
+            "r4": 10,
+            "r6": 15
+          },
+          "required": true
+        },
+        {
+          "id": "D13-T02",
+          "type": "lesson",
+          "refId": "L25",
+          "titleAr": "الدرس 25: سلوك التكاليف ونقطة التعادل",
+          "block": "guided",
+          "estimates": {
+            "r2": 35,
+            "r4": 40,
+            "r6": 45
+          },
+          "required": true
+        },
+        {
+          "id": "D13-T03",
+          "type": "lesson",
+          "refId": "L26",
+          "titleAr": "الدرس 26: الموازنة ورأس المال العامل ودورات الأعمال",
+          "block": "guided",
+          "estimates": {
+            "r2": 40,
+            "r4": 45,
+            "r6": 50
+          },
+          "required": true,
+          "prerequisites": [
+            "D13-T02"
+          ]
+        },
+        {
+          "id": "D13-T04",
+          "type": "practice",
+          "refId": "Q-D13-09|Q-D13-10|Q-D13-12",
+          "titleAr": "تمرين: اقتراح ذكاء اصطناعي على المستند، قيود الـ ERP التلقائية، SWOT للشركة",
+          "block": "transfer",
+          "estimates": {
+            "r2": null,
+            "r4": 20,
+            "r6": 25
+          },
+          "required": false
+        },
+        {
+          "id": "D13-T05",
+          "type": "excel",
+          "refId": "XL-SALES:T5",
+          "titleAr": "إكسل: PivotTable للمبيعات حسب الشهر + PivotChart بسيط",
+          "block": "excel",
+          "estimates": {
+            "r2": null,
+            "r4": 30,
+            "r6": 40
+          },
+          "required": false
+        },
+        {
+          "id": "D13-T06",
+          "type": "interview",
+          "refId": "IV-ACC-12",
+          "titleAr": "سؤال مقابلة: يعني إيه رأس المال العامل؟ وليه مهم؟",
+          "block": "interview",
+          "estimates": {
+            "r2": null,
+            "r4": 10,
+            "r6": 10
+          },
+          "required": false
+        },
+        {
+          "id": "D13-T07",
+          "type": "interview",
+          "refId": "IV-BUS-04",
+          "titleAr": "سؤال مقابلة: مؤشرات أداء لقسم الحسابات أو التحصيل",
+          "block": "interview",
+          "estimates": {
+            "r2": null,
+            "r4": null,
+            "r6": 10
+          },
+          "required": false
+        },
+        {
+          "id": "D13-T08",
+          "type": "career",
+          "refId": "career:jobs",
+          "titleAr": "خريطة الوظايف: اختار مسار مستهدف لما بعد اليوم 14",
+          "block": "interview",
+          "estimates": {
+            "r2": null,
+            "r4": null,
+            "r6": 15
+          },
+          "required": false
+        },
+        {
+          "id": "D13-T10",
+          "type": "scenario",
+          "refId": "SC-25",
+          "titleAr": "مختبر المواقف: عميل عايز فاتورة «من غير ضريبة»",
+          "block": "transfer",
+          "estimates": {
+            "r2": null,
+            "r4": null,
+            "r6": 8
+          },
+          "required": false
+        },
+        {
+          "id": "D13-T09",
+          "type": "reflection",
+          "refId": "reflection:day",
+          "titleAr": "تأمّل اليوم وخطة بكرة",
+          "block": "reflection",
+          "estimates": {
+            "r2": 10,
+            "r4": 10,
+            "r6": 10
+          },
+          "required": true
+        }
+      ],
+      "narrowerOn2hAr": "مسار الساعتين بيغطي الدرسين (ومنهم أمثلة الذكاء الاصطناعي والـ ERP). الإكسل (PivotTable) وأسئلة المقابلة وخريطة الوظايف بتتأجل لأيام الاستكمال."
+    },
+    {
+      "day": 14,
+      "titleAr": "مراجعة الإقفال المتكاملة — وماذا بعد؟",
+      "outcomesAr": [
+        "تتبّع أرصدة 31 مارس لأدلتها وتستخدم فحوص الربط علشان تمسك أخطاء الإقفال",
+        "التقييم النهائي على نموذج ما شفتهوش قبل كده",
+        "ممارسة إكسل عملية كاملة (مطابقة البنك) من غير تلميحات",
+        "مقابلة تجريبية 3، وإجابة صادقة بالإنجليزي البسيط عن تدريب الإقفال",
+        "ملف التدريب v2 وعليه «تدريب على شركة وهمية»، وخطة استكمال فردية للأيام 15–90"
+      ],
+      "lessonIds": [
+        "L27",
+        "L28"
+      ],
+      "eventIds": [],
+      "tasks": [
+        {
+          "id": "D14-T01",
+          "type": "review",
+          "refId": "review",
+          "titleAr": "مراجعة متباعدة قبل التقييم النهائي",
+          "block": "recall",
+          "estimates": {
+            "r2": null,
+            "r4": 10,
+            "r6": 15
+          },
+          "required": true
+        },
+        {
+          "id": "D14-T02",
+          "type": "lesson",
+          "refId": "L27",
+          "titleAr": "الدرس 27: مراجعة الإقفال المتكاملة",
+          "block": "guided",
+          "estimates": {
+            "r2": 20,
+            "r4": 30,
+            "r6": 40
+          },
+          "required": true
+        },
+        {
+          "id": "D14-T03",
+          "type": "lesson",
+          "refId": "L28",
+          "titleAr": "الدرس 28: ماذا بعد؟ المسارات المهنية",
+          "block": "guided",
+          "estimates": {
+            "r2": 15,
+            "r4": 25,
+            "r6": 30
+          },
+          "required": true,
+          "prerequisites": [
+            "D14-T02"
+          ]
+        },
+        {
+          "id": "D14-T04",
+          "type": "practice",
+          "refId": "Q-D14-08|Q-D14-09|Q-D14-10|Q-D14-11",
+          "titleAr": "تمرين مراجعة: بند توقيت اتقيد، تسويات إقفال، متوسط وجرد، تسوية بنكية",
+          "block": "transfer",
+          "estimates": {
+            "r2": null,
+            "r4": null,
+            "r6": 30
+          },
+          "required": false
+        },
+        {
+          "id": "D14-T05",
+          "type": "assessment",
+          "refId": "final",
+          "titleAr": "التقييم النهائي",
+          "block": "practical",
+          "estimates": {
+            "r2": 50,
+            "r4": 60,
+            "r6": 60
+          },
+          "required": true,
+          "prerequisites": [
+            "D14-T02"
+          ]
+        },
+        {
+          "id": "D14-T06",
+          "type": "excel",
+          "refId": "XL-BANK:T1|XL-BANK:T2|XL-BANK:T3|XL-BANK:T4",
+          "titleAr": "إكسل (عملي نهائي): مطابقة البنك كاملة من غير تلميحات",
+          "block": "excel",
+          "estimates": {
+            "r2": null,
+            "r4": 25,
+            "r6": 35
+          },
+          "required": true
+        },
+        {
+          "id": "D14-T07",
+          "type": "mock-interview",
+          "refId": "mock:3",
+          "titleAr": "مقابلة تجريبية 3 (منها أسئلة بالإنجليزي)",
+          "block": "interview",
+          "estimates": {
+            "r2": null,
+            "r4": 20,
+            "r6": 25
+          },
+          "required": true
+        },
+        {
+          "id": "D14-T08",
+          "type": "career",
+          "refId": "career:portfolio",
+          "titleAr": "ملف التدريب v2: باكدج إقفال مارس + سجل المهارات المحدّث",
+          "block": "interview",
+          "estimates": {
+            "r2": null,
+            "r4": 15,
+            "r6": 20
+          },
+          "required": true
+        },
+        {
+          "id": "D14-T09",
+          "type": "scenario",
+          "refId": "SC-24",
+          "titleAr": "مختبر المواقف: طلب تأريخ بأثر رجعي / المورد غيّر شروط الدفع بإيميل",
+          "block": "transfer",
+          "estimates": {
+            "r2": null,
+            "r4": null,
+            "r6": 8
+          },
+          "required": false
+        },
+        {
+          "id": "D14-T10",
+          "type": "reflection",
+          "refId": "reflection:day",
+          "titleAr": "خطة الاستكمال الفردية (الأيام 15–90) وتأمّل الأسبوعين",
+          "block": "reflection",
+          "estimates": {
+            "r2": 10,
+            "r4": 10,
+            "r6": 10
+          },
+          "required": true
+        }
+      ],
+      "narrowerOn2hAr": "على مسار الساعتين اليوم 14 = الدرسين والتقييم النهائي وخطة الاستكمال. الإكسل العملي والمقابلة التجريبية 3 وملف التدريب v2 بيبقوا أول مهام الأيام 15–18."
+    }
+  ],
+  "continued": [
+    {
+      "id": "C-15-18",
+      "rangeAr": "الأيام 15–18",
+      "titleAr": "سدّ الفجوات: علاج أضعف مهارات P0 و P1",
+      "goalsAr": [
+        "كل مهارة P0 أو P1 طلعت ضعيفة في التقييم النهائي أو لوحة الجاهزية يبقى عليها دليل جديد من تمرين ما شفتهوش قبل كده",
+        "تخلّص اللي اتأجّل من اليوم 14 على مسارك: الإكسل العملي، والمقابلة التجريبية 3، وملف التدريب v2",
+        "لو بوابة من بوابات الجاهزية لسه مفتوحة، تعالج سببها قبل أي إعادة محاولة"
+      ],
+      "activitiesAr": [
+        "ابدأ كل يوم بالمراجعة المتباعدة (المراجعة بتطلع البنود المستحقة لوحدها)",
+        "افتح تقرير التقييم النهائي ولوحة الجاهزية واختار أضعف مهارتين؛ اشتغل على تمارين العلاج المرتبطة بيهم من الدروس",
+        "معامل التسوية البنكية والمواقف والأخطاء على نفس المهارات (مثلًا BR-03 و BR-04 للبنك، وMC-09 لـ MC-16 للتسويات والإقفال)",
+        "مهام إكسل مش مكتملة من الورشة (مستوى الدليل بيتكتب جنب كل مهمة)",
+        "مقابلة تجريبية واحدة بعد العلاج، ومراجعة إجاباتك بالمعايير"
+      ],
+      "effortAr": "4 أيام دراسة على مسارك: حوالي 8 ساعات على مسار الساعتين، و16 على الأربع ساعات، و24 على الست ساعات. لو الفجوات كتير، الفترة دي ممكن تطوّل — وده طبيعي.",
+      "outcomeAr": "مهارات أضعف بقى عليها دليل حقيقي (مش مجرد إعادة قراءة)، وملف تدريب v2 متصدّر. 4 أيام مش هتقفل كل الفجوات — الهدف إن أخطر فجوتين يتحسنوا وتعرف إنهم اتحسنوا من أداء على تمرين جديد."
+    },
+    {
+      "id": "C-19-24",
+      "rangeAr": "الأيام 19–24",
+      "titleAr": "اختيار مسار وظيفي + إكسل متوسط + مقابلة كل أسبوع",
+      "goalsAr": [
+        "تختار مسار مستهدف واحد (عملاء، موردين، خزينة، مخازن، أو محاسب عام) على أساس أدلتك وشروط الإعلانات",
+        "تتمرن على مهام المسار ده تحديدًا في الشركة الوهمية والمعامل",
+        "تتقن دوال إكسل المتوسطة: XLOOKUP (أو VLOOKUP و INDEX/MATCH)، وPivotTable، وتوزيع أعمار الديون"
+      ],
+      "activitiesAr": [
+        "خريطة الوظايف ولوحة الشروط: طابق مهام المسار بأدلتك، وسجّل الشروط الرسمية المستوفاة واللي لأ",
+        "حسب المسار: عملاء ← XL-SALES (T3 و T7) ومواقف SC-14 و SC-15 و SC-16؛ موردين ← XL-PURCH (T1–T4) ومواقف SC-13 و SC-19 و SC-24؛ خزينة ← XL-BANK ومعامل التسوية BR-01 لـ BR-05 وSC-05 و SC-10؛ مخازن ← XL-INV و SC-17 و MC-07؛ عام ← مراجعة مساحة الإقفال والقوائم وMC-09 لـ MC-16",
+        "مقابلة تجريبية مرة في الأسبوع (فيها أسئلة إنجليزي)، ومراجعة بالمعايير",
+        "تحديث القصة المهنية والسي في بحيث المسار يبان من غير أي ادعاء خبرة"
+      ],
+      "effortAr": "6 أيام دراسة: حوالي 12 ساعة على مسار الساعتين، و24 على الأربع، و36 على الست. الإكسل لوحده محتاج غالبًا 4–6 ساعات تمرين على ملفات الورشة.",
+      "outcomeAr": "مسار مستهدف مكتوب ومبرّر بدليل، ومخرجات إكسل متوسطة متراجعة آليًا لما ده متاح (والباقي تقييم ذاتي مكتوب عليه كده)، ومقابلتين تجريبيتين بمعايير. ده تدريب على مهام الوظيفة — مش خبرة عمل."
+    },
+    {
+      "id": "C-25-30",
+      "rangeAr": "الأيام 25–30",
+      "titleAr": "التحضير للشهر التاني + التقديم الصادق",
+      "goalsAr": [
+        "تبقى جاهز لشهر تاني للشركة بتوعية مبسّطة بضريبة القيمة المضافة (حزمة محتوى لاحقة — SHOULD، مش موجودة في التطبيق لسه)",
+        "تراجع أساس الضريبة كتوعية بس، وترجع لمصادرها الرسمية قبل أي استخدام حقيقي",
+        "تقدّم على عدد محدود من الوظايف المناسبة بملف صادق"
+      ],
+      "activitiesAr": [
+        "لحد ما حزمة الشهر التاني تنزل: إعادة تمارين التسويات والإقفال من المعامل، ومراجعة تمرين توعية القيمة المضافة (مدخلات 1,400، مخرجات 2,100، الصافي 700 — تبسيط)",
+        "بطاقات المصادر للمعلومات المتغيرة (الضريبة، الفاتورة والإيصال الإلكتروني): اقرا حالة كل معلومة وتاريخ مراجعتها",
+        "قائمة التقديم: راجع الشروط الرسمية لكل إعلان، وقدّم على 3–5 إعلانات مناسبة لمبتدئين أو متدربين",
+        "مقابلة تجريبية أسبوعية، وتحديث ملف التدريب بأي شغل جديد"
+      ],
+      "effortAr": "6 أيام دراسة. حزمة الشهر التاني (لما تنزل) متوقع تاخد حوالي 10–14 ساعة على مسار الأربع ساعات (3–4 أيام)، وأكتر على مسار الساعتين. التقديم نفسه بياخد وقت إضافي برّه التطبيق.",
+      "outcomeAr": "استعداد لدورة شهر كامل تاني، وفهم توعوي للقيمة المضافة مكتوب عليه حدوده، وطلبات تقديم صادقة. التطبيق ما بيبعتش أي طلب ولا بيتواصل مع أي جهة — ده كله بإيدك."
+    },
+    {
+      "id": "C-31-60",
+      "rangeAr": "الأيام 31–60",
+      "titleAr": "ممارسة المسار + وعي بنظام محاسبي (ERP) + توثيق دورة عمل",
+      "goalsAr": [
+        "تعمّق في حالات مسارك المختار لحد ما تعملها من غير تلميحات وبوقت",
+        "تفهم إزاي نظام محاسبي أو ERP بيحوّل المستندات لقيود وتقارير",
+        "توثّق دورة عمل واحدة كاملة (P2P أو O2C) خطوة بخطوة"
+      ],
+      "activitiesAr": [
+        "إعادة حالات المسار من المعامل في وضع «من غير تلميحات» ومقارنة الوقت والنتيجة بأول مرة",
+        "اختياري وبإيدك إنت: تثبيت أداة مجانية على جهازك (GnuCash على الكمبيوتر، أو Odoo Community لو مستعد لمجهود التثبيت) وتجربتها ببيانات وهمية بس — التطبيق مش بيثبّت أي حاجة ولا بيعمل حسابات",
+        "توثيق دورة واحدة: المستندات ← الإدخال ← القيود اللي اتولدت ← التقرير ← المطابقة، مع ملاحظة إيه اللي النظام عمله لوحده وإيه اللي احتاج حكمك",
+        "توعية بالفاتورة الإلكترونية من منظور محاسب الشركة، من المصادر الرسمية",
+        "مقابلة تجريبية كل أسبوع، والإجابات الإنجليزي تزيد"
+      ],
+      "effortAr": "حوالي 3–4 جلسات في الأسبوع على مسارك (24–40 ساعة في الشهر على مسار الأربع ساعات). تثبيت أداة وتجهيزها ممكن ياخد من ساعتين لكذا جلسة حسب الأداة وجهازك.",
+      "outcomeAr": "مهام مسارك بقت أسرع وبدقة، وعندك وثيقة دورة عمل حقيقية على أداة جربتها بنفسك — تتكتب «تدريب ذاتي على أداة كذا ببيانات وهمية»، مش «خبرة ERP»."
+    },
+    {
+      "id": "C-61-90",
+      "rangeAr": "الأيام 61–90",
+      "titleAr": "محاكاة إقفال لوحدك + مذكرة تحليل + خطة دراسة رسمية",
+      "goalsAr": [
+        "تقفل شهر كامل لوحدك بوقت ومن غير تلميحات",
+        "تكتب مذكرة تحليل مالي قصيرة مبنية على أرقام وفيها توصيات",
+        "تسيب الشهر بسجل استثناءات كامل",
+        "تبني خطة مدروسة للدراسة الرسمية بعد ما تتأكد من شروطها من مصادرها"
+      ],
+      "activitiesAr": [
+        "محاكاة إقفال: على شهر جديد للشركة لو حزمة محتواه متاحة، أو على مجموعة حالات من المعامل بتوقيت ثابت — تسوية بنك، قيود تسوية، ميزان معدّل، قوائم، إقفال",
+        "مذكرة تحليل (صفحة أو اتنين): الربح مقابل النقدية، الهوامش، رأس المال العامل، الموازنة مقابل الفعلي، و3 توصيات",
+        "سجل استثناءات للشهر بالحقايق (نزاعات، مستندات ناقصة، استحقاقات جاية) وحالة كل بند",
+        "بحث خطة الدراسة الرسمية: الخيارات (دراسة تجارية أو دبلومة أو شهادة مهنية) وشروطها ومدتها وتكلفتها — من المواقع الرسمية، وتاريخ آخر مراجعة"
+      ],
+      "effortAr": "المحاكاة نفسها جلسة أو اتنين طوال (4–8 ساعات)، والمذكرة 3–4 ساعات، وبحث الدراسة الرسمية كذا ساعة على مدار الشهر. باقي الوقت مراجعة ومقابلات وتقديم.",
+      "outcomeAr": "دليل إنك تقدر تقفل شهر لوحدك، ومذكرة تحليل وسجل استثناءات تقدر تعرضهم في مقابلة كتدريب، وخطة دراسة واقعية. ده بيقوّي فرصك لوظايف المبتدئين والمتدربين، لكنه مش بديل عن المؤهل أو الخبرة لو الإعلان بيطلبهم."
+    }
+  ]
+}

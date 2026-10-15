@@ -1,0 +1,1143 @@
+{
+  "pack": "excel",
+  "generalNotesAr": [
+    "الملفات اصطناعية لشركات وهمية، ومتولدة بشكل ثابت (نفس الأرقام كل مرة).",
+    "التطبيق بيراجع المخرجات اللي بتكتبها (أرقام وأكواد)، وأحيانًا نص المعادلة كنص بس — عمره ما بيشغّل معادلاتك ولا ماكروهات. الرقم الصح ما بيثبتش إنك استخدمت الدالة المطلوبة.",
+    "لو عندك Excel 2016 أو 2019: دالة XLOOKUP مش موجودة — استخدم VLOOKUP أو INDEX/MATCH (نفس النتيجة).",
+    "LibreOffice Calc (مجاني) من إصدار 24.8 فيه XLOOKUP و XMATCH، وبيفتح ملفات xlsx و csv.",
+    "أسماء الدوال بالإنجليزي حتى في Excel العربي. فاصل الوسائط ممكن يكون «,» أو «;» حسب إعدادات المنطقة في ويندوز.",
+    "لو ملف CSV فتح في عمود واحد (بسبب الفاصل)، افتح نسخة xlsx بدلها."
+  ],
+  "challenges": [
+    {
+      "id": "XL-SALES",
+      "track": "sales",
+      "release": "R1",
+      "titleAr": "المبيعات والعملاء: تنظيف وتجميع وحدود الائتمان",
+      "briefAr": "عندك ملف فواتير بيع لـ 3 شهور (شركة وهمية) فيه أخطاء إدخال، وملف عملاء فيه حد الائتمان. نظّف البيانات الأول، وبعدين احسب المطلوب. افتح نسخة xlsx في Excel أو LibreOffice.",
+      "datasetFiles": [
+        {
+          "path": "/datasets/sales/sales_dirty.xlsx",
+          "format": "xlsx",
+          "variant": "dirty",
+          "labelAr": "فواتير البيع — قبل التنظيف (Excel)"
+        },
+        {
+          "path": "/datasets/sales/sales_dirty.csv",
+          "format": "csv",
+          "variant": "dirty",
+          "labelAr": "فواتير البيع — قبل التنظيف (CSV)"
+        },
+        {
+          "path": "/datasets/sales/customers.xlsx",
+          "format": "xlsx",
+          "variant": "clean",
+          "labelAr": "العملاء وحدود الائتمان (Excel)"
+        },
+        {
+          "path": "/datasets/sales/customers.csv",
+          "format": "csv",
+          "variant": "clean",
+          "labelAr": "العملاء وحدود الائتمان (CSV)"
+        },
+        {
+          "path": "/datasets/sales/sales_clean.xlsx",
+          "format": "xlsx",
+          "variant": "solution",
+          "labelAr": "فواتير البيع بعد التنظيف (للمراجعة بعد ما تحل) (Excel)"
+        },
+        {
+          "path": "/datasets/sales/sales_clean.csv",
+          "format": "csv",
+          "variant": "solution",
+          "labelAr": "فواتير البيع بعد التنظيف (للمراجعة بعد ما تحل) (CSV)"
+        }
+      ],
+      "columnDictionary": [
+        {
+          "column": "InvoiceNo",
+          "meaningAr": "رقم الفاتورة (المفروض يكون فريد)",
+          "type": "نص"
+        },
+        {
+          "column": "Date",
+          "meaningAr": "تاريخ الفاتورة",
+          "type": "تاريخ"
+        },
+        {
+          "column": "CustomerCode",
+          "meaningAr": "كود العميل",
+          "type": "نص"
+        },
+        {
+          "column": "CustomerName",
+          "meaningAr": "اسم العميل",
+          "type": "نص"
+        },
+        {
+          "column": "Product",
+          "meaningAr": "الصنف",
+          "type": "نص"
+        },
+        {
+          "column": "Qty / UnitPrice / Amount",
+          "meaningAr": "الكمية / سعر الوحدة / القيمة",
+          "type": "رقم"
+        },
+        {
+          "column": "DueDate",
+          "meaningAr": "تاريخ الاستحقاق (30 يوم)",
+          "type": "تاريخ"
+        },
+        {
+          "column": "Status",
+          "meaningAr": "Paid مدفوعة · Open مفتوحة (لسه عليها فلوس)",
+          "type": "نص"
+        }
+      ],
+      "tasks": [
+        {
+          "id": "T1",
+          "level": "core",
+          "promptAr": "نظّف الملف: شيل الصف المكرر، اعمل TRIM لأكواد العملاء، وحوّل القيم المكتوبة نص (أرقام عربية) لأرقام. كام فاتورة فريدة؟ وكام إجمالي المبيعات؟",
+          "functionsEn": [
+            "Remove Duplicates",
+            "TRIM",
+            "VALUE",
+            "SUM",
+            "COUNTA"
+          ],
+          "expectedOutputs": [
+            {
+              "id": "count",
+              "labelAr": "عدد الفواتير الفريدة",
+              "type": "number",
+              "value": 48,
+              "tolerance": 0
+            },
+            {
+              "id": "total",
+              "labelAr": "إجمالي المبيعات (جنيه)",
+              "type": "money",
+              "value": 328635,
+              "tolerance": 0
+            }
+          ],
+          "evidenceLevel": "output-checked",
+          "solutionAr": "Data › Remove Duplicates على كل الأعمدة؛ عمود مساعد =TRIM(C2)؛ القيم المكتوبة بأرقام عربية حوّلها (اكتبها تاني أو استخدم Find & Replace)؛ بعد كده =SUM(H2:H49) و =COUNTA(A2:A49)."
+        },
+        {
+          "id": "T2",
+          "level": "core",
+          "promptAr": "بـ SUMIFS احسب إجمالي مبيعات كل من CUS-01 و CUS-03 و CUS-05 (بعد التنظيف). والصق المعادلة اللي استخدمتها لـ CUS-01.",
+          "functionsEn": [
+            "SUMIFS"
+          ],
+          "expectedOutputs": [
+            {
+              "id": "c01",
+              "labelAr": "إجمالي CUS-01",
+              "type": "money",
+              "value": 45485,
+              "tolerance": 0
+            },
+            {
+              "id": "c03",
+              "labelAr": "إجمالي CUS-03",
+              "type": "money",
+              "value": 45115,
+              "tolerance": 0
+            },
+            {
+              "id": "c05",
+              "labelAr": "إجمالي CUS-05",
+              "type": "money",
+              "value": 39165,
+              "tolerance": 0
+            }
+          ],
+          "acceptedFormulaPatterns": [
+            "^=\\s*SUMIFS?\\s*\\("
+          ],
+          "evidenceLevel": "formula-text-checked",
+          "solutionAr": "=SUMIFS(H:H, C:C, \"CUS-01\") — لو ما عملتش TRIM، الصفوف اللي فيها مسافات زيادة مش هتتحسب."
+        },
+        {
+          "id": "T3",
+          "level": "core",
+          "promptAr": "لكل عميل: احسب رصيد الفواتير المفتوحة (Status = Open) وهات حد الائتمان من ملف العملاء بدالة بحث (XLOOKUP أو VLOOKUP أو INDEX/MATCH). مين العملاء اللي رصيدهم المفتوح أكبر من حدهم؟ (اكتب الأكواد مفصولة بفاصلة)",
+          "functionsEn": [
+            "SUMIFS",
+            "XLOOKUP",
+            "VLOOKUP",
+            "INDEX",
+            "MATCH",
+            "IF"
+          ],
+          "expectedOutputs": [
+            {
+              "id": "over",
+              "labelAr": "أكواد العملاء المتجاوزين للحد",
+              "type": "id-list",
+              "value": [
+                "CUS-02",
+                "CUS-04"
+              ],
+              "tolerance": 0
+            }
+          ],
+          "acceptedFormulaPatterns": [
+            "(XLOOKUP|VLOOKUP|INDEX)\\s*\\("
+          ],
+          "evidenceLevel": "output-checked",
+          "solutionAr": "رصيد مفتوح: =SUMIFS(H:H,C:C,A2,J:J,\"Open\")؛ الحد: =XLOOKUP(A2,customers!A:A,customers!D:D) أو =VLOOKUP(A2,customers!A:D,4,FALSE)؛ ثم =IF(B2>C2,\"متجاوز\",\"\")."
+        },
+        {
+          "id": "T4",
+          "level": "core",
+          "promptAr": "بـ COUNTIFS: كام فاتورة مفتوحة للعميل CUS-02؟",
+          "functionsEn": [
+            "COUNTIFS"
+          ],
+          "expectedOutputs": [
+            {
+              "id": "n",
+              "labelAr": "عدد الفواتير المفتوحة لـ CUS-02",
+              "type": "number",
+              "value": 8,
+              "tolerance": 0
+            }
+          ],
+          "acceptedFormulaPatterns": [
+            "^=\\s*COUNTIFS?\\s*\\("
+          ],
+          "evidenceLevel": "output-checked",
+          "solutionAr": "=COUNTIFS(C:C,\"CUS-02\",J:J,\"Open\")"
+        },
+        {
+          "id": "T5",
+          "level": "extension",
+          "promptAr": "اعمل PivotTable بالمبيعات حسب الشهر. اكتب إجمالي يناير وفبراير ومارس.",
+          "functionsEn": [
+            "PivotTable",
+            "Group by Months"
+          ],
+          "expectedOutputs": [
+            {
+              "id": "jan",
+              "labelAr": "يناير",
+              "type": "money",
+              "value": 143040,
+              "tolerance": 0
+            },
+            {
+              "id": "feb",
+              "labelAr": "فبراير",
+              "type": "money",
+              "value": 91600,
+              "tolerance": 0
+            },
+            {
+              "id": "mar",
+              "labelAr": "مارس",
+              "type": "money",
+              "value": 93995,
+              "tolerance": 0
+            }
+          ],
+          "evidenceLevel": "output-checked",
+          "solutionAr": "Insert › PivotTable؛ Date في Rows (Group by Months)؛ Amount في Values (Sum)."
+        },
+        {
+          "id": "T6",
+          "level": "core",
+          "promptAr": "حوّل البيانات لجدول (Ctrl+T)، اعمل فرز حسب التاريخ وتصفية للفواتير المفتوحة، وثبّت صف العناوين.",
+          "functionsEn": [
+            "Format as Table",
+            "Sort",
+            "Filter",
+            "Freeze Panes"
+          ],
+          "expectedOutputs": [],
+          "evidenceLevel": "self-reported",
+          "solutionAr": "Home › Format as Table؛ Data › Sort/Filter؛ View › Freeze Top Row.",
+          "rubric": [
+            {
+              "id": "r1",
+              "criterionAr": "عملت جدول بعناوين واضحة"
+            },
+            {
+              "id": "r2",
+              "criterionAr": "فرزت حسب التاريخ"
+            },
+            {
+              "id": "r3",
+              "criterionAr": "صفّيت الفواتير المفتوحة بس"
+            }
+          ]
+        },
+        {
+          "id": "T7",
+          "level": "extension",
+          "promptAr": "أعمار ديون العملاء في 31 مارس 2026 (الفواتير المفتوحة بس، من الملف بعد التنظيف): احسب أيام التأخير = 31 مارس − تاريخ الاستحقاق، ووزّع الأرصدة على الشرايح: لسه ما استحقتش (صفر أو أقل)، متأخرة 1–30 يوم، 31–60 يوم، أكتر من 60 يوم.",
+          "functionsEn": [
+            "SUMIFS",
+            "DATEDIF",
+            "IFS"
+          ],
+          "expectedOutputs": [
+            {
+              "id": "cur",
+              "labelAr": "لسه ما استحقتش",
+              "type": "money",
+              "value": 62600,
+              "tolerance": 0
+            },
+            {
+              "id": "d30",
+              "labelAr": "متأخرة 1–30 يوم",
+              "type": "money",
+              "value": 28250,
+              "tolerance": 0
+            },
+            {
+              "id": "d60",
+              "labelAr": "متأخرة 31–60 يوم",
+              "type": "money",
+              "value": 90250,
+              "tolerance": 0
+            },
+            {
+              "id": "d90",
+              "labelAr": "متأخرة أكتر من 60 يوم",
+              "type": "money",
+              "value": 0,
+              "tolerance": 0
+            }
+          ],
+          "evidenceLevel": "output-checked",
+          "solutionAr": "عمود أيام التأخير: =DATE(2026,3,31)-I2 ؛ عمود الشريحة: =IFS(L2<=0,\"لسه\",L2<=30,\"1-30\",L2<=60,\"31-60\",TRUE,\"+60\") ؛ ثم =SUMIFS(H:H,J:J,\"Open\",M:M,\"1-30\") لكل شريحة. مجموع الشرايح = إجمالي الأرصدة المفتوحة — ده فحص سريع إنك ما نسيتش فاتورة."
+        }
+      ],
+      "seededDefectsAr": [
+        "صف فاتورة مكرر بالكامل",
+        "مسافات زيادة بعد بعض أكواد العملاء",
+        "3 قيم مكتوبة بأرقام عربية (رقم مخزن كنص)",
+        "تاريخ استحقاق ناقص في صفين"
+      ],
+      "compatibilityNotesAr": [
+        "لو عندك Excel 2016 أو 2019: دالة XLOOKUP مش موجودة — استخدم VLOOKUP أو INDEX/MATCH (نفس النتيجة).",
+        "LibreOffice Calc (مجاني) من إصدار 24.8 فيه XLOOKUP و XMATCH، وبيفتح ملفات xlsx و csv.",
+        "أسماء الدوال بالإنجليزي حتى في Excel العربي. فاصل الوسائط ممكن يكون «,» أو «;» حسب إعدادات المنطقة في ويندوز.",
+        "لو ملف CSV فتح في عمود واحد (بسبب الفاصل)، افتح نسخة xlsx بدلها."
+      ],
+      "skillIds": [
+        "XL.CORE",
+        "XL.MATCH",
+        "AR.CORE",
+        "AR.AGING",
+        "XL.PIVOT"
+      ]
+    },
+    {
+      "id": "XL-PURCH",
+      "track": "purchases",
+      "release": "R1",
+      "titleAr": "المشتريات والموردين: المطابقة الثلاثية والاستثناءات",
+      "briefAr": "كل سطر فيه أمر شراء (PO) وإذن استلام (GRN) وفاتورة المورد. طابق الثلاثة: الكمية والسعر، ووجود GRN، وتكرار رقم الفاتورة. المطلوب قائمة استثناءات قبل أي سداد.",
+      "datasetFiles": [
+        {
+          "path": "/datasets/purchases/purchases_dirty.xlsx",
+          "format": "xlsx",
+          "variant": "dirty",
+          "labelAr": "سطور المشتريات (Excel)"
+        },
+        {
+          "path": "/datasets/purchases/purchases_dirty.csv",
+          "format": "csv",
+          "variant": "dirty",
+          "labelAr": "سطور المشتريات (CSV)"
+        },
+        {
+          "path": "/datasets/purchases/purchases_solution.xlsx",
+          "format": "xlsx",
+          "variant": "solution",
+          "labelAr": "الحل: سطور مع نوع الاستثناء (بعد ما تحل) (Excel)"
+        },
+        {
+          "path": "/datasets/purchases/purchases_solution.csv",
+          "format": "csv",
+          "variant": "solution",
+          "labelAr": "الحل: سطور مع نوع الاستثناء (بعد ما تحل) (CSV)"
+        }
+      ],
+      "columnDictionary": [
+        {
+          "column": "LineID",
+          "meaningAr": "رقم السطر",
+          "type": "نص"
+        },
+        {
+          "column": "PO / OrderedQty / POUnitPrice",
+          "meaningAr": "أمر الشراء والكمية والسعر المتفق عليه",
+          "type": "نص/رقم"
+        },
+        {
+          "column": "GRN / ReceivedQty",
+          "meaningAr": "إذن الاستلام والكمية المستلمة فعلًا",
+          "type": "نص/رقم"
+        },
+        {
+          "column": "InvoiceNo / InvoiceDate / InvoiceQty / InvoiceUnitPrice / InvoiceAmount",
+          "meaningAr": "بيانات فاتورة المورد",
+          "type": "نص/تاريخ/رقم"
+        }
+      ],
+      "tasks": [
+        {
+          "id": "T1",
+          "level": "core",
+          "promptAr": "اكتب أرقام السطور (LineID) اللي فيها استثناء: فاتورة من غير GRN، أو سعر الفاتورة مختلف عن أمر الشراء، أو رقم فاتورة مكرر لنفس المورد (السطر المكرر التاني).",
+          "functionsEn": [
+            "IF",
+            "COUNTIFS",
+            "ISBLANK",
+            "Conditional Formatting"
+          ],
+          "expectedOutputs": [
+            {
+              "id": "exc",
+              "labelAr": "أرقام السطور",
+              "type": "id-list",
+              "value": [
+                "L07",
+                "L11",
+                "L19",
+                "L24",
+                "L28"
+              ],
+              "tolerance": 0
+            }
+          ],
+          "evidenceLevel": "output-checked",
+          "solutionAr": "عمود: =IF(H2=\"\",\"بدون GRN\",IF(M2<>G2,\"سعر مختلف\",IF(COUNTIFS($J$2:J2,J2,$C$2:C2,C2)>1,\"فاتورة مكررة\",\"OK\")))"
+        },
+        {
+          "id": "T2",
+          "level": "core",
+          "promptAr": "إجمالي فواتير المورد SUP-A السليمة بس (من غير السطور اللي فيها استثناء).",
+          "functionsEn": [
+            "SUMIFS"
+          ],
+          "expectedOutputs": [
+            {
+              "id": "a",
+              "labelAr": "إجمالي SUP-A السليم",
+              "type": "money",
+              "value": 191660,
+              "tolerance": 0
+            }
+          ],
+          "acceptedFormulaPatterns": [
+            "^=\\s*SUMIFS?\\s*\\("
+          ],
+          "evidenceLevel": "output-checked",
+          "solutionAr": "=SUMIFS(N:N,C:C,\"SUP-A\",O:O,\"OK\") بعد عمود الاستثناء."
+        },
+        {
+          "id": "T3",
+          "level": "core",
+          "promptAr": "كام سطر مطابق بالكامل (جاهز للاعتماد)؟",
+          "functionsEn": [
+            "COUNTIF"
+          ],
+          "expectedOutputs": [
+            {
+              "id": "ok",
+              "labelAr": "عدد السطور المطابقة",
+              "type": "number",
+              "value": 25,
+              "tolerance": 0
+            }
+          ],
+          "evidenceLevel": "output-checked",
+          "solutionAr": "=COUNTIF(O:O,\"OK\")"
+        },
+        {
+          "id": "T4",
+          "level": "extension",
+          "promptAr": "أعمار الموردين في 31 مارس 2026 للفواتير السليمة: 0–30 يوم، 31–60، أكتر من 60.",
+          "functionsEn": [
+            "DATEDIF",
+            "SUMIFS",
+            "IFS"
+          ],
+          "expectedOutputs": [
+            {
+              "id": "b1",
+              "labelAr": "0–30 يوم",
+              "type": "money",
+              "value": 177958,
+              "tolerance": 0
+            },
+            {
+              "id": "b2",
+              "labelAr": "31–60 يوم",
+              "type": "money",
+              "value": 268777,
+              "tolerance": 0
+            },
+            {
+              "id": "b3",
+              "labelAr": "أكتر من 60 يوم",
+              "type": "money",
+              "value": 263968,
+              "tolerance": 0
+            }
+          ],
+          "evidenceLevel": "output-checked",
+          "solutionAr": "عمود أيام: =DATE(2026,3,31)-K2؛ ثم SUMIFS بشروط >= و <=."
+        }
+      ],
+      "seededDefectsAr": [
+        "فاتورتين من غير إذن استلام",
+        "سطرين سعر الفاتورة مختلف عن أمر الشراء",
+        "فاتورة مكررة بنفس الرقم والمبلغ",
+        "مسافات زيادة في أسماء موردين وقيمتين بأرقام عربية"
+      ],
+      "compatibilityNotesAr": [
+        "لو عندك Excel 2016 أو 2019: دالة XLOOKUP مش موجودة — استخدم VLOOKUP أو INDEX/MATCH (نفس النتيجة).",
+        "LibreOffice Calc (مجاني) من إصدار 24.8 فيه XLOOKUP و XMATCH، وبيفتح ملفات xlsx و csv.",
+        "أسماء الدوال بالإنجليزي حتى في Excel العربي. فاصل الوسائط ممكن يكون «,» أو «;» حسب إعدادات المنطقة في ويندوز.",
+        "لو ملف CSV فتح في عمود واحد (بسبب الفاصل)، افتح نسخة xlsx بدلها."
+      ],
+      "skillIds": [
+        "XL.CORE",
+        "XL.MATCH",
+        "AP.CORE",
+        "CTRL.CORE"
+      ]
+    },
+    {
+      "id": "XL-EXP",
+      "track": "expenses",
+      "release": "R1",
+      "titleAr": "المصروفات: تجميع حسب البند وفحص الاعتمادات",
+      "briefAr": "مطالبات مصروفات موظفين لشهر مارس (وهمية). سياسة الشركة الوهمية: لازم إيصال لكل مطالبة، وأي مبلغ أكبر من 10,000 لازم اعتماد المدير (ليلى منصور). نظّف أسماء البنود وطلّع الاستثناءات.",
+      "datasetFiles": [
+        {
+          "path": "/datasets/expenses/expenses_dirty.xlsx",
+          "format": "xlsx",
+          "variant": "dirty",
+          "labelAr": "مطالبات المصروفات (Excel)"
+        },
+        {
+          "path": "/datasets/expenses/expenses_dirty.csv",
+          "format": "csv",
+          "variant": "dirty",
+          "labelAr": "مطالبات المصروفات (CSV)"
+        },
+        {
+          "path": "/datasets/expenses/expenses_solution.xlsx",
+          "format": "xlsx",
+          "variant": "solution",
+          "labelAr": "الحل مع الاستثناءات (بعد ما تحل) (Excel)"
+        },
+        {
+          "path": "/datasets/expenses/expenses_solution.csv",
+          "format": "csv",
+          "variant": "solution",
+          "labelAr": "الحل مع الاستثناءات (بعد ما تحل) (CSV)"
+        }
+      ],
+      "columnDictionary": [
+        {
+          "column": "ExpID",
+          "meaningAr": "رقم المطالبة",
+          "type": "نص"
+        },
+        {
+          "column": "Category",
+          "meaningAr": "بند المصروف",
+          "type": "نص"
+        },
+        {
+          "column": "Amount",
+          "meaningAr": "المبلغ",
+          "type": "رقم"
+        },
+        {
+          "column": "Receipt",
+          "meaningAr": "فيه إيصال؟ (نعم/لا)",
+          "type": "نص"
+        },
+        {
+          "column": "ApprovedBy",
+          "meaningAr": "مين اعتمد (فاضي = من غير اعتماد)",
+          "type": "نص"
+        }
+      ],
+      "tasks": [
+        {
+          "id": "T1",
+          "level": "core",
+          "promptAr": "بعد توحيد كتابة البنود (TRIM وتصحيح «ادوات» إلى «أدوات»): إجمالي بند النقل، والضيافة، والأدوات المكتبية.",
+          "functionsEn": [
+            "TRIM",
+            "SUBSTITUTE",
+            "SUMIFS"
+          ],
+          "expectedOutputs": [
+            {
+              "id": "naql",
+              "labelAr": "نقل",
+              "type": "money",
+              "value": 9290,
+              "tolerance": 0
+            },
+            {
+              "id": "diafa",
+              "labelAr": "ضيافة",
+              "type": "money",
+              "value": 8680,
+              "tolerance": 0
+            },
+            {
+              "id": "adawat",
+              "labelAr": "أدوات مكتبية",
+              "type": "money",
+              "value": 15160,
+              "tolerance": 0
+            }
+          ],
+          "evidenceLevel": "output-checked",
+          "solutionAr": "عمود: =TRIM(SUBSTITUTE(D2,\"ادوات\",\"أدوات\")) ثم SUMIFS على العمود الجديد."
+        },
+        {
+          "id": "T2",
+          "level": "core",
+          "promptAr": "اكتب أرقام المطالبات اللي ما ينفعش تتصرف زي ما هي: من غير إيصال، أو أكبر من 10,000 من غير اعتماد، أو مصروف المفروض يتسجل أصل (شراء جهاز).",
+          "functionsEn": [
+            "IF",
+            "AND",
+            "OR",
+            "Filter"
+          ],
+          "expectedOutputs": [
+            {
+              "id": "exc",
+              "labelAr": "أرقام المطالبات",
+              "type": "id-list",
+              "value": [
+                "EXP-006",
+                "EXP-018",
+                "EXP-021",
+                "EXP-027",
+                "EXP-033"
+              ],
+              "tolerance": 0
+            }
+          ],
+          "evidenceLevel": "output-checked",
+          "solutionAr": "=IF(OR(F2=\"لا\",AND(E2>10000,G2=\"\")),\"استثناء\",\"\") — وراجع الوصف يدويًا: شاشة كمبيوتر = أصل مش أدوات مكتبية."
+        },
+        {
+          "id": "T3",
+          "level": "core",
+          "promptAr": "إجمالي المطالبات السليمة القابلة للصرف.",
+          "functionsEn": [
+            "SUMIFS",
+            "SUBTOTAL"
+          ],
+          "expectedOutputs": [
+            {
+              "id": "ok",
+              "labelAr": "الإجمالي السليم",
+              "type": "money",
+              "value": 54350,
+              "tolerance": 0
+            }
+          ],
+          "evidenceLevel": "output-checked",
+          "solutionAr": "SUMIFS على عمود الحالة = OK، أو فلتر + SUBTOTAL(9,…)."
+        }
+      ],
+      "seededDefectsAr": [
+        "3 مطالبات من غير إيصال",
+        "مطالبة أكبر من 10,000 من غير اعتماد",
+        "شراء شاشة متسجل أدوات مكتبية (المفروض أصل)",
+        "بنود مكتوبة بأشكال مختلفة ومسافات زيادة، وقيمتين بأرقام عربية"
+      ],
+      "compatibilityNotesAr": [
+        "لو عندك Excel 2016 أو 2019: دالة XLOOKUP مش موجودة — استخدم VLOOKUP أو INDEX/MATCH (نفس النتيجة).",
+        "LibreOffice Calc (مجاني) من إصدار 24.8 فيه XLOOKUP و XMATCH، وبيفتح ملفات xlsx و csv.",
+        "أسماء الدوال بالإنجليزي حتى في Excel العربي. فاصل الوسائط ممكن يكون «,» أو «;» حسب إعدادات المنطقة في ويندوز.",
+        "لو ملف CSV فتح في عمود واحد (بسبب الفاصل)، افتح نسخة xlsx بدلها."
+      ],
+      "skillIds": [
+        "XL.CORE",
+        "CTRL.CORE",
+        "CASH.CORE"
+      ]
+    },
+    {
+      "id": "XL-BANK",
+      "track": "bank",
+      "release": "R1",
+      "titleAr": "البنك: مطابقة كشف البنك مع دفتر النقدية وعمل التسوية",
+      "briefAr": "شركة وهمية: رصيد أول مارس 50,000 في الدفاتر والبنك. طابق الحركات بالمرجع (Ref) والمبلغ بين الملفين، صنّف الفروق (توقيت / بنود من جهة الدفاتر / أخطاء)، واعمل التسوية. افتكر: الدائن في كشف البنك بيزوّد رصيدك.",
+      "datasetFiles": [
+        {
+          "path": "/datasets/bank/bank_statement.xlsx",
+          "format": "xlsx",
+          "variant": "dirty",
+          "labelAr": "كشف حساب البنك — مارس (Excel)"
+        },
+        {
+          "path": "/datasets/bank/bank_statement.csv",
+          "format": "csv",
+          "variant": "dirty",
+          "labelAr": "كشف حساب البنك — مارس (CSV)"
+        },
+        {
+          "path": "/datasets/bank/cash_book.xlsx",
+          "format": "xlsx",
+          "variant": "dirty",
+          "labelAr": "دفتر النقدية (البنك في دفاترنا) — مارس (Excel)"
+        },
+        {
+          "path": "/datasets/bank/cash_book.csv",
+          "format": "csv",
+          "variant": "dirty",
+          "labelAr": "دفتر النقدية (البنك في دفاترنا) — مارس (CSV)"
+        }
+      ],
+      "columnDictionary": [
+        {
+          "column": "Ref",
+          "meaningAr": "مرجع الحركة (رقم شيك أو تحويل) — مفتاح المطابقة",
+          "type": "نص"
+        },
+        {
+          "column": "Debit / Credit (الكشف)",
+          "meaningAr": "من وجهة نظر البنك: مدين = خصم من حسابك، دائن = إضافة لحسابك",
+          "type": "رقم"
+        },
+        {
+          "column": "Receipt / Payment (الدفتر)",
+          "meaningAr": "مقبوضات / مدفوعات في دفاترنا",
+          "type": "رقم"
+        },
+        {
+          "column": "Balance",
+          "meaningAr": "رصيد الكشف بعد كل حركة",
+          "type": "رقم"
+        }
+      ],
+      "tasks": [
+        {
+          "id": "T1",
+          "level": "core",
+          "promptAr": "كام سطر في كشف البنك مالوش سطر مطابق (نفس المرجع ونفس المبلغ) في دفتر النقدية؟",
+          "functionsEn": [
+            "XLOOKUP",
+            "VLOOKUP",
+            "COUNTIFS",
+            "IFERROR"
+          ],
+          "expectedOutputs": [
+            {
+              "id": "n",
+              "labelAr": "عدد سطور الكشف غير المطابقة",
+              "type": "number",
+              "value": 3,
+              "tolerance": 0
+            }
+          ],
+          "acceptedFormulaPatterns": [
+            "(COUNTIFS|XLOOKUP|VLOOKUP|MATCH)\\s*\\("
+          ],
+          "evidenceLevel": "output-checked",
+          "solutionAr": "عمود في الكشف: =COUNTIFS(cash_book!B:B,B2,cash_book!E:E,D2)+COUNTIFS(cash_book!B:B,B2,cash_book!D:D,E2) — اللي نتيجته 0: المصروفات البنكية، الشيك المرتد، والتحويل TRF-2207 (المبلغ مختلف)."
+        },
+        {
+          "id": "T2",
+          "level": "core",
+          "promptAr": "اكتب أرقام الشيكات المعلّقة (في دفاترنا ولسه ما ظهرتش في الكشف)، وقيمة الإيداع في الطريق.",
+          "functionsEn": [
+            "XLOOKUP",
+            "IFERROR",
+            "Filter"
+          ],
+          "expectedOutputs": [
+            {
+              "id": "oc",
+              "labelAr": "الشيكات المعلّقة",
+              "type": "id-list",
+              "value": [
+                "CHQ-2041",
+                "CHQ-2045"
+              ],
+              "tolerance": 0
+            },
+            {
+              "id": "dit",
+              "labelAr": "الإيداع في الطريق",
+              "type": "money",
+              "value": 6500,
+              "tolerance": 0
+            }
+          ],
+          "evidenceLevel": "output-checked",
+          "solutionAr": "في الدفتر: =IFERROR(XLOOKUP(B2,bank_statement!B:B,bank_statement!B:B),\"مش في الكشف\") — CHQ-2041 و CHQ-2045 و DEP-0331. (CHQ-2039 المكرر: موجود في الكشف مرة واحدة بس — ده خطأ دفاتر مش بند توقيت.)"
+        },
+        {
+          "id": "T3",
+          "level": "core",
+          "promptAr": "اعمل التسوية: الرصيد المعدّل للبنك (رصيد الكشف + إيداع في الطريق − شيكات معلّقة) والرصيد المعدّل للدفاتر (رصيد الدفتر − المصروفات البنكية − الشيك المرتد ± تصحيح الأخطاء). لازم الاتنين يتساووا.",
+          "functionsEn": [
+            "SUM",
+            "SUMIFS"
+          ],
+          "expectedOutputs": [
+            {
+              "id": "bank",
+              "labelAr": "رصيد البنك المعدّل",
+              "type": "money",
+              "value": 105675,
+              "tolerance": 0
+            },
+            {
+              "id": "book",
+              "labelAr": "رصيد الدفاتر المعدّل",
+              "type": "money",
+              "value": 105675,
+              "tolerance": 0
+            }
+          ],
+          "evidenceLevel": "output-checked",
+          "solutionAr": "رصيد الكشف 104,125 + 6,500 − 4,950 = 105,675. رصيد الدفتر 107,270 − 85 − 4,000 + 90 (TRF-2207 اتسجل 1,980 بدل 1,890) + 2,400 (CHQ-2039 متسجل مرتين) = 105,675. بنود التوقيت مالهاش قيود؛ بنود الدفاتر بس هي اللي ليها قيود."
+        },
+        {
+          "id": "T4",
+          "level": "core",
+          "promptAr": "تصحيحات الدفاتر: فرق التحويل المقلوب الأرقام، وقيمة الدفعة المسجلة مرتين.",
+          "functionsEn": [
+            "ABS"
+          ],
+          "expectedOutputs": [
+            {
+              "id": "transp",
+              "labelAr": "فرق تبديل الأرقام",
+              "type": "money",
+              "value": 90,
+              "tolerance": 0
+            },
+            {
+              "id": "dup",
+              "labelAr": "الدفعة المكررة",
+              "type": "money",
+              "value": 2400,
+              "tolerance": 0
+            }
+          ],
+          "evidenceLevel": "output-checked",
+          "solutionAr": "1,980 − 1,890 = 90 (بيقبل القسمة على 9 → علامة تبديل أرقام). CHQ-2039 بـ 2,400 متسجل مرتين في الدفتر ومرة واحدة في البنك."
+        }
+      ],
+      "seededDefectsAr": [
+        "إيداع في الطريق آخر يوم",
+        "شيكين معلّقين",
+        "مصروفات بنكية في الكشف بس",
+        "شيك عميل مرتد",
+        "تحويل متسجل 1,980 بدل 1,890 (تبديل أرقام)",
+        "شيك متسجل مرتين في الدفتر"
+      ],
+      "compatibilityNotesAr": [
+        "لو عندك Excel 2016 أو 2019: دالة XLOOKUP مش موجودة — استخدم VLOOKUP أو INDEX/MATCH (نفس النتيجة).",
+        "LibreOffice Calc (مجاني) من إصدار 24.8 فيه XLOOKUP و XMATCH، وبيفتح ملفات xlsx و csv.",
+        "أسماء الدوال بالإنجليزي حتى في Excel العربي. فاصل الوسائط ممكن يكون «,» أو «;» حسب إعدادات المنطقة في ويندوز.",
+        "لو ملف CSV فتح في عمود واحد (بسبب الفاصل)، افتح نسخة xlsx بدلها."
+      ],
+      "skillIds": [
+        "XL.MATCH",
+        "BANK.REC",
+        "XL.CORE"
+      ]
+    },
+    {
+      "id": "XL-INV",
+      "track": "inventory",
+      "release": "R1",
+      "titleAr": "المخزون: جرد فعلي مقابل النظام وتقييم العجز",
+      "briefAr": "كشف جرد لمخزن أدوات مكتبية (وهمي): الكمية في النظام والكمية المعدودة فعليًا وتكلفة الوحدة. طلّع الفروق وقيّمها، واكتشف أخطاء البيانات قبل ما تعتمد على الأرقام.",
+      "datasetFiles": [
+        {
+          "path": "/datasets/inventory/inventory_count_dirty.xlsx",
+          "format": "xlsx",
+          "variant": "dirty",
+          "labelAr": "كشف الجرد (Excel)"
+        },
+        {
+          "path": "/datasets/inventory/inventory_count_dirty.csv",
+          "format": "csv",
+          "variant": "dirty",
+          "labelAr": "كشف الجرد (CSV)"
+        },
+        {
+          "path": "/datasets/inventory/inventory_count_clean.xlsx",
+          "format": "xlsx",
+          "variant": "solution",
+          "labelAr": "الكشف بعد تصحيح أخطاء البيانات (بعد ما تحل) (Excel)"
+        },
+        {
+          "path": "/datasets/inventory/inventory_count_clean.csv",
+          "format": "csv",
+          "variant": "solution",
+          "labelAr": "الكشف بعد تصحيح أخطاء البيانات (بعد ما تحل) (CSV)"
+        }
+      ],
+      "columnDictionary": [
+        {
+          "column": "SKU / Description",
+          "meaningAr": "كود الصنف ووصفه",
+          "type": "نص"
+        },
+        {
+          "column": "SystemQty",
+          "meaningAr": "الكمية حسب النظام",
+          "type": "رقم"
+        },
+        {
+          "column": "CountedQty",
+          "meaningAr": "الكمية المعدودة فعليًا",
+          "type": "رقم"
+        },
+        {
+          "column": "UnitCost",
+          "meaningAr": "تكلفة الوحدة",
+          "type": "رقم"
+        }
+      ],
+      "tasks": [
+        {
+          "id": "T1",
+          "level": "core",
+          "promptAr": "أخطاء البيانات اللي لازم تتراجع قبل أي حساب: صنف رصيده في النظام بالسالب، وصنف تكلفته غلط (أكبر 10 مرات من المعتاد لصنف زيه). اكتب الأكواد.",
+          "functionsEn": [
+            "IF",
+            "Conditional Formatting",
+            "Sort"
+          ],
+          "expectedOutputs": [
+            {
+              "id": "err",
+              "labelAr": "أكواد أخطاء البيانات",
+              "type": "id-list",
+              "value": [
+                "SKU-111",
+                "SKU-120"
+              ],
+              "tolerance": 0
+            }
+          ],
+          "evidenceLevel": "output-checked",
+          "solutionAr": "فرز حسب SystemQty يبيّن السالب (SKU-120)؛ فرز حسب UnitCost يبيّن 1,850 لصنف تكلفته الطبيعية 185 (SKU-111)."
+        },
+        {
+          "id": "T2",
+          "level": "core",
+          "promptAr": "الأصناف اللي فيها فرق بين الجرد والنظام (من غير صنف الرصيد السالب).",
+          "functionsEn": [
+            "IF",
+            "FILTER"
+          ],
+          "expectedOutputs": [
+            {
+              "id": "diff",
+              "labelAr": "أكواد الأصناف بفروق",
+              "type": "id-list",
+              "value": [
+                "SKU-104",
+                "SKU-109",
+                "SKU-113",
+                "SKU-117"
+              ],
+              "tolerance": 0
+            }
+          ],
+          "evidenceLevel": "output-checked",
+          "solutionAr": "=IF(E2<>D2,\"فرق\",\"\") مع استبعاد SKU-120."
+        },
+        {
+          "id": "T3",
+          "level": "core",
+          "promptAr": "صافي قيمة العجز (رقم موجب) = مجموع (الكمية المعدودة − النظام) × التكلفة الصحيحة للأصناف اللي فيها فروق.",
+          "functionsEn": [
+            "SUMPRODUCT"
+          ],
+          "expectedOutputs": [
+            {
+              "id": "short",
+              "labelAr": "صافي قيمة العجز",
+              "type": "money",
+              "value": 2214,
+              "tolerance": 0
+            }
+          ],
+          "evidenceLevel": "output-checked",
+          "solutionAr": "عمود فرق القيمة =(E2-D2)*F2 ثم جمع صفوف الفروق؛ الزيادة في SKU-113 بتقلل صافي العجز."
+        },
+        {
+          "id": "T4",
+          "level": "core",
+          "promptAr": "قيمة المخزون حسب الجرد (الكمية المعدودة × التكلفة الصحيحة) لكل الأصناف.",
+          "functionsEn": [
+            "SUMPRODUCT"
+          ],
+          "expectedOutputs": [
+            {
+              "id": "val",
+              "labelAr": "قيمة المخزون بالجرد",
+              "type": "money",
+              "value": 680643,
+              "tolerance": 0
+            }
+          ],
+          "evidenceLevel": "output-checked",
+          "solutionAr": "=SUMPRODUCT(E2:E21,F2:F21) بعد تصحيح تكلفة SKU-111 إلى 185."
+        }
+      ],
+      "seededDefectsAr": [
+        "4 أصناف فيها فروق جرد (عجز وزيادة)",
+        "صنف رصيده في النظام بالسالب",
+        "صنف تكلفته مكتوبة 1,850 بدل 185"
+      ],
+      "compatibilityNotesAr": [
+        "لو عندك Excel 2016 أو 2019: دالة XLOOKUP مش موجودة — استخدم VLOOKUP أو INDEX/MATCH (نفس النتيجة).",
+        "LibreOffice Calc (مجاني) من إصدار 24.8 فيه XLOOKUP و XMATCH، وبيفتح ملفات xlsx و csv.",
+        "أسماء الدوال بالإنجليزي حتى في Excel العربي. فاصل الوسائط ممكن يكون «,» أو «;» حسب إعدادات المنطقة في ويندوز.",
+        "لو ملف CSV فتح في عمود واحد (بسبب الفاصل)، افتح نسخة xlsx بدلها."
+      ],
+      "skillIds": [
+        "XL.CORE",
+        "INV.CORE",
+        "INV.COST"
+      ]
+    },
+    {
+      "id": "XL-PAY",
+      "track": "payroll",
+      "release": "R2",
+      "titleAr": "الرواتب: مراجعة كشف رواتب مارس قبل الصرف",
+      "briefAr": "كشف رواتب وهمي بأكواد موظفين مخفية. الاستقطاعات توضيحية مش نسب قانونية. راجع الكشف قبل الصرف: تكرار، صافي غلط، وموظف ساب الشغل ولسه بيقبض.",
+      "datasetFiles": [
+        {
+          "path": "/datasets/payroll/payroll_march_dirty.xlsx",
+          "format": "xlsx",
+          "variant": "dirty",
+          "labelAr": "كشف رواتب مارس (Excel)"
+        },
+        {
+          "path": "/datasets/payroll/payroll_march_dirty.csv",
+          "format": "csv",
+          "variant": "dirty",
+          "labelAr": "كشف رواتب مارس (CSV)"
+        }
+      ],
+      "columnDictionary": [
+        {
+          "column": "EmpID",
+          "meaningAr": "كود موظف مخفي (وهمي)",
+          "type": "نص"
+        },
+        {
+          "column": "Gross / Deductions / Net",
+          "meaningAr": "الإجمالي / الاستقطاعات (توضيحية) / الصافي",
+          "type": "رقم"
+        },
+        {
+          "column": "Status / LeaveDate",
+          "meaningAr": "الحالة وتاريخ ترك العمل",
+          "type": "نص/تاريخ"
+        }
+      ],
+      "tasks": [
+        {
+          "id": "T1",
+          "level": "core",
+          "promptAr": "اكتب أكواد الموظفين اللي فيها مشكلة لازم تتحل قبل الصرف (تكرار، صافي ≠ الإجمالي − الاستقطاعات، أو تارك للعمل).",
+          "functionsEn": [
+            "COUNTIF",
+            "IF",
+            "AND"
+          ],
+          "expectedOutputs": [
+            {
+              "id": "exc",
+              "labelAr": "أكواد الموظفين",
+              "type": "id-list",
+              "value": [
+                "EMP-****16",
+                "EMP-****19",
+                "EMP-****22"
+              ],
+              "tolerance": 0
+            }
+          ],
+          "evidenceLevel": "output-checked",
+          "solutionAr": "=IF(COUNTIF(A:A,A2)>1,\"مكرر\",IF(F2<>D2-E2,\"صافي غلط\",IF(G2<>\"نشط\",\"ترك العمل\",\"\")))"
+        },
+        {
+          "id": "T2",
+          "level": "core",
+          "promptAr": "بعد استبعاد المكرر والتارك وتصحيح الصافي: إجمالي الرواتب، وإجمالي الاستقطاعات، وإجمالي الصافي اللي هيتحوّل.",
+          "functionsEn": [
+            "SUMIFS"
+          ],
+          "expectedOutputs": [
+            {
+              "id": "gross",
+              "labelAr": "إجمالي الرواتب",
+              "type": "money",
+              "value": 147000,
+              "tolerance": 0
+            },
+            {
+              "id": "ded",
+              "labelAr": "إجمالي الاستقطاعات",
+              "type": "money",
+              "value": 14700,
+              "tolerance": 0
+            },
+            {
+              "id": "net",
+              "labelAr": "إجمالي الصافي",
+              "type": "money",
+              "value": 132300,
+              "tolerance": 0
+            }
+          ],
+          "evidenceLevel": "output-checked",
+          "solutionAr": "قيد الرواتب: من حـ/ مصروف الرواتب (الإجمالي) إلى مذكورين: حـ/ البنك (الصافي) و حـ/ استقطاعات رواتب مستحقة (الاستقطاعات)."
+        }
+      ],
+      "seededDefectsAr": [
+        "موظف متكرر مرتين",
+        "صافي مش بيساوي الإجمالي − الاستقطاعات",
+        "موظف ترك العمل في فبراير ولسه في كشف مارس"
+      ],
+      "compatibilityNotesAr": [
+        "لو عندك Excel 2016 أو 2019: دالة XLOOKUP مش موجودة — استخدم VLOOKUP أو INDEX/MATCH (نفس النتيجة).",
+        "LibreOffice Calc (مجاني) من إصدار 24.8 فيه XLOOKUP و XMATCH، وبيفتح ملفات xlsx و csv.",
+        "أسماء الدوال بالإنجليزي حتى في Excel العربي. فاصل الوسائط ممكن يكون «,» أو «;» حسب إعدادات المنطقة في ويندوز.",
+        "لو ملف CSV فتح في عمود واحد (بسبب الفاصل)، افتح نسخة xlsx بدلها."
+      ],
+      "skillIds": [
+        "XL.CORE",
+        "PAY.CORE",
+        "CTRL.CORE"
+      ]
+    }
+  ]
+}

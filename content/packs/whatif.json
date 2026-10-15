@@ -1,0 +1,48 @@
+{
+  "pack": "whatif",
+  "pairs": [
+    {
+      "id": "W-CASH-CREDIT",
+      "titleAr": "بيع نقدي مقابل بيع آجل",
+      "baseLabelAr": "بيع آجل (على الحساب)",
+      "altLabelAr": "بيع نقدي (تحويل فوري للبنك)",
+      "contextAr": "بعنا بضاعة بـ 10,000. هل يفرق في الربح لو العميل دفع فورًا أو هيدفع بعدين؟ (قيد التكلفة واحد في الحالتين فاستبعدناه.)",
+      "baseEntries": [ { "descriptionAr": "بيع آجل", "lines": [ { "account": "1201", "side": "debit", "amount": 10000, "party": "C1" }, { "account": "4101", "side": "credit", "amount": 10000 } ] } ],
+      "altEntries": [ { "descriptionAr": "بيع نقدي", "lines": [ { "account": "1103", "side": "debit", "amount": 10000 }, { "account": "4101", "side": "credit", "amount": 10000 } ] } ],
+      "takeawayAr": "الربح واحد في الحالتين (الإيراد اتكسب بالتسليم). اللي بيتغيّر: نوع الأصل — حق عند العميل ولا فلوس في البنك."
+    },
+    {
+      "id": "W-ASSET-EXP",
+      "titleAr": "شراء أصل مقابل تسجيله مصروف فورًا",
+      "baseLabelAr": "تسجيل الطابعة كأصل (أثاث ومعدات)",
+      "altLabelAr": "تسجيلها مصروف فورًا (غلط شائع)",
+      "contextAr": "اشترينا طابعة كبيرة بـ 12,000 هتشتغل 3 سنين.",
+      "baseEntries": [ { "descriptionAr": "شراء طابعة كأصل", "lines": [ { "account": "1501", "side": "debit", "amount": 12000 }, { "account": "1103", "side": "credit", "amount": 12000 } ] } ],
+      "altEntries": [ { "descriptionAr": "تسجيل الطابعة مصروف", "lines": [ { "account": "5206", "side": "debit", "amount": 12000 }, { "account": "1103", "side": "credit", "amount": 12000 } ] } ],
+      "takeawayAr": "النقدية نفسها في الحالتين. لكن تسجيلها مصروف بيقلل الربح 12,000 ويخفي أصل موجود فعلًا من الميزانية."
+    },
+    {
+      "id": "W-PREPAID-EXP",
+      "titleAr": "إيجار مقدم مقابل مصروف الشهر كله",
+      "baseLabelAr": "إيجار مقدم (أصل) واستهلاك شهر واحد",
+      "altLabelAr": "تسجيل الـ 3 شهور مصروف مارس",
+      "contextAr": "دفعنا 18,000 إيجار 3 شهور (مارس–مايو). آخر مارس: إيه أثر كل طريقة؟",
+      "baseEntries": [
+        { "descriptionAr": "دفع الإيجار مقدمًا", "lines": [ { "account": "1401", "side": "debit", "amount": 18000 }, { "account": "1103", "side": "credit", "amount": 18000 } ] },
+        { "descriptionAr": "استهلاك إيجار مارس", "lines": [ { "account": "5201", "side": "debit", "amount": 6000 }, { "account": "1401", "side": "credit", "amount": 6000 } ] }
+      ],
+      "altEntries": [ { "descriptionAr": "تحميل الإيجار كله على مارس", "lines": [ { "account": "5201", "side": "debit", "amount": 18000 }, { "account": "1103", "side": "credit", "amount": 18000 } ] } ],
+      "takeawayAr": "النقدية واحدة. لكن الطريقة الغلط بتحمّل مارس 12,000 زيادة (ربح أقل) وتخفي أصل 12,000 يخص أبريل ومايو."
+    },
+    {
+      "id": "W-COLLECT-REV",
+      "titleAr": "تحصيل من عميل مقابل تسجيله إيراد جديد",
+      "baseLabelAr": "تحصيل (تقليل حساب العميل)",
+      "altLabelAr": "تسجيله مبيعات جديدة (غلط)",
+      "contextAr": "مكتبة النور حوّلت 30,000 من دين قديم عليها.",
+      "baseEntries": [ { "descriptionAr": "تحصيل من C1", "lines": [ { "account": "1103", "side": "debit", "amount": 30000 }, { "account": "1201", "side": "credit", "amount": 30000, "party": "C1" } ] } ],
+      "altEntries": [ { "descriptionAr": "تسجيل التحصيل كمبيعات", "lines": [ { "account": "1103", "side": "debit", "amount": 30000 }, { "account": "4101", "side": "credit", "amount": 30000 } ] } ],
+      "takeawayAr": "النقدية واحدة. الغلط بيسجّل نفس الإيراد مرتين (مرة يوم البيع ومرة يوم التحصيل) فالربح والعملاء يبانوا أكبر من الحقيقة."
+    }
+  ]
+}

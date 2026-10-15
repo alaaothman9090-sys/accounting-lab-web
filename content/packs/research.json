@@ -1,0 +1,666 @@
+{
+  "pack": "research",
+  "claims": [
+    {
+      "accessedAt": "2026-10-13",
+      "jurisdiction": "Egypt",
+      "status": "verified-secondary",
+      "method": "Re-checked 2026-10-13. ETA primary page lists Law 67/2016 and its amendments incl. Law 149/2026 (PDFs). The law PDFs could not be text-extracted by the research tool, so the 14% rate itself was confirmed on secondary professional sources (PwC page reviewed 17 Aug 2026; Deloitte article on Law 149/2026, 3 Aug 2026). The ETA English VAT page has no rate text.",
+      "nextReviewTrigger": "Any new amendment listed on the ETA VAT-laws page; before each content release; a human read of the official PDF text of Law 67/2016 Art. 3 and Law 149/2026.",
+      "usage": "awareness",
+      "id": "CLM-VAT-RATE",
+      "topic": "ضريبة القيمة المضافة",
+      "claimAr": "قانون الضريبة على القيمة المضافة رقم 67 لسنة 2016؛ السعر العام 14%، مع سعر مخفّض لبعض الآلات والمعدات، وصادرات بسعر صفر. القانون اتعدل أكتر من مرة، آخرها القانون رقم 149 لسنة 2026 (منشور في الجريدة الرسمية 28 يوليو 2026)، والمصادر المهنية بتقول إن السعر العام فضل 14%.",
+      "claimEn": "VAT Law No. 67 of 2016; general rate 14%, a reduced rate for certain machinery and equipment, zero-rated exports. Amended several times, most recently by Law No. 149 of 2026 (Official Gazette, 28 July 2026); professional sources state the general rate remains 14%.",
+      "sources": [
+        {
+          "url": "https://www.eta.gov.eg/ar/content/qwanyn-aldrybt-ly-alqymt-almdaft",
+          "title": "قوانين الضريبة على القيمة المضافة (قائمة القانون وتعديلاته)",
+          "publisher": "مصلحة الضرائب المصرية"
+        },
+        {
+          "url": "https://taxsummaries.pwc.com/egypt/corporate/other-taxes",
+          "title": "Egypt — Corporate — Other taxes (last reviewed 17 August 2026)",
+          "publisher": "PwC Worldwide Tax Summaries"
+        },
+        {
+          "url": "https://www.deloitte.com/middle-east/en/services/tax/perspectives/key-changes-to-egypts-vat-law.html",
+          "title": "Key changes to Egypt's VAT law (Law No. 149 of 2026), 3 August 2026",
+          "publisher": "Deloitte Middle East"
+        }
+      ],
+      "scopeAr": "توعية فقط: المفهوم والسعر العام. مش بيغطي الإعفاءات ولا ضريبة الجدول ولا شروط الخصم ولا تفاصيل تعديل 2026.",
+      "evidenceNote": "Primary source confirms the amendment list, not the rate text. PwC states the standard rate is 14%; Deloitte describes Law 149/2026 changes (e.g., 5% for certain medical devices, refund after 4 periods, natural gas moved to schedule tax) and refers to the general 14% rate. Upgrade to verified-primary only after reading Article 3 of the official text."
+    },
+    {
+      "id": "CLM-VAT-NET",
+      "topic": "ضريبة القيمة المضافة — الفكرة",
+      "claimAr": "بشكل مبسط: الضريبة المستحقة = ضريبة المخرجات (على المبيعات) − ضريبة المدخلات القابلة للخصم (على المشتريات)، بشروط يحددها القانون.",
+      "claimEn": "Simplified: net VAT = output VAT − deductible input VAT, subject to statutory conditions.",
+      "sources": [
+        {
+          "url": "https://eg.andersen.com/input-tax/",
+          "title": "Effective Input Tax Strategies Under Egypt's Law No. 67 of 2016 (8 Jul 2024)",
+          "publisher": "Andersen in Egypt"
+        },
+        {
+          "url": "https://taxsummaries.pwc.com/egypt/corporate/other-taxes",
+          "title": "Egypt — Corporate — Other taxes (last reviewed 17 August 2026)",
+          "publisher": "PwC Worldwide Tax Summaries"
+        }
+      ],
+      "accessedAt": "2026-10-14",
+      "jurisdiction": "Egypt",
+      "scopeAr": "تبسيط تعليمي بأرقام وهمية؛ مش إرشاد ضريبي.",
+      "status": "verified-secondary",
+      "method": "Re-checked 2026-10-14. Andersen in Egypt (commentary on Law 67/2016, 8 Jul 2024) states input tax may be deducted up to the tax due, with any excess carried forward; PwC (reviewed 17 Aug 2026) confirms input VAT is not recoverable on exempt or schedule-tax supplies and lists special recovery cases. The official article text was not read.",
+      "evidenceNote": "Teaching simplification of the output − input mechanism; deduction conditions, proportional deduction, exemptions and schedule tax are out of scope. Upgrade to verified-primary only after reading the deduction article of the official text.",
+      "nextReviewTrigger": "With CLM-VAT-RATE.",
+      "usage": "teaching-assumption"
+    },
+    {
+      "id": "CLM-EINVOICE",
+      "topic": "الفاتورة الإلكترونية",
+      "claimAr": "الفاتورة الإلكترونية إلزامية للمسجلين في ضريبة القيمة المضافة من خلال منظومة مصلحة الضرائب على مراحل، بتوقيع إلكتروني، وبتشمل الفواتير وإشعارات الخصم والإضافة.",
+      "claimEn": "E-invoicing is mandatory for VAT-registered businesses through the ETA platform (phased), with e-signature; covers invoices, debit and credit notes.",
+      "sources": [
+        {
+          "url": "https://www.eta.gov.eg/ar/content/e-invoice-services",
+          "title": "خدمات الفاتورة الإلكترونية",
+          "publisher": "مصلحة الضرائب المصرية"
+        },
+        {
+          "url": "https://edicomgroup.com/electronic-invoicing/egypt",
+          "title": "Electronic invoicing in Egypt",
+          "publisher": "EDICOM"
+        },
+        {
+          "url": "https://www.fonoa.com/resources/country-tax-guides/egypt/e-invoicing-and-digital-reporting",
+          "title": "Egypt — e-invoicing and digital reporting",
+          "publisher": "Fonoa"
+        }
+      ],
+      "accessedAt": "2026-10-14",
+      "jurisdiction": "Egypt",
+      "scopeAr": "توعية بالمفهوم فقط؛ مين ملزم وإمتى بيتحدد بقرارات المصلحة.",
+      "status": "verified-secondary",
+      "method": "Re-checked 2026-10-14. The ETA e-invoice services page links the obligation decisions, a fifth-phase inquiry, and the electronic-signature service (no rule text on the page). Coverage of invoices, debit and credit notes, pre-validation and signing with an HSM or USB token is confirmed by independent compliance guides (EDICOM, Fonoa); their phase dates disagree, so no dates are taught.",
+      "evidenceNote": "Official page confirms the obligation-by-decision, phases and e-signature exist; document coverage is from secondary guides. No phase dates or penalties are taught.",
+      "nextReviewTrigger": "New ETA phase decisions.",
+      "usage": "awareness"
+    },
+    {
+      "id": "CLM-ERECEIPT",
+      "topic": "الإيصال الإلكتروني",
+      "claimAr": "الإيصال الإلكتروني (للبيع للمستهلك) بيتطبق على مراحل بقرارات من مصلحة الضرائب بتحدد الممولين الملزمين، والالتزام بيتعرف من خدمة الاستعلام بتاعة المصلحة.",
+      "claimEn": "B2C e-receipts are rolled out in phases by ETA decisions naming obligated taxpayers; obligation is checked through ETA's inquiry service.",
+      "sources": [
+        {
+          "url": "https://www.eta.gov.eg/ar/content/e-receipt-services",
+          "title": "خدمات الإيصال الإلكتروني",
+          "publisher": "مصلحة الضرائب المصرية"
+        },
+        {
+          "url": "https://kpmg.com/us/en/taxnewsflash.html",
+          "title": "TaxNewsFlash (30 July 2025)",
+          "publisher": "KPMG"
+        }
+      ],
+      "accessedAt": "2026-10-14",
+      "effectiveDate": "phased (e.g. Decision 281/2025 effective 15 Sep 2025 per KPMG)",
+      "jurisdiction": "Egypt",
+      "scopeAr": "توعية بالمفهوم فقط.",
+      "status": "verified-primary",
+      "method": "Re-checked 2026-10-14. The ETA e-receipt services page links the obligation decisions (\"قرارات الإلزام بالتعامل بالإيصال الالكترونى\") and an inquiry service for taxpayers named in those decisions; its taxpayer guides are B2C guides. KPMG TaxNewsFlash (30 Jul 2025) reports a phase decision (281/2025, effective 15 Sep 2025).",
+      "evidenceNote": "Mechanism (obligation by decision + inquiry service) is on the official page. Which taxpayers are obligated, and when, is deliberately not taught.",
+      "nextReviewTrigger": "New ETA e-receipt phase decisions.",
+      "usage": "awareness"
+    },
+    {
+      "id": "CLM-WHT",
+      "topic": "الخصم والإضافة",
+      "claimAr": "نظام الخصم والإضافة بيطبق على مدفوعات معينة للموردين المحليين فوق حد معين، ونسبه بتختلف حسب نوع المدفوعات — المصادر المتاحة متعارضة في التفاصيل، فلازم الرجوع لمواد المصلحة الحالية.",
+      "claimEn": "Withholding (khasm wa idafa) applies to certain payments to local suppliers above a threshold; rates depend on payment type — sources conflict on details.",
+      "sources": [
+        {
+          "url": "https://www.eta.gov.eg/",
+          "title": "Egyptian Tax Authority",
+          "publisher": "مصلحة الضرائب المصرية"
+        }
+      ],
+      "accessedAt": "2026-10-12",
+      "jurisdiction": "Egypt",
+      "scopeAr": "بطاقة توعية: «النسب موجودة وبتعتمد على نوع المدفوعات — راجع مواد المصلحة الحالية». ممنوع أي نسبة في أسئلة بدرجات.",
+      "status": "quarantined",
+      "method": "Planner baseline found conflicting secondary figures (3% services vs 1–5% by type).",
+      "evidenceNote": "Conflicting secondary sources; no rate is published in the app.",
+      "nextReviewTrigger": "Find a current primary ETA source stating rates and thresholds.",
+      "usage": "awareness"
+    },
+    {
+      "id": "CLM-XLOOKUP",
+      "topic": "إكسل — XLOOKUP",
+      "claimAr": "دالة XLOOKUP مش موجودة في Excel 2016 و Excel 2019؛ البديل VLOOKUP أو INDEX/MATCH. و LibreOffice Calc من إصدار 24.8 فيه XLOOKUP.",
+      "claimEn": "XLOOKUP is not available in Excel 2016 or 2019 (use VLOOKUP or INDEX/MATCH); LibreOffice Calc 24.8+ supports XLOOKUP.",
+      "sources": [
+        {
+          "url": "https://support.microsoft.com/en-us/office/xlookup-function-b7fd680e-6d10-43e6-84f9-88eae8bf5929",
+          "title": "XLOOKUP function",
+          "publisher": "Microsoft Support"
+        },
+        {
+          "url": "https://wiki.documentfoundation.org/ReleaseNotes/24.8",
+          "title": "LibreOffice 24.8 Release Notes",
+          "publisher": "The Document Foundation"
+        },
+        {
+          "url": "https://www.phoronix.com/news/LibreOffice-24.8-Released",
+          "title": "LibreOffice 24.8 Delivers Many Advancements (22 Aug 2024)",
+          "publisher": "Phoronix"
+        }
+      ],
+      "accessedAt": "2026-10-14",
+      "scopeAr": "توافق نسخ البرامج.",
+      "status": "verified-primary",
+      "method": "Re-checked 2026-10-14. Microsoft Support XLOOKUP page states verbatim that XLOOKUP is not available in Excel 2016 and Excel 2019 (its \"Applies to\" list still names them — the note is authoritative). LibreOffice part: the Document Foundation wiki and Bugzilla refused automated access; tdf#127293 (Add XLOOKUP) is listed as resolved for 24.8.0 in search results, and release coverage (Phoronix, Linuxiac, Debugpoint, Aug 2024) lists XLOOKUP and XMATCH among the new Calc functions.",
+      "evidenceNote": "Excel part: vendor primary text. LibreOffice part: vendor bug tracker (via search index) + independent release coverage; the official release-notes page itself was not readable by the research tool.",
+      "nextReviewTrigger": "New Excel/LibreOffice versions.",
+      "usage": "teaching-assumption"
+    },
+    {
+      "id": "CLM-ODOO",
+      "topic": "Odoo",
+      "claimAr": "Odoo Community مفتوح المصدر (رخصة LGPL الإصدار 3) وتقدر تستضيفه بنفسك ببلاش (بس عليك تكلفة ومجهود الاستضافة)، وEnterprise برخصة Odoo التجارية ومدفوع بالمستخدم في الشهر. على Odoo Online فيه خطة «One App Free»: تطبيق واحد لعدد غير محدود من المستخدمين، ولو ركّبت تطبيق تاني بتتحول لخطة مدفوعة. الأسعار والشروط بتتغير — راجع صفحة الأسعار قبل أي قرار.",
+      "claimEn": "Odoo Community is open source (LGPL v3) and free to self-host (hosting cost and effort apply); Enterprise uses the Odoo Enterprise Edition License and is paid per user per month. Odoo Online offers a 'One App Free' plan (one app, unlimited users); installing a second app moves you to a paid plan. Prices and terms change — check the pricing page before any decision.",
+      "sources": [
+        {
+          "url": "https://www.odoo.com/documentation/18.0/legal/licenses.html",
+          "title": "Licenses (Odoo 18 documentation)",
+          "publisher": "Odoo S.A."
+        },
+        {
+          "url": "https://www.odoo.com/pricing",
+          "title": "Pricing",
+          "publisher": "Odoo S.A."
+        },
+        {
+          "url": "https://www.odoo.com/page/editions",
+          "title": "Odoo Editions",
+          "publisher": "Odoo S.A."
+        }
+      ],
+      "accessedAt": "2026-10-14",
+      "scopeAr": "توعية بالأدوات؛ مش توصية شراء.",
+      "status": "verified-primary",
+      "method": "Re-checked 2026-10-14 on odoo.com: the Odoo 18 licences page states Community is licensed under LGPL version 3 and Enterprise under the Odoo Enterprise Edition License v1.0; the pricing page lists \"One App Free\" at $0 (one app, unlimited users, Odoo Online) and per-user monthly Standard/Custom plans.",
+      "evidenceNote": "Vendor primary pages. Specific prices are deliberately not taught (they change and are region-dependent).",
+      "nextReviewTrigger": "Before recommending any hands-on Odoo workflow; any new major Odoo version; before each content release.",
+      "usage": "awareness"
+    },
+    {
+      "accessedAt": "2026-10-13",
+      "jurisdiction": "Egypt",
+      "status": "verified-secondary",
+      "method": "Manual review of 12 accessible Egyptian entry-level ads (Wuzzuf, Forasna, Workable) opened individually on 2026-10-13; counts made by W5 from the ad pages.",
+      "nextReviewTrigger": "Refresh the job snapshot every 3 months or before a career-content release; ads close quickly.",
+      "usage": "awareness",
+      "id": "CLM-JOB-EXCEL",
+      "topic": "سوق العمل — إكسل",
+      "claimAr": "في عينة 12 إعلان مصري لوظائف محاسبة مبتدئة: Excel اتذكر بالاسم في 7 إعلانات، وMicrosoft Office بشكل عام في 3 (واحد منهم ذكر الاتنين)، يعني إكسل أو أوفيس ظهر في 9 من 12. الجداول المحورية (PivotTable) اتذكرت صراحة في إعلان واحد.",
+      "claimEn": "In a sample of 12 Egyptian entry-level accounting ads, Excel was named in 7, Microsoft Office generically in 3 (one ad named both), so Excel or Office appeared in 9 of 12. PivotTables were named explicitly in 1 ad.",
+      "sources": [
+        {
+          "url": "https://wuzzuf.net/jobs/p/lyvjclqcfc7k-junior-accountant-statements-consulting-cairo-egypt",
+          "title": "Junior Accountant — Statements Consulting (JE-01)",
+          "publisher": "Wuzzuf"
+        },
+        {
+          "url": "https://wuzzuf.net/jobs/p/32xmhdaj2dpc-junior-accountant-elite-comfort-cairo-egypt",
+          "title": "Junior Accountant — Elite Comfort (JE-02)",
+          "publisher": "Wuzzuf"
+        },
+        {
+          "url": "https://apply.workable.com/petroapp/jobs/view/4ED6F5047F",
+          "title": "Junior Accountant — PetroApp (JE-03)",
+          "publisher": "Workable (صفحة توظيف الشركة)"
+        },
+        {
+          "url": "https://forasna.com/job/p/%D9%85%D8%AD%D8%A7%D8%B3%D8%A8-%D9%85%D8%B5%D8%B1-%D8%A5%D9%83%D8%B3%D8%A8%D8%B1%D9%8A%D8%B3-%D9%84%D9%84%D8%AA%D8%AC%D8%A7%D8%B1%D8%A9-%D9%88-%D8%A7%D9%84%D8%AA%D9%88%D8%B2%D9%8A%D8%B9-%D9%85%D8%B5%D8%B1-%D8%A7%D9%84%D9%82%D8%A7%D9%87%D8%B1%D8%A9-442969",
+          "title": "محاسب — مصر إكسبريس للتجارة والتوزيع (JE-04)",
+          "publisher": "Forasna"
+        },
+        {
+          "url": "https://wuzzuf.net/jobs/p/uf3qxwpttfku-collection-specialist-talaat-moustafa-group-cairo-egypt",
+          "title": "Collection Specialist — Talaat Moustafa Group (JE-07)",
+          "publisher": "Wuzzuf"
+        },
+        {
+          "url": "https://wuzzuf.net/jobs/p/oisuaak9gkdu-collection-invoicing-specialist-ship-c-r-e-w-alexandria-egypt",
+          "title": "Collection & Invoicing Specialist — Ship & C.R.E.W (JE-08)",
+          "publisher": "Wuzzuf"
+        },
+        {
+          "url": "https://wuzzuf.net/jobs/p/ndrvdf7qmwfz-treasury-accountant-gb-corp-cairo-egypt",
+          "title": "Treasury Accountant — GB Corp (JE-10)",
+          "publisher": "Wuzzuf"
+        },
+        {
+          "url": "https://wuzzuf.net/jobs/p/auipmlhazpwd-inventory-control-accountant-fb-10th-of-ramadan-alwafaa-food-industries-cairo-egypt",
+          "title": "Inventory Control Accountant — Alwafaa Food Industries (JE-11)",
+          "publisher": "Wuzzuf"
+        },
+        {
+          "url": "https://forasna.com/job/p/%D9%83%D8%A7%D8%B4%D9%8A%D8%B1-%D9%85%D8%A4%D9%87%D9%84-%D8%B9%D8%A7%D9%84%D9%8A-%D9%81%D9%82%D8%B7-%D8%A7%D9%84%D9%83%D9%8A%D8%A7%D9%86-%D9%85%D8%B5%D8%B1-%D8%A7%D9%84%D9%82%D8%A7%D9%87%D8%B1%D8%A9-443069",
+          "title": "كاشير (مؤهل عالي فقط) — الكيان (JE-12)",
+          "publisher": "Forasna"
+        }
+      ],
+      "scopeAr": "وصف لعينة 12 إعلان اتقرت يوم 2026-10-13 بس؛ مش نسبة في سوق العمل ومش بتتعمم.",
+      "evidenceNote": "Excel: JE-01, JE-02, JE-03, JE-07, JE-08, JE-10, JE-11. Office only: JE-04, JE-12 (JE-01 names both). No office tool named: JE-05, JE-06, JE-09. PivotTable: JE-02."
+    },
+    {
+      "accessedAt": "2026-10-13",
+      "jurisdiction": "Egypt",
+      "status": "verified-secondary",
+      "method": "Manual review of 12 accessible Egyptian entry-level ads (Wuzzuf, Forasna, Workable) opened individually on 2026-10-13; counts made by W5 from the ad pages.",
+      "nextReviewTrigger": "Refresh the job snapshot every 3 months or before a career-content release; ads close quickly.",
+      "usage": "awareness",
+      "id": "CLM-JOB-ERP",
+      "topic": "سوق العمل — أنظمة ERP",
+      "claimAr": "في نفس العينة (12 إعلان): 6 إعلانات طلبت أو ذكرت نظام محاسبي أو ERP. Odoo اتذكر في 3 (مطلوب «must» في واحد، وميزة في واحد، ومثال جنب SAP وOracle في واحد)، وSAP في 1، وOracle في 1، وXero وQuickBooks في 1. نوع الـ ERP مش محدد في إعلانين.",
+      "claimEn": "In the same 12-ad sample, 6 ads required or mentioned an ERP/accounting system. Odoo appeared in 3 (a must in 1, a plus in 1, listed with SAP and Oracle in 1); SAP in 1; Oracle in 1; Xero and QuickBooks in 1. Two ads did not name the system.",
+      "sources": [
+        {
+          "url": "https://wuzzuf.net/jobs/p/lyvjclqcfc7k-junior-accountant-statements-consulting-cairo-egypt",
+          "title": "Junior Accountant — Statements Consulting (JE-01)",
+          "publisher": "Wuzzuf"
+        },
+        {
+          "url": "https://wuzzuf.net/jobs/p/32xmhdaj2dpc-junior-accountant-elite-comfort-cairo-egypt",
+          "title": "Junior Accountant — Elite Comfort (JE-02)",
+          "publisher": "Wuzzuf"
+        },
+        {
+          "url": "https://apply.workable.com/petroapp/jobs/view/4ED6F5047F",
+          "title": "Junior Accountant — PetroApp (JE-03)",
+          "publisher": "Workable (صفحة توظيف الشركة)"
+        },
+        {
+          "url": "https://wuzzuf.net/jobs/p/op6hj6z9ymwt-accounts-receivable-accountant-ar-specialist-mg-cairo-egypt",
+          "title": "Accounts Receivable Accountant (AR Specialist) — MG (JE-06)",
+          "publisher": "Wuzzuf"
+        },
+        {
+          "url": "https://wuzzuf.net/jobs/p/jp0qgov2gwm5-accounts-payable-accountant-hyma-plastic-cairo-egypt",
+          "title": "Accounts Payable Accountant — Hyma Plastic (JE-09)",
+          "publisher": "Wuzzuf"
+        },
+        {
+          "url": "https://wuzzuf.net/jobs/p/auipmlhazpwd-inventory-control-accountant-fb-10th-of-ramadan-alwafaa-food-industries-cairo-egypt",
+          "title": "Inventory Control Accountant — Alwafaa Food Industries (JE-11)",
+          "publisher": "Wuzzuf"
+        }
+      ],
+      "scopeAr": "وصف لعينة 12 إعلان اتقرت يوم 2026-10-13 بس؛ مش نسبة في سوق العمل ومش بتتعمم. بيأكد إن Odoo أكتر ERP اتذكر في العينة، بس العدد صغير (3 من 12).",
+      "evidenceNote": "ERP/system: JE-01 (ERP required, Odoo plus), JE-02 (Xero/QuickBooks), JE-03 (Odoo must), JE-06 (ERP unnamed), JE-09 (SAP/Oracle/Odoo), JE-11 (ERP preferred, unnamed)."
+    },
+    {
+      "accessedAt": "2026-10-13",
+      "jurisdiction": "Egypt",
+      "status": "verified-secondary",
+      "method": "Manual review of 12 accessible Egyptian entry-level ads (Wuzzuf, Forasna, Workable) opened individually on 2026-10-13; counts made by W5 from the ad pages.",
+      "nextReviewTrigger": "Refresh the job snapshot every 3 months or before a career-content release; ads close quickly.",
+      "usage": "awareness",
+      "id": "CLM-JOB-DEGREE",
+      "topic": "سوق العمل — المؤهل",
+      "claimAr": "في العينة (12 إعلان): 5 إعلانات طلبت بكالوريوس محاسبة/مالية/تجارة «أو مجال مرتبط»، و5 طلبت تجارة أو محاسبة أو مالية تحديدًا (منها 2 بشرط الشعبة الإنجليزي)، و2 طلبوا أي مؤهل عالي أو بكالوريوس من غير تخصص. ولا إعلان ذكر ليسانس الحقوق صراحة.",
+      "claimEn": "In the 12-ad sample, 5 ads asked for an accounting/finance/commerce degree \"or a related field\", 5 required commerce, accounting or finance specifically (2 of them the English section), and 2 accepted any bachelor's or higher degree. No ad mentioned a law degree.",
+      "sources": [
+        {
+          "url": "https://wuzzuf.net/jobs/p/lyvjclqcfc7k-junior-accountant-statements-consulting-cairo-egypt",
+          "title": "Junior Accountant — Statements Consulting (JE-01)",
+          "publisher": "Wuzzuf"
+        },
+        {
+          "url": "https://wuzzuf.net/jobs/p/32xmhdaj2dpc-junior-accountant-elite-comfort-cairo-egypt",
+          "title": "Junior Accountant — Elite Comfort (JE-02)",
+          "publisher": "Wuzzuf"
+        },
+        {
+          "url": "https://apply.workable.com/petroapp/jobs/view/4ED6F5047F",
+          "title": "Junior Accountant — PetroApp (JE-03)",
+          "publisher": "Workable (صفحة توظيف الشركة)"
+        },
+        {
+          "url": "https://forasna.com/job/p/%D9%85%D8%AD%D8%A7%D8%B3%D8%A8-%D9%85%D8%B5%D8%B1-%D8%A5%D9%83%D8%B3%D8%A8%D8%B1%D9%8A%D8%B3-%D9%84%D9%84%D8%AA%D8%AC%D8%A7%D8%B1%D8%A9-%D9%88-%D8%A7%D9%84%D8%AA%D9%88%D8%B2%D9%8A%D8%B9-%D9%85%D8%B5%D8%B1-%D8%A7%D9%84%D9%82%D8%A7%D9%87%D8%B1%D8%A9-442969",
+          "title": "محاسب — مصر إكسبريس للتجارة والتوزيع (JE-04)",
+          "publisher": "Forasna"
+        },
+        {
+          "url": "https://wuzzuf.net/jobs/p/mjplkz5e6czr-ar-accountant-raya-distribution-cairo-egypt",
+          "title": "AR Accountant — Raya Distribution (JE-05)",
+          "publisher": "Wuzzuf"
+        },
+        {
+          "url": "https://wuzzuf.net/jobs/p/op6hj6z9ymwt-accounts-receivable-accountant-ar-specialist-mg-cairo-egypt",
+          "title": "Accounts Receivable Accountant (AR Specialist) — MG (JE-06)",
+          "publisher": "Wuzzuf"
+        },
+        {
+          "url": "https://wuzzuf.net/jobs/p/uf3qxwpttfku-collection-specialist-talaat-moustafa-group-cairo-egypt",
+          "title": "Collection Specialist — Talaat Moustafa Group (JE-07)",
+          "publisher": "Wuzzuf"
+        },
+        {
+          "url": "https://wuzzuf.net/jobs/p/oisuaak9gkdu-collection-invoicing-specialist-ship-c-r-e-w-alexandria-egypt",
+          "title": "Collection & Invoicing Specialist — Ship & C.R.E.W (JE-08)",
+          "publisher": "Wuzzuf"
+        },
+        {
+          "url": "https://wuzzuf.net/jobs/p/jp0qgov2gwm5-accounts-payable-accountant-hyma-plastic-cairo-egypt",
+          "title": "Accounts Payable Accountant — Hyma Plastic (JE-09)",
+          "publisher": "Wuzzuf"
+        },
+        {
+          "url": "https://wuzzuf.net/jobs/p/ndrvdf7qmwfz-treasury-accountant-gb-corp-cairo-egypt",
+          "title": "Treasury Accountant — GB Corp (JE-10)",
+          "publisher": "Wuzzuf"
+        },
+        {
+          "url": "https://wuzzuf.net/jobs/p/auipmlhazpwd-inventory-control-accountant-fb-10th-of-ramadan-alwafaa-food-industries-cairo-egypt",
+          "title": "Inventory Control Accountant — Alwafaa Food Industries (JE-11)",
+          "publisher": "Wuzzuf"
+        },
+        {
+          "url": "https://forasna.com/job/p/%D9%83%D8%A7%D8%B4%D9%8A%D8%B1-%D9%85%D8%A4%D9%87%D9%84-%D8%B9%D8%A7%D9%84%D9%8A-%D9%81%D9%82%D8%B7-%D8%A7%D9%84%D9%83%D9%8A%D8%A7%D9%86-%D9%85%D8%B5%D8%B1-%D8%A7%D9%84%D9%82%D8%A7%D9%87%D8%B1%D8%A9-443069",
+          "title": "كاشير (مؤهل عالي فقط) — الكيان (JE-12)",
+          "publisher": "Forasna"
+        }
+      ],
+      "scopeAr": "وصف لعينة 12 إعلان اتقرت يوم 2026-10-13 بس؛ مش نسبة في سوق العمل ومش بتتعمم. هل «مجال مرتبط» بيشمل الحقوق؟ ده قرار صاحب العمل ومش معروف من العينة.",
+      "evidenceNote": "Related field: JE-01, JE-02, JE-03, JE-08, JE-10. Specific: JE-04, JE-05 (English section), JE-06, JE-09 (Commerce English section or international trade/logistics), JE-11. Any degree: JE-07, JE-12."
+    },
+    {
+      "accessedAt": "2026-10-13",
+      "jurisdiction": "Egypt",
+      "status": "verified-secondary",
+      "method": "Manual review of 12 accessible Egyptian entry-level ads (Wuzzuf, Forasna, Workable) opened individually on 2026-10-13; counts made by W5 from the ad pages.",
+      "nextReviewTrigger": "Refresh the job snapshot every 3 months or before a career-content release; ads close quickly.",
+      "usage": "awareness",
+      "id": "CLM-JOB-YEARS",
+      "topic": "سوق العمل — سنين الخبرة",
+      "claimAr": "في العينة (12 إعلان): 5 إعلانات بتقبل صراحة صفر خبرة أو حديثي التخرج في نص الإعلان، و2 بطاقتهم بتقول 0–2 سنة لكن النص بيطلب أو بيفضّل خبرة، و5 بيطلبوا سنة على الأقل. في 3 إعلانات فيه تعارض بين بطاقة الإعلان ونص المتطلبات.",
+      "claimEn": "In the 12-ad sample, 5 ads explicitly accept zero experience or fresh graduates in the ad text, 2 show 0–2 years on the card but ask for or prefer experience in the text, and 5 require at least 1 year. Three ads show a mismatch between the card and the requirements text.",
+      "sources": [
+        {
+          "url": "https://wuzzuf.net/jobs/p/lyvjclqcfc7k-junior-accountant-statements-consulting-cairo-egypt",
+          "title": "Junior Accountant — Statements Consulting (JE-01)",
+          "publisher": "Wuzzuf"
+        },
+        {
+          "url": "https://wuzzuf.net/jobs/p/32xmhdaj2dpc-junior-accountant-elite-comfort-cairo-egypt",
+          "title": "Junior Accountant — Elite Comfort (JE-02)",
+          "publisher": "Wuzzuf"
+        },
+        {
+          "url": "https://apply.workable.com/petroapp/jobs/view/4ED6F5047F",
+          "title": "Junior Accountant — PetroApp (JE-03)",
+          "publisher": "Workable (صفحة توظيف الشركة)"
+        },
+        {
+          "url": "https://forasna.com/job/p/%D9%85%D8%AD%D8%A7%D8%B3%D8%A8-%D9%85%D8%B5%D8%B1-%D8%A5%D9%83%D8%B3%D8%A8%D8%B1%D9%8A%D8%B3-%D9%84%D9%84%D8%AA%D8%AC%D8%A7%D8%B1%D8%A9-%D9%88-%D8%A7%D9%84%D8%AA%D9%88%D8%B2%D9%8A%D8%B9-%D9%85%D8%B5%D8%B1-%D8%A7%D9%84%D9%82%D8%A7%D9%87%D8%B1%D8%A9-442969",
+          "title": "محاسب — مصر إكسبريس للتجارة والتوزيع (JE-04)",
+          "publisher": "Forasna"
+        },
+        {
+          "url": "https://wuzzuf.net/jobs/p/mjplkz5e6czr-ar-accountant-raya-distribution-cairo-egypt",
+          "title": "AR Accountant — Raya Distribution (JE-05)",
+          "publisher": "Wuzzuf"
+        },
+        {
+          "url": "https://wuzzuf.net/jobs/p/op6hj6z9ymwt-accounts-receivable-accountant-ar-specialist-mg-cairo-egypt",
+          "title": "Accounts Receivable Accountant (AR Specialist) — MG (JE-06)",
+          "publisher": "Wuzzuf"
+        },
+        {
+          "url": "https://wuzzuf.net/jobs/p/uf3qxwpttfku-collection-specialist-talaat-moustafa-group-cairo-egypt",
+          "title": "Collection Specialist — Talaat Moustafa Group (JE-07)",
+          "publisher": "Wuzzuf"
+        },
+        {
+          "url": "https://wuzzuf.net/jobs/p/oisuaak9gkdu-collection-invoicing-specialist-ship-c-r-e-w-alexandria-egypt",
+          "title": "Collection & Invoicing Specialist — Ship & C.R.E.W (JE-08)",
+          "publisher": "Wuzzuf"
+        },
+        {
+          "url": "https://wuzzuf.net/jobs/p/jp0qgov2gwm5-accounts-payable-accountant-hyma-plastic-cairo-egypt",
+          "title": "Accounts Payable Accountant — Hyma Plastic (JE-09)",
+          "publisher": "Wuzzuf"
+        },
+        {
+          "url": "https://wuzzuf.net/jobs/p/ndrvdf7qmwfz-treasury-accountant-gb-corp-cairo-egypt",
+          "title": "Treasury Accountant — GB Corp (JE-10)",
+          "publisher": "Wuzzuf"
+        },
+        {
+          "url": "https://wuzzuf.net/jobs/p/auipmlhazpwd-inventory-control-accountant-fb-10th-of-ramadan-alwafaa-food-industries-cairo-egypt",
+          "title": "Inventory Control Accountant — Alwafaa Food Industries (JE-11)",
+          "publisher": "Wuzzuf"
+        },
+        {
+          "url": "https://forasna.com/job/p/%D9%83%D8%A7%D8%B4%D9%8A%D8%B1-%D9%85%D8%A4%D9%87%D9%84-%D8%B9%D8%A7%D9%84%D9%8A-%D9%81%D9%82%D8%B7-%D8%A7%D9%84%D9%83%D9%8A%D8%A7%D9%86-%D9%85%D8%B5%D8%B1-%D8%A7%D9%84%D9%82%D8%A7%D9%87%D8%B1%D8%A9-443069",
+          "title": "كاشير (مؤهل عالي فقط) — الكيان (JE-12)",
+          "publisher": "Forasna"
+        }
+      ],
+      "scopeAr": "وصف لعينة 12 إعلان اتقرت يوم 2026-10-13 بس؛ مش نسبة في سوق العمل ومش بتتعمم.",
+      "evidenceNote": "Zero/fresh accepted in text: JE-02, JE-03, JE-04, JE-07, JE-10. Card 0–2 but text asks/prefers more: JE-01 (1–3), JE-09. Minimum 1 year: JE-05, JE-06, JE-08, JE-11, JE-12. Card/text mismatch: JE-01, JE-04, JE-09."
+    },
+    {
+      "accessedAt": "2026-10-13",
+      "jurisdiction": "Egypt",
+      "status": "verified-secondary",
+      "method": "Manual review of 12 accessible Egyptian entry-level ads (Wuzzuf, Forasna, Workable) opened individually on 2026-10-13; counts made by W5 from the ad pages.",
+      "nextReviewTrigger": "Refresh the job snapshot every 3 months or before a career-content release; ads close quickly.",
+      "usage": "awareness",
+      "id": "CLM-JOB-ENGLISH",
+      "topic": "سوق العمل — الإنجليزي",
+      "claimAr": "في العينة (12 إعلان): 3 إعلانات طلبت الإنجليزي صراحة (مستوى «جيد» أو مصطلحات محاسبية بالعربي والإنجليزي)، و2 طلبوا مؤهل من الشعبة الإنجليزي، و7 ما ذكروش اللغة.",
+      "claimEn": "In the 12-ad sample, 3 ads asked for English explicitly (\"good\" level or accounting terms in Arabic and English), 2 required an English-section degree, and 7 did not mention language.",
+      "sources": [
+        {
+          "url": "https://forasna.com/job/p/%D9%85%D8%AD%D8%A7%D8%B3%D8%A8-%D9%85%D8%B5%D8%B1-%D8%A5%D9%83%D8%B3%D8%A8%D8%B1%D9%8A%D8%B3-%D9%84%D9%84%D8%AA%D8%AC%D8%A7%D8%B1%D8%A9-%D9%88-%D8%A7%D9%84%D8%AA%D9%88%D8%B2%D9%8A%D8%B9-%D9%85%D8%B5%D8%B1-%D8%A7%D9%84%D9%82%D8%A7%D9%87%D8%B1%D8%A9-442969",
+          "title": "محاسب — مصر إكسبريس للتجارة والتوزيع (JE-04)",
+          "publisher": "Forasna"
+        },
+        {
+          "url": "https://wuzzuf.net/jobs/p/mjplkz5e6czr-ar-accountant-raya-distribution-cairo-egypt",
+          "title": "AR Accountant — Raya Distribution (JE-05)",
+          "publisher": "Wuzzuf"
+        },
+        {
+          "url": "https://wuzzuf.net/jobs/p/op6hj6z9ymwt-accounts-receivable-accountant-ar-specialist-mg-cairo-egypt",
+          "title": "Accounts Receivable Accountant (AR Specialist) — MG (JE-06)",
+          "publisher": "Wuzzuf"
+        },
+        {
+          "url": "https://wuzzuf.net/jobs/p/jp0qgov2gwm5-accounts-payable-accountant-hyma-plastic-cairo-egypt",
+          "title": "Accounts Payable Accountant — Hyma Plastic (JE-09)",
+          "publisher": "Wuzzuf"
+        },
+        {
+          "url": "https://forasna.com/job/p/%D9%83%D8%A7%D8%B4%D9%8A%D8%B1-%D9%85%D8%A4%D9%87%D9%84-%D8%B9%D8%A7%D9%84%D9%8A-%D9%81%D9%82%D8%B7-%D8%A7%D9%84%D9%83%D9%8A%D8%A7%D9%86-%D9%85%D8%B5%D8%B1-%D8%A7%D9%84%D9%82%D8%A7%D9%87%D8%B1%D8%A9-443069",
+          "title": "كاشير (مؤهل عالي فقط) — الكيان (JE-12)",
+          "publisher": "Forasna"
+        }
+      ],
+      "scopeAr": "وصف لعينة 12 إعلان اتقرت يوم 2026-10-13 بس؛ مش نسبة في سوق العمل ومش بتتعمم.",
+      "evidenceNote": "Explicit English: JE-04, JE-06, JE-12. English-section degree: JE-05, JE-09. Not stated: JE-01, JE-02, JE-03, JE-07, JE-08, JE-10, JE-11."
+    },
+    {
+      "accessedAt": "2026-10-13",
+      "jurisdiction": "Egypt",
+      "status": "verified-secondary",
+      "method": "Manual review of 12 accessible Egyptian entry-level ads (Wuzzuf, Forasna, Workable) opened individually on 2026-10-13; counts made by W5 from the ad pages.",
+      "nextReviewTrigger": "Refresh the job snapshot every 3 months or before a career-content release; ads close quickly.",
+      "usage": "awareness",
+      "id": "CLM-JOB-DUTIES",
+      "topic": "سوق العمل — المهام المتكررة",
+      "claimAr": "في العينة (12 إعلان): 8 إعلانات فيها مهمة مطابقة أو تسوية من نوع ما (بنك، عملاء، موردين، مخزون، منصات دفع)، منها 3 تسوية بنكية بالاسم؛ و6 فيها حسابات عملاء أو تحصيل؛ و4 فيها حسابات موردين أو فواتير موردين؛ و5 فيها دعم الإقفال الشهري أو التقارير المالية الدورية؛ و3 فيها تواصل مباشر مع العملاء على الفواتير أو المتأخرات.",
+      "claimEn": "In the 12-ad sample, 8 ads include some reconciliation or matching task (bank, customers, suppliers, stock or payment platforms), 3 of them bank reconciliation by name; 6 include receivables or collections; 4 include payables or supplier invoices; 5 include month-end close or periodic financial-reporting support; 3 include direct customer contact about invoices or overdue balances.",
+      "sources": [
+        {
+          "url": "https://wuzzuf.net/jobs/p/lyvjclqcfc7k-junior-accountant-statements-consulting-cairo-egypt",
+          "title": "Junior Accountant — Statements Consulting (JE-01)",
+          "publisher": "Wuzzuf"
+        },
+        {
+          "url": "https://wuzzuf.net/jobs/p/32xmhdaj2dpc-junior-accountant-elite-comfort-cairo-egypt",
+          "title": "Junior Accountant — Elite Comfort (JE-02)",
+          "publisher": "Wuzzuf"
+        },
+        {
+          "url": "https://apply.workable.com/petroapp/jobs/view/4ED6F5047F",
+          "title": "Junior Accountant — PetroApp (JE-03)",
+          "publisher": "Workable (صفحة توظيف الشركة)"
+        },
+        {
+          "url": "https://forasna.com/job/p/%D9%85%D8%AD%D8%A7%D8%B3%D8%A8-%D9%85%D8%B5%D8%B1-%D8%A5%D9%83%D8%B3%D8%A8%D8%B1%D9%8A%D8%B3-%D9%84%D9%84%D8%AA%D8%AC%D8%A7%D8%B1%D8%A9-%D9%88-%D8%A7%D9%84%D8%AA%D9%88%D8%B2%D9%8A%D8%B9-%D9%85%D8%B5%D8%B1-%D8%A7%D9%84%D9%82%D8%A7%D9%87%D8%B1%D8%A9-442969",
+          "title": "محاسب — مصر إكسبريس للتجارة والتوزيع (JE-04)",
+          "publisher": "Forasna"
+        },
+        {
+          "url": "https://wuzzuf.net/jobs/p/mjplkz5e6czr-ar-accountant-raya-distribution-cairo-egypt",
+          "title": "AR Accountant — Raya Distribution (JE-05)",
+          "publisher": "Wuzzuf"
+        },
+        {
+          "url": "https://wuzzuf.net/jobs/p/op6hj6z9ymwt-accounts-receivable-accountant-ar-specialist-mg-cairo-egypt",
+          "title": "Accounts Receivable Accountant (AR Specialist) — MG (JE-06)",
+          "publisher": "Wuzzuf"
+        },
+        {
+          "url": "https://wuzzuf.net/jobs/p/uf3qxwpttfku-collection-specialist-talaat-moustafa-group-cairo-egypt",
+          "title": "Collection Specialist — Talaat Moustafa Group (JE-07)",
+          "publisher": "Wuzzuf"
+        },
+        {
+          "url": "https://wuzzuf.net/jobs/p/oisuaak9gkdu-collection-invoicing-specialist-ship-c-r-e-w-alexandria-egypt",
+          "title": "Collection & Invoicing Specialist — Ship & C.R.E.W (JE-08)",
+          "publisher": "Wuzzuf"
+        },
+        {
+          "url": "https://wuzzuf.net/jobs/p/jp0qgov2gwm5-accounts-payable-accountant-hyma-plastic-cairo-egypt",
+          "title": "Accounts Payable Accountant — Hyma Plastic (JE-09)",
+          "publisher": "Wuzzuf"
+        },
+        {
+          "url": "https://wuzzuf.net/jobs/p/ndrvdf7qmwfz-treasury-accountant-gb-corp-cairo-egypt",
+          "title": "Treasury Accountant — GB Corp (JE-10)",
+          "publisher": "Wuzzuf"
+        },
+        {
+          "url": "https://wuzzuf.net/jobs/p/auipmlhazpwd-inventory-control-accountant-fb-10th-of-ramadan-alwafaa-food-industries-cairo-egypt",
+          "title": "Inventory Control Accountant — Alwafaa Food Industries (JE-11)",
+          "publisher": "Wuzzuf"
+        },
+        {
+          "url": "https://forasna.com/job/p/%D9%83%D8%A7%D8%B4%D9%8A%D8%B1-%D9%85%D8%A4%D9%87%D9%84-%D8%B9%D8%A7%D9%84%D9%8A-%D9%81%D9%82%D8%B7-%D8%A7%D9%84%D9%83%D9%8A%D8%A7%D9%86-%D9%85%D8%B5%D8%B1-%D8%A7%D9%84%D9%82%D8%A7%D9%87%D8%B1%D8%A9-443069",
+          "title": "كاشير (مؤهل عالي فقط) — الكيان (JE-12)",
+          "publisher": "Forasna"
+        }
+      ],
+      "scopeAr": "وصف لعينة 12 إعلان اتقرت يوم 2026-10-13 بس؛ مش نسبة في سوق العمل ومش بتتعمم. التصنيف من قراءة W5 لنص المهام.",
+      "evidenceNote": "Reconciliation: JE-01, JE-02, JE-03, JE-05, JE-06, JE-09, JE-10, JE-11 (bank by name: JE-01, JE-05, JE-10). AR/collections: JE-01, JE-03, JE-05, JE-06, JE-07, JE-08. AP: JE-01, JE-02, JE-03, JE-09. Financial reporting/close: JE-01, JE-02, JE-03, JE-09, JE-10. Customer contact: JE-06, JE-07, JE-08."
+    },
+    {
+      "accessedAt": "2026-10-13",
+      "jurisdiction": "Egypt",
+      "status": "verified-secondary",
+      "method": "Manual review of 12 accessible Egyptian entry-level ads (Wuzzuf, Forasna, Workable) opened individually on 2026-10-13; counts made by W5 from the ad pages.",
+      "nextReviewTrigger": "Refresh the job snapshot every 3 months or before a career-content release; ads close quickly.",
+      "usage": "awareness",
+      "id": "CLM-JOB-RESTRICT",
+      "topic": "سوق العمل — قيود شكلية",
+      "claimAr": "في العينة (12 إعلان): إعلانين فيهم قيود شكلية صريحة غير المؤهل والخبرة: واحد «ذكور فقط» وسن من 23 لـ 28، وواحد سن من 22 لـ 32 وإنهاء الخدمة العسكرية للذكور. وفي صفحات البحث ظهرت إعلانات تانية (مش في العينة) عليها علامة «males only».",
+      "claimEn": "In the 12-ad sample, 2 ads had explicit formal restrictions beyond degree and experience: one \"males only\" with age 23–28, one age 22–32 with completed military service for men. Other ads on the listing pages (not in the sample) carried a \"males only\" tag.",
+      "sources": [
+        {
+          "url": "https://forasna.com/job/p/%D9%85%D8%AD%D8%A7%D8%B3%D8%A8-%D9%85%D8%B5%D8%B1-%D8%A5%D9%83%D8%B3%D8%A8%D8%B1%D9%8A%D8%B3-%D9%84%D9%84%D8%AA%D8%AC%D8%A7%D8%B1%D8%A9-%D9%88-%D8%A7%D9%84%D8%AA%D9%88%D8%B2%D9%8A%D8%B9-%D9%85%D8%B5%D8%B1-%D8%A7%D9%84%D9%82%D8%A7%D9%87%D8%B1%D8%A9-442969",
+          "title": "محاسب — مصر إكسبريس للتجارة والتوزيع (JE-04)",
+          "publisher": "Forasna"
+        },
+        {
+          "url": "https://forasna.com/job/p/%D9%83%D8%A7%D8%B4%D9%8A%D8%B1-%D9%85%D8%A4%D9%87%D9%84-%D8%B9%D8%A7%D9%84%D9%8A-%D9%81%D9%82%D8%B7-%D8%A7%D9%84%D9%83%D9%8A%D8%A7%D9%86-%D9%85%D8%B5%D8%B1-%D8%A7%D9%84%D9%82%D8%A7%D9%87%D8%B1%D8%A9-443069",
+          "title": "كاشير (مؤهل عالي فقط) — الكيان (JE-12)",
+          "publisher": "Forasna"
+        }
+      ],
+      "scopeAr": "وصف لعينة 12 إعلان اتقرت يوم 2026-10-13 بس؛ مش نسبة في سوق العمل ومش بتتعمم. القيود دي بتظهر في لوحة الأهلية كشروط شكلية، مش كمهارات.",
+      "evidenceNote": "JE-04: male, age 23–28. JE-12: age 22–32, military service completed for men. Listing pages (Wuzzuf Junior Accountant Cairo; AR Accountant Egypt) showed further males-only tags on ads not opened for the sample."
+    }
+  ],
+  "resources": [
+    {
+      "id": "RES-XLOOKUP-AR",
+      "url": "https://support.microsoft.com/ar-sa/excel/functions/xlookup-function",
+      "titleAr": "الدالة XLOOKUP — صفحة الدعم الرسمية من Microsoft (بالعربي)",
+      "skillIds": [
+        "XL.MATCH"
+      ],
+      "purposeAr": "لو عايز تشوف شرح الشركة المصنّعة للدالة وأمثلتها بعد ما خلّصت مهمة البحث في ورشة إكسل.",
+      "language": "ar",
+      "estimatedMinutes": 15,
+      "offlineSummaryAr": "XLOOKUP بتدوّر على قيمة في عمود وترجع القيمة المقابلة من عمود تاني، وتقدر تحدد رسالة لو القيمة مش موجودة. مش موجودة في Excel 2016 ولا Excel 2019 — هناك استخدم VLOOKUP أو INDEX/MATCH. أسماء الدوال بتفضل إنجليزي حتى في إكسل العربي، والفاصل بين الوسائط (فاصلة أو فاصلة منقوطة) بيتحدد من إعدادات المنطقة في الويندوز.",
+      "licenceNote": "صفحة توثيق رسمية من Microsoft — للقراءة فقط",
+      "lastCheckedAt": "2026-10-14",
+      "lastCheckStatus": "ok"
+    },
+    {
+      "id": "RES-LIBREOFFICE",
+      "url": "https://www.libreoffice.org/download/download-libreoffice/",
+      "titleAr": "تنزيل LibreOffice — بديل مجاني لإكسل على الويندوز",
+      "skillIds": [
+        "XL.CORE",
+        "XL.MATCH"
+      ],
+      "purposeAr": "لو مفيش Microsoft Excel على جهازك: برنامج Calc بيفتح ملفات الورشة (CSV و XLSX) وفيه الدوال اللي بنستخدمها.",
+      "language": "ar-en",
+      "estimatedMinutes": 20,
+      "offlineSummaryAr": "LibreOffice مجموعة برامج مكتبية مفتوحة المصدر (رخصة MPL 2.0) وبتتنزل من موقعها الرسمي للويندوز. برنامج الجداول اسمه Calc، ومن إصدار 24.8 فيه XLOOKUP و XMATCH. الإصدارات بتتغير — نزّل من الموقع الرسمي بس، وما تنزلش من مواقع وسيطة. أنت اللي بتنزّل وتثبّت بنفسك؛ التطبيق ما بيثبّتش أي برنامج.",
+      "licenceNote": "برنامج مفتوح المصدر (MPL 2.0) — التثبيت اختيارك",
+      "lastCheckedAt": "2026-10-14",
+      "lastCheckStatus": "ok"
+    },
+    {
+      "id": "RES-GNUCASH",
+      "url": "https://www.gnucash.org/",
+      "titleAr": "GnuCash — برنامج محاسبة قيد مزدوج مجاني على الجهاز",
+      "skillIds": [
+        "ERP.AWARE"
+      ],
+      "purposeAr": "تجربة اختيارية بعد اليوم 14: تسجّل شهر الشركة الوهمية في برنامج حقيقي وتقارن الميزان بالتطبيق.",
+      "language": "en",
+      "estimatedMinutes": 60,
+      "offlineSummaryAr": "GnuCash برنامج محاسبة مجاني ومفتوح المصدر (رخصة GNU GPL) بيشتغل على الويندوز من غير إنترنت، وبيعتمد على القيد المزدوج: حسابات، قيود، دفتر أستاذ، تقارير. مش ERP كامل زي Odoo (مفيش مخازن ومشتريات متكاملة)، لكنه مناسب تتدرب فيه على الشجرة والقيود والميزان. استخدم بيانات الشركة الوهمية بس.",
+      "licenceNote": "برنامج مفتوح المصدر (GNU GPL) — التثبيت اختيارك",
+      "lastCheckedAt": "2026-10-14",
+      "lastCheckStatus": "ok"
+    },
+    {
+      "id": "RES-ODOO-ACC-DOCS",
+      "url": "https://www.odoo.com/documentation/18.0/applications/finance/accounting.html",
+      "titleAr": "توثيق المحاسبة في Odoo 18 (رسمي)",
+      "skillIds": [
+        "ERP.AWARE"
+      ],
+      "purposeAr": "علشان تشوف إزاي نظام ERP بيحوّل المستند (فاتورة، فاتورة مورد، دفعة) لقيود وتقارير — نفس الدورة اللي اتدربت عليها.",
+      "language": "en",
+      "estimatedMinutes": 30,
+      "offlineSummaryAr": "التوثيق الرسمي لتطبيق المحاسبة في Odoo 18: شجرة الحسابات واليوميات، فواتير العملاء وإشعارات الدائن، فواتير الموردين، المدفوعات، الحسابات البنكية والتسوية البنكية، والتقارير والإقفال. الفكرة الأساسية: الموظف بيدخل المستند والنظام بيعمل القيد تلقائيًا — والمحاسب بيراجع ويطابق. اقرأه للتوعية؛ التطبيق ما بيطلبش منك تعمل حساب على أي خدمة.",
+      "licenceNote": "صفحة توثيق رسمية من Odoo S.A. — للقراءة فقط",
+      "lastCheckedAt": "2026-10-14",
+      "lastCheckStatus": "ok"
+    }
+  ]
+}

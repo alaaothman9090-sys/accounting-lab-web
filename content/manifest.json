@@ -1,0 +1,443 @@
+{
+  "schemaVersion": 1,
+  "contentVersion": "aacc9a2deefa",
+  "builtAt": "2026-10-15T09:18:51.362Z",
+  "packs": [
+    {
+      "id": "assessments",
+      "kind": "assessments",
+      "path": "/content/packs/assessments.json",
+      "version": 1,
+      "released": true,
+      "release": "R1",
+      "sha256": "4cd75392e89d13f1b9917bbf8a22a10c0ddf0315ae5f738eca841ab1d44dbe2e",
+      "bytes": 331623,
+      "counts": {
+        "blueprints": 19,
+        "questions": 90
+      }
+    },
+    {
+      "id": "career",
+      "kind": "career",
+      "path": "/content/packs/career.json",
+      "version": 1,
+      "released": true,
+      "release": "R1",
+      "sha256": "54846949ec7c6e0d6566815b783b744ba5bb6df41698dcfd139be84b99978316",
+      "bytes": 147593,
+      "counts": {
+        "roles": 12,
+        "interviews": 30,
+        "jobEvidence": 12
+      }
+    },
+    {
+      "id": "company",
+      "kind": "company",
+      "path": "/content/packs/company.json",
+      "version": 1,
+      "released": true,
+      "release": "R1",
+      "sha256": "5c098bb89f9b2e95f6f6a365027e8f81152c3d4bbf9eea7af84731c4f0fae7db",
+      "bytes": 79661,
+      "counts": {
+        "events": 32,
+        "accounts": 35,
+        "parties": 12
+      }
+    },
+    {
+      "id": "day-01",
+      "kind": "day",
+      "path": "/content/packs/day-01.json",
+      "version": 1,
+      "released": true,
+      "release": "R1",
+      "sha256": "7180addc96e5c19ca40f56739e97c9f9273195ae5e013a22eb4b06ed2114ae7b",
+      "bytes": 41019,
+      "counts": {
+        "lessons": 2,
+        "questions": 11
+      },
+      "day": 1
+    },
+    {
+      "id": "day-02",
+      "kind": "day",
+      "path": "/content/packs/day-02.json",
+      "version": 1,
+      "released": true,
+      "release": "R1",
+      "sha256": "37d09a0f583d4112ab84e317a27c8f12fd794b946f7ec371dce54754d492122b",
+      "bytes": 66661,
+      "counts": {
+        "lessons": 2,
+        "questions": 12
+      },
+      "day": 2
+    },
+    {
+      "id": "day-03",
+      "kind": "day",
+      "path": "/content/packs/day-03.json",
+      "version": 1,
+      "released": true,
+      "release": "R1",
+      "sha256": "62fbdb7dc2ffd3efa6b9205eb76b8d1ab8e60c0ed48b528154b12d1dfccc6644",
+      "bytes": 66166,
+      "counts": {
+        "lessons": 2,
+        "questions": 12
+      },
+      "day": 3
+    },
+    {
+      "id": "day-04",
+      "kind": "day",
+      "path": "/content/packs/day-04.json",
+      "version": 1,
+      "released": true,
+      "release": "R1",
+      "sha256": "06e5bbca5c55aca540ae6d10039066fb59b5caf6bec545416e1e5731bdd113d9",
+      "bytes": 65408,
+      "counts": {
+        "lessons": 2,
+        "questions": 12
+      },
+      "day": 4
+    },
+    {
+      "id": "day-05",
+      "kind": "day",
+      "path": "/content/packs/day-05.json",
+      "version": 1,
+      "released": true,
+      "release": "R1",
+      "sha256": "4646f9fdc6d040986c8633208e338ff250e318f452ae9b1f47cd6b190706a27e",
+      "bytes": 67689,
+      "counts": {
+        "lessons": 2,
+        "questions": 12
+      },
+      "day": 5
+    },
+    {
+      "id": "day-06",
+      "kind": "day",
+      "path": "/content/packs/day-06.json",
+      "version": 1,
+      "released": true,
+      "release": "R1",
+      "sha256": "fa5ba154adcacb9b96d3a659dddcac64855cb1cc3ed975dee1a0845017d4fc44",
+      "bytes": 71919,
+      "counts": {
+        "lessons": 2,
+        "questions": 12
+      },
+      "day": 6
+    },
+    {
+      "id": "day-07",
+      "kind": "day",
+      "path": "/content/packs/day-07.json",
+      "version": 1,
+      "released": true,
+      "release": "R1",
+      "sha256": "1e808ce68ec87a80dafbd20ca13691a6b43540894d38be0232d7572c03d335aa",
+      "bytes": 66786,
+      "counts": {
+        "lessons": 2,
+        "questions": 12
+      },
+      "day": 7
+    },
+    {
+      "id": "day-08",
+      "kind": "day",
+      "path": "/content/packs/day-08.json",
+      "version": 1,
+      "released": true,
+      "release": "R2",
+      "sha256": "5c2c2af512ff17b9d67f01818232f7ed598b3ff5c46631b693b0659bace8415c",
+      "bytes": 91090,
+      "counts": {
+        "lessons": 2,
+        "questions": 12
+      },
+      "day": 8
+    },
+    {
+      "id": "day-09",
+      "kind": "day",
+      "path": "/content/packs/day-09.json",
+      "version": 1,
+      "released": true,
+      "release": "R2",
+      "sha256": "55c1953ebe3852c446a1fee3585ffa564d36cb55dac8b5a37ea9e309afec39ea",
+      "bytes": 96900,
+      "counts": {
+        "lessons": 2,
+        "questions": 12
+      },
+      "day": 9
+    },
+    {
+      "id": "day-10",
+      "kind": "day",
+      "path": "/content/packs/day-10.json",
+      "version": 1,
+      "released": true,
+      "release": "R2",
+      "sha256": "83ee7b7dd1e4b93aee5580982a15ad577f573a7e05a5e6d6ece577e6518cedb8",
+      "bytes": 86936,
+      "counts": {
+        "lessons": 2,
+        "questions": 12
+      },
+      "day": 10
+    },
+    {
+      "id": "day-11",
+      "kind": "day",
+      "path": "/content/packs/day-11.json",
+      "version": 1,
+      "released": true,
+      "release": "R2",
+      "sha256": "39b8c92cc71c187489a3ee797d44caae45af53783d0bbe9190b439666996f950",
+      "bytes": 94727,
+      "counts": {
+        "lessons": 2,
+        "questions": 12
+      },
+      "day": 11
+    },
+    {
+      "id": "day-12",
+      "kind": "day",
+      "path": "/content/packs/day-12.json",
+      "version": 1,
+      "released": true,
+      "release": "R2",
+      "sha256": "2780f6b0d55932c4bc34fcde8bf978b01c2d34f51d8e3d2f82355882cb407ccd",
+      "bytes": 115395,
+      "counts": {
+        "lessons": 2,
+        "questions": 12
+      },
+      "day": 12
+    },
+    {
+      "id": "day-13",
+      "kind": "day",
+      "path": "/content/packs/day-13.json",
+      "version": 1,
+      "released": true,
+      "release": "R2",
+      "sha256": "df0259ef56fd9eb866ded099783066957491fb979259bf00bf4e3b5d2526b7a8",
+      "bytes": 92842,
+      "counts": {
+        "lessons": 2,
+        "questions": 12
+      },
+      "day": 13
+    },
+    {
+      "id": "day-14",
+      "kind": "day",
+      "path": "/content/packs/day-14.json",
+      "version": 1,
+      "released": true,
+      "release": "R2",
+      "sha256": "dbd148dd8f19bdb8987839443e2a16e460a2fefa156fa06e07c87a02590d51f4",
+      "bytes": 80652,
+      "counts": {
+        "lessons": 2,
+        "questions": 12
+      },
+      "day": 14
+    },
+    {
+      "id": "dictionary",
+      "kind": "dictionary",
+      "path": "/content/packs/dictionary.json",
+      "version": 1,
+      "released": true,
+      "release": "R1",
+      "sha256": "628429e09e37d22e0a70c2d2f6ec9746ed0f8951a0a12dbfcc449a7a1856058a",
+      "bytes": 72929,
+      "counts": {
+        "terms": 100
+      }
+    },
+    {
+      "id": "documents",
+      "kind": "documents",
+      "path": "/content/packs/documents.json",
+      "version": 1,
+      "released": true,
+      "release": "R1",
+      "sha256": "d1c1523c60a8a12b4ac39f03b6c58d5db728e8854b0ed86a389ce6745dea3f57",
+      "bytes": 126552,
+      "counts": {
+        "documents": 74
+      }
+    },
+    {
+      "id": "excel",
+      "kind": "excel",
+      "path": "/content/packs/excel.json",
+      "version": 1,
+      "released": true,
+      "release": "R1",
+      "sha256": "606cdb673e209fd2b4364d5f13db455523a912c09c4d7ae156d1a971a3dc832a",
+      "bytes": 45687,
+      "counts": {
+        "challenges": 6
+      }
+    },
+    {
+      "id": "labs",
+      "kind": "labs",
+      "path": "/content/packs/labs.json",
+      "version": 1,
+      "released": true,
+      "release": "R1",
+      "sha256": "3e3c7c8c477dbab9badb0f9b83793b6d5f3ba44021a26791fb108641d578b21b",
+      "bytes": 489414,
+      "counts": {
+        "scenarios": 25,
+        "mistakes": 16,
+        "bankRecCases": 5
+      }
+    },
+    {
+      "id": "research",
+      "kind": "research",
+      "path": "/content/packs/research.json",
+      "version": 1,
+      "released": true,
+      "release": "R1",
+      "sha256": "25a207afdf62ebccc45940eda084f08a0f34de34d89205082c07837d831772cf",
+      "bytes": 47690,
+      "counts": {
+        "claims": 14,
+        "resources": 4
+      }
+    },
+    {
+      "id": "skills",
+      "kind": "skills",
+      "path": "/content/packs/skills.json",
+      "version": 1,
+      "released": true,
+      "release": "R1",
+      "sha256": "c810349824c252e62b08cfdabd50776b843cd9d51efda79f8c6dc79d74b7e2c6",
+      "bytes": 24248,
+      "counts": {
+        "skills": 36,
+        "misconceptions": 30,
+        "jobTasks": 10
+      }
+    },
+    {
+      "id": "track",
+      "kind": "track",
+      "path": "/content/packs/track.json",
+      "version": 1,
+      "released": true,
+      "release": "R1",
+      "sha256": "ed147e2efc34340c3c2891ad87685b9b1703e7c5066c8ffb0e4c21849d4da0de",
+      "bytes": 92390,
+      "counts": {
+        "days": 14,
+        "continued": 5
+      }
+    },
+    {
+      "id": "whatif",
+      "kind": "whatif",
+      "path": "/content/packs/whatif.json",
+      "version": 1,
+      "released": true,
+      "release": "R1",
+      "sha256": "b73ead310d4d267b128310dc560e44c1d26272e55ece963bc588122454bdb151",
+      "bytes": 4392,
+      "counts": {
+        "pairs": 4
+      }
+    }
+  ],
+  "dependencies": {
+    "day-01": [
+      "skills",
+      "company",
+      "documents"
+    ],
+    "day-02": [
+      "skills",
+      "company",
+      "documents"
+    ],
+    "day-03": [
+      "skills",
+      "company",
+      "documents"
+    ],
+    "day-04": [
+      "skills",
+      "company",
+      "documents"
+    ],
+    "day-05": [
+      "skills",
+      "company",
+      "documents"
+    ],
+    "day-06": [
+      "skills",
+      "company",
+      "documents"
+    ],
+    "day-07": [
+      "skills",
+      "company",
+      "documents"
+    ],
+    "day-08": [
+      "skills",
+      "company",
+      "documents"
+    ],
+    "day-09": [
+      "skills",
+      "company",
+      "documents"
+    ],
+    "day-10": [
+      "skills",
+      "company",
+      "documents"
+    ],
+    "day-11": [
+      "skills",
+      "company",
+      "documents"
+    ],
+    "day-12": [
+      "skills",
+      "company",
+      "documents"
+    ],
+    "day-13": [
+      "skills",
+      "company",
+      "documents"
+    ],
+    "day-14": [
+      "skills",
+      "company",
+      "documents"
+    ]
+  }
+}
